@@ -1,0 +1,864 @@
+{
+ "cards": [
+  {
+   "kind": "tv",
+   "id": 95480,
+   "title": "Медленные лошади",
+   "poster": "https://image.tmdb.org/t/p/w342/fcXBCozEg3rCc9h8RPypLvnPSzU.jpg",
+   "backdrop": "https://image.tmdb.org/t/p/w1280/gPQppUnLx9vqPDLz3WwZ2HJsNbt.jpg",
+   "year": "2022",
+   "vote": 8.0,
+   "genre_ids": [
+    80,
+    18,
+    9648
+   ],
+   "genres": [
+    "криминал",
+    "драма"
+   ],
+   "is_anime": false,
+   "is_animation": false,
+   "country": "GB",
+   "network": "Apple TV",
+   "season": 6,
+   "total": 6,
+   "aired": 3,
+   "all_aired": false,
+   "next_ep": {
+    "ep": 4,
+    "date": "2026-10-07",
+    "name": "Эпизод 4",
+    "season": 6
+   },
+   "last_ep": {
+    "ep": 3,
+    "date": "2026-09-30",
+    "name": "Воскрешение",
+    "season": 6
+   },
+   "new_today": true,
+   "status": "Returning Series"
+  },
+  {
+   "kind": "tv",
+   "id": 247718,
+   "title": "Гангстерленд",
+   "poster": "https://image.tmdb.org/t/p/w342/vuKwmIVw6lClfzOtGzakhl47mjA.jpg",
+   "backdrop": "https://image.tmdb.org/t/p/w1280/h0OC7ouop8YLwbAVfS3UUE2Lw4T.jpg",
+   "year": "2025",
+   "vote": 8.5,
+   "genre_ids": [
+    80,
+    18
+   ],
+   "genres": [
+    "криминал",
+    "драма"
+   ],
+   "is_anime": false,
+   "is_animation": false,
+   "country": "GB",
+   "network": "Paramount+",
+   "season": 2,
+   "total": 10,
+   "aired": 2,
+   "all_aired": false,
+   "next_ep": {
+    "ep": 3,
+    "date": "2026-10-02",
+    "name": "Эпизод 3",
+    "season": 2
+   },
+   "last_ep": {
+    "ep": 2,
+    "date": "2026-09-25",
+    "name": "Песня 2",
+    "season": 2
+   },
+   "new_today": false,
+   "status": "Returning Series"
+  },
+  {
+   "kind": "tv",
+   "id": 95350,
+   "title": "Фонари",
+   "poster": "https://image.tmdb.org/t/p/w342/15AkiRpjuBLyS385ycDM5vvB7oI.jpg",
+   "backdrop": "https://image.tmdb.org/t/p/w1280/wJjnJbVUwPz0GADAgpFt9nWtzUu.jpg",
+   "year": "2026",
+   "vote": 8.4,
+   "genre_ids": [
+    18,
+    9648,
+    10765
+   ],
+   "genres": [
+    "драма",
+    "детектив"
+   ],
+   "is_anime": false,
+   "is_animation": false,
+   "country": "US",
+   "network": "HBO",
+   "season": 1,
+   "total": 8,
+   "aired": 7,
+   "all_aired": false,
+   "next_ep": {
+    "ep": 8,
+    "date": "2026-10-04",
+    "name": "Эпизод 8",
+    "season": 1
+   },
+   "last_ep": {
+    "ep": 7,
+    "date": "2026-09-27",
+    "name": "Наследие Джорданов",
+    "season": 1
+   },
+   "new_today": false,
+   "status": "Returning Series"
+  },
+  {
+   "kind": "tv",
+   "id": 97546,
+   "title": "Тед Лассо",
+   "poster": "https://image.tmdb.org/t/p/w342/gO2kQUDfZWsvdDetUljaTI6t87i.jpg",
+   "backdrop": "https://image.tmdb.org/t/p/w1280/nE94ejEbzNCU48bW1oju0dqBONz.jpg",
+   "year": "2020",
+   "vote": 8.4,
+   "genre_ids": [
+    18,
+    35
+   ],
+   "genres": [
+    "драма",
+    "комедия"
+   ],
+   "is_anime": false,
+   "is_animation": false,
+   "country": "US",
+   "network": "Apple TV",
+   "season": 4,
+   "total": 10,
+   "aired": 9,
+   "all_aired": false,
+   "next_ep": {
+    "ep": 10,
+    "date": "2026-10-06",
+    "name": "Прощание с девушкой",
+    "season": 4
+   },
+   "last_ep": {
+    "ep": 9,
+    "date": "2026-09-29",
+    "name": "Мэй едет на автобусе",
+    "season": 4
+   },
+   "new_today": false,
+   "status": "Returning Series"
+  },
+  {
+   "kind": "tv",
+   "id": 1413,
+   "title": "Американская история ужасов",
+   "poster": "https://image.tmdb.org/t/p/w342/gj2dFFgEHdhxqSBpD2oPyo4YmPD.jpg",
+   "backdrop": "https://image.tmdb.org/t/p/w1280/5G4Bnc4Q0YUK1bwLEUYmIsmm2Ib.jpg",
+   "year": "2011",
+   "vote": 8.1,
+   "genre_ids": [
+    18,
+    9648,
+    10765
+   ],
+   "genres": [
+    "драма",
+    "детектив"
+   ],
+   "is_anime": false,
+   "is_animation": false,
+   "country": "US",
+   "network": "FX",
+   "season": 13,
+   "total": 13,
+   "aired": 3,
+   "all_aired": false,
+   "next_ep": {
+    "ep": 4,
+    "date": "2026-10-01",
+    "name": "Эпизод 4",
+    "season": 13
+   },
+   "last_ep": {
+    "ep": 3,
+    "date": "2026-09-24",
+    "name": "Эпизод 3",
+    "season": 13
+   },
+   "new_today": false,
+   "status": "Returning Series"
+  },
+  {
+   "kind": "tv",
+   "id": 108978,
+   "title": "Ричер",
+   "poster": "https://image.tmdb.org/t/p/w342/zLqlW0rXmHwOZRhmOjeod14sGiT.jpg",
+   "backdrop": "https://image.tmdb.org/t/p/w1280/pF0qkRsrHkdYadPWY9AMeFZfcwk.jpg",
+   "year": "2022",
+   "vote": 8.1,
+   "genre_ids": [
+    10759,
+    80
+   ],
+   "genres": [
+    "Боевик и Приключения",
+    "криминал"
+   ],
+   "is_anime": false,
+   "is_animation": false,
+   "country": "US",
+   "network": "Prime Video",
+   "season": 4,
+   "total": 8,
+   "aired": 8,
+   "all_aired": true,
+   "next_ep": null,
+   "last_ep": {
+    "ep": 8,
+    "date": "2026-09-16",
+    "name": "Порез",
+    "season": 4
+   },
+   "new_today": false,
+   "status": "Returning Series"
+  },
+  {
+   "kind": "tv",
+   "id": 2734,
+   "title": "Закон и порядок. Специальный корпус",
+   "poster": "https://image.tmdb.org/t/p/w342/1GLIkXaLtgaRooXLSltTdp8oShL.jpg",
+   "backdrop": "https://image.tmdb.org/t/p/w1280/obtdxPgmfykYwVnvuYXC5f2xKlQ.jpg",
+   "year": "1999",
+   "vote": 8.0,
+   "genre_ids": [
+    80,
+    18,
+    9648
+   ],
+   "genres": [
+    "криминал",
+    "драма"
+   ],
+   "is_anime": false,
+   "is_animation": false,
+   "country": "US",
+   "network": "NBC",
+   "season": 28,
+   "total": 4,
+   "aired": 0,
+   "all_aired": false,
+   "next_ep": {
+    "ep": 1,
+    "date": "2026-10-08",
+    "name": "Эпизод 1",
+    "season": 28
+   },
+   "last_ep": null,
+   "new_today": false,
+   "status": "Returning Series"
+  },
+  {
+   "kind": "tv",
+   "id": 2261,
+   "title": "Вечернее шоу Джонни Карсона",
+   "poster": "https://image.tmdb.org/t/p/w342/uSvET5YUvHNDIeoCpErrbSmasFb.jpg",
+   "backdrop": "https://image.tmdb.org/t/p/w1280/qFfWFwfaEHzDLWLuttWiYq7Poy2.jpg",
+   "year": "1962",
+   "vote": 7.6,
+   "genre_ids": [
+    10767
+   ],
+   "genres": [
+    "Ток-шоу"
+   ],
+   "is_anime": false,
+   "is_animation": false,
+   "country": "US",
+   "network": "NBC",
+   "season": 31,
+   "total": 74,
+   "aired": 74,
+   "all_aired": true,
+   "next_ep": null,
+   "last_ep": {
+    "ep": 74,
+    "date": "1992-05-22",
+    "name": "Эпизод 74",
+    "season": 31
+   },
+   "new_today": false,
+   "status": "Ended"
+  },
+  {
+   "kind": "tv",
+   "id": 549,
+   "title": "Закон и порядок",
+   "poster": "https://image.tmdb.org/t/p/w342/6IfLWdBXDuktBo8oVjiWxodSHCV.jpg",
+   "backdrop": "https://image.tmdb.org/t/p/w1280/tc7canPSAn2X14hYi6Rl3gZm1o4.jpg",
+   "year": "1990",
+   "vote": 7.3,
+   "genre_ids": [
+    80,
+    18
+   ],
+   "genres": [
+    "криминал",
+    "драма"
+   ],
+   "is_anime": false,
+   "is_animation": false,
+   "country": "US",
+   "network": "NBC",
+   "season": 26,
+   "total": 4,
+   "aired": 0,
+   "all_aired": false,
+   "next_ep": {
+    "ep": 1,
+    "date": "2026-10-08",
+    "name": "Эпизод 1",
+    "season": 26
+   },
+   "last_ep": null,
+   "new_today": false,
+   "status": "Returning Series"
+  },
+  {
+   "kind": "tv",
+   "id": 275102,
+   "title": "Скандал в Чосоне",
+   "poster": "https://image.tmdb.org/t/p/w342/8ra17h8Z3NX14qdWaOKn0scURJR.jpg",
+   "backdrop": "https://image.tmdb.org/t/p/w1280/uc1p1PEbEMpdIHqnU9TESNC6Jhp.jpg",
+   "year": "2026",
+   "vote": 6.6,
+   "genre_ids": [
+    18
+   ],
+   "genres": [
+    "драма"
+   ],
+   "is_anime": false,
+   "is_animation": false,
+   "country": "KR",
+   "network": "Netflix",
+   "season": 1,
+   "total": 8,
+   "aired": 8,
+   "all_aired": true,
+   "next_ep": null,
+   "last_ep": {
+    "ep": 8,
+    "date": "2026-09-18",
+    "name": "Эпизод 8",
+    "season": 1
+   },
+   "new_today": false,
+   "status": "Ended"
+  },
+  {
+   "kind": "tv",
+   "id": 456,
+   "title": "Симпсоны",
+   "poster": "https://image.tmdb.org/t/p/w342/171yRAHGCziNjtO53sEil1PH64v.jpg",
+   "backdrop": "https://image.tmdb.org/t/p/w1280/jIArNHIekrCSVgdMbKPAXpPY03Y.jpg",
+   "year": "1989",
+   "vote": 8.0,
+   "genre_ids": [
+    16,
+    35
+   ],
+   "genres": [
+    "мультфильм",
+    "комедия"
+   ],
+   "is_anime": false,
+   "is_animation": true,
+   "country": "US",
+   "network": "FOX",
+   "season": 38,
+   "total": 5,
+   "aired": 1,
+   "all_aired": false,
+   "next_ep": {
+    "ep": 2,
+    "date": "2026-10-04",
+    "name": "Эпизод 2",
+    "season": 38
+   },
+   "last_ep": {
+    "ep": 1,
+    "date": "2026-09-27",
+    "name": "Эпизод 1",
+    "season": 38
+   },
+   "new_today": false,
+   "status": "Returning Series"
+  },
+  {
+   "kind": "tv",
+   "id": 65733,
+   "title": "Дораэмон",
+   "poster": "https://image.tmdb.org/t/p/w342/9YqdMXlPTQGLIG67vqZdsPdPC4T.jpg",
+   "backdrop": "https://image.tmdb.org/t/p/w1280/c2oiRa7V3bQzof4wVGzLXtWJ5QU.jpg",
+   "year": "2005",
+   "vote": 8.1,
+   "genre_ids": [
+    10759,
+    16,
+    35,
+    10765,
+    10762,
+    10751
+   ],
+   "genres": [
+    "Боевик и Приключения",
+    "мультфильм"
+   ],
+   "is_anime": true,
+   "is_animation": true,
+   "country": "JP",
+   "network": "tv asahi",
+   "season": 1,
+   "total": 1464,
+   "aired": 1463,
+   "all_aired": false,
+   "next_ep": {
+    "ep": 936,
+    "date": "2026-10-03",
+    "name": "Эпизод 936",
+    "season": 1
+   },
+   "last_ep": {
+    "ep": 1466,
+    "date": "2025-06-28",
+    "name": "Эпизод 1466",
+    "season": 1
+   },
+   "new_today": false,
+   "status": "Returning Series"
+  },
+  {
+   "kind": "tv",
+   "id": 70998,
+   "title": "Жаркая ночка с монахом",
+   "poster": "https://image.tmdb.org/t/p/w342/ueI9EeoRdMVa7hWEm21nQEU8Zv3.jpg",
+   "backdrop": "https://image.tmdb.org/t/p/w1280/4kQiFnWtwndtCyKMszVJNPEE1kY.jpg",
+   "year": "2017",
+   "vote": 5.5,
+   "genre_ids": [
+    16,
+    18
+   ],
+   "genres": [
+    "мультфильм",
+    "драма"
+   ],
+   "is_anime": true,
+   "is_animation": true,
+   "country": "JP",
+   "network": "Tokyo MX",
+   "season": 1,
+   "total": 12,
+   "aired": 12,
+   "all_aired": true,
+   "next_ep": null,
+   "last_ep": {
+    "ep": 12,
+    "date": "2017-06-19",
+    "name": "Эпизод 12",
+    "season": 1
+   },
+   "new_today": false,
+   "status": "Ended"
+  },
+  {
+   "kind": "movie",
+   "id": 1204680,
+   "title": "Хитрый Койот",
+   "poster": "https://image.tmdb.org/t/p/w342/gwCwmTk2EfDccd4RtIPsWEwzd1r.jpg",
+   "backdrop": "https://image.tmdb.org/t/p/w1280/7GOW6jod9lLurW5utokAatxg7ql.jpg",
+   "year": "2026",
+   "vote": 7.6,
+   "genre_ids": [
+    35,
+    12,
+    10751
+   ],
+   "genres": [
+    "комедия",
+    "приключения"
+   ],
+   "is_anime": false,
+   "is_animation": false,
+   "country": "US",
+   "network": "",
+   "season": null,
+   "total": 0,
+   "aired": 0,
+   "all_aired": false,
+   "next_ep": null,
+   "last_ep": null,
+   "new_today": false,
+   "status": "Released",
+   "release_date": "2026-08-17",
+   "runtime": 103
+  },
+  {
+   "kind": "movie",
+   "id": 1288445,
+   "title": "Мятеж",
+   "poster": "https://image.tmdb.org/t/p/w342/opOHbNmV0VPOugSBxrRQKmPgfZL.jpg",
+   "backdrop": "https://image.tmdb.org/t/p/w1280/e2QAGrEmbpmZpMymDRkDisJkvg9.jpg",
+   "year": "2026",
+   "vote": 7.3,
+   "genre_ids": [
+    28,
+    53
+   ],
+   "genres": [
+    "боевик",
+    "триллер"
+   ],
+   "is_anime": false,
+   "is_animation": false,
+   "country": "GB",
+   "network": "",
+   "season": null,
+   "total": 0,
+   "aired": 0,
+   "all_aired": false,
+   "next_ep": null,
+   "last_ep": null,
+   "new_today": false,
+   "status": "Released",
+   "release_date": "2026-08-19",
+   "runtime": 94
+  },
+  {
+   "kind": "movie",
+   "id": 1377237,
+   "title": "Курьер",
+   "poster": "https://image.tmdb.org/t/p/w342/vnrrZCe2sDMdEY7xyGSZMpSsZyG.jpg",
+   "backdrop": "https://image.tmdb.org/t/p/w1280/2c9zNZJL0ZdagD6JbmU3hH4hovs.jpg",
+   "year": "2026",
+   "vote": 8.1,
+   "genre_ids": [
+    28,
+    35
+   ],
+   "genres": [
+    "боевик",
+    "комедия"
+   ],
+   "is_anime": false,
+   "is_animation": false,
+   "country": "US",
+   "network": "",
+   "season": null,
+   "total": 0,
+   "aired": 0,
+   "all_aired": false,
+   "next_ep": null,
+   "last_ep": null,
+   "new_today": false,
+   "status": "Released",
+   "release_date": "2026-09-07",
+   "runtime": 97
+  },
+  {
+   "kind": "movie",
+   "id": 977942,
+   "title": "Восставший",
+   "poster": "https://image.tmdb.org/t/p/w342/uSDqNYQXOGTbWdMMmzMJkXROJDh.jpg",
+   "backdrop": "https://image.tmdb.org/t/p/w1280/y0reRTsewsPh0ePtgvDeLIsb5Wk.jpg",
+   "year": "2026",
+   "vote": 7.5,
+   "genre_ids": [
+    36,
+    18
+   ],
+   "genres": [
+    "история",
+    "драма"
+   ],
+   "is_anime": false,
+   "is_animation": false,
+   "country": "DE",
+   "network": "",
+   "season": null,
+   "total": 0,
+   "aired": 0,
+   "all_aired": false,
+   "next_ep": null,
+   "last_ep": null,
+   "new_today": false,
+   "status": "Released",
+   "release_date": "2026-09-10",
+   "runtime": 127
+  },
+  {
+   "kind": "movie",
+   "id": 1386315,
+   "title": "Бегущая",
+   "poster": "https://image.tmdb.org/t/p/w342/aJFbFOT1DhLq97Gp7MtrAmXze1n.jpg",
+   "backdrop": "https://image.tmdb.org/t/p/w1280/jzBWExXacS33rMQ2zLBrqIVweyG.jpg",
+   "year": "2026",
+   "vote": 6.8,
+   "genre_ids": [
+    53,
+    28
+   ],
+   "genres": [
+    "триллер",
+    "боевик"
+   ],
+   "is_anime": false,
+   "is_animation": false,
+   "country": "US",
+   "network": "",
+   "season": null,
+   "total": 0,
+   "aired": 0,
+   "all_aired": false,
+   "next_ep": null,
+   "last_ep": null,
+   "new_today": false,
+   "status": "Released",
+   "release_date": "2026-09-03",
+   "runtime": 85
+  },
+  {
+   "kind": "movie",
+   "id": 1101412,
+   "title": "Вышка 2",
+   "poster": "https://image.tmdb.org/t/p/w342/81FLOOicWMgiT67RiqP42pRcTaw.jpg",
+   "backdrop": "https://image.tmdb.org/t/p/w1280/yBDxqDB29kpH9VojTytjGWBgmdJ.jpg",
+   "year": "2026",
+   "vote": 6.2,
+   "genre_ids": [
+    53
+   ],
+   "genres": [
+    "триллер"
+   ],
+   "is_anime": false,
+   "is_animation": false,
+   "country": "GB",
+   "network": "",
+   "season": null,
+   "total": 0,
+   "aired": 0,
+   "all_aired": false,
+   "next_ep": null,
+   "last_ep": null,
+   "new_today": false,
+   "status": "Released",
+   "release_date": "2026-09-01",
+   "runtime": 98
+  }
+ ],
+ "today": [
+  {
+   "kind": "tv",
+   "title": "Медленные лошади",
+   "season": 6,
+   "ep": 3,
+   "ep_name": "Воскрешение",
+   "network": "Apple TV"
+  }
+ ],
+ "calendar": [
+  {
+   "date": "2026-10-01",
+   "items": [
+    {
+     "title": "Американская история ужасов",
+     "poster": "https://image.tmdb.org/t/p/w342/gj2dFFgEHdhxqSBpD2oPyo4YmPD.jpg",
+     "season": 13,
+     "ep": 4,
+     "ep_name": "Эпизод 4",
+     "network": "FX"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-02",
+   "items": [
+    {
+     "title": "Гангстерленд",
+     "poster": "https://image.tmdb.org/t/p/w342/vuKwmIVw6lClfzOtGzakhl47mjA.jpg",
+     "season": 2,
+     "ep": 3,
+     "ep_name": "Эпизод 3",
+     "network": "Paramount+"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-03",
+   "items": [
+    {
+     "title": "Дораэмон",
+     "poster": "https://image.tmdb.org/t/p/w342/9YqdMXlPTQGLIG67vqZdsPdPC4T.jpg",
+     "season": 1,
+     "ep": 936,
+     "ep_name": "Эпизод 936",
+     "network": "tv asahi"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-04",
+   "items": [
+    {
+     "title": "Фонари",
+     "poster": "https://image.tmdb.org/t/p/w342/15AkiRpjuBLyS385ycDM5vvB7oI.jpg",
+     "season": 1,
+     "ep": 8,
+     "ep_name": "Эпизод 8",
+     "network": "HBO"
+    },
+    {
+     "title": "Симпсоны",
+     "poster": "https://image.tmdb.org/t/p/w342/171yRAHGCziNjtO53sEil1PH64v.jpg",
+     "season": 38,
+     "ep": 2,
+     "ep_name": "Эпизод 2",
+     "network": "FOX"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-06",
+   "items": [
+    {
+     "title": "Тед Лассо",
+     "poster": "https://image.tmdb.org/t/p/w342/gO2kQUDfZWsvdDetUljaTI6t87i.jpg",
+     "season": 4,
+     "ep": 10,
+     "ep_name": "Прощание с девушкой",
+     "network": "Apple TV"
+    }
+   ]
+  }
+ ],
+ "next_episode": {
+  "kind": "tv",
+  "id": 1413,
+  "title": "Американская история ужасов",
+  "poster": "https://image.tmdb.org/t/p/w342/gj2dFFgEHdhxqSBpD2oPyo4YmPD.jpg",
+  "backdrop": "https://image.tmdb.org/t/p/w1280/5G4Bnc4Q0YUK1bwLEUYmIsmm2Ib.jpg",
+  "year": "2011",
+  "vote": 8.1,
+  "genre_ids": [
+   18,
+   9648,
+   10765
+  ],
+  "genres": [
+   "драма",
+   "детектив"
+  ],
+  "is_anime": false,
+  "is_animation": false,
+  "country": "US",
+  "network": "FX",
+  "season": 13,
+  "total": 13,
+  "aired": 3,
+  "all_aired": false,
+  "next_ep": {
+   "ep": 4,
+   "date": "2026-10-01",
+   "name": "Эпизод 4",
+   "season": 13
+  },
+  "last_ep": {
+   "ep": 3,
+   "date": "2026-09-24",
+   "name": "Эпизод 3",
+   "season": 13
+  },
+  "new_today": false,
+  "status": "Returning Series"
+ },
+ "hero": {
+  "kind": "tv",
+  "id": 247718,
+  "title": "Гангстерленд",
+  "poster": "https://image.tmdb.org/t/p/w342/vuKwmIVw6lClfzOtGzakhl47mjA.jpg",
+  "backdrop": "https://image.tmdb.org/t/p/w1280/h0OC7ouop8YLwbAVfS3UUE2Lw4T.jpg",
+  "year": "2025",
+  "vote": 8.5,
+  "genre_ids": [
+   80,
+   18
+  ],
+  "genres": [
+   "криминал",
+   "драма"
+  ],
+  "is_anime": false,
+  "is_animation": false,
+  "country": "GB",
+  "network": "Paramount+",
+  "season": 2,
+  "total": 10,
+  "aired": 2,
+  "all_aired": false,
+  "next_ep": {
+   "ep": 3,
+   "date": "2026-10-02",
+   "name": "Эпизод 3",
+   "season": 2
+  },
+  "last_ep": {
+   "ep": 2,
+   "date": "2026-09-25",
+   "name": "Песня 2",
+   "season": 2
+  },
+  "new_today": false,
+  "status": "Returning Series"
+ },
+ "genres": {
+  "10759": "Боевик и Приключения",
+  "16": "мультфильм",
+  "35": "комедия",
+  "80": "криминал",
+  "99": "документальный",
+  "18": "драма",
+  "10751": "семейный",
+  "10762": "Детский",
+  "9648": "детектив",
+  "10763": "Новости",
+  "10764": "Реалити-шоу",
+  "10765": "НФ и Фэнтези",
+  "10766": "Мыльная опера",
+  "10767": "Ток-шоу",
+  "10768": "Война и Политика",
+  "37": "вестерн",
+  "28": "боевик",
+  "12": "приключения",
+  "14": "фэнтези",
+  "36": "история",
+  "27": "ужасы",
+  "10402": "музыка",
+  "10749": "мелодрама",
+  "878": "фантастика",
+  "10770": "телевизионный фильм",
+  "53": "триллер",
+  "10752": "военный"
+ },
+ "today_date": "2026-09-30"
+}

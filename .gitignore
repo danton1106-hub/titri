@@ -1,0 +1,24 @@
+# Секреты и локальные настройки
+.env
+.env.local
+.env*.local
+
+# Next.js
+node_modules/
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# Python — превью и скрипты сборки данных
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Системное
+.DS_Store
+Thumbs.db
+
+# Служебное: скриншоты проверки вёрстки
+shots/

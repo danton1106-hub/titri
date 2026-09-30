@@ -9,7 +9,7 @@ from datetime import date
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PREV = os.path.join(ROOT, "preview")
-SITE = "/tmp/titry_build"
+SITE = ROOT
 D = json.load(open(os.path.join(ROOT, "data", "home.json"), encoding="utf-8"))
 CAT = json.load(open(os.path.join(ROOT, "data", "catalog.json"), encoding="utf-8"))
 # Рейтинги IMDb / Томаты / Metacritic — собраны заранее скриптом fetch_ratings.py.
@@ -605,7 +605,7 @@ def build_detail(r):
 <section class="detail-hero">
   <div class="detail-media"><img src="{e(bd)}" alt="{e(title)}"></div>
   <div class="wrap detail-inner">
-    <a class="back" href="{back_link}">{icon("arrow-left", 16)} {e(back_name)}</a>
+    <a class="back" href="{PREFIX}{back_link}">{icon("arrow-left", 16)} {e(back_name)}</a>
     <div class="detail-cols">
       <div class="detail-poster">
         {'<img src="' + e(r["poster"]) + '" alt="' + e(title) + '">' if r.get("poster") else ''}
@@ -690,7 +690,12 @@ for r in CAT["catalog"] + CAT["upcoming"]:
         made += 1
 PREFIX = ""
 
-shutil.copy(os.path.join(PREV, "titry.css"), os.path.join(SITE, "titry.css"))
+_css_src = os.path.join(PREV, "titry.css")
+_css_dst = os.path.join(SITE, "titry.css")
+if os.path.exists(_css_src) and os.path.abspath(_css_src) != os.path.abspath(_css_dst):
+    shutil.copy(_css_src, _css_dst)
+else:
+    print("CSS уже на месте:", os.path.relpath(_css_dst, ROOT))
 
 # главная: берём собранный home.html и переводим его на новый CSS и навигацию
 home = open(os.path.join(PREV, "home.html"), encoding="utf-8").read()
@@ -702,8 +707,9 @@ open(os.path.join(SITE, ".nojekyll"), "w").close()
 
 # Инструкции кладём рядом с сайтом — они нужны тем, кто будет его вести.
 for doc in ("UPDATES.md", "EDITORIAL.md", "MASTER.md", "CLAUDE.md"):
-    src = os.path.join(ROOT, doc)
-    if os.path.exists(src):
-        shutil.copy(src, os.path.join(SITE, doc))
+    _src = os.path.join(ROOT, doc)
+    _dst = os.path.join(SITE, doc)
+    if os.path.exists(_src) and os.path.abspath(_src) != os.path.abspath(_dst):
+        shutil.copy(_src, _dst)
 print(f"каталог: {len(CAT['catalog'])} | скоро: {len(CAT['upcoming'])} | карточек проектов: {made}")
 print("сайт собран в", SITE)
