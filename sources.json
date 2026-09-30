@@ -1,0 +1,69 @@
+{
+  "feeds": [
+    {
+      "name": "Variety",
+      "url": "https://variety.com/feed/",
+      "lang": "en"
+    },
+    {
+      "name": "The Hollywood Reporter",
+      "url": "https://www.hollywoodreporter.com/feed/",
+      "lang": "en"
+    },
+    {
+      "name": "Deadline",
+      "url": "https://deadline.com/feed/",
+      "lang": "en"
+    },
+    {
+      "name": "The Verge",
+      "url": "https://www.theverge.com/rss/index.xml",
+      "lang": "en"
+    },
+    {
+      "name": "Vulture",
+      "url": "https://www.vulture.com/feed/",
+      "lang": "en"
+    },
+    {
+      "name": "AV Club",
+      "url": "https://www.avclub.com/feed/",
+      "lang": "en"
+    },
+    {
+      "name": "IndieWire",
+      "url": "https://www.indiewire.com/feed/",
+      "lang": "en"
+    },
+    {
+      "name": "Slashfilm",
+      "url": "https://www.slashfilm.com/feed/",
+      "lang": "en"
+    },
+    {
+      "name": "Collider",
+      "url": "https://collider.com/feed/",
+      "lang": "en"
+    },
+    {
+      "name": "IMDb News",
+      "url": "https://www.imdb.com/news/rss/",
+      "lang": "en"
+    },
+    {
+      "name": "Google News: TV (РУ)",
+      "url": "https://news.google.com/rss/topics/CCqB7rYswK0C?hl=ru&gl=RU&ceid=RU:ru",
+      "lang": "ru"
+    },
+    {
+      "name": "Google News: Cinema (РУ)",
+      "url": "https://news.google.com/rss/topics/CCqB4L4swK0C?hl=ru&gl=RU&ceid=RU:ru",
+      "lang": "ru"
+    },
+    {
+      "name": "Google News: Streaming (РУ)",
+      "url": "https://news.google.com/rss/search?q=streaming&hl=ru&gl=RU&ceid=RU:ru",
+      "lang": "ru"
+    }
+  ]
+}
