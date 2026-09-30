@@ -1,0 +1,1383 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Все фильмы и сериалы 2026 — титры</title>
+<meta name="description" content="Каталог фильмов и сериалов 2026 года с рейтингами и фильтрами">
+<link rel="stylesheet" href="titry.css">
+
+</head><body>
+<header class="header">
+  <a class="brand" href="index.html">[титры]</a>
+  <nav class="nav"><a href="">Что посмотреть</a><a href="catalog.html"><em class="nav-year">2026</em>Все фильмы и сериалы</a><a href="upcoming.html">Скоро выходят</a><a href="journal.html">Журнал</a></nav>
+  <div class="head-right">
+    <button class="bookmark-btn"><svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg>Мой список</button>
+    <span class="count" id="list-count">0</span>
+  </div>
+</header>
+<main>
+<section class="band wrap page-head">
+  <div class="label dim">2026 / Каталог</div>
+  <h1 class="h2" style="margin-top:14px">Все фильмы<br>и сериалы 2026</h1>
+  <p class="lead muted" style="margin-top:18px;max-width:60ch">
+    131 проект года: 71 сериалов, 60 фильмов,
+    23 аниме. Сюда попадают и сериалы прошлых лет, если новый сезон выходит в 2026-м.
+  </p>
+</section>
+<section class="band wrap" style="padding-top:0">
+  <div class="filters">
+  <div class="filter-row">
+    <div class="chips" id="type-chips">
+      <button class="chip" data-type="all" aria-pressed="true">Всё</button>
+      <button class="chip" data-type="tv" aria-pressed="false">Сериалы</button>
+      <button class="chip" data-type="movie" aria-pressed="false">Фильмы</button>
+      <button class="chip" data-type="anime" aria-pressed="false">Аниме</button>
+      <button class="chip" data-type="animation" aria-pressed="false">Мультфильмы</button>
+    </div>
+    <div class="selects">
+      <button class="select" data-sort="rating" aria-pressed="true">По рейтингу <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 5 5 5-5"/></svg></button>
+      <button class="select" data-sort="date" aria-pressed="false">По дате <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 5 5 5-5"/></svg></button>
+      <button class="select" data-sort="votes" aria-pressed="false">По голосам <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 5 5 5-5"/></svg></button>
+      <button class="select" id="reset-btn">Сбросить</button>
+    </div>
+  </div>
+  <div class="filter-row" style="margin-top:12px">
+    <div class="chips" id="genre-chips">
+      <button class="chip" data-genre="" aria-pressed="true">Все жанры</button>
+      <button class="chip" data-genre="35" aria-pressed="false">комедия</button><button class="chip" data-genre="18" aria-pressed="false">драма</button><button class="chip" data-genre="16" aria-pressed="false">мультфильм</button><button class="chip" data-genre="28" aria-pressed="false">боевик</button><button class="chip" data-genre="10759" aria-pressed="false">Боевик и Приключения</button><button class="chip" data-genre="10765" aria-pressed="false">НФ и Фэнтези</button><button class="chip" data-genre="12" aria-pressed="false">приключения</button><button class="chip" data-genre="80" aria-pressed="false">криминал</button><button class="chip" data-genre="53" aria-pressed="false">триллер</button><button class="chip" data-genre="9648" aria-pressed="false">детектив</button><button class="chip" data-genre="10751" aria-pressed="false">семейный</button><button class="chip" data-genre="878" aria-pressed="false">фантастика</button><button class="chip" data-genre="14" aria-pressed="false">фэнтези</button><button class="chip" data-genre="10749" aria-pressed="false">мелодрама</button>
+    </div>
+  </div>
+  <div class="filter-row" style="margin-top:12px">
+    <div class="chips" id="country-chips">
+      <button class="chip" data-country="" aria-pressed="true">Все страны</button>
+      <button class="chip" data-country="US" aria-pressed="false">США</button><button class="chip" data-country="JP" aria-pressed="false">Япония</button><button class="chip" data-country="GB" aria-pressed="false">Великобритания</button><button class="chip" data-country="KR" aria-pressed="false">Южная Корея</button><button class="chip" data-country="MX" aria-pressed="false">Мексика</button><button class="chip" data-country="FR" aria-pressed="false">Франция</button><button class="chip" data-country="TH" aria-pressed="false">Таиланд</button><button class="chip" data-country="CA" aria-pressed="false">Канада</button><button class="chip" data-country="CN" aria-pressed="false">Китай</button>
+    </div>
+  </div>
+  <div class="filter-row" style="margin-top:12px">
+    <div class="chips">
+      <button class="chip" data-flag="rating8" aria-pressed="false">Рейтинг 8+</button>
+      <button class="chip" data-flag="new" aria-pressed="false">Новые серии</button>
+      <label class="search search-slim">
+        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="m13.2 13.2 3.3 3.3"/></svg>
+        <input type="search" id="q" placeholder="Поиск по названию" aria-label="Поиск">
+      </label>
+    </div>
+  </div>
+  <div class="filter-status"><span id="found"></span></div>
+</div>
+  <div class="grid-posters" id="grid"><a class="card" href="tv/istinnoe-obrazovanie.html" data-kind="tv" data-anime="0" data-animation="0" data-country="KR" data-lang="ko" data-vote="9.4" data-votes="941" data-year="2026" data-date="2026-06-05" data-genres="10759,18,35" data-title="истинное образование">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/k5XFkspikw2fGcXZ1GwbTRhzJHy.jpg" alt="Истинное образование" loading="lazy">
+    <span class="badge-rate">9.4 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Истинное образование</div>
+  <div class="card-meta">2026 · Сериал · Боевик и Приключения</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">Сериал завершён</span></span></div>
+</a><a class="card" href="movie/betmen-padenie-rytsarya-chast-pervaya.html" data-kind="movie" data-anime="0" data-animation="1" data-country="US" data-lang="en" data-vote="9.2" data-votes="403" data-year="2026" data-date="2026-06-23" data-genres="16,28,12,18" data-title="бэтмен: падение рыцаря. часть первая">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/7ESgU028QbgZd8wdKYaE3NXlf4P.jpg" alt="Бэтмен: Падение рыцаря. Часть первая" loading="lazy">
+    <span class="badge-rate">9.2 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Бэтмен: Падение рыцаря. Часть первая</div>
+  <div class="card-meta">2026 · Фильм · мультфильм</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="tv/rancho-dattonov.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="9.1" data-votes="608" data-year="2026" data-date="2026-05-15" data-genres="37,18" data-title="ранчо даттонов">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/mmxsx98NnY56CvataUqM1ktt14O.jpg" alt="Ранчо Даттонов" loading="lazy">
+    <span class="badge-rate">9.1 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Ранчо Даттонов</div>
+  <div class="card-meta">2026 · Сериал · вестерн</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t muted">Returning Series</span></span></div>
+</a><a class="card" href="movie/legenda-ob-aange-posledniy-mag-vozdukha.html" data-kind="movie" data-anime="0" data-animation="1" data-country="US" data-lang="en" data-vote="9.1" data-votes="1216" data-year="2026" data-date="2026-07-24" data-genres="16,12,14,28" data-title="легенда об аанге: последний маг воздуха">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/cypsdXImFEVN3NOlckf9ZVrBY6M.jpg" alt="Легенда об Аанге: Последний маг воздуха" loading="lazy">
+    <span class="badge-rate">9.1 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Легенда об Аанге: Последний маг воздуха</div>
+  <div class="card-meta">2026 · Фильм · мультфильм</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="tv/vne-kampusa.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="8.9" data-votes="871" data-year="2026" data-date="2026-05-13" data-genres="18" data-title="вне кампуса">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/etw1XngIUqHeTeIPloS9B8w9xPi.jpg" alt="Вне кампуса" loading="lazy">
+    <span class="badge-rate">8.9 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Вне кампуса</div>
+  <div class="card-meta">2026 · Сериал · драма</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t muted">Returning Series</span></span></div>
+</a><a class="card" href="movie/v-chuzhoy-shkure.html" data-kind="movie" data-anime="0" data-animation="1" data-country="US" data-lang="en" data-vote="8.9" data-votes="2214" data-year="2026" data-date="2026-05-01" data-genres="12,16,10751,14" data-title="в чужой шкуре">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/gl112Rnih0fHcWBIKpVzeW84xov.jpg" alt="В чужой шкуре" loading="lazy">
+    <span class="badge-rate">8.9 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">В чужой шкуре</div>
+  <div class="card-meta">2026 · Фильм · приключения</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="tv/friren-provozhayushchaya-v-posledniy-put.html" data-kind="tv" data-anime="1" data-animation="1" data-country="JP" data-lang="ja" data-vote="8.8" data-votes="981" data-year="2023" data-date="2023-09-29" data-genres="16,10759,18,10765" data-title="фрирен, провожающая в последний путь">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/bxWVzZ6oq5SdUBOcG74IavUlHGd.jpg" alt="Фрирен, провожающая в последний путь" loading="lazy">
+    <span class="badge-rate">8.8 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Фрирен, провожающая в последний путь</div>
+  <div class="card-meta">2023 · Сериал · мультфильм</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t muted">Returning Series</span></span></div>
+</a><a class="card" href="tv/van-pis.html" data-kind="tv" data-anime="1" data-animation="1" data-country="JP" data-lang="ja" data-vote="8.8" data-votes="5569" data-year="1999" data-date="1999-10-20" data-genres="10759,35,16" data-title="ван-пис">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/osRT8GsND3PfhvevsS5DK9px0LI.jpg" alt="Ван-Пис" loading="lazy">
+    <span class="badge-rate">8.8 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Ван-Пис</div>
+  <div class="card-meta">1999 · Сериал · Боевик и Приключения</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t muted">Returning Series</span></span></div>
+</a><a class="card" href="movie/poymat-el-chapo.html" data-kind="movie" data-anime="0" data-animation="0" data-country="MX" data-lang="es" data-vote="8.8" data-votes="850" data-year="2026" data-date="2026-08-21" data-genres="80,28,53" data-title="поймать эль чапо">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/cd6wq3ctMo3eKnZvKeYwoasBhJL.jpg" alt="Поймать Эль Чапо" loading="lazy">
+    <span class="badge-rate">8.8 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Поймать Эль Чапо</div>
+  <div class="card-meta">2026 · Фильм · криминал</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/socias-por-accidente.html" data-kind="movie" data-anime="0" data-animation="0" data-country="MX" data-lang="es" data-vote="8.8" data-votes="391" data-year="2026" data-date="2026-03-12" data-genres="35,10749" data-title="socias por accidente">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/j0CIVzeR7hRAPBPGR54qDZoOQpp.jpg" alt="Socias por accidente" loading="lazy">
+    <span class="badge-rate">8.8 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Socias por accidente</div>
+  <div class="card-meta">2026 · Фильм · комедия</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="tv/rik-i-morti.html" data-kind="tv" data-anime="0" data-animation="1" data-country="US" data-lang="en" data-vote="8.7" data-votes="11432" data-year="2013" data-date="2013-12-02" data-genres="16,35,10765,10759" data-title="рик и морти">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/6D1NA4IMUFI8lBNuCBUlp7eLYDP.jpg" alt="Рик и Морти" loading="lazy">
+    <span class="badge-rate">8.7 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Рик и Морти</div>
+  <div class="card-meta">2013 · Сериал · мультфильм</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t muted">Returning Series</span></span></div>
+</a><a class="card" href="tv/magicheskaya-bitva.html" data-kind="tv" data-anime="1" data-animation="1" data-country="JP" data-lang="ja" data-vote="8.6" data-votes="4673" data-year="2020" data-date="2020-10-03" data-genres="16,10765,10759" data-title="магическая битва">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/gsBwgwaW1YWHrQYbVymarruw1yN.jpg" alt="МАГИЧЕСКАЯ БИТВА" loading="lazy">
+    <span class="badge-rate">8.6 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">МАГИЧЕСКАЯ БИТВА</div>
+  <div class="card-meta">2020 · Сериал · мультфильм</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t muted">Returning Series</span></span></div>
+</a><a class="card" href="movie/moya-lyubimaya-ubiytsa.html" data-kind="movie" data-anime="0" data-animation="0" data-country="TH" data-lang="th" data-vote="8.6" data-votes="305" data-year="2026" data-date="2026-05-06" data-genres="28,18,10749" data-title="моя любимая убийца">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/b1VNnA0ewb6F0hccCpPpXD8c8oT.jpg" alt="Моя любимая убийца" loading="lazy">
+    <span class="badge-rate">8.6 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Моя любимая убийца</div>
+  <div class="card-meta">2026 · Фильм · боевик</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/maykl.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="8.6" data-votes="4443" data-year="2026" data-date="2026-04-22" data-genres="10402,18" data-title="майкл">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/AsPFMI3PhgCsraMq7RmMJwFQh2b.jpg" alt="Майкл" loading="lazy">
+    <span class="badge-rate">8.6 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Майкл</div>
+  <div class="card-meta">2026 · Фильм · музыка</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/proekt-konets-sveta.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="8.6" data-votes="8057" data-year="2026" data-date="2026-03-15" data-genres="878,12" data-title="проект «конец света»">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/lGNWODvZnfiocvegYSw1bYnm6pt.jpg" alt="Проект «Конец света»" loading="lazy">
+    <span class="badge-rate">8.6 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Проект «Конец света»</div>
+  <div class="card-meta">2026 · Фильм · фантастика</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="tv/neveroyatnye-priklyucheniya-dzhodzho.html" data-kind="tv" data-anime="1" data-animation="1" data-country="JP" data-lang="ja" data-vote="8.5" data-votes="1665" data-year="2012" data-date="2012-10-06" data-genres="16,10759,10765" data-title="невероятные приключения джоджо">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/6kG506PdsyuHWnc5OWGl64Kd6XK.jpg" alt="Невероятные приключения ДжоДжо" loading="lazy">
+    <span class="badge-rate">8.5 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Невероятные приключения ДжоДжо</div>
+  <div class="card-meta">2012 · Сериал · мультфильм</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 2 октября 2026</span></span></div>
+</a><a class="card" href="tv/novichok.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="8.5" data-votes="3551" data-year="2018" data-date="2018-10-16" data-genres="80,18,35" data-title="новичок">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/jfxInWjSixQeeyT7oiBvdXjd7HM.jpg" alt="Новичок" loading="lazy">
+    <span class="badge-rate">8.5 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Новичок</div>
+  <div class="card-meta">2018 · Сериал · криминал</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 1 января 2027</span></span></div>
+</a><a class="card" href="tv/gangsterlend.html" data-kind="tv" data-anime="0" data-animation="0" data-country="GB" data-lang="en" data-vote="8.5" data-votes="935" data-year="2025" data-date="2025-03-30" data-genres="80,18" data-title="гангстерленд">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/vuKwmIVw6lClfzOtGzakhl47mjA.jpg" alt="Гангстерленд" loading="lazy">
+    <span class="badge-rate">8.5 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Гангстерленд</div>
+  <div class="card-meta">2025 · Сериал · криминал</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 2 октября 2026</span></span></div>
+</a><a class="card" href="tv/o-moem-pererozhdenii-v-sliz.html" data-kind="tv" data-anime="1" data-animation="1" data-country="JP" data-lang="ja" data-vote="8.4" data-votes="992" data-year="2018" data-date="2018-10-02" data-genres="10759,16,10765,35" data-title="о моём перерождении в слизь">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/dyvUkf3bFFd0tC2yJCJ6rUgeZRO.jpg" alt="О моём перерождении в слизь" loading="lazy">
+    <span class="badge-rate">8.4 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">О моём перерождении в слизь</div>
+  <div class="card-meta">2018 · Сериал · Боевик и Приключения</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t muted">Returning Series</span></span></div>
+</a><a class="card" href="tv/dobro-pozhalovat-v-klass-prevoskhodstva.html" data-kind="tv" data-anime="1" data-animation="1" data-country="JP" data-lang="ja" data-vote="8.4" data-votes="862" data-year="2017" data-date="2017-07-12" data-genres="16,18,9648" data-title="добро пожаловать в класс превосходства">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/q4Fz1mwVBUX8s2oU8JTbSwa8D6D.jpg" alt="Добро пожаловать в класс превосходства" loading="lazy">
+    <span class="badge-rate">8.4 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Добро пожаловать в класс превосходства</div>
+  <div class="card-meta">2017 · Сериал · мультфильм</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t muted">Returning Series</span></span></div>
+</a><a class="card" href="tv/chikago-v-ogne.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="8.4" data-votes="2442" data-year="2012" data-date="2012-10-10" data-genres="18" data-title="чикаго в огне">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/pfz9fm6XOorOFkxmin7tqFMv14g.jpg" alt="Чикаго в огне" loading="lazy">
+    <span class="badge-rate">8.4 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Чикаго в огне</div>
+  <div class="card-meta">2012 · Сериал · драма</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 7 октября 2026</span></span></div>
+</a><a class="card" href="tv/politsiya-chikago.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="8.4" data-votes="2636" data-year="2014" data-date="2014-01-08" data-genres="80,18" data-title="полиция чикаго">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/nMSL6PGiHOKefKWfS2UFV7mOIX4.jpg" alt="Полиция Чикаго" loading="lazy">
+    <span class="badge-rate">8.4 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Полиция Чикаго</div>
+  <div class="card-meta">2014 · Сериал · криминал</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 7 октября 2026</span></span></div>
+</a><a class="card" href="tv/blich.html" data-kind="tv" data-anime="1" data-animation="1" data-country="JP" data-lang="ja" data-vote="8.4" data-votes="2283" data-year="2004" data-date="2004-10-05" data-genres="10759,16,10765" data-title="блич">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/ldLzOgDlAeoX3NgyhFQI1H3MXGk.jpg" alt="Блич" loading="lazy">
+    <span class="badge-rate">8.4 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Блич</div>
+  <div class="card-meta">2004 · Сериал · Боевик и Приключения</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 20 октября 2026</span></span></div>
+</a><a class="card" href="tv/ted-lasso.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="8.4" data-votes="2700" data-year="2020" data-date="2020-08-14" data-genres="18,35" data-title="тед лассо">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/gO2kQUDfZWsvdDetUljaTI6t87i.jpg" alt="Тед Лассо" loading="lazy">
+    <span class="badge-rate">8.4 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Тед Лассо</div>
+  <div class="card-meta">2020 · Сериал · драма</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 6 октября 2026</span></span></div>
+</a><a class="card" href="tv/reinkarnatsiya-bezrabotnogo-istoriya-o-priklyucheniyakh-v-drugom.html" data-kind="tv" data-anime="1" data-animation="1" data-country="JP" data-lang="ja" data-vote="8.4" data-votes="1751" data-year="2021" data-date="2021-01-11" data-genres="10759,16,10765" data-title="реинкарнация безработного: история о приключениях в другом мире">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/bC2DRV5S6BDtW0DmAqN3g3xtLoP.jpg" alt="Реинкарнация безработного: История о приключениях в другом мире" loading="lazy">
+    <span class="badge-rate">8.4 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Реинкарнация безработного: История о приключениях в другом мире</div>
+  <div class="card-meta">2021 · Сериал · Боевик и Приключения</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t muted">Returning Series</span></span></div>
+</a><a class="card" href="tv/fonari.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="8.4" data-votes="473" data-year="2026" data-date="2026-08-16" data-genres="18,9648,10765" data-title="фонари">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/15AkiRpjuBLyS385ycDM5vvB7oI.jpg" alt="Фонари" loading="lazy">
+    <span class="badge-rate">8.4 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Фонари</div>
+  <div class="card-meta">2026 · Сериал · драма</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 4 октября 2026</span></span></div>
+</a><a class="card" href="movie/mstitel.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="8.4" data-votes="603" data-year="2026" data-date="2026-02-20" data-genres="28,53" data-title="мститель">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/A2x5A6weMyB75Dua5BQCXT3lqkg.jpg" alt="Мститель" loading="lazy">
+    <span class="badge-rate">8.4 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Мститель</div>
+  <div class="card-meta">2026 · Фильм · боевик</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/neobychayno-umnye-sozdaniya.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="8.4" data-votes="936" data-year="2026" data-date="2026-05-07" data-genres="18,9648" data-title="необычайно умные создания">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/3odwuuWv6v7RQpI4GtJdxDVlice.jpg" alt="Необычайно умные создания" loading="lazy">
+    <span class="badge-rate">8.4 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Необычайно умные создания</div>
+  <div class="card-meta">2026 · Фильм · драма</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="tv/superchudaki.html" data-kind="tv" data-anime="0" data-animation="0" data-country="KR" data-lang="ko" data-vote="8.8" data-votes="272" data-year="2026" data-date="2026-05-15" data-genres="10759,35,10765,18" data-title="суперчудаки">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/h9nT8T6itFP9sbpXjzMT9x0Murl.jpg" alt="Суперчудаки" loading="lazy">
+    <span class="badge-rate">8.8 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Суперчудаки</div>
+  <div class="card-meta">2026 · Сериал · Боевик и Приключения</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">Сериал завершён</span></span></div>
+</a><a class="card" href="tv/myslit-kak-prestupnik.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="8.3" data-votes="4179" data-year="2005" data-date="2005-09-22" data-genres="80,18,9648" data-title="мыслить как преступник">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/AuQnXLFaCbhmE7gOPGWfJ9onzC.jpg" alt="Мыслить как преступник" loading="lazy">
+    <span class="badge-rate">8.3 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Мыслить как преступник</div>
+  <div class="card-meta">2005 · Сериал · криминал</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t muted">Returning Series</span></span></div>
+</a><a class="card" href="tv/spetsnaz-lvitsa.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="8.3" data-votes="1650" data-year="2023" data-date="2023-07-23" data-genres="18,10768" data-title="спецназ: львица">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/yWOwT5xlwdIsboOa3f20jpfxaQK.jpg" alt="Спецназ: Львица" loading="lazy">
+    <span class="badge-rate">8.3 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Спецназ: Львица</div>
+  <div class="card-meta">2023 · Сериал · драма</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t muted">Returning Series</span></span></div>
+</a><a class="card" href="tv/devushka-na-chas.html" data-kind="tv" data-anime="1" data-animation="1" data-country="JP" data-lang="ja" data-vote="8.3" data-votes="996" data-year="2020" data-date="2020-07-11" data-genres="16,35" data-title="девушка на час">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/wyOT9KGEZLHzPFVB0N8PWV1c043.jpg" alt="Девушка на час" loading="lazy">
+    <span class="badge-rate">8.3 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Девушка на час</div>
+  <div class="card-meta">2020 · Сериал · мультфильм</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t muted">Returning Series</span></span></div>
+</a><a class="card" href="tv/dobro-pozhalovat-v-ad-iruma.html" data-kind="tv" data-anime="1" data-animation="1" data-country="JP" data-lang="ja" data-vote="8.3" data-votes="309" data-year="2019" data-date="2019-10-05" data-genres="16,35,10765" data-title="добро пожаловать в ад, ирума!">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/7mQ1j9jiXdJvoQtpaKZQ6nVBsZT.jpg" alt="Добро пожаловать в ад, Ирума!" loading="lazy">
+    <span class="badge-rate">8.3 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Добро пожаловать в ад, Ирума!</div>
+  <div class="card-meta">2019 · Сериал · мультфильм</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">Сериал завершён</span></span></div>
+</a><a class="card" href="movie/karatel-poslednee-ubiystvo.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="8.3" data-votes="2281" data-year="2026" data-date="2026-05-12" data-genres="28,18,80" data-title="каратель: последнее убийство">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/nLFfNeftCJRK1PXebnSymYX3Vhf.jpg" alt="Каратель: Последнее убийство" loading="lazy">
+    <span class="badge-rate">8.3 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Каратель: Последнее убийство</div>
+  <div class="card-meta">2026 · Фильм · боевик</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/istoriya-igrushek-5.html" data-kind="movie" data-anime="0" data-animation="1" data-country="US" data-lang="en" data-vote="8.3" data-votes="2424" data-year="2026" data-date="2026-06-17" data-genres="16,10751,35,12" data-title="история игрушек 5">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/84igQj0DU3TgPrtQ7bHXHCio1sV.jpg" alt="История игрушек 5" loading="lazy">
+    <span class="badge-rate">8.3 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">История игрушек 5</div>
+  <div class="card-meta">2026 · Фильм · мультфильм</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/soobshcheniya-dlya-izabel.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="8.3" data-votes="946" data-year="2026" data-date="2026-06-20" data-genres="10749,35,18" data-title="сообщения для изабель">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/tS2zXRG1X04brQKrkCxR0pevGc5.jpg" alt="Сообщения для Изабель" loading="lazy">
+    <span class="badge-rate">8.3 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Сообщения для Изабель</div>
+  <div class="card-meta">2026 · Фильм · мелодрама</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="tv/dlya-tebya-bessmertnyy.html" data-kind="tv" data-anime="1" data-animation="1" data-country="JP" data-lang="ja" data-vote="8.2" data-votes="346" data-year="2021" data-date="2021-04-12" data-genres="16,10759,10765" data-title="для тебя, бессмертный">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/6amuSIbJZYvoPYquA0T6uNSerVz.jpg" alt="Для тебя, Бессмертный" loading="lazy">
+    <span class="badge-rate">8.2 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Для тебя, Бессмертный</div>
+  <div class="card-meta">2021 · Сериал · мультфильм</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">Сериал завершён</span></span></div>
+</a><a class="card" href="tv/adskiy-ray.html" data-kind="tv" data-anime="1" data-animation="1" data-country="JP" data-lang="ja" data-vote="8.2" data-votes="521" data-year="2023" data-date="2023-04-01" data-genres="16,10759,10765" data-title="адский рай">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/75OaIA4S8ZKFVNmKnTCgAcNqwlC.jpg" alt="Адский рай" loading="lazy">
+    <span class="badge-rate">8.2 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Адский рай</div>
+  <div class="card-meta">2023 · Сериал · мультфильм</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">Сериал завершён</span></span></div>
+</a><a class="card" href="tv/anatomiya-strasti.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="8.2" data-votes="11065" data-year="2005" data-date="2005-03-27" data-genres="18" data-title="анатомия страсти">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/9LIuxUjJ2Cc4DMXFRN2ReCMBKDD.jpg" alt="Анатомия страсти" loading="lazy">
+    <span class="badge-rate">8.2 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Анатомия страсти</div>
+  <div class="card-meta">2005 · Сериал · драма</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 15 октября 2026</span></span></div>
+</a><a class="card" href="tv/ukrytie.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="8.2" data-votes="2739" data-year="2023" data-date="2023-05-04" data-genres="10765,18" data-title="укрытие">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/gRkvq6FgiGRdtCwhVIozaUqhoDL.jpg" alt="Укрытие" loading="lazy">
+    <span class="badge-rate">8.2 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Укрытие</div>
+  <div class="card-meta">2023 · Сериал · НФ и Фэнтези</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 8 июля 2027</span></span></div>
+</a><a class="card" href="movie/obsessiya.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="8.2" data-votes="5839" data-year="2026" data-date="2026-05-13" data-genres="27,53" data-title="обсессия">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/cdRHtfzxbpjxD5yOyFrRummb0yO.jpg" alt="Обсессия" loading="lazy">
+    <span class="badge-rate">8.2 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Обсессия</div>
+  <div class="card-meta">2026 · Фильм · ужасы</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/zhivaya-yarost.html" data-kind="movie" data-anime="0" data-animation="0" data-country="HK" data-lang="zh" data-vote="8.2" data-votes="781" data-year="2026" data-date="2026-06-10" data-genres="28,80,53" data-title="живая ярость">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/bVeGiwpYRIwSxBDREyOWjzcxN0r.jpg" alt="Живая ярость" loading="lazy">
+    <span class="badge-rate">8.2 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Живая ярость</div>
+  <div class="card-meta">2026 · Фильм · боевик</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/super-mario-galakticheskoe-kino.html" data-kind="movie" data-anime="0" data-animation="1" data-country="JP" data-lang="en" data-vote="8.2" data-votes="3744" data-year="2026" data-date="2026-04-01" data-genres="10751,35,12,14,16" data-title="супер марио: галактическое кино">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/qKKstbeafWIjmZqTwAqt3brDNs1.jpg" alt="Супер Марио: Галактическое кино" loading="lazy">
+    <span class="badge-rate">8.2 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Супер Марио: Галактическое кино</div>
+  <div class="card-meta">2026 · Фильм · семейный</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="tv/ledi-bag-i-super-kot.html" data-kind="tv" data-anime="0" data-animation="1" data-country="FR" data-lang="fr" data-vote="8.1" data-votes="4681" data-year="2015" data-date="2015-10-19" data-genres="10759,16,10762" data-title="леди баг и супер-кот">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/pJKWBSVPebRcyLe3pM5awvMioy8.jpg" alt="Леди Баг и Супер-кот" loading="lazy">
+    <span class="badge-rate">8.1 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Леди Баг и Супер-кот</div>
+  <div class="card-meta">2015 · Сериал · Боевик и Приключения</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 4 октября 2026</span></span></div>
+</a><a class="card" href="tv/re-zero-zhizn-s-nulya-v-alternativnom-mire.html" data-kind="tv" data-anime="1" data-animation="1" data-country="JP" data-lang="ja" data-vote="8.1" data-votes="793" data-year="2016" data-date="2016-04-04" data-genres="16,9648,10759,10765" data-title="re:zero – жизнь с нуля в альтернативном мире">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/6xrfeaPTFUVTbV3stmDD5HLLJDN.jpg" alt="Re:ZERO – Жизнь с нуля в альтернативном мире" loading="lazy">
+    <span class="badge-rate">8.1 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Re:ZERO – Жизнь с нуля в альтернативном мире</div>
+  <div class="card-meta">2016 · Сериал · мультфильм</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 30 сентября 2026</span></span></div>
+</a><a class="card" href="tv/amerikanskaya-istoriya-uzhasov.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="8.1" data-votes="6198" data-year="2011" data-date="2011-10-05" data-genres="18,9648,10765" data-title="американская история ужасов">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/gj2dFFgEHdhxqSBpD2oPyo4YmPD.jpg" alt="Американская история ужасов" loading="lazy">
+    <span class="badge-rate">8.1 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Американская история ужасов</div>
+  <div class="card-meta">2011 · Сериал · драма</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 1 октября 2026</span></span></div>
+</a><a class="card" href="tv/richer.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="8.1" data-votes="3431" data-year="2022" data-date="2022-02-03" data-genres="10759,80" data-title="ричер">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/zLqlW0rXmHwOZRhmOjeod14sGiT.jpg" alt="Ричер" loading="lazy">
+    <span class="badge-rate">8.1 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Ричер</div>
+  <div class="card-meta">2022 · Сериал · Боевик и Приключения</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t muted">Returning Series</span></span></div>
+</a><a class="card" href="movie/koloniya.html" data-kind="movie" data-anime="0" data-animation="0" data-country="KR" data-lang="ko" data-vote="8.1" data-votes="969" data-year="2026" data-date="2026-05-21" data-genres="27,28,878" data-title="колония">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/uQIlX1zpvM7FAKRbeyLDJN3zxrX.jpg" alt="Колония" loading="lazy">
+    <span class="badge-rate">8.1 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Колония</div>
+  <div class="card-meta">2026 · Фильм · ужасы</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/gipoteza-lyubvi.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="8.1" data-votes="374" data-year="2026" data-date="2026-09-23" data-genres="10749,35" data-title="гипотеза любви">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/kz4Rtf6eSc3dEl29Vk1G3QKoND6.jpg" alt="Гипотеза любви" loading="lazy">
+    <span class="badge-rate">8.1 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Гипотеза любви</div>
+  <div class="card-meta">2026 · Фильм · мелодрама</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/pryguny.html" data-kind="movie" data-anime="0" data-animation="1" data-country="US" data-lang="en" data-vote="8.1" data-votes="2384" data-year="2026" data-date="2026-03-04" data-genres="12,16,35,10751,878" data-title="прыгуны">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/4eqr5LZH122BiU9hboXHZxX8bBl.jpg" alt="Прыгуны" loading="lazy">
+    <span class="badge-rate">8.1 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Прыгуны</div>
+  <div class="card-meta">2026 · Фильм · приключения</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="tv/detektiv-konan.html" data-kind="tv" data-anime="1" data-animation="1" data-country="JP" data-lang="ja" data-vote="8.0" data-votes="791" data-year="1996" data-date="1996-01-08" data-genres="16,80,9648,35" data-title="детектив конан">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/gW14n6xxONXrya8CIDhRe5Ada7U.jpg" alt="Детектив Конан" loading="lazy">
+    <span class="badge-rate">8.0 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Детектив Конан</div>
+  <div class="card-meta">1996 · Сериал · мультфильм</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 3 октября 2026</span></span></div>
+</a><a class="card" href="tv/medlennye-loshadi.html" data-kind="tv" data-anime="0" data-animation="0" data-country="GB" data-lang="en" data-vote="8.0" data-votes="1005" data-year="2022" data-date="2022-04-01" data-genres="80,18,9648" data-title="медленные лошади">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/fcXBCozEg3rCc9h8RPypLvnPSzU.jpg" alt="Медленные лошади" loading="lazy">
+    <span class="badge-rate">8.0 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Медленные лошади</div>
+  <div class="card-meta">2022 · Сериал · криминал</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 30 сентября 2026</span></span></div>
+</a><a class="card" href="tv/zakon-i-poryadok-spetsialnyy-korpus.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="8.0" data-votes="4362" data-year="1999" data-date="1999-09-20" data-genres="80,18,9648" data-title="закон и порядок. специальный корпус">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/1GLIkXaLtgaRooXLSltTdp8oShL.jpg" alt="Закон и порядок. Специальный корпус" loading="lazy">
+    <span class="badge-rate">8.0 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Закон и порядок. Специальный корпус</div>
+  <div class="card-meta">1999 · Сериал · криминал</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 8 октября 2026</span></span></div>
+</a><a class="card" href="tv/simpsony.html" data-kind="tv" data-anime="0" data-animation="1" data-country="US" data-lang="en" data-vote="8.0" data-votes="11040" data-year="1989" data-date="1989-12-17" data-genres="16,35" data-title="симпсоны">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/171yRAHGCziNjtO53sEil1PH64v.jpg" alt="Симпсоны" loading="lazy">
+    <span class="badge-rate">8.0 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Симпсоны</div>
+  <div class="card-meta">1989 · Сериал · мультфильм</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 4 октября 2026</span></span></div>
+</a><a class="card" href="movie/meydey.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="8.0" data-votes="858" data-year="2026" data-date="2026-09-03" data-genres="28,35" data-title="мэйдэй">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/tUHzcIOt5miEdgDyV6PJdFNTp3N.jpg" alt="Мэйдэй" loading="lazy">
+    <span class="badge-rate">8.0 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Мэйдэй</div>
+  <div class="card-meta">2026 · Фильм · боевик</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/odisseya.html" data-kind="movie" data-anime="0" data-animation="0" data-country="GB" data-lang="en" data-vote="8.0" data-votes="3977" data-year="2026" data-date="2026-07-15" data-genres="12,28,14" data-title="одиссея">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/n7NR7SH7CyiiF70yN96r3d1jWr0.jpg" alt="Одиссея" loading="lazy">
+    <span class="badge-rate">8.0 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Одиссея</div>
+  <div class="card-meta">2026 · Фильм · приключения</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/goat-mechtay-po-krupnomu.html" data-kind="movie" data-anime="0" data-animation="1" data-country="US" data-lang="en" data-vote="8.0" data-votes="1106" data-year="2026" data-date="2026-02-11" data-genres="16,35,10751" data-title="goat: мечтай по-крупному">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/4WQ56hzt2M0coLGVMPwsoLzZZUE.jpg" alt="Goat: Мечтай по-крупному" loading="lazy">
+    <span class="badge-rate">8.0 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Goat: Мечтай по-крупному</div>
+  <div class="card-meta">2026 · Фильм · мультфильм</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="tv/fbr.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="7.9" data-votes="951" data-year="2018" data-date="2018-09-25" data-genres="80,10759,18" data-title="фбр">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/s5UpIET8YeVa8gI3r78F0h98UnF.jpg" alt="ФБР" loading="lazy">
+    <span class="badge-rate">7.9 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">ФБР</div>
+  <div class="card-meta">2018 · Сериал · криминал</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 5 октября 2026</span></span></div>
+</a><a class="card" href="movie/sledstvie-vedut-ovechki.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="7.9" data-votes="1734" data-year="2026" data-date="2026-04-30" data-genres="35,10751,9648" data-title="следствие ведут овечки">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/cArYRS41NKc8kEJXrGZBWCmUmBG.jpg" alt="Следствие ведут овечки" loading="lazy">
+    <span class="badge-rate">7.9 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Следствие ведут овечки</div>
+  <div class="card-meta">2026 · Фильм · комедия</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/chelovek-pauk-novyy-den.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="7.9" data-votes="2949" data-year="2026" data-date="2026-07-29" data-genres="878,28,12" data-title="человек-паук: новый день">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/pK8CH9JxrgX2ZIq3WclTwnX0cCL.jpg" alt="Человек-паук: Новый день" loading="lazy">
+    <span class="badge-rate">7.9 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Человек-паук: Новый день</div>
+  <div class="card-meta">2026 · Фильм · фантастика</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/ubezhishche.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="7.8" data-votes="1919" data-year="2026" data-date="2026-01-28" data-genres="28,80,53" data-title="убежище">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/yHwVIhzBYWzUpwOmOTT3ijWj1kS.jpg" alt="Убежище" loading="lazy">
+    <span class="badge-rate">7.8 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Убежище</div>
+  <div class="card-meta">2026 · Фильм · боевик</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/mortal-kombat-2.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="7.8" data-votes="2642" data-year="2026" data-date="2026-05-06" data-genres="28,14,12" data-title="мортал комбат 2">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/4WgJ5Dk0JhPdCdJkwHNVyJyQYdH.jpg" alt="Мортал Комбат 2" loading="lazy">
+    <span class="badge-rate">7.8 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Мортал Комбат 2</div>
+  <div class="card-meta">2026 · Фильм · боевик</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/napominanie-o-nem.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="7.8" data-votes="426" data-year="2026" data-date="2026-03-11" data-genres="10749,18" data-title="напоминание о нём">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/ifJ1gPGtkGZIeAQs9UxoRXCcS31.jpg" alt="Напоминание о нём" loading="lazy">
+    <span class="badge-rate">7.8 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Напоминание о нём</div>
+  <div class="card-meta">2026 · Фильм · мелодрама</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/mumiya.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="7.8" data-votes="2732" data-year="2026" data-date="2026-04-15" data-genres="27,9648" data-title="мумия">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/vOyM4rebbIan7wANnFyCKr460mS.jpg" alt="Мумия" loading="lazy">
+    <span class="badge-rate">7.8 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Мумия</div>
+  <div class="card-meta">2026 · Фильм · ужасы</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/zloveshchie-mertvetsy-peklo.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="7.7" data-votes="1621" data-year="2026" data-date="2026-07-07" data-genres="27" data-title="зловещие мертвецы: пекло">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/nbQgIssZPp1WsX1BF1OK7rBKe98.jpg" alt="Зловещие мертвецы: Пекло" loading="lazy">
+    <span class="badge-rate">7.7 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Зловещие мертвецы: Пекло</div>
+  <div class="card-meta">2026 · Фильм · ужасы</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/davlenie.html" data-kind="movie" data-anime="0" data-animation="0" data-country="GB" data-lang="en" data-vote="7.7" data-votes="477" data-year="2026" data-date="2026-05-28" data-genres="53,36,10752" data-title="давление">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/xYLbAshji6VK0vQjtLZg2E9bea.jpg" alt="Давление" loading="lazy">
+    <span class="badge-rate">7.7 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Давление</div>
+  <div class="card-meta">2026 · Фильм · триллер</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="tv/zhena-printsa-xxi-veka.html" data-kind="tv" data-anime="0" data-animation="0" data-country="KR" data-lang="ko" data-vote="9.0" data-votes="217" data-year="2026" data-date="2026-04-10" data-genres="35,18" data-title="жена принца xxi века">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/4EDKW5nyVYmTvqU3AV6aRMrIkFU.jpg" alt="Жена принца XXI века" loading="lazy">
+    <span class="badge-rate">9.0 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Жена принца XXI века</div>
+  <div class="card-meta">2026 · Сериал · комедия</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">Сериал завершён</span></span></div>
+</a><a class="card" href="tv/morskaya-politsiya-spetsotdel.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="7.6" data-votes="2579" data-year="2003" data-date="2003-09-23" data-genres="80,18,10759" data-title="морская полиция: спецотдел">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/4ltafNQAjz9jhZ4xPN3eLGPD5P8.jpg" alt="Морская полиция: Спецотдел" loading="lazy">
+    <span class="badge-rate">7.6 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Морская полиция: Спецотдел</div>
+  <div class="card-meta">2003 · Сериал · криминал</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 6 октября 2026</span></span></div>
+</a><a class="card" href="movie/khitryy-koyot.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="7.6" data-votes="580" data-year="2026" data-date="2026-08-17" data-genres="35,12,10751" data-title="хитрый койот">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/gwCwmTk2EfDccd4RtIPsWEwzd1r.jpg" alt="Хитрый Койот" loading="lazy">
+    <span class="badge-rate">7.6 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Хитрый Койот</div>
+  <div class="card-meta">2026 · Фильм · комедия</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/gryaznye-dengi.html" data-kind="movie" data-anime="0" data-animation="0" data-country="GB" data-lang="en" data-vote="7.6" data-votes="1053" data-year="2026" data-date="2026-05-13" data-genres="28,53" data-title="грязные деньги">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/eX68co76w7wunCRunji7kyglqTG.jpg" alt="Грязные деньги" loading="lazy">
+    <span class="badge-rate">7.6 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Грязные деньги</div>
+  <div class="card-meta">2026 · Фильм · боевик</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/minony-i-monstry.html" data-kind="movie" data-anime="0" data-animation="1" data-country="US" data-lang="en" data-vote="7.6" data-votes="1200" data-year="2026" data-date="2026-06-24" data-genres="12,16,35,10751,14" data-title="миньоны и монстры">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/kuVqoYoUnlL9OLhGfobqMRYxVIT.jpg" alt="Миньоны и монстры" loading="lazy">
+    <span class="badge-rate">7.6 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Миньоны и монстры</div>
+  <div class="card-meta">2026 · Фильм · приключения</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/nastroyshchik.html" data-kind="movie" data-anime="0" data-animation="0" data-country="CA" data-lang="en" data-vote="7.6" data-votes="500" data-year="2026" data-date="2026-05-21" data-genres="80,18,53" data-title="настройщик">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/7oNxg17JawXBMdkuSo7hpThhTZF.jpg" alt="Настройщик" loading="lazy">
+    <span class="badge-rate">7.6 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Настройщик</div>
+  <div class="card-meta">2026 · Фильм · криминал</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/mandalorets-i-grogu.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="7.5" data-votes="1757" data-year="2026" data-date="2026-05-20" data-genres="28,12,878" data-title="мандалорец и грогу">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/tNap97mpnj63cQ5dXnCDYWKdUbi.jpg" alt="Мандалорец и Грогу" loading="lazy">
+    <span class="badge-rate">7.5 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Мандалорец и Грогу</div>
+  <div class="card-meta">2026 · Фильм · боевик</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/den-razoblacheniya.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="7.5" data-votes="3487" data-year="2026" data-date="2026-06-10" data-genres="878,53" data-title="день разоблачения">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/rwsWNNJKqLdN0ymCPx1yJagMVi.jpg" alt="День разоблачения" loading="lazy">
+    <span class="badge-rate">7.5 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">День разоблачения</div>
+  <div class="card-meta">2026 · Фильм · фантастика</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/ya-idu-iskat-2.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="7.5" data-votes="1681" data-year="2026" data-date="2026-03-19" data-genres="27,35" data-title="я иду искать 2">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/tlqqwUXe4uK3hqmghtYSir1i80O.jpg" alt="Я иду искать 2" loading="lazy">
+    <span class="badge-rate">7.5 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Я иду искать 2</div>
+  <div class="card-meta">2026 · Фильм · ужасы</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="tv/mnogozhenets.html" data-kind="tv" data-anime="0" data-animation="0" data-country="ZA" data-lang="zu" data-vote="8.9" data-votes="211" data-year="2026" data-date="2026-06-12" data-genres="18,10766" data-title="многоженец">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/unauZrKoQBBVKUuV66tlZvQWM1w.jpg" alt="Многоженец" loading="lazy">
+    <span class="badge-rate">8.9 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Многоженец</div>
+  <div class="card-meta">2026 · Сериал · драма</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t muted">Returning Series</span></span></div>
+</a><a class="card" href="tv/korolevskie-gonki-rupola.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="7.5" data-votes="293" data-year="2009" data-date="2009-02-02" data-genres="10764" data-title="королевские гонки рупола">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/qCfylkzWUdIaXPd5Np57Tkd5QKz.jpg" alt="Королевские гонки РуПола" loading="lazy">
+    <span class="badge-rate">7.5 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Королевские гонки РуПола</div>
+  <div class="card-meta">2009 · Сериал · Реалити-шоу</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t muted">Returning Series</span></span></div>
+</a><a class="card" href="tv/griffiny.html" data-kind="tv" data-anime="0" data-animation="1" data-country="US" data-lang="en" data-vote="7.4" data-votes="5125" data-year="1999" data-date="1999-01-31" data-genres="16,35" data-title="гриффины">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/9zdZeAxt7Xxu5omPufFu1TMl8BP.jpg" alt="Гриффины" loading="lazy">
+    <span class="badge-rate">7.4 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Гриффины</div>
+  <div class="card-meta">1999 · Сериал · мультфильм</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t muted">Returning Series</span></span></div>
+</a><a class="card" href="movie/moana.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="7.4" data-votes="815" data-year="2026" data-date="2026-07-08" data-genres="10751,14,35,12" data-title="моана">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/s7o0gbvgpjwb8S0Uc5QaEdwJntb.jpg" alt="Моана" loading="lazy">
+    <span class="badge-rate">7.4 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Моана</div>
+  <div class="card-meta">2026 · Фильм · семейный</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="tv/doraemon.html" data-kind="tv" data-anime="1" data-animation="1" data-country="JP" data-lang="ja" data-vote="8.1" data-votes="248" data-year="2005" data-date="2005-04-22" data-genres="10759,16,35,10765,10762,10751" data-title="дораэмон">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/9YqdMXlPTQGLIG67vqZdsPdPC4T.jpg" alt="Дораэмон" loading="lazy">
+    <span class="badge-rate">8.1 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Дораэмон</div>
+  <div class="card-meta">2005 · Сериал · Боевик и Приключения</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 3 октября 2026</span></span></div>
+</a><a class="card" href="movie/klinki-khraniteley.html" data-kind="movie" data-anime="0" data-animation="0" data-country="CN" data-lang="zh" data-vote="8.2" data-votes="241" data-year="2026" data-date="2026-02-17" data-genres="28,12" data-title="клинки хранителей">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/mpxVTWARSk6TQVYXOkeMLFrDPew.jpg" alt="Клинки хранителей" loading="lazy">
+    <span class="badge-rate">8.2 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Клинки хранителей</div>
+  <div class="card-meta">2026 · Фильм · боевик</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="tv/zakon-i-poryadok.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="7.3" data-votes="729" data-year="1990" data-date="1990-09-13" data-genres="80,18" data-title="закон и порядок">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/6IfLWdBXDuktBo8oVjiWxodSHCV.jpg" alt="Закон и порядок" loading="lazy">
+    <span class="badge-rate">7.3 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Закон и порядок</div>
+  <div class="card-meta">1990 · Сериал · криминал</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 8 октября 2026</span></span></div>
+</a><a class="card" href="movie/myatezh.html" data-kind="movie" data-anime="0" data-animation="0" data-country="GB" data-lang="en" data-vote="7.3" data-votes="715" data-year="2026" data-date="2026-08-19" data-genres="28,53" data-title="мятеж">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/opOHbNmV0VPOugSBxrRQKmPgfZL.jpg" alt="Мятеж" loading="lazy">
+    <span class="badge-rate">7.3 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Мятеж</div>
+  <div class="card-meta">2026 · Фильм · боевик</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/obitel-zla.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="7.3" data-votes="619" data-year="2026" data-date="2026-09-16" data-genres="27,878,12" data-title="обитель зла">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/vLl5tcuabARqGBefccSsYAYXdgA.jpg" alt="Обитель зла" loading="lazy">
+    <span class="badge-rate">7.3 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Обитель зла</div>
+  <div class="card-meta">2026 · Фильм · ужасы</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="tv/sredi-nas.html" data-kind="tv" data-anime="0" data-animation="1" data-country="US" data-lang="en" data-vote="9.0" data-votes="197" data-year="2026" data-date="2026-06-05" data-genres="16,35,9648,10765" data-title="среди нас">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/b1Iicvevtup9jAzXVCNMnjSN2ti.jpg" alt="Среди нас" loading="lazy">
+    <span class="badge-rate">9.0 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Среди нас</div>
+  <div class="card-meta">2026 · Сериал · мультфильм</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t muted">Returning Series</span></span></div>
+</a><a class="card" href="tv/100-devushek-kotorye-ochen-ochen-ochen-ochen-ochen-silno-tebya-l.html" data-kind="tv" data-anime="1" data-animation="1" data-country="JP" data-lang="ja" data-vote="8.3" data-votes="225" data-year="2023" data-date="2023-10-08" data-genres="16,35" data-title="100 девушек, которые очень-очень-очень-очень-очень сильно тебя любят">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/ztTCciRqfx8XsezhBM0fA3xIjjL.jpg" alt="100 девушек, которые очень-очень-очень-очень-очень сильно тебя любят" loading="lazy">
+    <span class="badge-rate">8.3 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">100 девушек, которые очень-очень-очень-очень-очень сильно тебя любят</div>
+  <div class="card-meta">2023 · Сериал · мультфильм</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">Сериал завершён</span></span></div>
+</a><a class="card" href="movie/na-krayu-ouk-strit.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="7.1" data-votes="1706" data-year="2026" data-date="2026-08-12" data-genres="878,9648,53" data-title="на краю оук-стрит">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/5jhArZFrQIqEuh4ZNuBaQsnEy7s.jpg" alt="На краю Оук-стрит" loading="lazy">
+    <span class="badge-rate">7.1 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">На краю Оук-стрит</div>
+  <div class="card-meta">2026 · Фильм · фантастика</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="tv/shou-grema-nortona.html" data-kind="tv" data-anime="0" data-animation="0" data-country="GB" data-lang="en" data-vote="7.2" data-votes="290" data-year="2007" data-date="2007-02-22" data-genres="35,10767" data-title="шоу грэма нортона">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/vrbqaBXB8AALynQzpWz6JdCPEJS.jpg" alt="Шоу Грэма Нортона" loading="lazy">
+    <span class="badge-rate">7.2 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Шоу Грэма Нортона</div>
+  <div class="card-meta">2007 · Сериал · комедия</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 2 октября 2026</span></span></div>
+</a><a class="card" href="movie/budesh-moey-devushkoy.html" data-kind="movie" data-anime="0" data-animation="0" data-country="MX" data-lang="es" data-vote="8.6" data-votes="203" data-year="2026" data-date="2026-02-12" data-genres="35,10749" data-title="будешь моей девушкой?">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/oscW8xV8EhRYj7iAhyVlBohKqxo.jpg" alt="Будешь моей девушкой?" loading="lazy">
+    <span class="badge-rate">8.6 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Будешь моей девушкой?</div>
+  <div class="card-meta">2026 · Фильм · комедия</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="tv/ulitsa-sezam.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="7.1" data-votes="295" data-year="1969" data-date="1969-11-10" data-genres="10762,35" data-title="улица сезам">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/14k9BfZ2p4rQBMeJ5crKTfUZVwD.jpg" alt="Улица Сезам" loading="lazy">
+    <span class="badge-rate">7.1 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Улица Сезам</div>
+  <div class="card-meta">1969 · Сериал · Детский</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t muted">Returning Series</span></span></div>
+</a><a class="card" href="tv/begushchiy-chelovek.html" data-kind="tv" data-anime="0" data-animation="0" data-country="KR" data-lang="ko" data-vote="8.2" data-votes="220" data-year="2010" data-date="2010-07-11" data-genres="35,10764" data-title="бегущий человек">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/15SMnscZqd7HZ0bzruatOcKUlOV.jpg" alt="Бегущий человек" loading="lazy">
+    <span class="badge-rate">8.2 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Бегущий человек</div>
+  <div class="card-meta">2010 · Сериал · комедия</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 4 октября 2026</span></span></div>
+</a><a class="card" href="tv/amerikanskiy-papasha.html" data-kind="tv" data-anime="0" data-animation="1" data-country="US" data-lang="en" data-vote="7.0" data-votes="2457" data-year="2005" data-date="2005-02-06" data-genres="16,35" data-title="американский папаша!">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/6Oz0DW4H6f1LH0UWsdjVeZyalDH.jpg" alt="Американский папаша!" loading="lazy">
+    <span class="badge-rate">7.0 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Американский папаша!</div>
+  <div class="card-meta">2005 · Сериал · мультфильм</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t muted">Returning Series</span></span></div>
+</a><a class="card" href="movie/zakulise-realnosti.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="7.0" data-votes="3506" data-year="2026" data-date="2026-05-27" data-genres="27,9648,878" data-title="закулисье реальности">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/oBY8IQb9NpzbkCo0xzpz7Q1DCu.jpg" alt="Закулисье реальности" loading="lazy">
+    <span class="badge-rate">7.0 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Закулисье реальности</div>
+  <div class="card-meta">2026 · Фильм · ужасы</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="tv/subbotnim-vecherom-v-pryamom-efire.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="6.9" data-votes="530" data-year="1975" data-date="1975-10-11" data-genres="35,10763" data-title="субботним вечером в прямом эфире">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/r9yFdsRSdAZD5pshDT6P2KsTq4P.jpg" alt="Субботним вечером в прямом эфире" loading="lazy">
+    <span class="badge-rate">6.9 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Субботним вечером в прямом эфире</div>
+  <div class="card-meta">1975 · Сериал · комедия</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 3 октября 2026</span></span></div>
+</a><a class="card" href="tv/wwe-raw.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="6.8" data-votes="376" data-year="1993" data-date="1993-01-11" data-genres="10764" data-title="wwe raw">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/dwvW9FclJlicFQkBOlboQ52Vx8y.jpg" alt="WWE RAW" loading="lazy">
+    <span class="badge-rate">6.8 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">WWE RAW</div>
+  <div class="card-meta">1993 · Сериал · Реалити-шоу</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 5 октября 2026</span></span></div>
+</a><a class="card" href="movie/begushchaya.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="6.8" data-votes="606" data-year="2026" data-date="2026-09-03" data-genres="53,28" data-title="бегущая">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/aJFbFOT1DhLq97Gp7MtrAmXze1n.jpg" alt="Бегущая" loading="lazy">
+    <span class="badge-rate">6.8 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Бегущая</div>
+  <div class="card-meta">2026 · Фильм · триллер</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/supergerl.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="6.7" data-votes="2462" data-year="2026" data-date="2026-06-24" data-genres="28,12,878" data-title="супергёрл">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/gcAZ5f6Y40koGYcfPUqb2tmnVd.jpg" alt="Супергёрл" loading="lazy">
+    <span class="badge-rate">6.7 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Супергёрл</div>
+  <div class="card-meta">2026 · Фильм · боевик</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/smert-robin-guda.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="6.7" data-votes="468" data-year="2026" data-date="2026-06-18" data-genres="12,18,28" data-title="смерть робин гуда">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/bv3ResPWfXVEOeDUwTW7XoC04Yh.jpg" alt="Смерть Робин Гуда" loading="lazy">
+    <span class="badge-rate">6.7 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Смерть Робин Гуда</div>
+  <div class="card-meta">2026 · Фильм · приключения</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="tv/khranitel-moey-zhizni.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="9.5" data-votes="144" data-year="2026" data-date="2026-05-18" data-genres="10766,18" data-title="хранитель моей жизни">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/ppdrvfUyukqtFkl1HY7x6qHd7st.jpg" alt="Хранитель моей жизни" loading="lazy">
+    <span class="badge-rate">9.5 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Хранитель моей жизни</div>
+  <div class="card-meta">2026 · Сериал · Мыльная опера</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">Сериал завершён</span></span></div>
+</a><a class="card" href="tv/dnevnoe-shou-s-trevorom-noem.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="6.4" data-votes="664" data-year="1996" data-date="1996-07-22" data-genres="10763,35" data-title="дневное шоу с тревором ноем">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/ixcfyK7it6FjRM36Te4OdblAq4X.jpg" alt="Дневное шоу с Тревором Ноем" loading="lazy">
+    <span class="badge-rate">6.4 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Дневное шоу с Тревором Ноем</div>
+  <div class="card-meta">1996 · Сериал · Новости</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 30 сентября 2026</span></span></div>
+</a><a class="card" href="movie/de-goll-chast-1-soprotivlenie.html" data-kind="movie" data-anime="0" data-animation="0" data-country="FR" data-lang="fr" data-vote="7.8" data-votes="201" data-year="2026" data-date="2026-06-03" data-genres="36,18" data-title="де голль. часть 1. сопротивление">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/zWuZWFKyga6GF3agrhJn8UtdMSu.jpg" alt="Де Голль. Часть 1. Сопротивление" loading="lazy">
+    <span class="badge-rate">7.8 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Де Голль. Часть 1. Сопротивление</div>
+  <div class="card-meta">2026 · Фильм · история</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/elize-sombras-de-uma-mulher.html" data-kind="movie" data-anime="0" data-animation="0" data-country="BR" data-lang="pt" data-vote="7.5" data-votes="216" data-year="2026" data-date="2026-07-22" data-genres="53,80,18" data-title="elize: sombras de uma mulher">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/612ZyfilK8CVEEFphgPb3GOw0NF.jpg" alt="Elize: Sombras de uma Mulher" loading="lazy">
+    <span class="badge-rate">7.5 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Elize: Sombras de uma Mulher</div>
+  <div class="card-meta">2026 · Фильм · триллер</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="tv/tagesschau.html" data-kind="tv" data-anime="0" data-animation="0" data-country="DE" data-lang="de" data-vote="6.8" data-votes="256" data-year="1952" data-date="1952-12-26" data-genres="10763" data-title="tagesschau">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/7dFZJ2ZJJdcmkp05B9NWlqTJ5tq.jpg" alt="Tagesschau" loading="lazy">
+    <span class="badge-rate">6.8 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Tagesschau</div>
+  <div class="card-meta">1952 · Сериал · Новости</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t muted">Returning Series</span></span></div>
+</a><a class="card" href="movie/kurer.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="8.1" data-votes="178" data-year="2026" data-date="2026-09-07" data-genres="28,35" data-title="курьер">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/vnrrZCe2sDMdEY7xyGSZMpSsZyG.jpg" alt="Курьер" loading="lazy">
+    <span class="badge-rate">8.1 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Курьер</div>
+  <div class="card-meta">2026 · Фильм · боевик</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/de-goll-chast-2-svoboda.html" data-kind="movie" data-anime="0" data-animation="0" data-country="FR" data-lang="fr" data-vote="7.8" data-votes="190" data-year="2026" data-date="2026-06-26" data-genres="36,18" data-title="де голль. часть 2. свобода">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/sfnKVuXQq2wHuAlOqs60FrtJmiz.jpg" alt="Де Голль. Часть 2. Свобода" loading="lazy">
+    <span class="badge-rate">7.8 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Де Голль. Часть 2. Свобода</div>
+  <div class="card-meta">2026 · Фильм · история</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="tv/vechernee-shou-so-stivenom-kolbertom.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="6.1" data-votes="367" data-year="2015" data-date="2015-09-08" data-genres="35,10767" data-title="вечернее шоу со стивеном колбертом">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/9jkThAGYj2yp8jsS6Nriy5mzKFT.jpg" alt="Вечернее шоу со Стивеном Колбертом" loading="lazy">
+    <span class="badge-rate">6.1 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Вечернее шоу со Стивеном Колбертом</div>
+  <div class="card-meta">2015 · Сериал · комедия</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">Сериал завершён</span></span></div>
+</a><a class="card" href="movie/boy-so-zverem.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="7.5" data-votes="198" data-year="2026" data-date="2026-04-10" data-genres="28,18" data-title="бой со зверем">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/jazhffqHI1Uob6mzERAH5isKe2W.jpg" alt="Бой со зверем" loading="lazy">
+    <span class="badge-rate">7.5 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Бой со зверем</div>
+  <div class="card-meta">2026 · Фильм · боевик</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="tv/obychnyy-multik-uteryannye-plenki.html" data-kind="tv" data-anime="0" data-animation="1" data-country="US" data-lang="en" data-vote="9.5" data-votes="116" data-year="2026" data-date="2026-05-11" data-genres="16,35,10759,10765" data-title="обычный мультик: утерянные плёнки">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/h5lAgHtM1ROmaMCxhSof7R9NNNL.jpg" alt="Обычный мультик: Утерянные плёнки" loading="lazy">
+    <span class="badge-rate">9.5 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Обычный мультик: Утерянные плёнки</div>
+  <div class="card-meta">2026 · Сериал · мультфильм</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 3 октября 2026</span></span></div>
+</a><a class="card" href="tv/nochnoe-shou-s-dzhimmi-fellonom.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="5.8" data-votes="391" data-year="2014" data-date="2014-02-17" data-genres="35,10767" data-title="ночное шоу с джимми фэллоном">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/1N4o5PmmqhlVDrcdJ2RlCFWbLGX.jpg" alt="Ночное шоу с Джимми Фэллоном" loading="lazy">
+    <span class="badge-rate">5.8 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Ночное шоу с Джимми Фэллоном</div>
+  <div class="card-meta">2014 · Сериал · комедия</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 30 сентября 2026</span></span></div>
+</a><a class="card" href="movie/shchenyachiy-patrul-dinofilm.html" data-kind="movie" data-anime="0" data-animation="1" data-country="CA" data-lang="en" data-vote="8.2" data-votes="150" data-year="2026" data-date="2026-07-23" data-genres="16,12,10751,14,35" data-title="щенячий патруль: динофильм">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/eRAMlD2MqqbilyMCpr2SCbgR4HH.jpg" alt="Щенячий патруль: Динофильм" loading="lazy">
+    <span class="badge-rate">8.2 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Щенячий патруль: Динофильм</div>
+  <div class="card-meta">2026 · Фильм · мультфильм</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/posledniy-rassvet.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="6.9" data-votes="204" data-year="2026" data-date="2026-08-26" data-genres="10749,18" data-title="последний рассвет">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/3H0QOFqjbqqMDcSqRVt2QK31uqR.jpg" alt="Последний рассвет" loading="lazy">
+    <span class="badge-rate">6.9 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Последний рассвет</div>
+  <div class="card-meta">2026 · Фильм · мелодрама</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/unabomber.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="6.8" data-votes="205" data-year="2026" data-date="2026-09-25" data-genres="53,18,80" data-title="унабомбер">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/2cG4kY2k5AWC7y2i3IMb6LsBpat.jpg" alt="Унабомбер" loading="lazy">
+    <span class="badge-rate">6.8 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Унабомбер</div>
+  <div class="card-meta">2026 · Фильм · триллер</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/katastrofa-udar-iz-kosmosa.html" data-kind="movie" data-anime="0" data-animation="0" data-country="PL" data-lang="en" data-vote="6.6" data-votes="217" data-year="2026" data-date="2026-08-06" data-genres="28,878,53" data-title="катастрофа. удар из космоса">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/7rUqtmq3isM3bEEnXPQbHi37MyV.jpg" alt="Катастрофа. Удар из космоса" loading="lazy">
+    <span class="badge-rate">6.6 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Катастрофа. Удар из космоса</div>
+  <div class="card-meta">2026 · Фильм · боевик</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="tv/vlast-knizhnogo-chervya.html" data-kind="tv" data-anime="1" data-animation="1" data-country="JP" data-lang="ja" data-vote="8.1" data-votes="144" data-year="2019" data-date="2019-10-03" data-genres="16,18,10765" data-title="власть книжного червя">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/hlfQbCQ35Xw33CAjaCORaHTCHK8.jpg" alt="Власть книжного червя" loading="lazy">
+    <span class="badge-rate">8.1 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Власть книжного червя</div>
+  <div class="card-meta">2019 · Сериал · мультфильм</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 3 октября 2026</span></span></div>
+</a><a class="card" href="movie/kollektor.html" data-kind="movie" data-anime="0" data-animation="0" data-country="TH" data-lang="th" data-vote="7.9" data-votes="141" data-year="2026" data-date="2026-07-20" data-genres="28,53,80" data-title="коллектор">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/bsvARJcr8FciwZa2noeiFP90DrL.jpg" alt="Коллектор" loading="lazy">
+    <span class="badge-rate">7.9 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Коллектор</div>
+  <div class="card-meta">2026 · Фильм · боевик</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="tv/put-baki-nepobedimyy-samuray.html" data-kind="tv" data-anime="1" data-animation="1" data-country="JP" data-lang="ja" data-vote="9.1" data-votes="105" data-year="2026" data-date="2026-02-26" data-genres="16,10759" data-title="путь баки: непобедимый самурай">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/1mbqWrW4nhItd17iWVj4AWqLvHT.jpg" alt="Путь Баки: непобедимый самурай" loading="lazy">
+    <span class="badge-rate">9.1 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Путь Баки: непобедимый самурай</div>
+  <div class="card-meta">2026 · Сериал · мультфильм</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t muted">Returning Series</span></span></div>
+</a><a class="card" href="movie/bts-컴백-라이브-arirang.html" data-kind="movie" data-anime="0" data-animation="0" data-country="GB" data-lang="ko" data-vote="8.6" data-votes="117" data-year="2026" data-date="2026-03-21" data-genres="10402" data-title="bts : arirang">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/u3IsNHuTykczbnLPYSzEMJ2p32G.jpg" alt="BTS : ARIRANG" loading="lazy">
+    <span class="badge-rate">8.6 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">BTS : ARIRANG</div>
+  <div class="card-meta">2026 · Фильм · музыка</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="movie/serdtse-zverya.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="7.6" data-votes="149" data-year="2026" data-date="2026-09-19" data-genres="12,53" data-title="сердце зверя">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/fOTKUSfg9C5DngN151Sfre9j6v7.jpg" alt="Сердце зверя" loading="lazy">
+    <span class="badge-rate">7.6 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Сердце зверя</div>
+  <div class="card-meta">2026 · Фильм · приключения</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="tv/lipkaya-lyubov.html" data-kind="tv" data-anime="0" data-animation="0" data-country="KR" data-lang="ko" data-vote="8.8" data-votes="111" data-year="2026" data-date="2026-08-07" data-genres="18,35" data-title="липкая любовь">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/ny8zYj40mWGTgKJi1a8hjNFUj9n.jpg" alt="Липкая любовь" loading="lazy">
+    <span class="badge-rate">8.8 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Липкая любовь</div>
+  <div class="card-meta">2026 · Сериал · драма</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">Сериал завершён</span></span></div>
+</a><a class="card" href="tv/pokemon-otpravlenie-liko-i-roya.html" data-kind="tv" data-anime="1" data-animation="1" data-country="JP" data-lang="ja" data-vote="8.6" data-votes="116" data-year="2023" data-date="2023-04-14" data-genres="16,10759,10765,10762" data-title="покемон: отправление лико и роя">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/3yxoF57XE5oAG71FcPOXWxHKv89.jpg" alt="Покемон: Отправление Лико и Роя" loading="lazy">
+    <span class="badge-rate">8.6 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Покемон: Отправление Лико и Роя</div>
+  <div class="card-meta">2023 · Сериал · мультфильм</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 9 октября 2026</span></span></div>
+</a><a class="card" href="movie/podrostkovyy-seks-i-smert-v-lagere-miazma.html" data-kind="movie" data-anime="0" data-animation="0" data-country="GB" data-lang="en" data-vote="6.3" data-votes="213" data-year="2026" data-date="2026-08-06" data-genres="35,27,10749" data-title="подростковый секс и смерть в лагере «миазма»">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/auJRaXce7WVZFGpaFR54tCFr74J.jpg" alt="Подростковый секс и смерть в лагере «Миазма»" loading="lazy">
+    <span class="badge-rate">6.3 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Подростковый секс и смерть в лагере «Миазма»</div>
+  <div class="card-meta">2026 · Фильм · комедия</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
+</a><a class="card" href="tv/divnyy-novyy-mir.html" data-kind="tv" data-anime="0" data-animation="0" data-country="KR" data-lang="ko" data-vote="8.8" data-votes="109" data-year="2026" data-date="2026-05-08" data-genres="18,35,10765" data-title="дивный новый мир">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/u2cX3CVzUZLIGVwd9HB7bUhE7OP.jpg" alt="Дивный новый мир" loading="lazy">
+    <span class="badge-rate">8.8 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Дивный новый мир</div>
+  <div class="card-meta">2026 · Сериал · драма</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">Сериал завершён</span></span></div>
+</a><a class="card" href="tv/risk.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="6.9" data-votes="166" data-year="1984" data-date="1984-09-10" data-genres="10764,10751" data-title="риск!">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/hfz0IgebqGENG6ZnuqKQKMFk2vy.jpg" alt="Риск!" loading="lazy">
+    <span class="badge-rate">6.9 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Риск!</div>
+  <div class="card-meta">1984 · Сериал · Реалити-шоу</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 30 сентября 2026</span></span></div>
+</a><a class="card" href="tv/rab-spetsotryada-demonicheskogo-goroda.html" data-kind="tv" data-anime="1" data-animation="1" data-country="JP" data-lang="ja" data-vote="8.1" data-votes="118" data-year="2024" data-date="2024-01-04" data-genres="16,10759,10765" data-title="раб спецотряда демонического города">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/aZOJgmFA70jLYD8rVnjZbII6vjl.jpg" alt="Раб спецотряда демонического города" loading="lazy">
+    <span class="badge-rate">8.1 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Раб спецотряда демонического города</div>
+  <div class="card-meta">2024 · Сериал · мультфильм</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t muted">Returning Series</span></span></div>
+</a><a class="card" href="tv/angel-po-sosedstvu.html" data-kind="tv" data-anime="1" data-animation="1" data-country="JP" data-lang="ja" data-vote="7.7" data-votes="121" data-year="2023" data-date="2023-01-07" data-genres="16,35" data-title="ангел по соседству">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/exUNuEEUNVdFBEdBlsfpEjA3P0o.jpg" alt="Ангел по соседству" loading="lazy">
+    <span class="badge-rate">7.7 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Ангел по соседству</div>
+  <div class="card-meta">2023 · Сериал · мультфильм</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">Сериал завершён</span></span></div>
+</a><a class="card" href="tv/ty-i-ya-polnye-protivopolozhnosti.html" data-kind="tv" data-anime="1" data-animation="1" data-country="JP" data-lang="ja" data-vote="8.6" data-votes="96" data-year="2026" data-date="2026-01-11" data-genres="16,35" data-title="ты и я — полные противоположности">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/sefqRn46igeaJR9YjdEPj2gK2ho.jpg" alt="Ты и я — полные противоположности" loading="lazy">
+    <span class="badge-rate">8.6 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Ты и я — полные противоположности</div>
+  <div class="card-meta">2026 · Сериал · мультфильм</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 4 октября 2026</span></span></div>
+</a><a class="card" href="tv/la-oficina.html" data-kind="tv" data-anime="0" data-animation="0" data-country="MX" data-lang="es" data-vote="9.3" data-votes="75" data-year="2026" data-date="2026-03-13" data-genres="35" data-title="la oficina">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/uUEPJHIGiNeV69RIco01j5Yqu1F.jpg" alt="La oficina" loading="lazy">
+    <span class="badge-rate">9.3 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">La oficina</div>
+  <div class="card-meta">2026 · Сериал · комедия</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t muted">Returning Series</span></span></div>
+</a><a class="card" href="tv/zavtra-snova-na-rabotu.html" data-kind="tv" data-anime="0" data-animation="0" data-country="KR" data-lang="ko" data-vote="8.9" data-votes="79" data-year="2026" data-date="2026-06-22" data-genres="35,18" data-title="завтра снова на работу!">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/6MELksXL65sIWNMZHR8Z9nLt1DE.jpg" alt="Завтра снова на работу!" loading="lazy">
+    <span class="badge-rate">8.9 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Завтра снова на работу!</div>
+  <div class="card-meta">2026 · Сериал · комедия</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">Сериал завершён</span></span></div>
+</a><a class="card" href="tv/puteshestvie-k-bessmertiyu.html" data-kind="tv" data-anime="0" data-animation="1" data-country="CN" data-lang="zh" data-vote="8.4" data-votes="88" data-year="2020" data-date="2020-07-25" data-genres="16,10759,18" data-title="путешествие к бессмертию">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/viVBozYSdBf4CTg88sHHZuFXX49.jpg" alt="Путешествие к бессмертию" loading="lazy">
+    <span class="badge-rate">8.4 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Путешествие к бессмертию</div>
+  <div class="card-meta">2020 · Сериал · мультфильм</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 3 октября 2026</span></span></div>
+</a><a class="card" href="tv/dzhimmi-kimmel-v-pryamom-efire.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-lang="en" data-vote="5.3" data-votes="218" data-year="2003" data-date="2003-01-26" data-genres="10767,35" data-title="джимми киммел в прямом эфире">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/bGB6bEbG4qL22C1SFupkdAxYC9i.jpg" alt="Джимми Киммел в прямом эфире" loading="lazy">
+    <span class="badge-rate">5.3 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Джимми Киммел в прямом эфире</div>
+  <div class="card-meta">2003 · Сериал · Ток-шоу</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 30 сентября 2026</span></span></div>
+</a><a class="card" href="tv/tabakoshka.html" data-kind="tv" data-anime="1" data-animation="1" data-country="JP" data-lang="ja" data-vote="8.3" data-votes="77" data-year="2026" data-date="2026-07-03" data-genres="16,35,10765" data-title="табакошка">
+  <div class="card-media">
+    <img src="https://image.tmdb.org/t/p/w342/hnaknaMGgZimRXrCX8KwL2LlPsJ.jpg" alt="Табакошка" loading="lazy">
+    <span class="badge-rate">8.3 <em>TMDB</em></span>
+    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+  </div>
+  <div class="card-title h3">Табакошка</div>
+  <div class="card-meta">2026 · Сериал · мультфильм</div>
+  <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">Сериал завершён</span></span></div>
+</a></div>
+  <div class="empty" id="empty" hidden>
+    <div class="h3">Ничего не нашлось</div>
+    <div class="muted body" style="margin-bottom:20px">Сбросьте фильтры или измените запрос.</div>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <span class="footer-brand">[титры]</span>
+      <span class="footer-tagline">Кино заканчивается.<br>Интерес — нет.</span>
+      <a class="up" href="#" onclick="scrollTo({top:0,behavior:'smooth'});return false">Наверх <span class="ring"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 15V5m0 0L6 9m4-4 4 4"/></svg></span></a>
+    </div>
+    <div class="footer-legal">
+      <span>Бесплатный навигатор по кино и сериалам</span>
+      <span>© [титры] 2026</span>
+    </div>
+    <div class="footer-legal" style="border-top:0;padding-top:8px;margin-top:8px;font-size:12.5px">
+      <span>Данные — TMDB. Расписание — TVMaze. Площадки — JustWatch.</span>
+      <span>This product uses the TMDB API but is not endorsed or certified by TMDB.</span>
+    </div>
+  </div>
+</footer>
+<script>
+(function () {
+  var grid = document.getElementById('grid');
+  if (!grid) return;
+  var cards = [].slice.call(grid.querySelectorAll('.card'));
+  var empty = document.getElementById('empty');
+  var found = document.getElementById('found');
+  var typeChips = [].slice.call(document.querySelectorAll('#type-chips .chip'));
+  var genreChips = [].slice.call(document.querySelectorAll('#genre-chips .chip'));
+  var countryChips = [].slice.call(document.querySelectorAll('#country-chips .chip'));
+  var flagChips = [].slice.call(document.querySelectorAll('.chip[data-flag]'));
+  var sortBtns = [].slice.call(document.querySelectorAll('.select[data-sort]'));
+  var st = { type: 'all', genre: '', country: '', q: '', r8: false, newep: false, sort: 'rating' };
+
+  function press(list, active) {
+    list.forEach(function (c) { c.setAttribute('aria-pressed', c === active ? 'true' : 'false'); });
+  }
+  function val(card, k) { return card.dataset[k] || ''; }
+
+  function match(c) {
+    if (st.type === 'tv' && val(c, 'kind') !== 'tv') return false;
+    if (st.type === 'movie' && val(c, 'kind') !== 'movie') return false;
+    if (st.type === 'anime' && val(c, 'anime') !== '1') return false;
+    if (st.type === 'animation' && val(c, 'animation') !== '1') return false;
+    if (st.genre && val(c, 'genres').split(',').indexOf(st.genre) === -1) return false;
+    if (st.country && val(c, 'country') !== st.country) return false;
+    if (st.r8 && parseFloat(val(c, 'vote')) < 8) return false;
+    if (st.newep && val(c, 'newep') !== '1') return false;
+    if (st.q && val(c, 'title').indexOf(st.q) === -1) return false;
+    return true;
+  }
+  function apply() {
+    var shown = 0;
+    cards.forEach(function (c) { var ok = match(c); c.hidden = !ok; if (ok) shown++; });
+    if (empty) empty.hidden = shown > 0;
+    if (found) found.textContent = shown
+      ? 'Найдено ' + shown + ' ' + plural(shown)
+      : 'Ничего не найдено';
+    grid.style.display = shown > 0 ? '' : 'none';
+  }
+  function plural(n) {
+    var a = n % 10, b = n % 100;
+    if (a === 1 && b !== 11) return 'проект';
+    if (a >= 2 && a <= 4 && (b < 12 || b > 14)) return 'проекта';
+    return 'проектов';
+  }
+  function sort() {
+    var key = st.sort;
+    var arr = cards.slice().sort(function (a, b) {
+      if (key === 'rating') return (parseFloat(val(b,'vote'))||0) - (parseFloat(val(a,'vote'))||0);
+      if (key === 'votes') return (parseInt(val(b,'votes'))||0) - (parseInt(val(a,'votes'))||0);
+      var da = val(a,'date') || '9999', db = val(b,'date') || '9999';
+      return da < db ? -1 : da > db ? 1 : 0;
+    });
+    arr.forEach(function (c) { grid.appendChild(c); });
+  }
+
+  typeChips.forEach(function (ch) {
+    ch.addEventListener('click', function () { press(typeChips, ch); st.type = ch.dataset.type; apply(); });
+  });
+  genreChips.forEach(function (ch) {
+    ch.addEventListener('click', function () { press(genreChips, ch); st.genre = ch.dataset.genre; apply(); });
+  });
+  countryChips.forEach(function (ch) {
+    ch.addEventListener('click', function () { press(countryChips, ch); st.country = ch.dataset.country; apply(); });
+  });
+  flagChips.forEach(function (ch) {
+    ch.addEventListener('click', function () {
+      var on = ch.getAttribute('aria-pressed') === 'true';
+      ch.setAttribute('aria-pressed', on ? 'false' : 'true');
+      if (ch.dataset.flag === 'rating8') st.r8 = !on;
+      if (ch.dataset.flag === 'new') st.newep = !on;
+      apply();
+    });
+  });
+  sortBtns.forEach(function (b) {
+    b.addEventListener('click', function () { press(sortBtns, b); st.sort = b.dataset.sort; sort(); apply(); });
+  });
+  var q = document.getElementById('q');
+  if (q) q.addEventListener('input', function () { st.q = q.value.trim().toLowerCase(); apply(); });
+  var rst = document.getElementById('reset-btn');
+  if (rst) rst.addEventListener('click', function () {
+    st = { type:'all', genre:'', country:'', q:'', r8:false, newep:false, sort:'rating' };
+    if (q) q.value = '';
+    press(typeChips, document.querySelector('#type-chips .chip[data-type="all"]'));
+    press(genreChips, document.querySelector('#genre-chips .chip[data-genre=""]'));
+    press(countryChips, document.querySelector('#country-chips .chip[data-country=""]'));
+    press(sortBtns, document.querySelector('.select[data-sort="rating"]'));
+    flagChips.forEach(function (c) { c.setAttribute('aria-pressed','false'); });
+    sort(); apply();
+  });
+  sort(); apply();
+})();
+</script>
+<script>
+(function () {
+  var count = document.getElementById('list-count');
+  var n = 0;
+  document.querySelectorAll('.card-mark').forEach(function (m) {
+    m.addEventListener('click', function (ev) {
+      ev.preventDefault(); ev.stopPropagation();
+      var on = m.dataset.on === '1';
+      m.dataset.on = on ? '0' : '1';
+      m.style.background = on ? '' : 'var(--cream)';
+      m.style.color = on ? '' : 'var(--ink)';
+      n += on ? -1 : 1;
+      count.textContent = n;
+    });
+  });
+})();
+</script>
+</body></html>
