@@ -8,12 +8,14 @@
 Счётчик пересчитывается при каждой сборке, то есть каждую неделю заново.
 """
 import json, html, os
-from datetime import date, timedelta
+from datetime import date, datetime
+from zoneinfo import ZoneInfo, datetime, timedelta
+from zoneinfo import ZoneInfo
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 D = json.load(open(os.path.join(ROOT, "data", "home.json"), encoding="utf-8"))
 OUT = os.path.join(ROOT, "preview")
-TODAY = date(2026, 9, 30)
+TODAY = datetime.now(ZoneInfo("Europe/Moscow")).date()
 
 MONTHS = ["января","февраля","марта","апреля","мая","июня",
           "июля","августа","сентября","октября","ноября","декабря"]

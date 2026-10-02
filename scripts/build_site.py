@@ -5,7 +5,8 @@
 Чего нет в источнике — то «данные не объявлены», а не выдумано.
 """
 import html, json, os, re, shutil
-from datetime import date
+from datetime import date, datetime
+from zoneinfo import ZoneInfo
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PREV = os.path.join(ROOT, "preview")
@@ -20,7 +21,7 @@ RATINGS = json.load(open(RATINGS_P, encoding="utf-8")) if os.path.exists(RATINGS
 
 def omdb_of(r):
     return RATINGS.get(r.get("imdb_id") or "") or {}
-TODAY = date(2026, 9, 30)
+TODAY = datetime.now(ZoneInfo("Europe/Moscow")).date()
 PREFIX = ""   # переопределяется перед сборкой карточек проектов
 
 MONTHS = ["января","февраля","марта","апреля","мая","июня",

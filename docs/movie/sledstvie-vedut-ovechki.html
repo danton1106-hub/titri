@@ -7,13 +7,14 @@
 <meta name="description" content="Каждый вечер пастух Джордж Харди собирает своё стадо и читает им детективные истории в уверенности, что овцы не понимают ни слова. Но однажды утром Джорджа нахо">
 <link rel="stylesheet" href="../titry.css">
 <meta property="og:title" content="Следствие ведут овечки"><meta property="og:description" content="Каждый вечер пастух Джордж Харди собирает своё стадо и читает им детективные истории в уверенности, что овцы не понимают ни слова. Но однажды утром Джорджа нахо">
+<script defer src="../site.js"></script>
 </head><body>
 <header class="header">
   <a class="brand" href="../index.html">[титры]</a>
   <nav class="nav"><a href="../" class="on">Что посмотреть</a><a href="../catalog.html"><em class="nav-year">2026</em>Все фильмы и сериалы</a><a href="../upcoming.html">Скоро выходят</a><a href="../journal.html">Журнал</a></nav>
   <div class="head-right">
     <button class="bookmark-btn"><svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg>Мой список</button>
-    <span class="count" id="list-count">0</span>
+    <span class="count" data-watch-count>0</span>
   </div>
 </header>
 <main>
@@ -37,7 +38,7 @@
 <p class="lead desc" id="desc-full" hidden>Каждый вечер пастух Джордж Харди собирает своё стадо и читает им детективные истории в уверенности, что овцы не понимают ни слова. Но однажды утром Джорджа находят мёртвым, и тогда стадо, проникшееся детективными сюжетами, решает взять расследование в свои копыта.</p>
 <button class="btn btn-ghost more-btn" id="more">Читать полностью <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 5 5 5-5"/></svg></button></div>
         <div class="detail-actions" style="margin-top:22px">
-          <button class="btn btn-cream">В мой список</button>
+          <button class="btn btn-cream" type="button" data-watch-id="Следствие ведут овечки" data-watch-title="Следствие ведут овечки" data-watch-url="sledstvie-vedut-ovechki.html">+ В мои просмотры</button>
           
         </div>
       </div>
@@ -73,7 +74,7 @@
   <div class="card-media">
     <img src="https://image.tmdb.org/t/p/w342/gl112Rnih0fHcWBIKpVzeW84xov.jpg" alt="В чужой шкуре" loading="lazy">
     <span class="badge-rate">8.9 <em>TMDB</em></span>
-    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+    <button class="card-mark" type="button" data-watch-id="В чужой шкуре" data-watch-title="В чужой шкуре" data-watch-url="movie/v-chuzhoy-shkure.html" aria-label="Dobavit v moi prosmotry">+</button>
   </div>
   <div class="card-title h3">В чужой шкуре</div>
   <div class="card-meta">2026 · Фильм · приключения</div>
@@ -82,7 +83,7 @@
   <div class="card-media">
     <img src="https://image.tmdb.org/t/p/w342/j0CIVzeR7hRAPBPGR54qDZoOQpp.jpg" alt="Socias por accidente" loading="lazy">
     <span class="badge-rate">8.8 <em>TMDB</em></span>
-    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+    <button class="card-mark" type="button" data-watch-id="Socias por accidente" data-watch-title="Socias por accidente" data-watch-url="movie/socias-por-accidente.html" aria-label="Dobavit v moi prosmotry">+</button>
   </div>
   <div class="card-title h3">Socias por accidente</div>
   <div class="card-meta">2026 · Фильм · комедия</div>
@@ -91,7 +92,7 @@
   <div class="card-media">
     <img src="https://image.tmdb.org/t/p/w342/oscW8xV8EhRYj7iAhyVlBohKqxo.jpg" alt="Будешь моей девушкой?" loading="lazy">
     <span class="badge-rate">8.6 <em>TMDB</em></span>
-    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+    <button class="card-mark" type="button" data-watch-id="Будешь моей девушкой?" data-watch-title="Будешь моей девушкой?" data-watch-url="movie/budesh-moey-devushkoy.html" aria-label="Dobavit v moi prosmotry">+</button>
   </div>
   <div class="card-title h3">Будешь моей девушкой?</div>
   <div class="card-meta">2026 · Фильм · комедия</div>
@@ -100,7 +101,7 @@
   <div class="card-media">
     <img src="https://image.tmdb.org/t/p/w342/3odwuuWv6v7RQpI4GtJdxDVlice.jpg" alt="Необычайно умные создания" loading="lazy">
     <span class="badge-rate">8.4 <em>TMDB</em></span>
-    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+    <button class="card-mark" type="button" data-watch-id="Необычайно умные создания" data-watch-title="Необычайно умные создания" data-watch-url="movie/neobychayno-umnye-sozdaniya.html" aria-label="Dobavit v moi prosmotry">+</button>
   </div>
   <div class="card-title h3">Необычайно умные создания</div>
   <div class="card-meta">2026 · Фильм · драма</div>
@@ -109,7 +110,7 @@
   <div class="card-media">
     <img src="https://image.tmdb.org/t/p/w342/84igQj0DU3TgPrtQ7bHXHCio1sV.jpg" alt="История игрушек 5" loading="lazy">
     <span class="badge-rate">8.3 <em>TMDB</em></span>
-    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+    <button class="card-mark" type="button" data-watch-id="История игрушек 5" data-watch-title="История игрушек 5" data-watch-url="movie/istoriya-igrushek-5.html" aria-label="Dobavit v moi prosmotry">+</button>
   </div>
   <div class="card-title h3">История игрушек 5</div>
   <div class="card-meta">2026 · Фильм · мультфильм</div>
@@ -118,7 +119,7 @@
   <div class="card-media">
     <img src="https://image.tmdb.org/t/p/w342/tS2zXRG1X04brQKrkCxR0pevGc5.jpg" alt="Сообщения для Изабель" loading="lazy">
     <span class="badge-rate">8.3 <em>TMDB</em></span>
-    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+    <button class="card-mark" type="button" data-watch-id="Сообщения для Изабель" data-watch-title="Сообщения для Изабель" data-watch-url="movie/soobshcheniya-dlya-izabel.html" aria-label="Dobavit v moi prosmotry">+</button>
   </div>
   <div class="card-title h3">Сообщения для Изабель</div>
   <div class="card-meta">2026 · Фильм · мелодрама</div>
@@ -137,8 +138,9 @@
       <span>Бесплатный навигатор по кино и сериалам</span>
       <span>© [титры] 2026</span>
     </div>
-    <div class="footer-legal" style="border-top:0;padding-top:8px;margin-top:8px;font-size:12.5px">
-      <span>Данные — TMDB. Расписание — TVMaze. Площадки — JustWatch.</span>
+    <div class="footer-legal" style="border-top:0;padding-top:8px;margin-top:8px;font-size:12.5px;align-items:flex-start">
+      <span>Dannie o filmah i serialah - TMDB. Raspisanie serij - TVMaze. Ploshchadki dlya prosmotra - JustWatch.</span>
+      <span>Katalog ispolzuet otkryto dostupnye dannye TMDB s obyazatelnoj atributsiey istochnika.</span>
       <span>This product uses the TMDB API but is not endorsed or certified by TMDB.</span>
     </div>
   </div>

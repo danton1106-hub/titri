@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>титры — найдётся ваше кино</title>
 <link rel="stylesheet" href="titry.css">
+<script defer src="site.js"></script>
 </head>
 <body>
 <header class="header">
@@ -12,14 +13,14 @@
   <nav class="nav"><a href="index.html">Что посмотреть</a><a href="catalog.html"><em class="nav-year">2026</em>Все фильмы и сериалы</a><a href="upcoming.html">Скоро выходят</a><a href="journal.html">Журнал</a></nav>
   <div class="head-right">
     <button class="bookmark-btn"><svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg>Мой список</button>
-    <span class="count" id="list-count">0</span>
+    <span class="count" data-watch-count>0</span>
   </div>
 </header><section class="hero" id="top">
   <div class="hero-media"><img src="https://image.tmdb.org/t/p/w1280/h0OC7ouop8YLwbAVfS3UUE2Lw4T.jpg" alt="Гангстерленд"></div>
   <div class="hero-inner wrap">
     <div class="hero-top">
       <span class="label dim">Кино и сериалы в одном месте</span>
-      <span class="label dim">28 / 09 / 2026</span>
+      <span class="label dim"><span data-current-date><span class="label dim">28 / 09 / 2026</span></span></span>
     </div>
     <div class="hero-cols">
       <div>
@@ -97,65 +98,65 @@
     </div>
   </div>
 
-  <div class="grid-posters" id="grid"><a class="card" href="#" data-kind="tv" data-anime="0" data-animation="0" data-country="GB" data-vote="8.0" data-allaired="0" data-new="1" data-genres="80,18,9648" data-date="2026-09-30" data-title="Медленные лошади">
+  <div class="grid-posters" id="grid"><a class="card" href="tv/medlennye-loshadi.html" data-kind="tv" data-anime="0" data-animation="0" data-country="GB" data-vote="8.0" data-allaired="0" data-new="1" data-genres="80,18,9648" data-date="2026-09-30" data-title="Медленные лошади">
   <div class="card-media">
     <img src="https://image.tmdb.org/t/p/w342/fcXBCozEg3rCc9h8RPypLvnPSzU.jpg" alt="Медленные лошади" loading="lazy">
     <span class="badge-rate">8.0 <em>TMDB</em></span>
-    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+    <button class="card-mark" type="button" data-watch-id="Медленные лошади" data-watch-title="Медленные лошади" data-watch-url="tv/medlennye-loshadi.html" aria-label="Dobavit v moi prosmotry">+</button>
   </div>
   <div class="card-title h3">Медленные лошади</div>
   <div class="card-meta">2022 · Сериал · криминал</div>
   <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия сегодня</span></span></div>
-</a><a class="card" href="#" data-kind="tv" data-anime="0" data-animation="0" data-country="GB" data-vote="8.5" data-allaired="0" data-new="0" data-genres="80,18" data-date="2026-10-02" data-title="Гангстерленд">
+</a><a class="card" href="tv/gangsterlend.html" data-kind="tv" data-anime="0" data-animation="0" data-country="GB" data-vote="8.5" data-allaired="0" data-new="0" data-genres="80,18" data-date="2026-10-02" data-title="Гангстерленд">
   <div class="card-media">
     <img src="https://image.tmdb.org/t/p/w342/vuKwmIVw6lClfzOtGzakhl47mjA.jpg" alt="Гангстерленд" loading="lazy">
     <span class="badge-rate">8.5 <em>TMDB</em></span>
-    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+    <button class="card-mark" type="button" data-watch-id="Гангстерленд" data-watch-title="Гангстерленд" data-watch-url="tv/gangsterlend.html" aria-label="Dobavit v moi prosmotry">+</button>
   </div>
   <div class="card-title h3">Гангстерленд</div>
   <div class="card-meta">2025 · Сериал · криминал</div>
   <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 2 октября</span></span></div>
-</a><a class="card" href="#" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-vote="8.4" data-allaired="0" data-new="0" data-genres="18,9648,10765" data-date="2026-10-04" data-title="Фонари">
+</a><a class="card" href="tv/fonari.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-vote="8.4" data-allaired="0" data-new="0" data-genres="18,9648,10765" data-date="2026-10-04" data-title="Фонари">
   <div class="card-media">
     <img src="https://image.tmdb.org/t/p/w342/15AkiRpjuBLyS385ycDM5vvB7oI.jpg" alt="Фонари" loading="lazy">
     <span class="badge-rate">8.4 <em>TMDB</em></span>
-    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+    <button class="card-mark" type="button" data-watch-id="Фонари" data-watch-title="Фонари" data-watch-url="tv/fonari.html" aria-label="Dobavit v moi prosmotry">+</button>
   </div>
   <div class="card-title h3">Фонари</div>
   <div class="card-meta">2026 · Сериал · драма</div>
   <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 4 октября</span></span></div>
-</a><a class="card" href="#" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-vote="8.4" data-allaired="0" data-new="0" data-genres="18,35" data-date="2026-10-06" data-title="Тед Лассо">
+</a><a class="card" href="tv/ted-lasso.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-vote="8.4" data-allaired="0" data-new="0" data-genres="18,35" data-date="2026-10-06" data-title="Тед Лассо">
   <div class="card-media">
     <img src="https://image.tmdb.org/t/p/w342/gO2kQUDfZWsvdDetUljaTI6t87i.jpg" alt="Тед Лассо" loading="lazy">
     <span class="badge-rate">8.4 <em>TMDB</em></span>
-    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+    <button class="card-mark" type="button" data-watch-id="Тед Лассо" data-watch-title="Тед Лассо" data-watch-url="tv/ted-lasso.html" aria-label="Dobavit v moi prosmotry">+</button>
   </div>
   <div class="card-title h3">Тед Лассо</div>
   <div class="card-meta">2020 · Сериал · драма</div>
   <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 6 октября</span></span></div>
-</a><a class="card" href="#" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-vote="8.1" data-allaired="0" data-new="0" data-genres="18,9648,10765" data-date="2026-10-01" data-title="Американская история ужасов">
+</a><a class="card" href="tv/amerikanskaya-istoriya-uzhasov.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-vote="8.1" data-allaired="0" data-new="0" data-genres="18,9648,10765" data-date="2026-10-01" data-title="Американская история ужасов">
   <div class="card-media">
     <img src="https://image.tmdb.org/t/p/w342/gj2dFFgEHdhxqSBpD2oPyo4YmPD.jpg" alt="Американская история ужасов" loading="lazy">
     <span class="badge-rate">8.1 <em>TMDB</em></span>
-    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+    <button class="card-mark" type="button" data-watch-id="Американская история ужасов" data-watch-title="Американская история ужасов" data-watch-url="tv/amerikanskaya-istoriya-uzhasov.html" aria-label="Dobavit v moi prosmotry">+</button>
   </div>
   <div class="card-title h3">Американская история ужасов</div>
   <div class="card-meta">2011 · Сериал · драма</div>
   <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 1 октября</span></span></div>
-</a><a class="card" href="#" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-vote="8.1" data-allaired="1" data-new="0" data-genres="10759,80" data-date="2026-09-16" data-title="Ричер">
+</a><a class="card" href="tv/richer.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-vote="8.1" data-allaired="1" data-new="0" data-genres="10759,80" data-date="2026-09-16" data-title="Ричер">
   <div class="card-media">
     <img src="https://image.tmdb.org/t/p/w342/zLqlW0rXmHwOZRhmOjeod14sGiT.jpg" alt="Ричер" loading="lazy">
     <span class="badge-rate">8.1 <em>TMDB</em></span>
-    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+    <button class="card-mark" type="button" data-watch-id="Ричер" data-watch-title="Ричер" data-watch-url="tv/richer.html" aria-label="Dobavit v moi prosmotry">+</button>
   </div>
   <div class="card-title h3">Ричер</div>
   <div class="card-meta">2022 · Сериал · Боевик и Приключения</div>
   <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">Весь сезон вышел</span></span></div>
-</a><a class="card" href="#" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-vote="8.0" data-allaired="0" data-new="0" data-genres="80,18,9648" data-date="2026-10-08" data-title="Закон и порядок. Специальный корпус">
+</a><a class="card" href="tv/zakon-i-poryadok-spetsialnyy-korpus.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-vote="8.0" data-allaired="0" data-new="0" data-genres="80,18,9648" data-date="2026-10-08" data-title="Закон и порядок. Специальный корпус">
   <div class="card-media">
     <img src="https://image.tmdb.org/t/p/w342/1GLIkXaLtgaRooXLSltTdp8oShL.jpg" alt="Закон и порядок. Специальный корпус" loading="lazy">
     <span class="badge-rate">8.0 <em>TMDB</em></span>
-    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+    <button class="card-mark" type="button" data-watch-id="Закон и порядок. Специальный корпус" data-watch-title="Закон и порядок. Специальный корпус" data-watch-url="tv/zakon-i-poryadok-spetsialnyy-korpus.html" aria-label="Dobavit v moi prosmotry">+</button>
   </div>
   <div class="card-title h3">Закон и порядок. Специальный корпус</div>
   <div class="card-meta">1999 · Сериал · криминал</div>
@@ -164,16 +165,16 @@
   <div class="card-media">
     <img src="https://image.tmdb.org/t/p/w342/uSvET5YUvHNDIeoCpErrbSmasFb.jpg" alt="Вечернее шоу Джонни Карсона" loading="lazy">
     <span class="badge-rate">7.6 <em>TMDB</em></span>
-    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+    <button class="card-mark" type="button" data-watch-id="Вечернее шоу Джонни Карсона" data-watch-title="Вечернее шоу Джонни Карсона" data-watch-url="" aria-label="Dobavit v moi prosmotry">+</button>
   </div>
   <div class="card-title h3">Вечернее шоу Джонни Карсона</div>
   <div class="card-meta">1962 · Сериал · Ток-шоу</div>
   <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">Весь сезон вышел</span></span></div>
-</a><a class="card" href="#" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-vote="7.3" data-allaired="0" data-new="0" data-genres="80,18" data-date="2026-10-08" data-title="Закон и порядок">
+</a><a class="card" href="tv/zakon-i-poryadok.html" data-kind="tv" data-anime="0" data-animation="0" data-country="US" data-vote="7.3" data-allaired="0" data-new="0" data-genres="80,18" data-date="2026-10-08" data-title="Закон и порядок">
   <div class="card-media">
     <img src="https://image.tmdb.org/t/p/w342/6IfLWdBXDuktBo8oVjiWxodSHCV.jpg" alt="Закон и порядок" loading="lazy">
     <span class="badge-rate">7.3 <em>TMDB</em></span>
-    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+    <button class="card-mark" type="button" data-watch-id="Закон и порядок" data-watch-title="Закон и порядок" data-watch-url="tv/zakon-i-poryadok.html" aria-label="Dobavit v moi prosmotry">+</button>
   </div>
   <div class="card-title h3">Закон и порядок</div>
   <div class="card-meta">1990 · Сериал · криминал</div>
@@ -182,25 +183,25 @@
   <div class="card-media">
     <img src="https://image.tmdb.org/t/p/w342/8ra17h8Z3NX14qdWaOKn0scURJR.jpg" alt="Скандал в Чосоне" loading="lazy">
     <span class="badge-rate">6.6 <em>TMDB</em></span>
-    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+    <button class="card-mark" type="button" data-watch-id="Скандал в Чосоне" data-watch-title="Скандал в Чосоне" data-watch-url="" aria-label="Dobavit v moi prosmotry">+</button>
   </div>
   <div class="card-title h3">Скандал в Чосоне</div>
   <div class="card-meta">2026 · Сериал · драма</div>
   <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">Весь сезон вышел</span></span></div>
-</a><a class="card" href="#" data-kind="tv" data-anime="0" data-animation="1" data-country="US" data-vote="8.0" data-allaired="0" data-new="0" data-genres="16,35" data-date="2026-10-04" data-title="Симпсоны">
+</a><a class="card" href="tv/simpsony.html" data-kind="tv" data-anime="0" data-animation="1" data-country="US" data-vote="8.0" data-allaired="0" data-new="0" data-genres="16,35" data-date="2026-10-04" data-title="Симпсоны">
   <div class="card-media">
     <img src="https://image.tmdb.org/t/p/w342/171yRAHGCziNjtO53sEil1PH64v.jpg" alt="Симпсоны" loading="lazy">
     <span class="badge-rate">8.0 <em>TMDB</em></span>
-    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+    <button class="card-mark" type="button" data-watch-id="Симпсоны" data-watch-title="Симпсоны" data-watch-url="tv/simpsony.html" aria-label="Dobavit v moi prosmotry">+</button>
   </div>
   <div class="card-title h3">Симпсоны</div>
   <div class="card-meta">1989 · Сериал · мультфильм</div>
   <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="dot"></span><span class="t">Новая серия 4 октября</span></span></div>
-</a><a class="card" href="#" data-kind="tv" data-anime="1" data-animation="1" data-country="JP" data-vote="8.1" data-allaired="0" data-new="0" data-genres="10759,16,35,10765,10762,10751" data-date="2026-10-03" data-title="Дораэмон">
+</a><a class="card" href="tv/doraemon.html" data-kind="tv" data-anime="1" data-animation="1" data-country="JP" data-vote="8.1" data-allaired="0" data-new="0" data-genres="10759,16,35,10765,10762,10751" data-date="2026-10-03" data-title="Дораэмон">
   <div class="card-media">
     <img src="https://image.tmdb.org/t/p/w342/9YqdMXlPTQGLIG67vqZdsPdPC4T.jpg" alt="Дораэмон" loading="lazy">
     <span class="badge-rate">8.1 <em>TMDB</em></span>
-    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+    <button class="card-mark" type="button" data-watch-id="Дораэмон" data-watch-title="Дораэмон" data-watch-url="tv/doraemon.html" aria-label="Dobavit v moi prosmotry">+</button>
   </div>
   <div class="card-title h3">Дораэмон</div>
   <div class="card-meta">2005 · Сериал · Боевик и Приключения</div>
@@ -209,34 +210,34 @@
   <div class="card-media">
     <img src="https://image.tmdb.org/t/p/w342/ueI9EeoRdMVa7hWEm21nQEU8Zv3.jpg" alt="Жаркая ночка с монахом" loading="lazy">
     <span class="badge-rate">5.5 <em>TMDB</em></span>
-    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+    <button class="card-mark" type="button" data-watch-id="Жаркая ночка с монахом" data-watch-title="Жаркая ночка с монахом" data-watch-url="" aria-label="Dobavit v moi prosmotry">+</button>
   </div>
   <div class="card-title h3">Жаркая ночка с монахом</div>
   <div class="card-meta">2017 · Сериал · мультфильм</div>
   <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">Весь сезон вышел</span></span></div>
-</a><a class="card" href="#" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-vote="7.6" data-allaired="0" data-new="0" data-genres="35,12,10751" data-date="2026-08-17" data-title="Хитрый Койот">
+</a><a class="card" href="movie/khitryy-koyot.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-vote="7.6" data-allaired="0" data-new="0" data-genres="35,12,10751" data-date="2026-08-17" data-title="Хитрый Койот">
   <div class="card-media">
     <img src="https://image.tmdb.org/t/p/w342/gwCwmTk2EfDccd4RtIPsWEwzd1r.jpg" alt="Хитрый Койот" loading="lazy">
     <span class="badge-rate">7.6 <em>TMDB</em></span>
-    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+    <button class="card-mark" type="button" data-watch-id="Хитрый Койот" data-watch-title="Хитрый Койот" data-watch-url="movie/khitryy-koyot.html" aria-label="Dobavit v moi prosmotry">+</button>
   </div>
   <div class="card-title h3">Хитрый Койот</div>
   <div class="card-meta">2026 · Фильм · комедия</div>
   <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
-</a><a class="card" href="#" data-kind="movie" data-anime="0" data-animation="0" data-country="GB" data-vote="7.3" data-allaired="0" data-new="0" data-genres="28,53" data-date="2026-08-19" data-title="Мятеж">
+</a><a class="card" href="movie/myatezh.html" data-kind="movie" data-anime="0" data-animation="0" data-country="GB" data-vote="7.3" data-allaired="0" data-new="0" data-genres="28,53" data-date="2026-08-19" data-title="Мятеж">
   <div class="card-media">
     <img src="https://image.tmdb.org/t/p/w342/opOHbNmV0VPOugSBxrRQKmPgfZL.jpg" alt="Мятеж" loading="lazy">
     <span class="badge-rate">7.3 <em>TMDB</em></span>
-    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+    <button class="card-mark" type="button" data-watch-id="Мятеж" data-watch-title="Мятеж" data-watch-url="movie/myatezh.html" aria-label="Dobavit v moi prosmotry">+</button>
   </div>
   <div class="card-title h3">Мятеж</div>
   <div class="card-meta">2026 · Фильм · боевик</div>
   <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
-</a><a class="card" href="#" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-vote="8.1" data-allaired="0" data-new="0" data-genres="28,35" data-date="2026-09-07" data-title="Курьер">
+</a><a class="card" href="movie/kurer.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-vote="8.1" data-allaired="0" data-new="0" data-genres="28,35" data-date="2026-09-07" data-title="Курьер">
   <div class="card-media">
     <img src="https://image.tmdb.org/t/p/w342/vnrrZCe2sDMdEY7xyGSZMpSsZyG.jpg" alt="Курьер" loading="lazy">
     <span class="badge-rate">8.1 <em>TMDB</em></span>
-    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+    <button class="card-mark" type="button" data-watch-id="Курьер" data-watch-title="Курьер" data-watch-url="movie/kurer.html" aria-label="Dobavit v moi prosmotry">+</button>
   </div>
   <div class="card-title h3">Курьер</div>
   <div class="card-meta">2026 · Фильм · боевик</div>
@@ -245,16 +246,16 @@
   <div class="card-media">
     <img src="https://image.tmdb.org/t/p/w342/uSDqNYQXOGTbWdMMmzMJkXROJDh.jpg" alt="Восставший" loading="lazy">
     <span class="badge-rate">7.5 <em>TMDB</em></span>
-    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+    <button class="card-mark" type="button" data-watch-id="Восставший" data-watch-title="Восставший" data-watch-url="" aria-label="Dobavit v moi prosmotry">+</button>
   </div>
   <div class="card-title h3">Восставший</div>
   <div class="card-meta">2026 · Фильм · история</div>
   <div class="card-meta" style="margin-top:10px"><span class="card-tag"><span class="t">В прокате</span></span></div>
-</a><a class="card" href="#" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-vote="6.8" data-allaired="0" data-new="0" data-genres="53,28" data-date="2026-09-03" data-title="Бегущая">
+</a><a class="card" href="movie/begushchaya.html" data-kind="movie" data-anime="0" data-animation="0" data-country="US" data-vote="6.8" data-allaired="0" data-new="0" data-genres="53,28" data-date="2026-09-03" data-title="Бегущая">
   <div class="card-media">
     <img src="https://image.tmdb.org/t/p/w342/aJFbFOT1DhLq97Gp7MtrAmXze1n.jpg" alt="Бегущая" loading="lazy">
     <span class="badge-rate">6.8 <em>TMDB</em></span>
-    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+    <button class="card-mark" type="button" data-watch-id="Бегущая" data-watch-title="Бегущая" data-watch-url="movie/begushchaya.html" aria-label="Dobavit v moi prosmotry">+</button>
   </div>
   <div class="card-title h3">Бегущая</div>
   <div class="card-meta">2026 · Фильм · триллер</div>
@@ -263,7 +264,7 @@
   <div class="card-media">
     <img src="https://image.tmdb.org/t/p/w342/81FLOOicWMgiT67RiqP42pRcTaw.jpg" alt="Вышка 2" loading="lazy">
     <span class="badge-rate">6.2 <em>TMDB</em></span>
-    <span class="card-mark" role="button" tabindex="0" aria-label="В мой список"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v12.2a.5.5 0 0 1-.77.42L12 15.6l-2.73 1.82a.5.5 0 0 1-.77-.42V5A1.5 1.5 0 0 1 6 3.5Z"/></svg></span>
+    <button class="card-mark" type="button" data-watch-id="Вышка 2" data-watch-title="Вышка 2" data-watch-url="" aria-label="Dobavit v moi prosmotry">+</button>
   </div>
   <div class="card-title h3">Вышка 2</div>
   <div class="card-meta">2026 · Фильм · триллер</div>
@@ -429,8 +430,9 @@
       <span>Бесплатный навигатор по кино и сериалам</span>
       <span>© [титры] 2026</span>
     </div>
-    <div class="footer-legal" style="border-top:0;padding-top:8px;margin-top:8px;font-size:12.5px">
-      <span>Данные — TMDB. Расписание — TVMaze. Площадки — JustWatch.</span>
+    <div class="footer-legal" style="border-top:0;padding-top:8px;margin-top:8px;font-size:12.5px;align-items:flex-start">
+      <span>Dannie o filmah i serialah - TMDB. Raspisanie serij - TVMaze. Ploshchadki dlya prosmotra - JustWatch.</span>
+      <span>Katalog ispolzuet otkryto dostupnye dannye TMDB s obyazatelnoj atributsiey istochnika.</span>
       <span>This product uses the TMDB API but is not endorsed or certified by TMDB.</span>
     </div>
   </div>
