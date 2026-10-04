@@ -6,18 +6,27 @@
 """
 import json, os, urllib.request, urllib.parse
 
-KEY = os.environ.get("TMDB_API_KEY", "8265bd1679663a7ea12ac168da84d2e8")
+from datetime import timedelta
+
+from time_service import today_moscow
+
+KEY = os.environ.get("TMDB_API_READ_TOKEN", "").strip()
+if not KEY:
+    raise SystemExit("TMDB_API_READ_TOKEN is required. Set it in .env locally or GitHub Secrets in CI.")
 BASE = "https://api.themoviedb.org/3"
 IMG = "https://image.tmdb.org/t/p"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TODAY = "2026-09-30"
+TODAY = today_moscow().isoformat()
 
 
 def get(path, **p):
-    p.update({"api_key": KEY, "language": "ru-RU"})
+    p.setdefault("language", "ru-RU")
     q = "&".join(f"{k}={urllib.parse.quote(str(v))}" for k, v in p.items())
+    request = urllib.request.Request(
+        f"{BASE}{path}?{q}", headers={"Authorization": f"Bearer {KEY}"}
+    )
     try:
-        with urllib.request.urlopen(f"{BASE}{path}?{q}", timeout=30) as r:
+        with urllib.request.urlopen(request, timeout=30) as r:
             return json.load(r)
     except Exception as e:
         return {"__error__": str(e)}
@@ -106,7 +115,10 @@ def card_movie(mid):
 
 
 # --- Сериалы: текущие + добор из популярных ---
-TV_IDS = [95480, 247718, 95350, 97546, 1413, 108978]
+# Список ID для витрины главной вынесен в data/featured.json.
+# Если файла нет — очередь строится только по popularity из TMDB.
+TV_IDS = list(json.load(open(os.path.join(ROOT, "data", "featured.json"), encoding="utf-8")).get("tv_ids", [])) \
+    if os.path.exists(os.path.join(ROOT, "data", "featured.json")) else []
 try:
     pop = get("/tv/popular", page=1).get("results", [])
     for x in pop:
@@ -164,12 +176,16 @@ for c in cards:
     if c["kind"] == "movie" and c.get("release_date") == TODAY:
         today_items.append({"kind": "movie", "title": c["title"], "network": ""})
 
-# --- Календарь: неделя 30.09 — 06.10 ---
+# --- Календарь: текущая неделя по Москве, понедельник — воскресенье ---
+_today = today_moscow()
+_mon = _today - timedelta(days=_today.weekday())
+_sun = _mon + timedelta(days=6)
+_w0, _w1 = _mon.isoformat(), _sun.isoformat()
 week = {}
 for c in cards:
     if c["kind"] == "tv" and c.get("next_ep"):
         d = c["next_ep"]["date"]
-        if "2026-09-30" <= d <= "2026-10-06":
+        if _w0 <= d <= _w1:
             week.setdefault(d, []).append({
                 "title": c["title"], "poster": c["poster"], "season": c["next_ep"]["season"],
                 "ep": c["next_ep"]["ep"], "ep_name": c["next_ep"]["name"], "network": c["network"],
@@ -181,11 +197,7 @@ for c in cards:
     if c["kind"] == "tv" and c.get("next_ep"):
         if next_up is None or c["next_ep"]["date"] < next_up["next_ep"]["date"]:
             next_up = c
-# по референсу — АИУ
-next_up = next((c for c in cards if c["id"] == 1413), next_up)
-
-hero = next((c for c in cards if c["id"] == 247718), None) or \
-       next((c for c in cards if c.get("backdrop")), cards[0] if cards else None)
+hero = next((c for c in cards if c.get("backdrop")), cards[0] if cards else None)
 
 out = {
     "cards": cards,

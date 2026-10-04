@@ -12,13 +12,17 @@
 import json, os, threading, time, urllib.parse, urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-KEY = os.environ.get("TMDB_API_KEY", "8265bd1679663a7ea12ac168da84d2e8")
+from time_service import today_moscow
+
+KEY = os.environ.get("TMDB_API_READ_TOKEN", "").strip()
+if not KEY:
+    raise SystemExit("TMDB_API_READ_TOKEN is required. Set it in .env locally or GitHub Secrets in CI.")
 OMDB_KEY = os.environ.get("OMDB_API_KEY", "").strip()
 BASE = "https://api.themoviedb.org/3"
 IMG = "https://image.tmdb.org/t/p"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CACHE_P = os.path.join(ROOT, "data", "cache.json")
-TODAY = "2026-09-30"
+TODAY = today_moscow().isoformat()
 
 os.makedirs(os.path.join(ROOT, "data"), exist_ok=True)
 CACHE = json.load(open(CACHE_P, encoding="utf-8")) if os.path.exists(CACHE_P) else {}
@@ -28,17 +32,17 @@ COUNTER = {"n": 0}
 
 
 def get(path, **p):
-    p.setdefault("api_key", KEY)
     p.setdefault("language", "ru-RU")
     q = "&".join(f"{k}={urllib.parse.quote(str(v))}" for k, v in sorted(p.items()))
     url = f"{BASE}{path}?{q}"
+    request = urllib.request.Request(url, headers={"Authorization": f"Bearer {KEY}"})
     with CACHE_LOCK:
         if url in CACHE:
             HITS["cached"] += 1
             return CACHE[url]
     for attempt in range(3):
         try:
-            with urllib.request.urlopen(url, timeout=45) as r:
+            with urllib.request.urlopen(request, timeout=45) as r:
                 d = json.load(r)
             with CACHE_LOCK:
                 CACHE[url] = d

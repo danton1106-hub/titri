@@ -1,0 +1,82 @@
+name: Обновление и сборка Титров
+
+on:
+  push:
+    branches: [main, staging]
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  TZ: Europe/Moscow
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      deploy: ${{ steps.mode.outputs.deploy }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Установить зависимости проверки
+        run: python3 -m pip install --quiet jsonschema
+
+      - name: Определить режим запуска
+        id: mode
+        run: |
+          if [ "${{ github.ref }}" = "refs/heads/main" ]; then
+            echo "deploy=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "deploy=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Проверить обязательный secret
+        run: |
+          test -n "$TMDB_API_READ_TOKEN" || { echo "TMDB_API_READ_TOKEN is not configured"; exit 1; }
+        env:
+          TMDB_API_READ_TOKEN: ${{ secrets.TMDB_API_READ_TOKEN }}
+
+      - name: Получить контент и расписание
+        env:
+          TMDB_API_READ_TOKEN: ${{ secrets.TMDB_API_READ_TOKEN }}
+        run: |
+          python3 scripts/fetch_catalog.py
+          python3 scripts/fetch_home.py
+
+      - name: Получить внешние рейтинги
+        if: ${{ secrets.OMDB_API_KEY != '' }}
+        env:
+          OMDB_API_KEY: ${{ secrets.OMDB_API_KEY }}
+        run: python3 scripts/fetch_ratings.py
+
+      - name: Собрать production
+        run: python3 scripts/build.py
+
+      - name: Проверить данные
+        run: python3 scripts/validate_data.py
+
+      - name: Проверить внутренние ссылки
+        run: python3 scripts/check_links.py
+
+      - name: Тесты
+        run: python3 -m unittest discover -s tests -p 'test_*.py'
+
+      - name: Публикация в docs только для main
+        if: steps.mode.outputs.deploy == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data docs
+          if git diff --cached --quiet; then
+            echo "Изменений нет."
+          else
+            git commit -m "Автообновление: $(TZ=Europe/Moscow date +'%d.%m.%Y %H:%M') МСК"
+            git push
+          fi

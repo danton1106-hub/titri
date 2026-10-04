@@ -1,34 +1,8 @@
-(function () {
-  var key = 'titri-watchlist-v1';
-  function getList() {
-    try { return JSON.parse(localStorage.getItem(key) || '[]'); }
-    catch (error) { return []; }
-  }
-  function update() {
-    var list = getList();
-    document.querySelectorAll('[data-watch-id]').forEach(function (button) {
-      var saved = list.some(function (item) { return item.id === button.dataset.watchId; });
-      button.classList.toggle('is-saved', saved);
-      button.setAttribute('aria-pressed', saved ? 'true' : 'false');
-      button.title = saved ? 'Ubrat iz moih prosmotrov' : 'Dobavit v moi prosmotry';
-      if (button.classList.contains('card-mark')) button.textContent = saved ? '+' : '+';
-    });
-    document.querySelectorAll('[data-watch-count]').forEach(function (node) { node.textContent = list.length; });
-  }
-  document.addEventListener('click', function (event) {
-    var button = event.target.closest('[data-watch-id]');
-    if (!button) return;
-    event.preventDefault(); event.stopPropagation();
-    var list = getList(), id = button.dataset.watchId;
-    var index = list.findIndex(function (item) { return item.id === id; });
-    if (index >= 0) list.splice(index, 1);
-    else list.push({ id: id, title: button.dataset.watchTitle || '', url: button.dataset.watchUrl || location.href });
-    localStorage.setItem(key, JSON.stringify(list)); update();
-  });
-  document.addEventListener('DOMContentLoaded', function () {
-    var parts = new Intl.DateTimeFormat('ru-RU', { timeZone: 'Europe/Moscow', day: '2-digit', month: '2-digit', year: 'numeric' }).formatToParts(new Date());
-    var values = Object.fromEntries(parts.filter(function (p) { return p.type !== 'literal'; }).map(function (p) { return [p.type, p.value]; }));
-    document.querySelectorAll('[data-current-date]').forEach(function (node) { node.textContent = values.day + ' / ' + values.month + ' / ' + values.year; });
-    update();
-  });
-})();
+(function(){
+var KEY='titri-watchlist-v2';
+function list(){try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return[]}}
+function save(v){localStorage.setItem(KEY,JSON.stringify(v))}
+function update(){var v=list();document.querySelectorAll('[data-watch-count]').forEach(function(n){n.textContent=v.length});document.querySelectorAll('[data-watch-id]').forEach(function(b){var on=v.some(function(x){return x.content_id===b.dataset.watchId});b.classList.toggle('is-saved',on);b.setAttribute('aria-pressed',on);b.textContent=b.classList.contains('card-mark')?(on?'✓':'+'):(on?'✓ Добавлено':'+ В мой список')});var grid=document.getElementById('my-list-grid');if(grid){grid.innerHTML=v.map(function(x){return '<article class="card"><a href="'+x.url+'"><h2 class="card-title h3">'+x.title+'</h2></a><button class="card-mark" type="button" data-watch-id="'+x.content_id+'" data-watch-title="'+x.title+'">✓</button></article>'}).join('');document.getElementById('my-list-empty').hidden=!!v.length}}
+document.addEventListener('click',function(e){var b=e.target.closest('[data-watch-id]');if(!b)return;e.preventDefault();var v=list(),id=b.dataset.watchId,i=v.findIndex(function(x){return x.content_id===id});if(i>=0)v.splice(i,1);else v.push({content_id:id,content_type:b.dataset.watchType||'content',added_at:new Date().toISOString(),title:b.dataset.watchTitle||'',url:b.dataset.watchUrl||location.href});save(v);update()});function refreshDate(){var parts=new Intl.DateTimeFormat('ru-RU',{timeZone:'Europe/Moscow',day:'2-digit',month:'2-digit',year:'numeric'}).formatToParts(new Date());var v={};parts.forEach(function(p){if(p.type!=='literal')v[p.type]=p.value});document.querySelectorAll('[data-current-date]').forEach(function(n){n.textContent=v.day+' / '+v.month+' / '+v.year})}
+function menu(){var t=document.querySelector('.menu-toggle'),n=document.getElementById('mobile-nav');if(!t||!n)return;function set(open){t.setAttribute('aria-expanded',String(open));n.hidden=!open}t.addEventListener('click',function(){set(t.getAttribute('aria-expanded')!=='true')});t.addEventListener('keydown',function(e){if(e.key==='Escape'){set(false);t.focus()}});n.addEventListener('keydown',function(e){if(e.key==='Escape'){set(false);t.focus()}})}
+document.addEventListener('DOMContentLoaded',function(){update();refreshDate();menu()})})();
