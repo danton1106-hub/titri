@@ -8,9 +8,10 @@ from __future__ import annotations
 import html
 import json
 import posixpath
+import re
 import shutil
 from collections import defaultdict
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 import env_service
@@ -20,6 +21,8 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 DOCS = ROOT / "docs"
 MONTHS = ("января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря")
+MONTHS_GEN = ("январь", "февраль", "март", "апрель", "май", "июнь",
+             "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь")
 CONTENT_TYPES = {
     "movie": "фильм", "series": "сериал", "reality": "реалити", "competition": "соревнование",
     "game_show": "игровое шоу", "talk_show": "ток-шоу", "comedy_show": "юмористическое шоу",
@@ -49,6 +52,25 @@ def content_id(item):
     return item["content_id"]
 
 
+CJK = re.compile(r"[\u2e80-\u9fff\u3040-\u30ff\uac00-\ud7af]")
+HAS_LETTERS = re.compile(r"[A-Za-z\u0410-\u042f\u0430-\u044f\u0401\u0451]")
+
+
+def readable_title(title, fallback=""):
+    """Русскому читателю нельзя показывать иероглифы вместо названия.
+
+    Если русского и латинского названия нет — берём оригинальное, а если
+    и его нет, проект в витрину не попадает.
+    """
+    text = (title or "").strip()
+    if CJK.search(text):
+        text = re.sub(r"\s{2,}", " ", CJK.sub(" ", text)).strip(" -–—:")
+    if not HAS_LETTERS.search(text):
+        alternative = (fallback or "").strip()
+        return alternative if HAS_LETTERS.search(alternative) else ""
+    return text
+
+
 def slug(value):
     return str(value).replace("tmdb:", "tmdb-")
 
@@ -65,17 +87,23 @@ def to_normalized():
         kind = row.get("kind", "tv")
         is_anime = bool(row.get("is_anime"))
         content_type = "anime" if is_anime else ("movie" if kind == "movie" else "series")
+        title = readable_title(row.get("title"), row.get("original_title"))
+        if not title:
+            continue
         result.append({
             "id": cid, "slug": row.get("slug") or slug(cid), "content_type": content_type,
-            "title": row.get("title"), "original_title": row.get("original_title"),
+            "title": readable_title(row.get("title"), row.get("original_title")),
+            "original_title": row.get("original_title"),
             "overview": row.get("overview") or "", "country": row.get("country"),
             "original_language": row.get("language"), "year_start": row.get("year"),
             "status": row.get("status"), "poster": row.get("poster"), "backdrop": row.get("backdrop"),
             "genres": row.get("genres") or [], "genre_ids": row.get("genre_ids") or [],
             "vote": row.get("vote"), "vote_count": row.get("vote_count"),
+            "popularity": row.get("popularity") or 0,
             "release_date": row.get("release_date") or row.get("first_date"),
-            "total_episodes": row.get("n_episodes") or row.get("total"),
-            "aired_count": row.get("aired"), "next_episode": row.get("next_ep"),
+            "total_episodes": row.get("n_episodes") or row.get("total") or None,
+            "aired_count": row.get("aired") or None,
+            "aired_season": None, "next_episode": row.get("next_ep"),
             "last_episode": row.get("last_ep"), "network": row.get("network"),
             "homepage": row.get("homepage"), "external_ids": {"tmdb": row.get("id")},
         })
@@ -107,7 +135,7 @@ def event(cid, event_type, release_date, title, episode=None, region="GLOBAL", c
         "content_id": cid, "season_id": None, "episode_id": None, "event_type": event_type,
         "release_date": release_date, "release_at": None, "release_timezone": None,
         "region": region, "country": country, "platform_id": None, "source_id": "tmdb", "source_url": None,
-        "verification_status": "imported", "title": title, "season_number": episode.get("season"),
+        "verification_status": "aggregator_confirmed", "title": title, "season_number": episode.get("season"),
         "episode_number": episode.get("ep"), "episode_name": episode.get("name"),
     }
 
@@ -126,7 +154,7 @@ def apply_overrides(contents, events):
         item = by_event.get(key)
         if item:
             item.update({k: v for k, v in override.items() if k in item and v is not None})
-            item["verification_status"] = "editorial"
+            item["verification_status"] = "editorial_verified"
         elif override.get("content_id") and override.get("release_date"):
             events.append({
                 "id": override.get("id") or f'{override["content_id"]}:editorial:{override["release_date"]}',
@@ -136,7 +164,7 @@ def apply_overrides(contents, events):
                 "release_timezone": override.get("release_timezone"),
                 "region": override.get("region") or "GLOBAL", "country": override.get("country"),
                 "platform_id": override.get("platform_id"), "source_id": "editorial",
-                "source_url": override.get("source_url"), "verification_status": "editorial",
+                "source_url": override.get("source_url"), "verification_status": "editorial_verified",
                 "title": override.get("title", ""), "season_number": override.get("season_number"),
                 "episode_number": override.get("episode_number"), "episode_name": override.get("episode_name"),
             })
@@ -157,12 +185,114 @@ def save_normalized(contents, events):
     (DATA / "external_ids.json").write_text(json.dumps({"schema_version": 1, "items": external_ids}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+def compute_aired(contents, events, today):
+    """Сколько выпусков уже вышло на сегодня.
+
+    Считаем по событиям-эпизодам, а не по количеству записей в API:
+    будущая серия может существовать, но ещё не иметь даты, и тогда
+    «0 из 20» вместо реальной картины. Номер последнего вышедшего
+    выпуска и есть число вышедших.
+    """
+    counters = {}
+    for event in events:
+        released = parse_local_date(event.get("release_date"))
+        if released is None or released > today:
+            continue
+        if event.get("event_type") not in {"episode", "show_episode", "reality_episode", "finale"}:
+            continue
+        number = event.get("episode_number")
+        if not number:
+            continue
+        season = event.get("season_number")
+        key = event["content_id"]
+        best = counters.get(key)
+        # Берём последнюю вышедшую серию: по номеру внутри сезона и по сезону.
+        if best is None or (season or 0, int(number)) > (best[0] or 0, best[1]):
+            counters[key] = (season, int(number))
+    for item in contents:
+        measured = counters.get(item["id"])
+        if measured:
+            season, number = measured
+            item["aired_count"] = number
+            item["aired_season"] = season
+        elif item.get("last_episode") and item["last_episode"].get("ep"):
+            item["aired_count"] = int(item["last_episode"]["ep"])
+            item["aired_season"] = item["last_episode"].get("season")
+
+
+def refresh_next_episode(contents, events, today):
+    """Ближайший релиз берём из событий, а не из поля API.
+
+    TMDB часто держит уже вышедшую серию в next_episode, пока не обновит
+    данные сезона. Тогда на странице появляется «Следующий релиз: серия 1»
+    у проекта, который уже стартовал. Источник истины для расписания —
+    release_events, поэтому поле пересчитываем здесь.
+    """
+    upcoming = defaultdict(list)
+    for event in events:
+        released = parse_local_date(event.get("release_date"))
+        if released is None or released <= today:
+            continue
+        if event.get("event_type") not in {"episode", "show_episode", "reality_episode", "finale", "movie_digital", "movie_streaming", "movie_theatrical"}:
+            continue
+        upcoming[event["content_id"]].append((released, event))
+    for item in contents:
+        rows = sorted(upcoming.get(item["id"], []), key=lambda pair: pair[0])
+        if not rows:
+            item["next_episode"] = None
+            continue
+        released, event = rows[0]
+        item["next_episode"] = {
+            "ep": event.get("episode_number"),
+            "season": event.get("season_number"),
+            "date": released.isoformat(),
+            "name": event.get("episode_name"),
+        }
+
+
 def rating_map():
+    """Оценки «После титров» по проектам: список голосов, а не одно значение.
+
+    Редакторов может быть несколько. Каждый голосует целым числом 1-10,
+    а итог считается средним и может быть дробным.
+    """
     result = {}
     for item in load(DATA / "editorial" / "ratings.json", {"items": []}).get("items", []):
-        if item.get("status") == "published":
-            result[item.get("content_id")] = item
+        if item.get("status") != "published":
+            continue
+        if not isinstance(item.get("rating"), int):
+            continue
+        result.setdefault(item.get("content_id"), []).append(item)
     return result
+
+
+def aggregate_rating(entries):
+    """Среднее по голосам. Целые на входе, дробное на выходе: 8, 9, 9 -> 8,7."""
+    values = [entry["rating"] for entry in entries or [] if isinstance(entry.get("rating"), int)]
+    if not values:
+        return None
+    return sum(values) / len(values)
+
+
+def rating_status(value):
+    """Эмоциональный статус оценки. Число остаётся главным."""
+    if value >= 9:
+        return "Остаёмся после титров"
+    if value >= 7:
+        return "Стоит досмотреть"
+    if value >= 5:
+        return "На один просмотр"
+    if value >= 3:
+        return "На перемотке"
+    return "Не доживает до титров"
+
+
+def rating_text(value):
+    """8 -> «8», 8.666 -> «8,7». Одна цифра после запятой."""
+    rounded = round(value, 1)
+    if abs(rounded - round(rounded)) < 0.05:
+        return str(int(round(rounded)))
+    return f"{rounded:.1f}".replace(".", ",")
 
 
 def rel(current, target):
@@ -174,21 +304,86 @@ def rel(current, target):
     return result
 
 
+def watch_panel(current):
+    """Раскрывающаяся панель «Мой список» в шапке.
+
+    Содержимое рисует site.js из localStorage: сервер не знает списка
+    до появления личного кабинета. Разметка общая для всех страниц.
+    """
+    return f'''<div class="watch" data-watch-root>
+<button class="bookmark-btn" type="button" aria-expanded="false" aria-controls="watch-panel" aria-haspopup="true">Мой список <span class="count" data-watch-count>0</span></button>
+<div class="watch-panel" id="watch-panel" hidden>
+<div class="watch-head"><span class="label dim">Мой список</span><a class="watch-all" href="{rel(current, 'my-list/')}">Открыть страницу</a></div>
+<ul class="watch-list" data-watch-list></ul>
+<p class="watch-empty" data-watch-empty>Пока пусто. Нажмите <b>+</b> на карточке, чтобы добавить проект.</p>
+</div>
+</div>'''
+
+
 def nav(current=Path("")):
-    links = [("", "Главная"), ("calendar/", "Календарь"), ("movies/", "Фильмы"), ("series/", "Сериалы"), ("shows/", "Шоу"), ("catalog/", "Каталог"), ("journal/", "Журнал")]
+    """Шапка: навигация, дата по Москве, мой список, мобильное меню."""
+    links = [("", "Главная"), ("calendar/", "Календарь"), ("movies/", "Фильмы"), ("series/", "Сериалы"),
+             ("shows/", "Шоу"), ("catalog/", "Каталог"), ("journal/", "Журнал")]
     parts = [f'<a href="{rel(current, href)}">{name}</a>' for href, name in links]
     today = today_moscow()
     today_text = f"{today.day:02d} / {today.month:02d} / {today.year}"
     return f'''<header class="header"><a class="brand" href="{rel(current, '')}">[титры]</a>
 <nav class="nav" aria-label="Основная навигация">{''.join(parts)}</nav>
 <time class="today" data-current-date datetime="{today.isoformat()}">{today_text}</time>
-<a class="bookmark-btn" href="{rel(current, 'my-list/')}">Мой список <span class="count" data-watch-count>0</span></a>
+{watch_panel(current)}
 <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">Меню</button>
 <nav id="mobile-nav" class="mobile-nav" aria-label="Мобильная навигация" hidden>{''.join(parts)}<a href="{rel(current, 'my-list/')}">Мой список</a></nav></header>'''
 
 
 def footer(current=Path("")):
-    return '''<footer class="footer"><div class="wrap"><div class="footer-top"><span class="footer-brand">[титры]</span><span class="footer-tagline">Кино заканчивается.<br>Интерес - нет.</span></div><div class="footer-legal"><span>Данные о фильмах и сериалах - TMDB. Расписание серий - TVMaze. Площадки для просмотра - JustWatch.</span><span>Каталог использует открыто доступные данные TMDB с обязательной атрибуцией источника.</span><span>This product uses the TMDB API but is not endorsed or certified by TMDB.</span></div></div></footer>'''
+    """Подвал: пользовательский текст по-русски, обязательная атрибуция — на отдельной странице."""
+    return (
+        '<footer class="footer"><div class="wrap">'
+        '<div class="footer-top"><span class="footer-brand">[титры]</span>'
+        '<span class="footer-tagline">Кино заканчивается.<br>Интерес остаётся.</span></div>'
+        '<div class="footer-legal">'
+        '<span>Данные о фильмах и сериалах — TMDB (The Movie Database). '
+        'Расписание выхода серий — TVMaze. Данные о доступности просмотра — JustWatch.</span>'
+        '<span>Каталог использует открытые данные TMDB с обязательной атрибуцией источника. '
+        f'<a href="{rel(current, "credits/")}">Источники и атрибуция</a></span>'
+        '<span>Портал «Титры» — бесплатный навигатор по фильмам, сериалам и шоу.</span>'
+        '<span>Все названия, постеры и описания принадлежат их правообладателям '
+        'и показаны исключительно в информационных целях.</span>'
+        '</div></div></footer>'
+    )
+
+
+def credits_page(current=Path("credits")):
+    """Источники и атрибуция. Обязательный notice TMDB живёт здесь, а не в подвале."""
+    body = (
+        '<section class="band wrap">'
+        '<div class="label dim">Источники и атрибуция</div>'
+        '<h1 class="h2">Откуда берутся данные</h1>'
+        '<p class="lead muted">Портал «Титры» использует открытые данные нескольких сервисов. '
+        'Все обязательные упоминания источников собраны на этой странице.</p>'
+        '<div class="credits-block">'
+        '<article class="credit-source">'
+        '<h2 class="h3">TMDB (The Movie Database)</h2>'
+        '<p class="lead muted">Метаданные фильмов и сериалов: названия, описания, постеры, кадры, '
+        'жанры, сезоны, а также идентификаторы проектов.</p>'
+        '<p class="credit-notice">This product uses the TMDB API but is not endorsed or certified by TMDB.</p>'
+        '</article>'
+        '<article class="credit-source">'
+        '<h2 class="h3">TVMaze</h2>'
+        '<p class="lead muted">Расписание выхода эпизодов, списки серий и уточнение дат '
+        'для действующих сериалов.</p>'
+        '</article>'
+        '<article class="credit-source">'
+        '<h2 class="h3">JustWatch</h2>'
+        '<p class="lead muted">Данные о доступности просмотра на площадках. '
+        'Показываются только там, где действительно доступны.</p>'
+        '</article>'
+        '</div>'
+        '<p class="cal-note">Отдельные оценки, кроме рейтинга «После титров», '
+        'принадлежат их источникам и приводятся справочно.</p>'
+        '</section>'
+    )
+    return page("Источники и атрибуция", body, current, "Источники данных и атрибуция портала «Титры»")
 
 
 def page(title, body, current=Path(""), description=""):
@@ -204,31 +399,129 @@ def status_label(status):
     return {"Returning Series": "Продолжается", "Ended": "Завершён", "Canceled": "Закрыт", "In Production": "В производстве", "Planned": "Анонсирован", "Released": "Вышел"}.get(status, status or "Статус не объявлен")
 
 
+def plural(number, forms):
+    """Русская форма слова по числу: 1 серия, 2 серии, 5 серий."""
+    one, few, many = forms
+    n = abs(int(number))
+    if n % 10 == 1 and n % 100 != 11:
+        return one
+    if 2 <= n % 10 <= 4 and not 12 <= n % 100 <= 14:
+        return few
+    return many
+
+
+EPISODE_FORMS = {
+    "серия": ("серия", "серии", "серий"),
+    "выпуск": ("выпуск", "выпуска", "выпусков"),
+    "релиз": ("релиз", "релиза", "релизов"),
+    "спецвыпуск": ("спецвыпуск", "спецвыпуска", "спецвыпусков"),
+}
+
+
+def episode_word(number, content_type):
+    """Слово для одного числа: 1 серия, 3 серии, 145 серий."""
+    base = EPISODE_WORD.get(content_type, "выпуск")
+    return plural(number, EPISODE_FORMS.get(base, ("выпуск", "выпуска", "выпусков")))
+
+
+def section_head(number, kicker, title):
+    """Один заголовок раздела: номер, рубрика и H2. Никаких $ и дублей H2."""
+    return (
+        f'<div class="section-head">'
+        f'<span class="section-no" aria-hidden="true">{esc(number)}</span>'
+        f'<div class="section-head-text">'
+        f'<span class="label dim">{esc(kicker)}</span>'
+        f'<h2 class="h2">{esc(title)}</h2>'
+        f'</div></div>'
+    )
+
+
+def progress_visual(item):
+    """Живая линейка: до 16 выпусков — точки, больше — полоса, неизвестно — текст.
+
+    aired_count и номер следующего выпуска никогда не смешиваются.
+    """
+    total = item.get("total_episodes")
+    aired = item.get("aired_count") or 0
+    next_ep = (item.get("next_episode") or {}).get("ep")
+    if not total:
+        return (f'<p class="prog-note">Вышло {aired} {episode_word(aired, item["content_type"])}'
+                f' \u00b7 общее количество пока не объявлено</p>')
+    if total <= 16:
+        dots = []
+        for index in range(1, total + 1):
+            cls = "prog-dot"
+            if index <= aired:
+                cls += " is-aired"
+            elif next_ep and index == next_ep:
+                cls += " is-next"
+            dots.append(f'<span class="{cls}"></span>')
+        visual = (f'<div class="prog-dots" role="img" aria-label="Вышло {aired} из {total}">'
+                  f'{"".join(dots)}</div>')
+    else:
+        percent = int(round(aired / total * 100))
+        visual = (f'<div class="prog-bar" role="img" aria-label="Вышло {aired} из {total}">'
+                  f'<span style="--fill:{percent}%"></span></div>')
+    lines = [visual, f'<span class="prog-count">Вышло {aired} из {total}</span>']
+    if next_ep:
+        released = parse_local_date((item.get("next_episode") or {}).get("date"))
+        when = f"{released.day} {month_name(released.month)}" if released else "дата не объявлена"
+        lines.append(f'<span class="prog-next">Следующая: {episode_word(next_ep, item["content_type"])} {next_ep} \u00b7 {when}</span>')
+    return "".join(lines)
+
+
 def progress(item):
+    """Сколько вышло. Неизвестное количество показываем честно, а не нулём."""
     total, aired = item.get("total_episodes"), item.get("aired_count")
-    word = EPISODE_WORD.get(item["content_type"], "выпуск")
-    if total is None:
-        return f'Вышло {aired or 0} {word}ов · количество пока не объявлено'
-    if total > 16:
-        return f'Вышло {aired or 0} из {total} {word}ов'
-    return f'Вышло {aired or 0} из {total} {word}ов'
+    aired = aired or 0
+    if not total:
+        return (f'Вышло {aired} {episode_word(aired, item["content_type"])}'
+                f' · количество пока не объявлено')
+    return (f'Вышло {aired} из {total} {episode_word(total, item["content_type"])}')
 
 
-def after_credits(item, ratings):
-    rating = ratings.get(item["id"])
-    if not rating:
+def after_credits(item, ratings, variant="normal"):
+    """Единый компонент рейтинга «После титров».
+
+    Голоса целые, агрегат дробный. Дробная часть показывается частичной
+    заливкой следующей строки, но точное число всегда написано текстом.
+    """
+    entries = ratings.get(item["id"]) or []
+    value = aggregate_rating(entries)
+    if value is None:
         return ""
-    value = rating["rating"]
-    status = "Остаёмся после титров" if value >= 9 else "Стоит досмотреть" if value >= 7 else "На один просмотр" if value >= 5 else "На перемотке" if value >= 3 else "Не доживает до титров"
-    bars = "".join(f'<span class="credit-line {"on" if index <= value else ""}" style="--line:{55 + (index * 17) % 39}%"></span>' for index in range(1, 11))
-    return f'''<section class="after-credits" aria-label="Рейтинг После титров: {value} из 10 строк"><div class="label dim">После титров</div><strong>{value}/10 строк</strong><span>{status}</span><div class="credit-lines">{bars}</div><p>{esc(rating.get("comment"))}</p></section>'''
+    shown = rating_text(value)
+    lines = []
+    for index in range(1, 11):
+        whole = int(value)
+        if index <= whole:
+            fill = 100
+        elif index == whole + 1:
+            fill = int(round((value - whole) * 100))
+        else:
+            fill = 0
+        lines.append(f'<span class="credit-line" style="--fill:{fill}%;--len:{58 + (index * 17) % 38}%"></span>')
+    if abs(value - round(value)) < 0.05:
+        label = f"Рейтинг После титров: {int(round(value))} из 10 строк"
+    else:
+        label = f"Рейтинг После титров: {shown} из 10"
+    comment = next((entry.get("comment") for entry in entries if entry.get("comment")), "")
+    return (
+        f'<section class="after-credits after-credits--{variant}" aria-label="{esc(label)}">'
+        f'<div class="label dim">После титров</div>'
+        f'<strong>{esc(shown)}/10 строк</strong>'
+        f'<span class="after-status">{esc(rating_status(value))}</span>'
+        f'<div class="credit-lines" role="img" aria-label="{esc(label)}">{"".join(lines)}</div>'
+        + (f'<p class="after-comment">{esc(comment)}</p>' if comment else "")
+        + '</section>'
+    )
 
 
 def card(item, current, ratings):
     image = f'<img src="{esc(item.get("poster"))}" alt="{esc(item["title"])}" loading="lazy">' if item.get("poster") else ""
-    rating = ratings.get(item["id"])
-    badge = f'<span class="after-badge">После титров {rating["rating"]}</span>' if rating else ""
-    return f'''<article class="card"><a href="{content_href(item, current)}"><div class="card-media">{image}{badge}</div><h2 class="card-title h3">{esc(item["title"])}</h2></a><div class="card-meta">{esc(CONTENT_TYPES.get(item["content_type"], item["content_type"]))} · {esc(item.get("year_start"))}</div><button class="card-mark" type="button" data-watch-id="{esc(item["id"])}" data-watch-type="{esc(item["content_type"])}" data-watch-title="{esc(item["title"])}" data-watch-url="{content_href(item, current)}" aria-label="Добавить в мой список">+</button></article>'''
+    value = aggregate_rating(ratings.get(item["id"]))
+    badge = f'<span class="after-badge">После титров {rating_text(value)}</span>' if value is not None else ""
+    return f'''<article class="card"><a href="{content_href(item, current)}"><div class="card-media">{image}{badge}</div><h3 class="card-title">{esc(item["title"])}</h3></a><div class="card-meta">{esc(CONTENT_TYPES.get(item["content_type"], item["content_type"]))} · {esc(item.get("year_start"))}</div><button class="card-mark" type="button" data-watch-id="{esc(item["id"])}" data-watch-type="{esc(item["content_type"])}" data-watch-title="{esc(item["title"])}" data-watch-url="{content_href(item, current)}" data-watch-poster="{esc(item.get("poster"))}" aria-label="Добавить в мой список">+</button></article>'''
 
 
 def list_page(title, items, current, ratings, lead):
@@ -268,7 +561,8 @@ def calendar_page(year, month, events, contents, ratings, current=None, availabl
 
 def my_list_page():
     current = Path("my-list")
-    body = '''<section class="band wrap"><div class="label dim">Мой список</div><h1 class="h2">Смотреть позже</h1><p class="lead muted">Список хранится в этом браузере.</p><div class="grid-posters" id="my-list-grid"></div><p class="lead muted" id="my-list-empty">В списке пока нет проектов.</p></section>'''
+    body = '''<section class="band wrap"><div class="label dim">Мой список</div><h1 class="h2">Смотреть позже</h1><p class="lead muted">Список хранится в этом браузере.</p><div class="grid-posters" id="my-list-grid"></div><p class="lead muted" id="my-list-empty">В списке пока нет проектов.</p>
+<p class="lead muted">Всего сохранено: <b id="my-list-total">0</b></p></section>'''
     return page("Мой список", body, current)
 
 
@@ -281,9 +575,450 @@ def detail_page(item, ratings):
     current = Path("content") / slug(item["id"])
     image = f'<img src="{esc(item.get("backdrop") or item.get("poster"))}" alt="{esc(item["title"])}">' if item.get("backdrop") or item.get("poster") else ""
     next_ep = item.get("next_episode") or {}
-    next_text = f'Следующий {EPISODE_WORD.get(item["content_type"], "выпуск")}: {next_ep.get("ep", "")} · {next_ep.get("date", "дата не объявлена")}' if next_ep else ""
-    body = f'''<section class="detail-hero"><div class="detail-media">{image}</div><div class="wrap detail-inner"><a class="back" href="{rel(current, 'catalog/')}">← Каталог</a><h1 class="h2 detail-title">{esc(item["title"])}</h1><p class="lead muted">{esc(CONTENT_TYPES.get(item["content_type"], item["content_type"]))} · {esc(status_label(item.get("status")))}</p><p class="lead">{esc(item.get("overview"))}</p><button class="btn btn-cream" type="button" data-watch-id="{esc(item["id"])}" data-watch-type="{esc(item["content_type"])}" data-watch-title="{esc(item["title"])}" data-watch-url="{rel(current, f'content/{slug(item["id"])}/')}">+ В мой список</button>{after_credits(item, ratings)}<section class="facts"><div><b>Выпуски</b><span>{esc(progress(item))}</span></div><div><b>Следующий релиз</b><span>{esc(next_text or 'Дата не объявлена')}</span></div></section></div></section>'''
+    word = EPISODE_WORD.get(item["content_type"], "выпуск")
+    if next_ep:
+        released = parse_local_date(next_ep.get("date"))
+        when = f"{released.day} {month_name(released.month)}" if released else "дата не объявлена"
+        number = next_ep.get("ep")
+        next_text = f"{word.capitalize()} {number} · {when}" if number else f"Продолжение · {when}"
+    else:
+        next_text = ""
+    body = f'''<section class="detail-hero"><div class="detail-media">{image}</div><div class="wrap detail-inner"><a class="back" href="{rel(current, 'catalog/')}">← Каталог</a><h1 class="h2 detail-title">{esc(item["title"])}</h1><p class="lead muted">{esc(CONTENT_TYPES.get(item["content_type"], item["content_type"]))} · {esc(status_label(item.get("status")))}</p><p class="lead">{esc(item.get("overview"))}</p><button class="btn btn-cream" type="button" data-watch-id="{esc(item["id"])}" data-watch-type="{esc(item["content_type"])}" data-watch-title="{esc(item["title"])}" data-watch-poster="{esc(item.get("poster"))}" data-watch-url="{rel(current, f'content/{slug(item["id"])}/')}">+ В мой список</button>{after_credits(item, ratings)}<section class="facts"><div><b>Выпуски</b><span>{progress_visual(item) if item["content_type"] != "movie" else esc(progress(item))}</span></div><div><b>Следующий релиз</b><span>{esc(next_text or 'Дата не объявлена')}</span></div></section></div></section>'''
     return page(item["title"], body, current, item.get("overview", "")[:160])
+
+
+def month_name(month):
+    return MONTHS[month - 1]
+
+
+def editorial_banner_ids():
+    """Редакторский порядок баннеров из data/editorial/featured.json."""
+    document = load(DATA / "editorial" / "featured.json", {"banner_ids": []})
+    return [str(x) for x in (document.get("banner_ids") or []) if x]
+
+
+PREMIERE_EVENTS = {"series_premiere", "season_premiere", "movie_theatrical", "movie_digital", "movie_streaming", "show_episode", "reality_episode", "special"}
+
+
+def month_candidates(contents, events, year, month):
+    """Проекты с релизом в месяце и признаки, по которым выбираем баннер."""
+    by_id = {item["id"]: item for item in contents}
+    found = {}
+    for event in events:
+        released = parse_local_date(event.get("release_date"))
+        if not released or released.year != year or released.month != month:
+            continue
+        item = by_id.get(event["content_id"])
+        if not item or not (item.get("backdrop") or item.get("poster")):
+            continue
+        entry = found.setdefault(item["id"], {"item": item, "kinds": set(), "dates": []})
+        entry["kinds"].add(event.get("event_type"))
+        entry["dates"].append(released)
+    result = []
+    for entry in found.values():
+        item = entry["item"]
+        is_premiere = bool(entry["kinds"] & PREMIERE_EVENTS)
+        # «Премьера месяца» — это проект, который стартовал в этом году,
+        # а не многолетний сериал, у которого просто вышла очередная серия.
+        fresh = str(item.get("year_start") or "") == str(year)
+        result.append({
+            "item": item,
+            "is_premiere": is_premiere,
+            "fresh": fresh,
+            "first_date": min(entry["dates"]),
+        })
+    return result
+
+
+def popular_of_month(contents, events, year, month, limit=6):
+    """До 6 баннеров: сначала премьеры этого года, затем остальные релизы месяца.
+
+    Внутри каждой группы — по популярности. Проекты без постера и кадра
+    не участвуют: пустой баннер выглядит сломанным.
+    """
+    candidates = month_candidates(contents, events, year, month)
+
+    # Сначала редакторские пины из data/editorial/featured.json: редактор
+    # решает, что важно, ровно как в ТЗ (override выше автоматики).
+    pinned = []
+    by_id = {row["item"]["id"]: row["item"] for row in candidates}
+    for content_id in editorial_banner_ids():
+        item = by_id.get(content_id)
+        if item and item not in pinned:
+            pinned.append(item)
+
+    # Остальные места добираем автоматически: проект месяца с голосами.
+    # Проект без единой оценки баннер не занимает — карточка без рейтинга
+    # читается как ошибка отбора.
+    rated = [row for row in candidates if (row["item"].get("vote_count") or 0) > 0]
+    pool = rated or candidates
+    pool.sort(key=lambda row: (
+        0 if row["fresh"] else 1,
+        0 if row["is_premiere"] else 1,
+        -float(row["item"].get("popularity") or 0),
+        -float(row["item"].get("vote") or 0),
+    ))
+    result = list(pinned)
+    for row in pool:
+        if len(result) >= limit:
+            break
+        if row["item"] not in result:
+            result.append(row["item"])
+    return result[:limit]
+
+
+def release_status_line(item, events, today):
+    """Что происходит с проектом прямо сейчас: короткая честная строка для hero.
+
+    Собирается из событий, а не из догадок: серия, сезон или полный сезон.
+    """
+    rows = sorted(
+        ((released, e) for e in events
+         if e.get("content_id") == item["id"]
+         and (released := parse_local_date(e.get("release_date")))),
+        key=lambda pair: pair[0],
+    )
+    word = EPISODE_WORD.get(item["content_type"], "выпуск")
+    total = item.get("total_episodes")
+    aired = item.get("aired_count") or 0
+
+    if total and aired >= total and rows and rows[-1][0] <= today:
+        return f"Все {episode_word(total, item['content_type'])} уже доступны"
+
+    today_rows = [e for d, e in rows if d == today]
+    if today_rows:
+        event = today_rows[0]
+        number, season = event.get("episode_number"), event.get("season_number")
+        if len(today_rows) > 1:
+            return f"Сегодня выходит весь сезон · {episode_word(len(today_rows), item['content_type'])}"
+        if number and season:
+            return f"Сегодня {word} {number} сезона {season}"
+        if number:
+            return f"Сегодня {word} {number}"
+        return "Сегодня премьера"
+
+    future = [(d, e) for d, e in rows if d > today]
+    if future:
+        released, event = future[0]
+        number, season = event.get("episode_number"), event.get("season_number")
+        when = f"{released.day} {month_name(released.month)}"
+        if number and season:
+            return f"Новая {word} {number} · сезон {season} · {when}"
+        if number:
+            return f"Новая {word} {number} · {when}"
+        return f"Премьера · {when}"
+
+    if aired:
+        return f"Вышло {aired} {episode_word(aired, item['content_type'])}"
+    return ""
+
+
+def banner_slider(contents, events, current, year, month):
+    """Баннер-слайдер: до шести проектов с релизом в этом месяце.
+
+    Порядок: редакторские пины, затем актуальность релиза, популярность
+    и оценки. Счётчик вида «24 / 13» в hero не используется.
+    """
+    slides = popular_of_month(contents, events, year, month)
+    if not slides:
+        return ""
+    month_title = month_name(month).capitalize()
+    today = today_moscow()
+    articles = []
+    for index, item in enumerate(slides):
+        image = esc(item.get("backdrop") or item.get("poster"))
+        active = " is-active" if index == 0 else ""
+        hidden = "" if index == 0 else ' aria-hidden="true"'
+        loading = "" if index == 0 else ' loading="lazy"'
+        meta = " · ".join(
+            part for part in (
+                CONTENT_TYPES.get(item["content_type"], item["content_type"]),
+                esc(status_label(item.get("status"))),
+                esc(item.get("network")),
+            ) if part
+        )
+        status = release_status_line(item, events, today)
+        original = (item.get("original_title") or "").strip()
+        title_block = f'<h2 class="slide-title">{esc(item["title"])}</h2>'
+        if original and original.lower() != (item.get("title") or "").strip().lower():
+            title_block += f'<p class="slide-original">{esc(original)}</p>'
+        link = content_href(item, current)
+        articles.append(
+            f'<article class="slide{active}" data-slide{hidden}>'
+            f'<div class="slide-bg"><img src="{image}" alt="{esc(item["title"])}"{loading}></div>'
+            f'<div class="slide-inner wrap">'
+            f'<span class="label dim">Премьера месяца · {month_title}</span>'
+            f'{title_block}'
+            + (f'<p class="slide-status">{esc(status)}</p>' if status else "")
+            + f'<p class="slide-lead">{esc((item.get("overview") or "")[:190])}</p>'
+            f'<div class="slide-meta label dim">{meta}</div>'
+            f'<div class="slide-actions">'
+            f'<a class="btn btn-cream" href="{link}">О проекте</a>'
+            f'<button class="btn btn-ghost slide-watch" type="button" data-watch-id="{esc(item["id"])}"'
+            f' data-watch-type="{esc(item["content_type"])}" data-watch-title="{esc(item["title"])}"'
+            f' data-watch-poster="{esc(item.get("poster"))}" data-watch-url="{link}">+ В мой список</button>'
+            f'</div></div></article>'
+        )
+    dots = "".join(
+        f'<button class="slide-dot{" is-active" if index == 0 else ""}" type="button"'
+        f' data-slide-to="{index}" aria-label="Баннер {index + 1}: {esc(item["title"])}"'
+        f'{" aria-current=\"true\"" if index == 0 else ""}></button>'
+        for index, item in enumerate(slides)
+    )
+    arrows = (
+        '<button class="slide-arrow slide-prev" type="button" data-slide-prev aria-label="Предыдущий баннер">←</button>'
+        '<button class="slide-arrow slide-next" type="button" data-slide-next aria-label="Следующий баннер">→</button>'
+    ) if len(slides) > 1 else ""
+    return (
+        '<section class="hero-banner" data-slider aria-roledescription="карусель"'
+        ' aria-label="Премьеры месяца">'
+        + "".join(articles)
+        + f'<div class="slide-controls wrap">{arrows}<div class="slide-dots" role="tablist">{dots}</div></div>'
+        + "</section>"
+    )
+
+
+def episode_line(event, today):
+    """Живая линейка: что уже вышло, что выходит сегодня, что впереди."""
+    released = parse_local_date(event.get("release_date"))
+    number = event.get("episode_number")
+    season = event.get("season_number")
+    if released is None:
+        return "дата не объявлена"
+    if released < today:
+        verb = "Вышла"
+    elif released == today:
+        verb = "Выходит сегодня"
+    else:
+        verb = "Выйдет"
+    stamp = f"{released.day} {month_name(released.month)}"
+    if verb == "Выходит сегодня":
+        return "Выходит сегодня"
+    if number and season:
+        return f"{verb} серия {number} · сезон {season} · {stamp}"
+    if number:
+        return f"{verb} серия {number} · {stamp}"
+    return f"{verb} · {stamp}"
+
+
+def calendar_inline(events, contents, current, today, year, month, available=None):
+    """Блок 01: календарь выходов.
+
+    Главный продуктовый блок страницы. Строится только из release_events,
+    поэтому в него попадают сериалы, аниме, реалити, шоу и премьеры сезонов.
+    Каждое название — ссылка на внутреннюю страницу проекта.
+    """
+    by_id = {item["id"]: item for item in contents}
+    days = defaultdict(list)
+    for event in events:
+        released = parse_local_date(event.get("release_date"))
+        if released and released.year == year and released.month == month:
+            days[released.day].append(event)
+    rows = []
+    for day in sorted(days):
+        lines = []
+        seen = set()
+        by_project = defaultdict(list)
+        for event in days[day]:
+            by_project[event["content_id"]].append(event)
+        for content_key, group in by_project.items():
+            item = by_id.get(content_key)
+            if not item:
+                continue
+            group.sort(key=lambda e: (e.get("season_number") or 0, e.get("episode_number") or 0))
+            event = group[0]
+            poster = item.get("poster")
+            thumb = f'<img class="thumb" src="{esc(poster)}" alt="" loading="lazy">' if poster else '<span class="thumb"></span>'
+            # Пять и более серий в один день — это полный сезон, а не пять строк подряд.
+            if len(group) >= 5:
+                sub = f'Весь сезон · {episode_word(len(group), item["content_type"])}'
+            elif len(group) > 1:
+                numbers = [e.get("episode_number") for e in group if e.get("episode_number")]
+                season = event.get("season_number")
+                label = f"сезон {season} · " if season else ""
+                sub = f'{label}{episode_word(len(numbers) or len(group), item["content_type"])} {", ".join(str(n) for n in numbers)}'
+            else:
+                sub = episode_line(event, today)
+            if item["id"] in seen:
+                continue
+            seen.add(item["id"])
+            lines.append(
+                f'<li class="rel"><span class="rel-day">{day}</span>'
+                f'<a class="rel-link" href="{content_href(item, current)}">{thumb}'
+                f'<span class="rel-text"><b>{esc(item["title"])}</b>'
+                f'<span class="rel-sub">{esc(sub)}</span></span></a></li>'
+            )
+        if lines:
+            rows.append(f'<ul class="rel-day-group">{"".join(lines)}</ul>')
+    body = "".join(rows) or '<p class="lead muted">В этом месяце подтверждённых релизов пока нет.</p>'
+    month_href = rel(current, f"calendar/{year}/{month}/")
+    return (
+        f'<section class="band wrap" id="calendar">'
+        + section_head("01", "Календарь выхода", f"{month_name(month).capitalize()} {year}: что выходит")
+        + f'<div class="calendar-nav">{calendar_links(current, year, month, available)}'
+          f'<a class="cal-month-link" href="{month_href}">Весь {MONTHS_GEN[month - 1]}</a></div>'
+        + f'<div class="cal-lines">{body}</div>'
+        + f'<p class="cal-note">Не пропустите продолжение: даты серий сверяются с официальными источниками, '
+          f'затем с TVMaze и TMDB. Неподтверждённая дата не показывается как состоявшийся релиз.</p>'
+        + '</section>'
+    )
+
+
+def month_link(current, target_year, target_month, label, available):
+    """Ссылка на месяц, если он собран. Иначе — просто подпись без ссылки."""
+    if available and (target_year, target_month) not in set(available):
+        return f'<span class="cal-off">{label}</span>'
+    return f'<a href="{rel(current, f"calendar/{target_year}/{target_month}/")}">{label}</a>'
+
+
+def calendar_links(current, year, month, available=None):
+    """Навигация по месяцам: назад, сегодня, вперёд."""
+    first = date(year, month, 1)
+    previous = first - timedelta(days=1)
+    following = (first + timedelta(days=32)).replace(day=1)
+    today = today_moscow()
+    return (
+        month_link(current, previous.year, previous.month, "← Предыдущий месяц", available)
+        + month_link(current, today.year, today.month, "Сегодня", available)
+        + month_link(current, following.year, following.month, "Следующий месяц →", available)
+    )
+
+
+VERIFIED_STATUSES = {"official", "editorial_verified", "aggregator_confirmed"}
+
+
+def today_block(events, contents, current, today):
+    """Что вышло сегодня. Только подтверждённые события, без догадок.
+
+    Дата берётся по Москве. Событие без верификации в этот блок не попадает:
+    «сегодня» — утверждение, которое нужно подтверждать.
+    """
+    by_id = {item["id"]: item for item in contents}
+    items, seen = [], set()
+    for event in events:
+        if parse_local_date(event.get("release_date")) != today:
+            continue
+        if event.get("verification_status") not in VERIFIED_STATUSES:
+            continue
+        item = by_id.get(event["content_id"])
+        if not item:
+            continue
+        marker = item["id"] if event.get("episode_number") in (None, 1) else (item["id"], event.get("episode_number"))
+        if marker in seen:
+            continue
+        seen.add(marker)
+        items.append((item, event))
+
+    heading = f"Сегодня, {today.day} {month_name(today.month)}"
+    if not items:
+        inner = (
+            '<p class="lead muted">Сегодня новых подтверждённых серий нет.</p>'
+            f'<p class="cal-note"><a href="{rel(current, "calendar/")}">Посмотреть ближайшие релизы</a></p>'
+        )
+        return (
+            f'<section class="band wrap" id="today">'
+            f'<div class="label dim">Сегодня вышло</div>'
+            f'<h2 class="h2">{esc(heading)}</h2>'
+            f'{inner}</section>'
+        )
+
+    shown = items[:8]
+    rows = []
+    for item, event in shown:
+        number, season = event.get("episode_number"), event.get("season_number")
+        word = EPISODE_WORD.get(item["content_type"], "выпуск")
+        parts = []
+        if season:
+            parts.append(f"сезон {season}")
+        if number:
+            parts.append(f"{word} {number}")
+        if len([e for e in events if e.get("content_id") == item["id"] and parse_local_date(e.get("release_date")) == today]) > 1:
+            parts = [f"весь сезон"]
+        detail = " · ".join(parts) or "премьера"
+        poster = item.get("poster")
+        thumb = f'<img class="thumb" src="{esc(poster)}" alt="" loading="lazy">' if poster else '<span class="thumb"></span>'
+        rows.append(
+            f'<li class="today-item"><a class="rel-link" href="{content_href(item, current)}">{thumb}'
+            f'<span class="rel-text"><b>{esc(item["title"])}</b>'
+            f'<span class="rel-sub">{esc(detail)}'
+            + (f' · {esc(item.get("network"))}' if item.get("network") else "")
+            + '</span></span></a></li>'
+        )
+    inner = f'<ul class="today-list">{"".join(rows)}</ul>'
+    rest = len(items) - len(shown)
+    if rest > 0:
+        inner += (f'<p class="cal-note">Ещё {rest} {plural(rest, ("релиз", "релиза", "релизов"))} — '
+                  f'<a href="{rel(current, "calendar/")}">в календаре на сегодня</a></p>')
+    return (
+        f'<section class="band wrap" id="today">'
+        f'<div class="label dim">Сегодня вышло</div>'
+        f'<h2 class="h2">{esc(heading)}</h2>'
+        f'{inner}</section>'
+    )
+
+
+def editorial_block(contents, ratings, limit=3):
+    """Блок 03: «Крупным планом». Название «После титров» закреплено за рейтингом."""
+    scored = [item for item in contents if aggregate_rating(ratings.get(item["id"])) is not None]
+    scored.sort(key=lambda item: (-aggregate_rating(ratings.get(item["id"])), item["title"]))
+    rows = []
+    for item in scored[:limit]:
+        rows.append(
+            f'<article class="closeup">'
+            f'<div class="label dim">{esc(CONTENT_TYPES.get(item["content_type"], item["content_type"]))}</div>'
+            f'<h3 class="closeup-title"><a href="{content_href(item, Path(""))}">{esc(item["title"])}</a></h3>'
+            + after_credits(item, ratings, variant="compact")
+            + '</article>'
+        )
+    body = "".join(rows) or '<p class="lead muted">Редакционные материалы готовятся.</p>'
+    return (
+        '<section class="band wrap" id="closeup">'
+        + section_head("03", "Крупным планом", "Истории, за которые стоит остаться")
+        + f'<div class="closeup-grid">{body}</div>'
+        + '<p class="cal-note"><a href="journal/">Все материалы Журнала</a></p>'
+        + '</section>'
+    )
+
+
+def home_page(contents, events, ratings, year, month, available=None):
+    """Главная: hero, «Сегодня вышло», календарь, витрина, «Крупным планом».
+
+    Календарь — первый полноценный блок после шапки и тикера: он показывает,
+    что выходит, когда и за чем следить.
+    """
+    today = today_moscow()
+    featured = popular_of_month(contents, events, year, month, limit=12)
+    if len(featured) < 12:
+        extra = sorted(
+            (item for item in contents if item not in featured),
+            key=lambda x: (x.get("popularity") or 0, x.get("vote") or 0),
+            reverse=True,
+        )
+        featured = featured + extra[: 12 - len(featured)]
+    cards = "".join(card(item, Path(""), ratings) for item in featured)
+    showcase = (
+        '<section class="band wrap" id="showcase">'
+        + section_head("02", "Что смотрим сегодня", "На вашем экране")
+        + f'<div class="grid-posters">{cards}</div></section>'
+    )
+    intro = (
+        '<section class="band wrap intro">'
+        '<h1 class="h2">Что смотреть: календарь выходов и премьеры месяца</h1>'
+        '<p class="lead muted">Бесплатный навигатор по фильмам, сериалам и шоу. '
+        'Что выходит сегодня, что будет дальше и за чем стоит следить.</p>'
+        '</section>'
+    )
+    return page(
+        "Что смотреть",
+        intro
+        + banner_slider(contents, events, Path(""), year, month)
+        + today_block(events, contents, Path(""), today)
+        + calendar_inline(events, contents, Path(""), today, year, month, available)
+        + showcase
+        + editorial_block(contents, ratings),
+        Path(""),
+        "Бесплатный навигатор по фильмам, сериалам и шоу: что выходит, когда и за чем стоит следить.",
+    )
 
 
 def write(relative, text):
@@ -297,16 +1032,23 @@ def main():
     contents = to_normalized()
     events = build_events(contents)
     apply_overrides(contents, events)
+    build_today = today_moscow()
+    compute_aired(contents, events, build_today)
+    refresh_next_episode(contents, events, build_today)
     save_normalized(contents, events)
     ratings = rating_map()
     if DOCS.exists(): shutil.rmtree(DOCS)
     DOCS.mkdir()
-    # Assets are source files. Never read a generated file from docs/ during a build.
-    source_css = ROOT / "assets" / "titry.css"
-    css = source_css.read_text(encoding="utf-8") if source_css.exists() else "body{font-family:system-ui;margin:0}"
-    (DOCS / "titry.css").write_text(css + "\n" + CSS_P0, encoding="utf-8")
-    (DOCS / "site.js").write_text(SITE_JS, encoding="utf-8")
-    write(Path(""), list_page("Что посмотреть", contents[:24], Path(""), ratings, "Бесплатный навигатор по фильмам, сериалам и шоу."))
+    # Ассеты — исходники. Сборка никогда не читает сгенерированный docs/.
+    (DOCS / "titry.css").write_text(
+        read_asset("titry.css", "body{font-family:system-ui;margin:0}")
+        + "\n" + read_asset("site.css"),
+        encoding="utf-8",
+    )
+    (DOCS / "site.js").write_text(read_asset("site.js"), encoding="utf-8")
+    home_today = today_moscow()
+    home_months = {(home_today.year, home_today.month)}
+    write(Path(""), home_page(contents, events, ratings, home_today.year, home_today.month, home_months))
     write(Path("catalog"), list_page("Каталог", contents, Path("catalog"), ratings, "Вся база Титров."))
     for route, content_type, title in (("movies", "movie", "Фильмы"), ("series", "series", "Сериалы"), ("shows", None, "Шоу"), ("anime", "anime", "Аниме")):
         items = [x for x in contents if x["content_type"] == content_type] if content_type else [x for x in contents if x["content_type"] not in {"movie", "series", "anime"}]
@@ -326,22 +1068,16 @@ def main():
     write(Path("calendar"), calendar_page(today_moscow().year, today_moscow().month, events, contents, ratings, Path("calendar"), months))
     write(Path("my-list"), my_list_page())
     write(Path("journal"), journal_page())
+    write(Path("credits"), credits_page())
     for item in contents: write(Path("content") / slug(item["id"]), detail_page(item, ratings))
     (DOCS / ".nojekyll").touch()
     print(f'Built {len(contents)} content pages and {len(events)} release events into {DOCS}')
 
 
-SITE_JS = r'''(function(){
-var KEY='titri-watchlist-v2';
-function list(){try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return[]}}
-function save(v){localStorage.setItem(KEY,JSON.stringify(v))}
-function update(){var v=list();document.querySelectorAll('[data-watch-count]').forEach(function(n){n.textContent=v.length});document.querySelectorAll('[data-watch-id]').forEach(function(b){var on=v.some(function(x){return x.content_id===b.dataset.watchId});b.classList.toggle('is-saved',on);b.setAttribute('aria-pressed',on);b.textContent=b.classList.contains('card-mark')?(on?'✓':'+'):(on?'✓ Добавлено':'+ В мой список')});var grid=document.getElementById('my-list-grid');if(grid){grid.innerHTML=v.map(function(x){return '<article class="card"><a href="'+x.url+'"><h2 class="card-title h3">'+x.title+'</h2></a><button class="card-mark" type="button" data-watch-id="'+x.content_id+'" data-watch-title="'+x.title+'">✓</button></article>'}).join('');document.getElementById('my-list-empty').hidden=!!v.length}}
-document.addEventListener('click',function(e){var b=e.target.closest('[data-watch-id]');if(!b)return;e.preventDefault();var v=list(),id=b.dataset.watchId,i=v.findIndex(function(x){return x.content_id===id});if(i>=0)v.splice(i,1);else v.push({content_id:id,content_type:b.dataset.watchType||'content',added_at:new Date().toISOString(),title:b.dataset.watchTitle||'',url:b.dataset.watchUrl||location.href});save(v);update()});function refreshDate(){var parts=new Intl.DateTimeFormat('ru-RU',{timeZone:'Europe/Moscow',day:'2-digit',month:'2-digit',year:'numeric'}).formatToParts(new Date());var v={};parts.forEach(function(p){if(p.type!=='literal')v[p.type]=p.value});document.querySelectorAll('[data-current-date]').forEach(function(n){n.textContent=v.day+' / '+v.month+' / '+v.year})}
-function menu(){var t=document.querySelector('.menu-toggle'),n=document.getElementById('mobile-nav');if(!t||!n)return;function set(open){t.setAttribute('aria-expanded',String(open));n.hidden=!open}t.addEventListener('click',function(){set(t.getAttribute('aria-expanded')!=='true')});t.addEventListener('keydown',function(e){if(e.key==='Escape'){set(false);t.focus()}});n.addEventListener('keydown',function(e){if(e.key==='Escape'){set(false);t.focus()}})}
-document.addEventListener('DOMContentLoaded',function(){update();refreshDate();menu()})})();'''
+def read_asset(name, fallback=""):
+    """Читает ассет из assets/. Сборка никогда не берёт шаблоны из docs/."""
+    path = ROOT / "assets" / name
+    return path.read_text(encoding="utf-8") if path.exists() else fallback
 
-CSS_P0 = '''
-.menu-toggle,.mobile-nav{display:none}.calendar-nav{display:flex;gap:18px;flex-wrap:wrap;margin:24px 0}.calendar-day{border-top:1px solid var(--line);padding:20px 0}.calendar-day h2{margin:0;font-size:22px}.calendar-day ul{padding-left:18px}.after-credits{margin:28px 0;padding:20px;border:1px solid var(--line);max-width:620px}.after-credits strong{display:block;font-size:30px}.after-credits span{color:var(--text-2)}.credit-lines{display:grid;gap:5px;margin:16px 0}.credit-line{height:5px;width:var(--line);background:var(--line)}.credit-line.on{background:var(--cream)}.after-badge{position:absolute;left:8px;bottom:8px;background:var(--bg-deep);padding:4px 7px;font-size:11px}.card{position:relative}.card-mark{position:absolute;right:8px;top:8px;z-index:2;width:32px;height:32px;border-radius:50%;border:1px solid var(--line);background:var(--bg-deep);color:var(--cream)}.card-mark.is-saved{background:var(--cream);color:var(--ink)}.facts{display:grid;gap:12px;margin:28px 0}.facts div{display:grid;gap:4px}.facts span{color:var(--text-2)}@media(max-width:720px){.nav{display:none}.menu-toggle{display:block;background:none;color:var(--text);border:1px solid var(--line);padding:7px}.mobile-nav[hidden]{display:none}.mobile-nav{display:grid;position:absolute;top:58px;left:0;right:0;background:var(--bg-deep);padding:20px;gap:14px}.header{position:sticky}.bookmark-btn{font-size:0}.bookmark-btn .count{font-size:11px}.grid-posters{grid-template-columns:repeat(2,minmax(0,1fr))}}
-'''
 
 if __name__ == "__main__": main()

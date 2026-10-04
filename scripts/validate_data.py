@@ -95,8 +95,19 @@ def main():
         if total is not None and aired is not None and aired > total:
             errors.append(f"aired_count exceeds total_episodes: {cid}")
         next_ep = item.get("next_episode") or {}
-        if aired is not None and next_ep.get("ep") and next_ep["ep"] <= aired:
-            errors.append(f"next episode is not after aired count: {cid}")
+        last_ep = item.get("last_episode") or {}
+        aired_season = item.get("aired_season")
+        if aired is not None and next_ep.get("ep"):
+            # Номер следующей серии сравниваем с вышедшими только внутри
+            # одного сезона: 21 серия 25-го сезона и серия 1 двадцать шестого
+            # — это не противоречие, а новый сезон.
+            same_season = (
+                next_ep.get("season") is None
+                or aired_season is None
+                or next_ep.get("season") == aired_season
+            )
+            if same_season and next_ep["ep"] <= aired:
+                errors.append(f"next episode is not after aired count: {cid}")
     for item in events:
         if item.get("content_id") not in ids:
             errors.append(f"release event references missing content: {item.get('id')}")

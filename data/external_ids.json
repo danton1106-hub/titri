@@ -870,13 +870,6 @@
       "tvdb_id": null
     },
     {
-      "content_id": "tmdb:274622",
-      "tmdb_id": 274622,
-      "tvmaze_id": null,
-      "imdb_id": null,
-      "tvdb_id": null
-    },
-    {
       "content_id": "tmdb:154743",
       "tmdb_id": 154743,
       "tvmaze_id": null,
@@ -954,13 +947,6 @@
       "tvdb_id": null
     },
     {
-      "content_id": "tmdb:1599191",
-      "tmdb_id": 1599191,
-      "tvmaze_id": null,
-      "imdb_id": null,
-      "tvdb_id": null
-    },
-    {
       "content_id": "tmdb:1244523",
       "tmdb_id": 1244523,
       "tvmaze_id": null,
@@ -989,20 +975,6 @@
       "tvdb_id": null
     },
     {
-      "content_id": "tmdb:1269325",
-      "tmdb_id": 1269325,
-      "tvmaze_id": null,
-      "imdb_id": null,
-      "tvdb_id": null
-    },
-    {
-      "content_id": "tmdb:1777750",
-      "tmdb_id": 1777750,
-      "tvmaze_id": null,
-      "imdb_id": null,
-      "tvdb_id": null
-    },
-    {
       "content_id": "tmdb:301139",
       "tmdb_id": 301139,
       "tvmaze_id": null,
@@ -1010,29 +982,8 @@
       "tvdb_id": null
     },
     {
-      "content_id": "tmdb:336153",
-      "tmdb_id": 336153,
-      "tvmaze_id": null,
-      "imdb_id": null,
-      "tvdb_id": null
-    },
-    {
-      "content_id": "tmdb:307106",
-      "tmdb_id": 307106,
-      "tvmaze_id": null,
-      "imdb_id": null,
-      "tvdb_id": null
-    },
-    {
       "content_id": "tmdb:288673",
       "tmdb_id": 288673,
-      "tvmaze_id": null,
-      "imdb_id": null,
-      "tvdb_id": null
-    },
-    {
-      "content_id": "tmdb:305551",
-      "tmdb_id": 305551,
       "tvmaze_id": null,
       "imdb_id": null,
       "tvdb_id": null
@@ -1073,13 +1024,6 @@
       "tvdb_id": null
     },
     {
-      "content_id": "tmdb:317326",
-      "tmdb_id": 317326,
-      "tvmaze_id": null,
-      "imdb_id": null,
-      "tvdb_id": null
-    },
-    {
       "content_id": "tmdb:1148365",
       "tmdb_id": 1148365,
       "tvmaze_id": null,
@@ -1089,13 +1033,6 @@
     {
       "content_id": "tmdb:1559680",
       "tmdb_id": 1559680,
-      "tvmaze_id": null,
-      "imdb_id": null,
-      "tvdb_id": null
-    },
-    {
-      "content_id": "tmdb:289423",
-      "tmdb_id": 289423,
       "tvmaze_id": null,
       "imdb_id": null,
       "tvdb_id": null
@@ -1124,20 +1061,6 @@
     {
       "content_id": "tmdb:287556",
       "tmdb_id": 287556,
-      "tvmaze_id": null,
-      "imdb_id": null,
-      "tvdb_id": null
-    },
-    {
-      "content_id": "tmdb:1375156",
-      "tmdb_id": 1375156,
-      "tvmaze_id": null,
-      "imdb_id": null,
-      "tvdb_id": null
-    },
-    {
-      "content_id": "tmdb:293607",
-      "tmdb_id": 293607,
       "tvmaze_id": null,
       "imdb_id": null,
       "tvdb_id": null
@@ -1206,13 +1129,6 @@
       "tvdb_id": null
     },
     {
-      "content_id": "tmdb:1234139",
-      "tmdb_id": 1234139,
-      "tvmaze_id": null,
-      "imdb_id": null,
-      "tvdb_id": null
-    },
-    {
       "content_id": "tmdb:1765072",
       "tmdb_id": 1765072,
       "tvmaze_id": null,
@@ -1222,13 +1138,6 @@
     {
       "content_id": "tmdb:204084",
       "tmdb_id": 204084,
-      "tvmaze_id": null,
-      "imdb_id": null,
-      "tvdb_id": null
-    },
-    {
-      "content_id": "tmdb:303745",
-      "tmdb_id": 303745,
       "tvmaze_id": null,
       "imdb_id": null,
       "tvdb_id": null
@@ -1311,13 +1220,6 @@
       "tvdb_id": null
     },
     {
-      "content_id": "tmdb:279246",
-      "tmdb_id": 279246,
-      "tvmaze_id": null,
-      "imdb_id": null,
-      "tvdb_id": null
-    },
-    {
       "content_id": "tmdb:1562642",
       "tmdb_id": 1562642,
       "tvmaze_id": null,
@@ -1334,13 +1236,6 @@
     {
       "content_id": "tmdb:1585239",
       "tmdb_id": 1585239,
-      "tvmaze_id": null,
-      "imdb_id": null,
-      "tvdb_id": null
-    },
-    {
-      "content_id": "tmdb:656908",
-      "tmdb_id": 656908,
       "tvmaze_id": null,
       "imdb_id": null,
       "tvdb_id": null
@@ -1444,13 +1339,6 @@
       "tvdb_id": null
     },
     {
-      "content_id": "tmdb:1599189",
-      "tmdb_id": 1599189,
-      "tvmaze_id": null,
-      "imdb_id": null,
-      "tvdb_id": null
-    },
-    {
       "content_id": "tmdb:940009",
       "tmdb_id": 940009,
       "tvmaze_id": null,
@@ -1509,13 +1397,6 @@
     {
       "content_id": "tmdb:1170608",
       "tmdb_id": 1170608,
-      "tvmaze_id": null,
-      "imdb_id": null,
-      "tvdb_id": null
-    },
-    {
-      "content_id": "tmdb:283220",
-      "tmdb_id": 283220,
       "tvmaze_id": null,
       "imdb_id": null,
       "tvdb_id": null

@@ -1,3 +1,4 @@
+import re
 import sys
 import unittest
 from datetime import date
@@ -31,6 +32,36 @@ class ContentModelTests(unittest.TestCase):
         item = {"content_type": "series", "total_episodes": 13, "aired_count": 3, "next_episode": {"ep": 4}}
         self.assertIn("3", progress(item))
         self.assertNotIn("4 из 13", progress(item))
+
+
+class SmokeHtml(unittest.TestCase):
+    """Проверки собранного HTML: артефакты шаблонов не должны попадать в production."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.docs = Path(__file__).resolve().parents[1] / "docs"
+        cls.home = cls.docs / "index.html"
+
+    def test_no_template_artifacts(self):
+        if not self.home.exists():
+            self.skipTest("docs/index.html отсутствует, сначала запустите scripts/build.py")
+        text = self.home.read_text(encoding="utf-8")
+        for artifact in ("$01", "$02", "$03", "''"):
+            self.assertNotIn(artifact, text, f"в собранной главной остался артефакт {artifact}")
+
+    def test_single_h1_and_unique_h2_per_section(self):
+        if not self.home.exists():
+            self.skipTest("docs/index.html отсутствует")
+        text = self.home.read_text(encoding="utf-8")
+        self.assertEqual(len(re.findall(r"<h1\b", text)), 1, "на главной должен быть ровно один H1")
+        for block in re.findall(r'<div class="section-head">.*?</div></div>', text, re.S):
+            self.assertLessEqual(len(re.findall(r"<h2\b", block)), 1, "в заголовке раздела два H2")
+
+    def test_internal_nav_has_no_dead_links(self):
+        if not self.home.exists():
+            self.skipTest("docs/index.html отсутствует")
+        text = self.home.read_text(encoding="utf-8")
+        self.assertNotIn('href="#"', text, "внутренняя ссылка ведёт в никуда")
 
 
 if __name__ == "__main__":
