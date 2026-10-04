@@ -57,13 +57,15 @@ class SeasonModelTests(unittest.TestCase):
         episodes = json.loads((self.root / "data" / "episodes.json").read_text(encoding="utf-8"))["items"]
         self.assertFalse(any(item["episode_number"] > 100 for item in episodes))
 
-    def test_month_heading_uses_nominative_case(self):
+    def test_home_calendar_renders_current_week_and_month_link(self):
         home = self.root / "docs" / "index.html"
         if not home.exists():
             self.skipTest("docs/index.html отсутствует")
         text = home.read_text(encoding="utf-8")
-        self.assertNotIn("Октября 2026", text)
-        self.assertIn("Октябрь 2026", text)
+        self.assertIn('class="calendar-spotlight', text)
+        self.assertIn("28 сентября — 4 октября", text)
+        self.assertIn("Весь октябрь", text)
+        self.assertIn("2026", text)
 
 
 class SmokeHtml(unittest.TestCase):

@@ -284,6 +284,29 @@ content_id всегда стабильный внешний идентифика
     restart();
   }
 
+  /* ---------- недельный календарь на главной ---------- */
+
+  function calendarSpotlight() {
+    var root = document.querySelector("[data-calendar-spot]");
+    var buttons = Array.prototype.slice.call(document.querySelectorAll("[data-calendar-spot-day]"));
+    if (!root || !buttons.length) return;
+    buttons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        var day = button.dataset.calendarSpotDay;
+        var panel = root.querySelector('[data-calendar-spot-panel="' + day + '"]');
+        if (!panel) return;
+        buttons.forEach(function (item) {
+          var active = item === button;
+          item.classList.toggle("is-active", active);
+          item.setAttribute("aria-pressed", active ? "true" : "false");
+        });
+        root.querySelectorAll("[data-calendar-spot-panel]").forEach(function (item) {
+          item.hidden = item !== panel;
+        });
+      });
+    });
+  }
+
   /* ---------- дата и мобильное меню ---------- */
 
   function refreshDate() {
@@ -345,6 +368,7 @@ content_id всегда стабильный внешний идентифика
     menu();
     watchPanel();
     banner();
+    calendarSpotlight();
     /* Любое изменение списка обновляет счётчик, панель и страницу списка. */
     subscribe(render);
   });

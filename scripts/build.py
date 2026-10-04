@@ -1134,6 +1134,101 @@ def episode_line(event, today):
     return f"{verb} · {stamp}"
 
 
+def calendar_spotlight(events, contents, current, today):
+    """Светлый недельный календарь главной: один выбранный релиз и прогресс серии."""
+    by_id = {item["id"]: item for item in contents}
+    week_start = today - timedelta(days=today.weekday())
+    week_days = [week_start + timedelta(days=index) for index in range(7)]
+    events_by_day = defaultdict(list)
+    for event in events:
+        released = parse_local_date(event.get("release_date"))
+        if released in week_days and event.get("verification_status") in VERIFIED_STATUSES:
+            item = by_id.get(event.get("content_id"))
+            if item:
+                events_by_day[released].append((item, event))
+
+    def priority(pair):
+        item, event = pair
+        return (
+            1 if item.get("content_type") in {"series", "anime"} and event.get("episode_number") else 0,
+            item.get("vote") or 0,
+            item.get("popularity") or 0,
+        )
+
+    selected_day = next((day for day in reversed(week_days) if events_by_day.get(day)), week_days[0])
+    selected_pair = max(events_by_day.get(selected_day, []), key=priority, default=None)
+    if selected_pair is None:
+        return ""
+
+    def panel(day):
+        item, event = max(events_by_day[day], key=priority)
+        season = event.get("season_number") or item.get("aired_season")
+        episode = event.get("episode_number") or item.get("aired_count") or 0
+        aired = max(item.get("aired_count") or 0, episode)
+        season_total = item.get("season_episode_count") or max(episode, aired)
+        season_label = f"Сезон {season}" if season else CONTENT_TYPES.get(item["content_type"], "проект")
+        network = item.get("network") or "Релиз"
+        released = parse_local_date(event.get("release_date"))
+        release_label = f"{released.day} {month_name(released.month)}" if released else "Дата уточняется"
+        if episode:
+            episode_label = f"{episode_word(episode, item['content_type']).capitalize()} {episode}"
+            subtitle = f"{network} · {season_label} · {episode_label}"
+        else:
+            subtitle = f"{network} · {season_label}"
+        poster = item.get("poster")
+        poster_html = f'<img src="{esc(poster)}" alt="" loading="lazy">' if poster else ""
+        dot_parts = []
+        for number in range(1, min(max(season_total, aired), 24) + 1):
+            dot_class = " is-aired" if number <= aired else ""
+            if number == episode:
+                dot_class += " is-current"
+            dot_parts.append(f'<span class="spot-episode{dot_class}">{number}</span>')
+        dots = "".join(dot_parts)
+        progress = ""
+        if season_total:
+            progress = (
+                f'<div class="spot-progress"><strong>{aired}</strong><span>/{season_total}</span>'
+                '<small>серий уже вышло</small></div>'
+            )
+        link = content_href(item, current)
+        panel_hidden = "" if day == selected_day else " hidden"
+        return (
+            f'<article class="calendar-spot-panel" data-calendar-spot-panel="{day.isoformat()}"{panel_hidden}>'
+            f'<a class="spot-release" href="{link}"><span class="spot-poster">{poster_html}</span>'
+            f'<span><b>{esc(item["title"])}</b><small>{esc(subtitle)}</small></span></a>'
+            f'<section class="spot-next"><span class="label">Следующая серия</span>'
+            f'<a href="{link}"><h3>{esc(item["title"])}</h3></a>'
+            f'<p>{esc(season_label)} · {esc(network)}</p>{progress}'
+            f'<div class="spot-episodes" aria-label="Прогресс серий">{dots}</div></section>'
+            f'<span class="spot-release-date">{release_label}</span></article>'
+        )
+
+    weekday = ("ПН", "ВТ", "СР", "ЧТ", "ПТ", "СБ", "ВС")
+    day_buttons = []
+    for index, day in enumerate(week_days):
+        active = " is-active" if day == selected_day else ""
+        pressed = "true" if day == selected_day else "false"
+        count = len({item["id"] for item, event in events_by_day.get(day, [])})
+        badge = f'<i>{count}</i>' if count else ""
+        day_buttons.append(
+            f'<button class="spot-day{active}" type="button" data-calendar-spot-day="{day.isoformat()}"'
+            f' aria-pressed="{pressed}"><strong>{day.day}</strong><small>{weekday[index]}</small>{badge}</button>'
+        )
+    range_label = f"{week_start.day} {month_name(week_start.month)} — {week_days[-1].day} {month_name(week_days[-1].month)}"
+    panels = "".join(panel(day) for day in week_days if events_by_day.get(day))
+    month_href = rel(current, f"calendar/{today.year}/{today.month}/")
+    return (
+        '<section class="calendar-spotlight wrap" id="calendar">'
+        '<div class="spot-intro"><span class="label">02 / Календарь выхода</span>'
+        '<h2>Не пропустите<br>продолжение.</h2>'
+        '<p>Когда новая серия?<br>Здесь всё по датам.</p>'
+        f'<a class="spot-month" href="{month_href}">Весь {MONTHS_GEN[today.month - 1]} <span aria-hidden="true">⌑</span></a></div>'
+        f'<div class="spot-week-head"><span>{range_label}</span><span>{today.year}</span></div>'
+        f'<div class="spot-days" role="group" aria-label="Неделя релизов">{"".join(day_buttons)}</div>'
+        f'<div class="spot-panels" data-calendar-spot>{panels}</div></section>'
+    )
+
+
 def calendar_inline(events, contents, current, today, year, month, available=None):
     """Блок 01: календарь выходов.
 
@@ -1353,8 +1448,7 @@ def home_page(contents, events, ratings, year, month, available=None):
         "Что смотреть",
         intro
         + banner_slider(contents, events, Path(""), year, month)
-        + today_block(events, contents, Path(""), today)
-        + calendar_inline(events, contents, Path(""), today, year, month, available)
+        + calendar_spotlight(events, contents, Path(""), today)
         + showcase
         + editorial_block(contents, ratings),
         Path(""),
