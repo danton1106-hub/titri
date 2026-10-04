@@ -35,6 +35,35 @@ def validate_schema(errors, filename, data):
         errors.append(f"{filename}:{path}: {error.message}")
 
 
+def secret_leaks(errors):
+    """Ни одно значение ключа не должно попасть в собранный сайт."""
+    import os
+
+    from env_service import load_dotenv
+
+    load_dotenv()
+    secrets = {
+        name: os.environ.get(name, "").strip()
+        for name in ("TMDB_API_READ_TOKEN", "OMDB_API_KEY")
+    }
+    secrets = {name: value for name, value in secrets.items() if len(value) >= 12}
+    if not secrets:
+        return
+    docs = ROOT / "docs"
+    if not docs.exists():
+        return
+    for page in docs.rglob("*"):
+        if not page.is_file() or page.suffix not in {".html", ".js", ".css", ".json"}:
+            continue
+        try:
+            text = page.read_text(encoding="utf-8", errors="ignore")
+        except OSError:
+            continue
+        for name, value in secrets.items():
+            if value and value in text:
+                errors.append(f"SECRET LEAK: {name} найден в {page.relative_to(ROOT)}")
+
+
 def main():
     errors = []
     content_document = load(DATA / "content.json")
@@ -93,6 +122,7 @@ def main():
             if marker in seen_external:
                 errors.append(f"duplicate external id: {provider}={value}")
             seen_external.add(marker)
+    secret_leaks(errors)
     if errors:
         print("P0 validation failed:")
         print("\n".join(f"- {error}" for error in errors))

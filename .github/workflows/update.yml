@@ -37,23 +37,29 @@ jobs:
             echo "deploy=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Проверить обязательный secret
+      - name: Проверить наличие секрета
         run: |
-          test -n "$TMDB_API_READ_TOKEN" || { echo "TMDB_API_READ_TOKEN is not configured"; exit 1; }
+          if [ -n "$TMDB_API_READ_TOKEN" ]; then
+            echo "::notice::TMDB_API_READ_TOKEN найден, данные будут обновлены."
+          else
+            echo "::warning::TMDB_API_READ_TOKEN не задан. Данные не обновятся, сайт соберётся из сохранённых JSON."
+          fi
         env:
           TMDB_API_READ_TOKEN: ${{ secrets.TMDB_API_READ_TOKEN }}
 
       - name: Получить контент и расписание
         env:
           TMDB_API_READ_TOKEN: ${{ secrets.TMDB_API_READ_TOKEN }}
+          OMDB_API_KEY: ${{ secrets.OMDB_API_KEY }}
+          TITRI_ALLOW_CACHED_DATA: '1'
         run: |
           python3 scripts/fetch_catalog.py
           python3 scripts/fetch_home.py
 
       - name: Получить внешние рейтинги
-        if: ${{ secrets.OMDB_API_KEY != '' }}
         env:
           OMDB_API_KEY: ${{ secrets.OMDB_API_KEY }}
+          TITRI_ALLOW_CACHED_DATA: '1'
         run: python3 scripts/fetch_ratings.py
 
       - name: Собрать production

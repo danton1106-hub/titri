@@ -9,15 +9,26 @@
 партнёрских договоров, поэтому слоты заполняются только при наличии ключа.
 Данные не выдумываются: чего нет — то None.
 """
-import json, os, threading, time, urllib.parse, urllib.request
+import json, os, sys, threading, time, urllib.parse, urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
+import env_service
 from time_service import today_moscow
 
-KEY = os.environ.get("TMDB_API_READ_TOKEN", "").strip()
+env_service.load_dotenv()
+KEY = env_service.optional("TMDB_API_READ_TOKEN")
+
 if not KEY:
-    raise SystemExit("TMDB_API_READ_TOKEN is required. Set it in .env locally or GitHub Secrets in CI.")
-OMDB_KEY = os.environ.get("OMDB_API_KEY", "").strip()
+    _msg = ("TMDB_API_READ_TOKEN не задан. Положите ключ в .env в корне проекта "
+            "или задайте его в GitHub Secrets.")
+    if not env_service.allow_cached():
+        raise SystemExit(_msg + " Либо задайте TITRI_ALLOW_CACHED_DATA=1, "
+                                "чтобы собрать сайт из уже сохранённых данных.")
+    print("ПРЕДУПРЕЖДЕНИЕ: " + _msg, file=sys.stderr)
+    print("Каталог останется прежним: data/catalog.json.", file=sys.stderr)
+    raise SystemExit(0)
+
+OMDB_KEY = env_service.optional("OMDB_API_KEY")
 BASE = "https://api.themoviedb.org/3"
 IMG = "https://image.tmdb.org/t/p"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

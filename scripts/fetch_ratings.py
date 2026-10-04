@@ -22,34 +22,26 @@ import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
 
+import env_service
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ENV_P = os.path.join(ROOT, ".env")
 CAT_P = os.path.join(ROOT, "data", "catalog.json")
 OUT_P = os.path.join(ROOT, "data", "ratings.json")
 
-# --- читаем .env без внешних зависимостей ---
-def load_env(path):
-    env = {}
-    if not os.path.exists(path):
-        return env
-    for line in open(path, encoding="utf-8"):
-        line = line.strip()
-        if not line or line.startswith("#") or "=" not in line:
-            continue
-        k, v = line.split("=", 1)
-        env[k.strip()] = v.strip().strip('"').strip("'")
-    return env
-
-
-ENV = load_env(ENV_P)
-KEY = os.environ.get("OMDB_API_KEY") or ENV.get("OMDB_API_KEY") or ""
+env_service.load_dotenv()
+KEY = env_service.optional("OMDB_API_KEY")
 
 if not KEY:
-    print("ОШИБКА: не найден OMDB_API_KEY.")
-    print("Положи ключ в .env в корне проекта:")
-    print("  OMDB_API_KEY=твой_ключ")
-    print("Файл .env в репозиторий не попадает — он в .gitignore.")
-    sys.exit(1)
+    _msg = ("OMDB_API_KEY не задан. Положите ключ в .env в корне проекта "
+            "или задайте его в GitHub Secrets.")
+    if env_service.allow_cached():
+        print("ПРЕДУПРЕЖДЕНИЕ: " + _msg, file=sys.stderr)
+        print("Внешние рейтинги не обновляются, data/ratings.json остаётся прежним.", file=sys.stderr)
+        raise SystemExit(0)
+    print("ОШИБКА: " + _msg, file=sys.stderr)
+    print("Файл .env в репозиторий не попадает — он в .gitignore.", file=sys.stderr)
+    raise SystemExit(1)
 
 REFRESH_DAYS = 7
 

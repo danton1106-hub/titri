@@ -13,6 +13,7 @@ from collections import defaultdict
 from datetime import date
 from pathlib import Path
 
+import env_service
 from time_service import parse_local_date, today_moscow
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -292,6 +293,7 @@ def write(relative, text):
 
 
 def main():
+    env_service.load_dotenv()  # одно место чтения .env для всей сборки
     contents = to_normalized()
     events = build_events(contents)
     apply_overrides(contents, events)

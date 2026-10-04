@@ -3,9 +3,9 @@
 ## Статус и границы
 
 - Production до завершения P0: GitHub Pages из `main/docs`.
-- Canonical build: `data/` и редакторские JSON -> `scripts/build_production.py` -> `docs/` -> GitHub Pages.
+- Canonical build: `data/` и редакторские JSON -> `scripts/build.py` -> `docs/` -> GitHub Pages.
 - `docs/` является generated output. Исходники и шаблоны правятся в `scripts/`, данные — в `data/`.
-- Backup production: tag `production-pre-p0-2026-10-02` at `11e1d3a`.
+- Backup production: tag `p0-start-backup` и ветка `backup/pre-p0` на `11e1d3a`.
 - Разработка ведётся в `staging`; `main` обновляется только после проверок.
 - P0 использует нормализованные JSON. PostgreSQL/Supabase начинается на P1.
 
@@ -15,7 +15,7 @@
 |---|---|---|
 | Импорт данных | `scripts/fetch_home.py`, `scripts/fetch_catalog.py` | Убрать hardcoded дату и credential fallback; нормализовать выходные данные. |
 | Редакторские данные | отсутствуют | `data/editorial/*.json`, schema validation, приоритет выше importer. |
-| Сборка | `scripts/build_home.py`, `scripts/build_site.py`, `preview/` | Одна команда `scripts/build_production.py`; output только `docs/`. |
+| Сборка | `scripts/build_home.py`, `scripts/build_site.py`, `preview/` | Одна команда `scripts/build.py`; output только `docs/`. |
 | Публикация | `update.yml` в корне | `.github/workflows/update.yml`, расписание 6 часов + `workflow_dispatch`. |
 | Published site | `docs/` | Полностью очищается и генерируется build-командой. |
 
@@ -30,6 +30,39 @@
 7. Добавить «После титров»: целые редакторские оценки, комментарий, статус и 10 строк разной длины.
 8. Перенести workflow, добавить validation, link checker и smoke checks HTML.
 9. Собрать staging, выполнить проверки и подготовить PR/merge staging -> main.
+
+## Окружение и секреты
+
+Единая точка чтения конфигурации — `scripts/env_service.py`. Свой разбор `.env` больше нигде не дублируется.
+
+Порядок приоритета: реальные переменные окружения → `.env` → `.env.local`.
+
+| Переменная | Назначение | Обязательна |
+|---|---|---|
+| `TMDB_API_READ_TOKEN` | каталог и витрина главной | для обновления данных |
+| `OMDB_API_KEY` | IMDb, Rotten Tomatoes, Metacritic | нет |
+| `TITRI_ALLOW_CACHED_DATA` | сборка из сохранённых JSON без ключа | нет |
+| `TITRI_TIMEZONE` | бизнес-часовой пояс | нет, по умолчанию `Europe/Moscow` |
+
+`.env` и `.env.local` в репозиторий не попадают. GitHub Actions берёт значения из GitHub Secrets с теми же именами. Локально: `cp .env.example .env`.
+
+Validation дополнительно проверяет, что значение ключа не попало в `docs/`. При обнаружении сборка падает с `SECRET LEAK`.
+
+## Команды P0
+
+- Production build: `python3 scripts/build.py`
+- Проверка данных: `python3 scripts/validate_data.py`
+- Проверка ссылок: `python3 scripts/check_links.py`
+- Тесты: `python3 -m unittest discover -s tests -p 'test_*.py'`
+- Сборка без ключа: `TITRI_ALLOW_CACHED_DATA=1 python3 scripts/build.py`
+
+`scripts/build_production.py` — тонкая обёртка для совместимости. `build_home.py` и `build_site.py` больше не запускаются как самостоятельные pipelines.
+
+## Ветки
+
+- `main` — production, GitHub Pages публикуется только отсюда.
+- `staging` — проверка изменений без публикации.
+- `backup/pre-p0` и tag `p0-start-backup` — резервная точка до P0.
 
 ## Риски и защита
 
