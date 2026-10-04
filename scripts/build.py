@@ -1088,12 +1088,16 @@ def banner_slider(contents, events, current, year, month):
             f' data-watch-poster="{esc(item.get("poster"))}" data-watch-url="{link}">+ В мой список</button>'
             f'</div></div></article>'
         )
-    dots = "".join(
-        f'<button class="slide-dot{" is-active" if index == 0 else ""}" type="button"'
-        f' data-slide-to="{index}" aria-label="Баннер {index + 1}: {esc(item["title"])}"'
-        f'{" aria-current=\"true\"" if index == 0 else ""}></button>'
-        for index, item in enumerate(slides)
-    )
+    dot_parts = []
+    for index, item in enumerate(slides):
+        dot_class = " is-active" if index == 0 else ""
+        current_attr = ' aria-current="true"' if index == 0 else ""
+        dot_parts.append(
+            f'<button class="slide-dot{dot_class}" type="button"'
+            f' data-slide-to="{index}" aria-label="Баннер {index + 1}: {esc(item["title"])}"'
+            f'{current_attr}></button>'
+        )
+    dots = "".join(dot_parts)
     arrows = (
         '<button class="slide-arrow slide-prev" type="button" data-slide-prev aria-label="Предыдущий баннер">←</button>'
         '<button class="slide-arrow slide-next" type="button" data-slide-next aria-label="Следующий баннер">→</button>'
