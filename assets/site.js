@@ -284,6 +284,39 @@ content_id всегда стабильный внешний идентифика
     restart();
   }
 
+  /* ---------- календарь дня: picker + timeline ---------- */
+
+  function calendarTimeline() {
+    var root = document.querySelector("[data-calendar-timeline]");
+    var buttons = Array.prototype.slice.call(document.querySelectorAll("[data-calendar-day]"));
+    if (!root || !buttons.length) return;
+    var rows = {};
+    root.querySelectorAll(".timeline-item").forEach(function (row) {
+      rows[row.dataset.calendarDay] = row;
+    });
+    /* Статическая разметка каждой даты уже находится в DOM; переключаем
+       подготовленные блоки, если генератор их предоставил. */
+    buttons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        buttons.forEach(function (item) {
+          var active = item === button;
+          item.classList.toggle("is-active", active);
+          item.setAttribute("aria-selected", active ? "true" : "false");
+        });
+        var day = button.dataset.calendarDay;
+        var selected = root.querySelector('[data-calendar-day-panel="' + day + '"]');
+        root.querySelectorAll("[data-calendar-day-panel]").forEach(function (panel) {
+          panel.hidden = panel !== selected;
+        });
+        var heading = root.querySelector("[data-calendar-heading]");
+        var count = root.querySelector("[data-calendar-count]");
+        if (heading) heading.textContent = button.dataset.calendarLabel;
+        if (count) {
+          var number = Number(button.dataset.calendarCountValue || 0);
+          count.textContent = number + " " + (number === 1 ? "релиз" : "релиза");
+        }
+      });
+    });
   /* ---------- дата и мобильное меню ---------- */
 
   function refreshDate() {
@@ -345,6 +378,7 @@ content_id всегда стабильный внешний идентифика
     menu();
     watchPanel();
     banner();
+    calendarTimeline();
     /* Любое изменение списка обновляет счётчик, панель и страницу списка. */
     subscribe(render);
   });

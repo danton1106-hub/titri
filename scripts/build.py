@@ -1134,6 +1134,98 @@ def episode_line(event, today):
     return f"{verb} · {stamp}"
 
 
+def calendar_inline_timeline(events, contents, current, today, year, month, available=None):
+    """Главный календарь: выбор дня слева и timeline релизов справа."""
+    by_id = {item["id"]: item for item in contents}
+    days = defaultdict(list)
+    for event in events:
+        released = parse_local_date(event.get("release_date"))
+        if released and released.year == year and released.month == month:
+            days[released.day].append(event)
+
+    def day_label(day):
+        value = date(year, month, day)
+        names = ("понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье")
+        return names[value.weekday()]
+
+    def plural_release(number, content_type):
+        return episode_word(number, content_type)
+
+    def day_rows(day):
+        grouped = defaultdict(list)
+        for event in days.get(day, []):
+            grouped[event["content_id"]].append(event)
+        rows = []
+        for content_key, group in grouped.items():
+            item = by_id.get(content_key)
+            if not item:
+                continue
+            group.sort(key=lambda event: (event.get("season_number") or 0, event.get("episode_number") or 0))
+            premiere = next((event for event in group if event.get("event_type") in PREMIERE_EVENTS), None)
+            episodes = [event for event in group if event.get("episode_number")]
+            # Премьера + серия 1 одного дня — одна строка, с полной подписью.
+            event = episodes[0] if episodes else (premiere or group[0])
+            if len(episodes) >= 5:
+                subtitle = f"Весь сезон · {plural_release(len(episodes), item['content_type'])}"
+            elif episodes:
+                nums = [str(event.get("episode_number")) for event in episodes]
+                season = event.get("season_number")
+                prefix = f"сезон {season} · " if season else ""
+                subtitle = f"{prefix}{plural_release(len(episodes), item['content_type'])} {', '.join(nums)}"
+                if premiere:
+                    subtitle = f"Премьера · {subtitle}"
+            elif premiere:
+                subtitle = "Премьера"
+            else:
+                subtitle = "Релиз"
+            poster = item.get("poster")
+            thumb = f'<img class="timeline-poster" src="{esc(poster)}" alt="" loading="lazy">' if poster else '<span class="timeline-poster"></span>'
+            rows.append(
+                f'<article class="timeline-item">'
+                f'<time class="timeline-time">{day:02d} октября</time>'
+                f'<span class="timeline-marker" aria-hidden="true"></span>'
+                f'<a class="timeline-project" href="{content_href(item, current)}">{thumb}'
+                f'<span class="timeline-copy"><b>{esc(item["title"])}</b><small>{esc(subtitle)}</small></span></a>'
+                f'</article>'
+            )
+        return "".join(rows) or '<p class="timeline-empty">В этот день подтверждённых релизов нет.</p>'
+
+    available_days = sorted(days)
+    selected = today.day if today.year == year and today.month == month and today.day in days else (available_days[0] if available_days else 1)
+    buttons = []
+    for day in available_days:
+        value = date(year, month, day)
+        active = " is-active" if day == selected else ""
+        aria_selected = "true" if day == selected else "false"
+        count = len({event["content_id"] for event in days[day]})
+        buttons.append(
+            f'<button class="calendar-day-button{active}" type="button" data-calendar-day="{day}"'
+            f' data-calendar-label="{day:02d} {MONTHS_GEN[month - 1]}" data-calendar-count-value="{count}"'
+            f' aria-selected="{aria_selected}">'
+            f'<span class="calendar-weekday">{esc(day_label(day)[:3])}</span>'
+            f'<strong>{day:02d}</strong><small>{count} {plural_release(count, "series")}</small></button>'
+        )
+    selected_count = len({event["content_id"] for event in days.get(selected, [])})
+    panels = []
+    for day in available_days:
+        hidden = "" if day == selected else " hidden"
+        panels.append(f'<div class="timeline-day-panel" data-calendar-day-panel="{day}"{hidden}><div class="timeline-items">{day_rows(day)}</div></div>')
+    month_href = rel(current, f"calendar/{year}/{month}/")
+    return (
+        '<section class="band wrap calendar-focus" id="calendar">'
+        + section_head("01", "Календарь выхода", f"{MONTHS_GEN[month - 1].capitalize()} {year}: что выходит")
+        + f'<div class="calendar-nav">{calendar_links(current, year, month, available)}'
+          f'<a class="cal-month-link" href="{month_href}">Весь {MONTHS_GEN[month - 1]}</a></div>'
+        + f'<div class="calendar-focus-grid"><nav class="calendar-day-picker" aria-label="Дни релизов">{"".join(buttons)}</nav>'
+          f'<div class="calendar-timeline" data-calendar-timeline>'
+          f'<div class="timeline-head"><div><span class="label dim">Релизы дня</span><h3 data-calendar-heading>{selected:02d} {MONTHS_GEN[month - 1]}</h3></div>'
+          f'<strong data-calendar-count>{selected_count} {plural_release(selected_count, "series")}</strong></div>'
+          f'{"".join(panels)}</div></div>'
+        + '<p class="cal-note">Выберите день слева: справа появится его лента релизов. Один проект в один день показывается одной строкой.</p>'
+        + '</section>'
+    )
+
+
 def calendar_inline(events, contents, current, today, year, month, available=None):
     """Блок 01: календарь выходов.
 
@@ -1354,7 +1446,7 @@ def home_page(contents, events, ratings, year, month, available=None):
         intro
         + banner_slider(contents, events, Path(""), year, month)
         + today_block(events, contents, Path(""), today)
-        + calendar_inline(events, contents, Path(""), today, year, month, available)
+        + calendar_inline_timeline(events, contents, Path(""), today, year, month, available)
         + showcase
         + editorial_block(contents, ratings),
         Path(""),
