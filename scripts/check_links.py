@@ -12,8 +12,11 @@ HREF = re.compile(r'<a\b[^>]*\bhref="([^"]+)"', re.I)
 
 
 def resolve(page: Path, href: str) -> Path:
-    path = (page.parent / href).resolve()
-    if href.endswith("/"):
+    # Query-строка и якорь — это часть адреса страницы, а не отдельный файл.
+    # catalog/?type=tv открывает catalog/index.html, а не несуществующий путь с «?».
+    clean = href.split("?", 1)[0].split("#", 1)[0]
+    path = (page.parent / clean).resolve()
+    if clean.endswith("/") or not clean:
         return path / "index.html"
     if path.is_dir():
         return path / "index.html"

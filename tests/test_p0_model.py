@@ -57,15 +57,23 @@ class SeasonModelTests(unittest.TestCase):
         episodes = json.loads((self.root / "data" / "episodes.json").read_text(encoding="utf-8"))["items"]
         self.assertFalse(any(item["episode_number"] > 100 for item in episodes))
 
-    def test_home_calendar_renders_current_week_and_month_link(self):
+    def test_home_matches_prototype_blocks(self):
+        """Главная повторяет прототип: первый экран, тикер, 01, 02, 03 по порядку."""
         home = self.root / "docs" / "index.html"
         if not home.exists():
             self.skipTest("docs/index.html отсутствует")
         text = home.read_text(encoding="utf-8")
-        self.assertIn('class="calendar-spotlight', text)
+        for marker in ('class="hero-stage"', 'class="ticker"', 'id="showcase"',
+                       'class="calendar-band', 'id="closeup"'):
+            self.assertIn(marker, text)
+        order = [text.find(m) for m in ('class="hero-stage"', 'class="ticker"',
+                                        'id="showcase"', 'class="calendar-band', 'id="closeup"')]
+        self.assertEqual(order, sorted(order), "блоки главной идут не в порядке прототипа")
+        self.assertIn("Сегодня вышло", text)
+        self.assertIn("Следующая серия", text)
         self.assertIn("28 сентября — 4 октября", text)
         self.assertIn("Весь октябрь", text)
-        self.assertIn("2026", text)
+        self.assertIn("Что смотрим сегодня?", text)
 
 
 class SmokeHtml(unittest.TestCase):

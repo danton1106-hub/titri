@@ -17,7 +17,7 @@ from datetime import date, timedelta
 from pathlib import Path
 
 import env_service
-from time_service import parse_local_date, today_moscow
+from time_service import parse_local_date, relative_day, today_moscow
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
@@ -526,15 +526,15 @@ def episode_word(number, content_type):
     return plural(number, EPISODE_FORMS.get(base, ("выпуск", "выпуска", "выпусков")))
 
 
-def section_head(number, kicker, title):
-    """Один заголовок раздела: номер, рубрика и H2. Никаких $ и дублей H2."""
+def section_head(number, kicker, title, note=""):
+    """Один заголовок раздела: номер, рубрика, H2 и необязательная строка справа."""
+    note_html = f'<span class="section-note">{esc(note)}</span>' if note else ""
     return (
         f'<div class="section-head">'
-        f'<span class="section-no" aria-hidden="true">{esc(number)}</span>'
         f'<div class="section-head-text">'
-        f'<span class="label dim">{esc(kicker)}</span>'
+        f'<span class="label dim">{esc(number)} / {esc(kicker)}</span>'
         f'<h2 class="h2">{esc(title)}</h2>'
-        f'</div></div>'
+        f'</div>{note_html}</div>'
     )
 
 
@@ -1134,8 +1134,208 @@ def episode_line(event, today):
     return f"{verb} · {stamp}"
 
 
-def calendar_spotlight(events, contents, current, today):
-    """Светлый недельный календарь главной: один выбранный релиз и прогресс серии."""
+def genres_of(item, limit=2):
+    """Читаемые жанры проекта из genre_ids. Пустой список, если жанров нет."""
+    return [GENRE_LABELS[g] for g in (item.get("genre_ids") or []) if g in GENRE_LABELS][:limit]
+
+
+def season_progress(events, item, season, today):
+    """Сколько серий сезона уже вышло и сколько заявлено.
+
+    Вышедшие считаем по событиям: серия с датой не позже сегодня. Заявленное
+    берём из модели сезона; если оно неизвестно, честно возвращаем None,
+    а не подставляем выдуманное число.
+    """
+    aired = 0
+    for event in events:
+        if event.get("content_id") != item["id"]:
+            continue
+        if event.get("season_number") != season or not event.get("episode_number"):
+            continue
+        released = parse_local_date(event.get("release_date"))
+        if released and released <= today:
+            aired = max(aired, event["episode_number"])
+    return aired
+
+
+def hero_stage(contents, events, current, today, year, month):
+    """Первый экран: заголовок, поиск, теги и карточка «В центре внимания»."""
+    slides = popular_of_month(contents, events, year, month, limit=6)
+    if not slides:
+        return ""
+    featured = slides[0]
+    image = esc(featured.get("backdrop") or featured.get("poster"))
+    vote = featured.get("vote")
+    rating = f'<b>{esc(rating_text(vote))}</b> <em>TMDB</em>' if vote else ""
+    genre = genres_of(featured, 1)
+    facts = " · ".join(part for part in (
+        esc(featured.get("year_start")),
+        esc(CONTENT_TYPES.get(featured["content_type"], featured["content_type"]).capitalize()),
+        esc(genre[0].capitalize()) if genre else "",
+    ) if part)
+    status = release_status_line(featured, events, today)
+    link = content_href(featured, current)
+    catalog = rel(current, "catalog/")
+    chips = (
+        '<div class="hero-chips">'
+        f'<a class="chip" href="{catalog}?type=tv">Сериалы</a>'
+        f'<a class="chip" href="{catalog}?type=movie">Фильмы</a>'
+        f'<a class="chip" href="{catalog}?flag=rating8">Рейтинг 8+</a>'
+        f'<a class="chip" href="{catalog}?flag=new">Новая серия</a>'
+        "</div>"
+    )
+    return (
+        '<section class="hero-stage" id="hero">'
+        f'<div class="hero-stage-bg"><img src="{image}" alt="{esc(featured["title"])}"></div>'
+        '<div class="hero-stage-grid wrap">'
+        '<div class="hero-stage-main">'
+        '<div class="hero-stage-top"><span class="label dim">Кино и сериалы в одном месте</span>'
+        f'<time class="hero-stage-date" datetime="{today.isoformat()}">{today.day:02d} / {today.month:02d} / {today.year}</time></div>'
+        '<h1 class="hero-stage-title">Что смотрим сегодня?</h1>'
+        '<p class="hero-stage-lead">Найдите своё кино. Оценки, даты выхода и новые серии — всё под рукой.</p>'
+        f'<form class="hero-search" action="{catalog}" method="get" role="search">'
+        '<span class="hero-search-icon" aria-hidden="true">⌕</span>'
+        '<input type="search" name="q" placeholder="Фильм, сериал или настроение" aria-label="Поиск по каталогу">'
+        '<button class="hero-search-btn" type="submit">Найти</button></form>'
+        + chips
+        + "</div>"
+        '<aside class="hero-feature">'
+        '<span class="label dim">В центре внимания</span>'
+        f'<span class="hero-feature-count"><b>01</b> /{len(slides):02d}</span>'
+        f'<a class="hero-feature-link" href="{link}"><h2 class="hero-feature-title">{esc(featured["title"])}</h2></a>'
+        f'<div class="hero-feature-meta">{rating}<span>{facts}</span></div>'
+        + (f'<p class="hero-feature-status">• {esc(status)}</p>' if status else "")
+        + f'<a class="btn btn-cream hero-feature-btn" href="{link}">О сериале <span aria-hidden="true">+</span></a>'
+        "</aside></div></section>"
+    )
+
+
+def today_ticker(events, contents, current, today):
+    """Тонкая строка «Сегодня вышло» под первым экраном."""
+    by_id = {item["id"]: item for item in contents}
+    found = []
+    for event in events:
+        if parse_local_date(event.get("release_date")) != today:
+            continue
+        if event.get("verification_status") not in VERIFIED_STATUSES:
+            continue
+        item = by_id.get(event["content_id"])
+        if item and item not in found:
+            found.append(item)
+    if not found:
+        text = "Сегодня подтверждённых релизов нет"
+    else:
+        first = found[0]
+        text = f"«{esc(first['title'])}»"
+        if len(found) > 1:
+            text += f" и ещё {len(found) - 1}"
+    return (
+        '<section class="ticker"><div class="wrap ticker-inner">'
+        f'<span class="ticker-label">Сегодня вышло</span>'
+        f'<span class="ticker-text">{text}</span>'
+        f'<a class="ticker-link" href="{rel(current, "calendar/")}" aria-label="Календарь выхода">▤</a>'
+        '<span class="ticker-note">Хорошее кино продолжается.</span>'
+        "</div></section>"
+    )
+
+
+def showcase_card(item, events, current, today):
+    """Карточка блока 01: постер с оценкой TMDB, метрика и нижняя строка."""
+    vote = item.get("vote")
+    badge = f'<span class="badge-rate">{esc(rating_text(vote))} <em>TMDB</em></span>' if vote else ""
+    poster = item.get("poster")
+    image = f'<img src="{esc(poster)}" alt="{esc(item["title"])}" loading="lazy">' if poster else ""
+    genre = genres_of(item, 1)
+    meta = " · ".join(part for part in (
+        esc(item.get("year_start")),
+        esc(CONTENT_TYPES.get(item["content_type"], item["content_type"]).capitalize()),
+        esc(genre[0].capitalize()) if genre else "",
+    ) if part)
+    line = release_status_line(item, events, today)
+    bullet = "• " if line.startswith(("Сегодня", "Новая", "Выйдет", "Выйд")) else ""
+    tag = f'<span class="dot" aria-hidden="true"></span><span class="t">{esc(bullet + line)}</span>' if line else ""
+    link = content_href(item, current)
+    return (
+        f'<article class="card film-card"><a href="{link}"><div class="card-media">{image}{badge}</div>'
+        f'<h3 class="card-title">{esc(item["title"])}</h3></a>'
+        f'<div class="card-meta">{meta}</div>'
+        + (f'<div class="card-tag">{tag}</div>' if tag else "")
+        + f'<button class="card-mark" type="button" data-watch-id="{esc(item["id"])}"'
+          f' data-watch-type="{esc(item["content_type"])}" data-watch-title="{esc(item["title"])}"'
+          f' data-watch-url="{link}" data-watch-poster="{esc(item.get("poster"))}"'
+          ' aria-label="Добавить в мой список">+</button></article>'
+    )
+
+
+def showcase_home(contents, events, current, today, year, month):
+    """Блок 01: «Что посмотреть» — фильтры-строки и сетка постеров."""
+    items = popular_of_month(contents, events, year, month, limit=6)
+    if not items:
+        return ""
+    cards = "".join(showcase_card(item, events, current, today) for item in items)
+    catalog = rel(current, "catalog/")
+    return (
+        '<section class="band wrap" id="showcase">'
+        + section_head("01", "Что посмотреть", "На вашем экране", "Истории, на которые стоит потратить вечер")
+        + '<div class="showcase-row"><div class="chips">'
+          f'<a class="chip chip-on" href="{catalog}">Всё</a>'
+          f'<a class="chip" href="{catalog}?type=tv">Сериалы</a>'
+          f'<a class="chip" href="{catalog}?type=movie">Фильмы</a>'
+          '</div><div class="selects">'
+          f'<a class="select" href="{catalog}">Все жанры</a>'
+          f'<a class="select" href="{catalog}?sort=rating">Популярное</a>'
+          '</div></div>'
+        + f'<div class="grid-posters">{cards}</div></section>'
+    )
+
+
+def journal_block(contents, events, ratings, current, today):
+    """Блок 03: «После титров» — разборы с обложкой, меткой и описанием."""
+    scored = [item for item in contents if aggregate_rating(ratings.get(item["id"])) is not None]
+    scored.sort(key=lambda item: (-aggregate_rating(ratings.get(item["id"])), item["title"]))
+    rows, seen = [], set()
+    for item in scored:
+        rows.append(item)
+        seen.add(item["id"])
+    if len(rows) < 3:
+        for item in popular_of_month(contents, events, today.year, today.month, limit=8):
+            if item["id"] in seen:
+                continue
+            rows.append(item)
+            seen.add(item["id"])
+            if len(rows) >= 3:
+                break
+    cards = []
+    for item in rows[:3]:
+        value = aggregate_rating(ratings.get(item["id"]))
+        image = esc(item.get("backdrop") or item.get("poster"))
+        badge = "Разбор" if value is not None else CONTENT_TYPES.get(item["content_type"], "проект").capitalize()
+        line = release_status_line(item, events, today) or "Материал готовится"
+        meta = f"После титров · {rating_text(value)} из 10" if value is not None else line
+        link = content_href(item, current)
+        cards.append(
+            f'<article class="journal-card"><a href="{link}">'
+            f'<div class="journal-media"><img src="{image}" alt="" loading="lazy"><span class="journal-badge">{esc(badge)}</span></div>'
+            f'<span class="journal-meta">{esc(meta)}</span>'
+            f'<h3 class="journal-title">{esc(item["title"])}</h3></a>'
+            f'<p class="journal-lead">{esc((item.get("overview") or "")[:150])}</p></article>'
+        )
+    return (
+        '<section class="band wrap" id="closeup">'
+        + section_head("03", "Крупным планом", "После титров", "Детали, которые делают историю интереснее")
+        + f'<div class="journal-grid">{"".join(cards)}</div>'
+        + f'<p class="cal-note"><a href="{rel(current, "journal/")}">Все материалы Журнала</a></p>'
+        + "</section>"
+    )
+
+
+def calendar_spotlight(events, contents, current, today, seasons=None):
+    """Блок 02: светлый недельный календарь «Не пропустите продолжение».
+
+    Слева — релиз выбранного дня, справа — ближайшая серия с прогрессом сезона.
+    Числа берутся из событий: вышедшие серии считаются по датам, заявленное
+    количество — из модели сезона. Неизвестное не подменяется выдумкой.
+    """
     by_id = {item["id"]: item for item in contents}
     week_start = today - timedelta(days=today.weekday())
     week_days = [week_start + timedelta(days=index) for index in range(7)]
@@ -1150,82 +1350,145 @@ def calendar_spotlight(events, contents, current, today):
     def priority(pair):
         item, event = pair
         return (
-            1 if item.get("content_type") in {"series", "anime"} and event.get("episode_number") else 0,
+            1 if event.get("episode_number") else 0,
             item.get("vote") or 0,
             item.get("popularity") or 0,
         )
 
+    available = [day for day in week_days if events_by_day.get(day)]
     selected_day = next((day for day in reversed(week_days) if events_by_day.get(day)), week_days[0])
-    selected_pair = max(events_by_day.get(selected_day, []), key=priority, default=None)
-    if selected_pair is None:
-        return ""
+
+    # Ближайшая серия: событие с эпизодом и датой строго впереди.
+    upcoming = None
+    for event in events:
+        if not event.get("episode_number"):
+            continue
+        if event.get("verification_status") not in VERIFIED_STATUSES:
+            continue
+        released = parse_local_date(event.get("release_date"))
+        if not released or released <= today:
+            continue
+        if upcoming is None or released < parse_local_date(upcoming.get("release_date")):
+            upcoming = event
+
+    def next_series(item, event):
+        season = event.get("season_number")
+        episode = event.get("episode_number") or 0
+        model = (seasons or {}).get(item["id"]) or {}
+        season = model.get("season") or season
+        aired = model.get("season_aired")
+        if aired is None:
+            aired = season_progress(events, item, season, today)
+        total = model.get("season_total")
+        released = parse_local_date(event.get("release_date"))
+        genre = genres_of(item, 1)
+        facts = " · ".join(part for part in (
+            f"Сезон {season}" if season else "",
+            esc(item.get("network") or ""),
+            esc(genre[0].capitalize()) if genre else "",
+        ) if part)
+        when = ""
+        if released:
+            stamp = f"{released.day} {month_name(released.month)}"
+            relative = relative_day(released.isoformat(), today)
+            when = f"{relative.capitalize()}, {stamp}" if relative else stamp
+        # Сколько квадратов нарисовать: объявленный размер сезона, иначе — по
+        # последней известной серии. Это визуальный ориентир, а не утверждение
+        # о длине сезона, поэтому рядом всегда стоит подпись со смыслом.
+        span = total if total else max(episode, aired)
+        squares = []
+        for number in range(1, min(span, 24) + 1):
+            cls = " is-aired" if number <= aired else ""
+            if number == episode:
+                cls += " is-next"
+            squares.append(f'<span class="cal-square{cls}">{number:02d}</span>')
+        if total:
+            count_block = (f'<div class="cal-count"><b>{aired:02d}</b><span>/{total:02d}</span></div>'
+                           '<p class="cal-count-note">серий уже вышло</p>')
+        else:
+            count_block = (f'<div class="cal-count"><b>{aired:02d}</b></div>'
+                           '<p class="cal-count-note">серий уже вышло · размер сезона пока не объявлен</p>')
+        return (
+            '<div class="cal-right">'
+            + '<div class="cal-right-head"><span class="cal-label">Следующая серия</span>'
+            + '<span class="cal-clock" aria-hidden="true">◷</span></div>'
+            + f'<a class="cal-right-link" href="{content_href(item, current)}"><h3>{esc(item["title"])}</h3></a>'
+            + f'<p class="cal-right-facts">{facts}</p>'
+            + count_block
+            + f'<div class="cal-squares" role="img" aria-label="Вышло {aired} серий">{"".join(squares)}</div>'
+            + '<div class="cal-next-row"><div><span class="cal-label">'
+            + f'Эпизод {episode}</span>'
+            + f'<b>{when or "дата уточняется"}</b></div>'
+            + f'<a class="cal-round" href="{content_href(item, current)}" aria-label="Добавить в мой список">+</a></div>'
+            + "</div>"
+        )
 
     def panel(day):
-        item, event = max(events_by_day[day], key=priority)
-        season = event.get("season_number") or item.get("aired_season")
-        episode = event.get("episode_number") or item.get("aired_count") or 0
-        aired = max(item.get("aired_count") or 0, episode)
-        season_total = item.get("season_episode_count") or max(episode, aired)
-        season_label = f"Сезон {season}" if season else CONTENT_TYPES.get(item["content_type"], "проект")
-        network = item.get("network") or "Релиз"
-        released = parse_local_date(event.get("release_date"))
-        release_label = f"{released.day} {month_name(released.month)}" if released else "Дата уточняется"
-        if episode:
-            episode_label = f"{episode_word(episode, item['content_type']).capitalize()} {episode}"
-            subtitle = f"{network} · {season_label} · {episode_label}"
-        else:
-            subtitle = f"{network} · {season_label}"
-        poster = item.get("poster")
-        poster_html = f'<img src="{esc(poster)}" alt="" loading="lazy">' if poster else ""
-        dot_parts = []
-        for number in range(1, min(max(season_total, aired), 24) + 1):
-            dot_class = " is-aired" if number <= aired else ""
-            if number == episode:
-                dot_class += " is-current"
-            dot_parts.append(f'<span class="spot-episode{dot_class}">{number}</span>')
-        dots = "".join(dot_parts)
-        progress = ""
-        if season_total:
-            progress = (
-                f'<div class="spot-progress"><strong>{aired}</strong><span>/{season_total}</span>'
-                '<small>серий уже вышло</small></div>'
+        best = max(events_by_day.get(day, []), key=priority, default=None)
+        left = ""
+        if best:
+            item, event = best
+            poster = item.get("poster")
+            image = f'<img src="{esc(poster)}" alt="" loading="lazy">' if poster else ""
+            season = event.get("season_number")
+            episode = event.get("episode_number")
+            parts = []
+            if season:
+                parts.append(f"Сезон {season}")
+            if episode:
+                parts.append(f"{episode_word(episode, item['content_type']).capitalize()} {episode}")
+            if event.get("episode_name") and not str(event["episode_name"]).startswith("Эпизод"):
+                parts.append(f"«{event['episode_name']}»")
+            subtitle = " · ".join(parts) or "Премьера"
+            left = (
+                '<div class="cal-left">'
+                f'<a class="cal-release" href="{content_href(item, current)}">'
+                f'<span class="cal-poster">{image}</span>'
+                f'<span><b>{esc(item["title"])}</b><small>{esc(subtitle)}</small></span></a>'
+                f'<span class="cal-network">{esc(item.get("network") or "")}</span>'
+                f'<button class="cal-plus" type="button" data-watch-id="{esc(item["id"])}"'
+                f' data-watch-type="{esc(item["content_type"])}" data-watch-title="{esc(item["title"])}"'
+                f' data-watch-url="{content_href(item, current)}" data-watch-poster="{esc(item.get("poster"))}"'
+                ' aria-label="Добавить в мой список">+</button></div>'
             )
-        link = content_href(item, current)
-        panel_hidden = "" if day == selected_day else " hidden"
-        return (
-            f'<article class="calendar-spot-panel" data-calendar-spot-panel="{day.isoformat()}"{panel_hidden}>'
-            f'<a class="spot-release" href="{link}"><span class="spot-poster">{poster_html}</span>'
-            f'<span><b>{esc(item["title"])}</b><small>{esc(subtitle)}</small></span></a>'
-            f'<section class="spot-next"><span class="label">Следующая серия</span>'
-            f'<a href="{link}"><h3>{esc(item["title"])}</h3></a>'
-            f'<p>{esc(season_label)} · {esc(network)}</p>{progress}'
-            f'<div class="spot-episodes" aria-label="Прогресс серий">{dots}</div></section>'
-            f'<span class="spot-release-date">{release_label}</span></article>'
-        )
+        right = ""
+        if upcoming:
+            target = by_id.get(upcoming.get("content_id"))
+            if target:
+                right = next_series(target, upcoming)
+        hidden = "" if day == selected_day else " hidden"
+        return f'<div class="cal-body" data-cal-panel="{day.isoformat()}"{hidden}>{left}{right}</div>'
 
     weekday = ("ПН", "ВТ", "СР", "ЧТ", "ПТ", "СБ", "ВС")
     day_buttons = []
     for index, day in enumerate(week_days):
         active = " is-active" if day == selected_day else ""
         pressed = "true" if day == selected_day else "false"
-        count = len({item["id"] for item, event in events_by_day.get(day, [])})
-        badge = f'<i>{count}</i>' if count else ""
+        has = " has-release" if events_by_day.get(day) else ""
         day_buttons.append(
-            f'<button class="spot-day{active}" type="button" data-calendar-spot-day="{day.isoformat()}"'
-            f' aria-pressed="{pressed}"><strong>{day.day}</strong><small>{weekday[index]}</small>{badge}</button>'
+            f'<button class="cal-day{active}{has}" type="button" data-cal-day="{day.isoformat()}"'
+            f' aria-pressed="{pressed}"><span class="cal-day-num">{day.day:02d}</span>'
+            f'<span class="cal-day-name">{weekday[index]}</span>'
+            '<span class="cal-day-dot" aria-hidden="true"></span></button>'
         )
-    range_label = f"{week_start.day} {month_name(week_start.month)} — {week_days[-1].day} {month_name(week_days[-1].month)}"
-    panels = "".join(panel(day) for day in week_days if events_by_day.get(day))
+    panels = "".join(panel(day) for day in week_days)
     month_href = rel(current, f"calendar/{today.year}/{today.month}/")
+    note = ("" if upcoming else
+            '<p class="cal-note">Ближайшая серия пока без объявленной даты — покажем, как только появится.</p>')
     return (
-        '<section class="calendar-spotlight wrap" id="calendar">'
-        '<div class="spot-intro"><span class="label">02 / Календарь выхода</span>'
-        '<h2>Не пропустите<br>продолжение.</h2>'
-        '<p>Когда новая серия?<br>Здесь всё по датам.</p>'
-        f'<a class="spot-month" href="{month_href}">Весь {MONTHS_GEN[today.month - 1]} <span aria-hidden="true">⌑</span></a></div>'
-        f'<div class="spot-week-head"><span>{range_label}</span><span>{today.year}</span></div>'
-        f'<div class="spot-days" role="group" aria-label="Неделя релизов">{"".join(day_buttons)}</div>'
-        f'<div class="spot-panels" data-calendar-spot>{panels}</div></section>'
+        '<section class="calendar-band wrap" id="calendar">'
+        '<div class="cal-head"><div class="cal-head-main">'
+        '<span class="cal-kicker">02 / Календарь выхода</span>'
+        '<h2 class="cal-title">Не пропустите<br>продолжение.</h2></div>'
+        '<div class="cal-head-side"><p>Когда новая серия?<br>Здесь всё по датам.</p>'
+        f'<a class="cal-cta" href="{month_href}">Весь {MONTHS_GEN[today.month - 1]} <span aria-hidden="true">▤</span></a>'
+        '</div></div>'
+        f'<div class="cal-week"><span class="cal-range">{week_start.day} {month_name(week_start.month)} — {week_days[-1].day} {month_name(week_days[-1].month)}</span>'
+        f'<span class="cal-year">{today.year}</span></div>'
+        f'<div class="cal-days" role="group" aria-label="Неделя релизов">{"".join(day_buttons)}</div>'
+        f'<div class="cal-panels" data-cal-panels>{"".join(panels)}</div>'
+        + note
+        + "</section>"
     )
 
 
@@ -1416,7 +1679,7 @@ def editorial_block(contents, ratings, limit=3):
     )
 
 
-def home_page(contents, events, ratings, year, month, available=None):
+def home_page(contents, events, ratings, year, month, available=None, seasons=None):
     """Главная: hero, «Сегодня вышло», календарь, витрина, «Крупным планом».
 
     Календарь — первый полноценный блок после шапки и тикера: он показывает,
@@ -1446,11 +1709,11 @@ def home_page(contents, events, ratings, year, month, available=None):
     )
     return page(
         "Что смотреть",
-        intro
-        + banner_slider(contents, events, Path(""), year, month)
-        + calendar_spotlight(events, contents, Path(""), today)
-        + showcase
-        + editorial_block(contents, ratings),
+        hero_stage(contents, events, Path(""), today, year, month)
+        + today_ticker(events, contents, Path(""), today)
+        + showcase_home(contents, events, Path(""), today, year, month)
+        + calendar_spotlight(events, contents, Path(""), today, seasons)
+        + journal_block(contents, events, ratings, Path(""), today),
         Path(""),
         "Бесплатный навигатор по фильмам, сериалам и шоу: что выходит, когда и за чем стоит следить.",
     )
@@ -1485,7 +1748,7 @@ def main():
     (DOCS / "site.js").write_text(read_asset("site.js"), encoding="utf-8")
     home_today = today_moscow()
     home_months = {(home_today.year, home_today.month)}
-    write(Path(""), home_page(contents, events, ratings, home_today.year, home_today.month, home_months))
+    write(Path(""), home_page(contents, events, ratings, home_today.year, home_today.month, home_months, season_model))
     write(Path("catalog"), list_page(
         "Каталог",
         contents,
@@ -1646,6 +1909,30 @@ CATALOG_JS = r'''(function () {
     flagChips.forEach(function (chip) { chip.setAttribute("aria-pressed", "false"); });
     sort(); apply();
   });
+
+  /* Параметры адреса: поиск и теги с первого экрана приходят как ?q=, ?type=, ?flag=. */
+  var params = new URLSearchParams(location.search);
+  var initial = params.get("q");
+  if (initial && search) { search.value = initial; state.query = initial.trim().toLowerCase(); }
+  var initialType = params.get("type");
+  if (initialType) {
+    var match = typeChips.filter(function (chip) { return chip.dataset.type === initialType; })[0];
+    if (match) { press(typeChips, match); state.type = initialType; }
+  }
+  var initialFlag = params.get("flag");
+  if (initialFlag) {
+    var flag = flagChips.filter(function (chip) { return chip.dataset.flag === initialFlag; })[0];
+    if (flag) {
+      flag.setAttribute("aria-pressed", "true");
+      if (initialFlag === "rating8") state.rating8 = true;
+      if (initialFlag === "new") state.newep = true;
+    }
+  }
+  var initialSort = params.get("sort");
+  if (initialSort) {
+    var sortChip = sortButtons.filter(function (button) { return button.dataset.sort === initialSort; })[0];
+    if (sortChip) { press(sortButtons, sortChip); state.sort = initialSort; sort(); }
+  }
 
   sort(); apply();
 })();'''

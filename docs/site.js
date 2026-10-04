@@ -286,24 +286,38 @@ content_id всегда стабильный внешний идентифика
 
   /* ---------- недельный календарь на главной ---------- */
 
-  function calendarSpotlight() {
-    var root = document.querySelector("[data-calendar-spot]");
-    var buttons = Array.prototype.slice.call(document.querySelectorAll("[data-calendar-spot-day]"));
+  function homeCalendar() {
+    var root = document.querySelector("[data-cal-panels]");
+    var buttons = Array.prototype.slice.call(document.querySelectorAll("[data-cal-day]"));
     if (!root || !buttons.length) return;
     buttons.forEach(function (button) {
       button.addEventListener("click", function () {
-        var day = button.dataset.calendarSpotDay;
-        var panel = root.querySelector('[data-calendar-spot-panel="' + day + '"]');
+        var day = button.dataset.calDay;
+        var panel = root.querySelector('[data-cal-panel="' + day + '"]');
         if (!panel) return;
         buttons.forEach(function (item) {
           var active = item === button;
           item.classList.toggle("is-active", active);
           item.setAttribute("aria-pressed", active ? "true" : "false");
         });
-        root.querySelectorAll("[data-calendar-spot-panel]").forEach(function (item) {
+        root.querySelectorAll("[data-cal-panel]").forEach(function (item) {
           item.hidden = item !== panel;
         });
       });
+    });
+  }
+
+  /* Поиск на первом экране ведёт в каталог и передаёт запрос в поле каталога. */
+
+  function heroSearch() {
+    var form = document.querySelector(".hero-search");
+    if (!form) return;
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      var field = form.querySelector("input[name=q]");
+      var query = field ? field.value.trim() : "";
+      form.action = (location.pathname.indexOf("/catalog/") !== -1 ? location.pathname : "/catalog/");
+      location.href = (form.action.charAt(0) === "/" ? form.action.replace(/\/+$/, "") : form.action) + "/" + (query ? "?q=" + encodeURIComponent(query) : "");
     });
   }
 
@@ -368,7 +382,8 @@ content_id всегда стабильный внешний идентифика
     menu();
     watchPanel();
     banner();
-    calendarSpotlight();
+    homeCalendar();
+    heroSearch();
     /* Любое изменение списка обновляет счётчик, панель и страницу списка. */
     subscribe(render);
   });

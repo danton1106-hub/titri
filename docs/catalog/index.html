@@ -100,6 +100,30 @@
     sort(); apply();
   });
 
+  /* Параметры адреса: поиск и теги с первого экрана приходят как ?q=, ?type=, ?flag=. */
+  var params = new URLSearchParams(location.search);
+  var initial = params.get("q");
+  if (initial && search) { search.value = initial; state.query = initial.trim().toLowerCase(); }
+  var initialType = params.get("type");
+  if (initialType) {
+    var match = typeChips.filter(function (chip) { return chip.dataset.type === initialType; })[0];
+    if (match) { press(typeChips, match); state.type = initialType; }
+  }
+  var initialFlag = params.get("flag");
+  if (initialFlag) {
+    var flag = flagChips.filter(function (chip) { return chip.dataset.flag === initialFlag; })[0];
+    if (flag) {
+      flag.setAttribute("aria-pressed", "true");
+      if (initialFlag === "rating8") state.rating8 = true;
+      if (initialFlag === "new") state.newep = true;
+    }
+  }
+  var initialSort = params.get("sort");
+  if (initialSort) {
+    var sortChip = sortButtons.filter(function (button) { return button.dataset.sort === initialSort; })[0];
+    if (sortChip) { press(sortButtons, sortChip); state.sort = initialSort; sort(); }
+  }
+
   sort(); apply();
 })();</script></head><body><header class="header"><a class="brand" href="../">[титры]</a>
 <nav class="nav" aria-label="Основная навигация"><a href="../">Главная</a><a href="../calendar/">Календарь</a><a href="../movies/">Фильмы</a><a href="../series/">Сериалы</a><a href="../shows/">Шоу</a><a href="./">Каталог</a><a href="../journal/">Журнал</a></nav>
