@@ -9,8 +9,8 @@ content_id всегда стабильный внешний идентифика
 (function () {
   "use strict";
 
-  var KEY = "titri-watchlist";
-  var LEGACY_KEY = "titri-watchlist-v2";
+  var KEY = "titri-watchlist-v2";
+  var LEGACY_KEYS = ["titri-watchlist-v1", "titri-watchlist"];
   var SCHEMA_VERSION = 2;
 
   /* ---------- хранилище ----------
@@ -62,7 +62,12 @@ content_id всегда стабильный внешний идентифика
     } catch (error) { /* повреждённые данные лечим миграцией ниже */ }
 
     /* Миграция: старые ключи не теряем. */
-    var legacy = readKey(KEY) || readKey(LEGACY_KEY) || [];
+    var legacy = null;
+    for (var i = 0; i < LEGACY_KEYS.length; i++) {
+      legacy = readKey(LEGACY_KEYS[i]);
+      if (legacy) break;
+    }
+    legacy = legacy || [];
     var migrated = { version: SCHEMA_VERSION, items: legacy };
     persist(migrated);
     return migrated;
@@ -71,7 +76,7 @@ content_id всегда стабильный внешний идентифика
   function persist(state) {
     try {
       localStorage.setItem(KEY, JSON.stringify(state));
-      localStorage.removeItem(LEGACY_KEY);
+      LEGACY_KEYS.forEach(function (key) { localStorage.removeItem(key); });
     } catch (error) {
       /* приватный режим: список не сохранится между визитами */
     }

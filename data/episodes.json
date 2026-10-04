@@ -1,4 +1,1325 @@
 {
   "schema_version": 1,
-  "items": []
+  "items": [
+    {
+      "id": "tmdb:94722:season:75:episode:57",
+      "content_id": "tmdb:94722",
+      "season_number": 75,
+      "episode_number": 57,
+      "title": "Эпизод 57",
+      "release_date": "2026-03-04",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:275202:season:1:episode:8",
+      "content_id": "tmdb:275202",
+      "season_number": 1,
+      "episode_number": 8,
+      "title": "Эпизод 8",
+      "release_date": "2026-03-13",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:139060:season:2:episode:12",
+      "content_id": "tmdb:139060",
+      "season_number": 2,
+      "episode_number": 12,
+      "title": "Совет богов",
+      "release_date": "2026-03-26",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:95479:season:1:episode:59",
+      "content_id": "tmdb:95479",
+      "season_number": 1,
+      "episode_number": 59,
+      "title": "Сэндайский барьер",
+      "release_date": "2026-03-27",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:209867:season:1:episode:38",
+      "content_id": "tmdb:209867",
+      "season_number": 1,
+      "episode_number": 38,
+      "title": "Прекрасный пейзаж",
+      "release_date": "2026-03-27",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:97525:season:3:episode:22",
+      "content_id": "tmdb:97525",
+      "season_number": 3,
+      "episode_number": 22,
+      "title": "Фуси",
+      "release_date": "2026-03-28",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:117465:season:1:episode:25",
+      "content_id": "tmdb:117465",
+      "season_number": 1,
+      "episode_number": 25,
+      "title": "Конец и начало",
+      "release_date": "2026-03-29",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:8514:season:18:episode:16",
+      "content_id": "tmdb:8514",
+      "season_number": 18,
+      "episode_number": 16,
+      "title": "Эпизод 16",
+      "release_date": "2026-04-17",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:79744:season:8:episode:18",
+      "content_id": "tmdb:79744",
+      "season_number": 8,
+      "episode_number": 18,
+      "title": "Бандит",
+      "release_date": "2026-05-04",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:1416:season:22:episode:18",
+      "content_id": "tmdb:1416",
+      "season_number": 22,
+      "episode_number": 18,
+      "title": "Эпизод 18",
+      "release_date": "2026-05-07",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:4614:season:23:episode:20",
+      "content_id": "tmdb:4614",
+      "season_number": 23,
+      "episode_number": 20,
+      "title": "Эпизод 20",
+      "release_date": "2026-05-12",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:273240:season:1:episode:8",
+      "content_id": "tmdb:273240",
+      "season_number": 1,
+      "episode_number": 8,
+      "title": "Эпизод 8",
+      "release_date": "2026-05-13",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:58841:season:13:episode:21",
+      "content_id": "tmdb:58841",
+      "season_number": 13,
+      "episode_number": 21,
+      "title": "Эпизод 21",
+      "release_date": "2026-05-13",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:44006:season:14:episode:21",
+      "content_id": "tmdb:44006",
+      "season_number": 14,
+      "episode_number": 21,
+      "title": "Эпизод 21",
+      "release_date": "2026-05-13",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:549:season:25:episode:21",
+      "content_id": "tmdb:549",
+      "season_number": 25,
+      "episode_number": 21,
+      "title": "Эпизод 21",
+      "release_date": "2026-05-14",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:2734:season:27:episode:21",
+      "content_id": "tmdb:2734",
+      "season_number": 27,
+      "episode_number": 21,
+      "title": "Эпизод 21",
+      "release_date": "2026-05-14",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:259837:season:1:episode:8",
+      "content_id": "tmdb:259837",
+      "season_number": 1,
+      "episode_number": 8,
+      "title": "Хранители Хэсона. Часть 2",
+      "release_date": "2026-05-15",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:278573:season:1:episode:12",
+      "content_id": "tmdb:278573",
+      "season_number": 1,
+      "episode_number": 12,
+      "title": "Эпизод 12",
+      "release_date": "2026-05-16",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:1434:season:24:episode:15",
+      "content_id": "tmdb:1434",
+      "season_number": 24,
+      "episode_number": 15,
+      "title": "Эпизод 15",
+      "release_date": "2026-05-17",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:80748:season:8:episode:22",
+      "content_id": "tmdb:80748",
+      "season_number": 8,
+      "episode_number": 22,
+      "title": "Перебежчик",
+      "release_date": "2026-05-18",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:276161:season:1:episode:10",
+      "content_id": "tmdb:276161",
+      "season_number": 1,
+      "episode_number": 10,
+      "title": "Эпизод 10",
+      "release_date": "2026-06-05",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:229544:season:1:episode:10",
+      "content_id": "tmdb:229544",
+      "season_number": 1,
+      "episode_number": 10,
+      "title": "Все всё ещё живы. Никто не умер",
+      "release_date": "2026-06-05",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:502:season:56:episode:13",
+      "content_id": "tmdb:502",
+      "season_number": 56,
+      "episode_number": 13,
+      "title": "Эпизод 13",
+      "release_date": "2026-06-08",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:322430:season:1:episode:22",
+      "content_id": "tmdb:322430",
+      "season_number": 1,
+      "episode_number": 22,
+      "title": "Эпизод 22",
+      "release_date": "2026-06-12",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:300054:season:1:episode:25",
+      "content_id": "tmdb:300054",
+      "season_number": 1,
+      "episode_number": 25,
+      "title": "Путь Меча",
+      "release_date": "2026-06-18",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:154743:season:2:episode:12",
+      "content_id": "tmdb:154743",
+      "season_number": 2,
+      "episode_number": 12,
+      "title": "Вот и пришёл важный для ангела день",
+      "release_date": "2026-06-19",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:303143:season:1:episode:14",
+      "content_id": "tmdb:303143",
+      "season_number": 1,
+      "episode_number": 14,
+      "title": "Эпизод 14",
+      "release_date": "2026-06-20",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:72517:season:4:episode:16",
+      "content_id": "tmdb:72517",
+      "season_number": 4,
+      "episode_number": 16,
+      "title": "Эпизод 16",
+      "release_date": "2026-06-24",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:274622:season:1:episode:13",
+      "content_id": "tmdb:274622",
+      "season_number": 1,
+      "episode_number": 13,
+      "title": "Эпизод 13",
+      "release_date": "2026-06-25",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:96316:season:1:episode:60",
+      "content_id": "tmdb:96316",
+      "season_number": 1,
+      "episode_number": 60,
+      "title": "Эпизод 60",
+      "release_date": "2026-06-27",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:299167:season:1:episode:9",
+      "content_id": "tmdb:299167",
+      "season_number": 1,
+      "episode_number": 9,
+      "title": "Эпизод 9",
+      "release_date": "2026-07-03",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:4057:season:19:episode:10",
+      "content_id": "tmdb:4057",
+      "season_number": 19,
+      "episode_number": 10,
+      "title": "Эпизод 10",
+      "release_date": "2026-07-23",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:60625:season:9:episode:10",
+      "content_id": "tmdb:60625",
+      "season_number": 9,
+      "episode_number": 10,
+      "title": "Поле его мечты",
+      "release_date": "2026-07-26",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:289763:season:1:episode:12",
+      "content_id": "tmdb:289763",
+      "season_number": 1,
+      "episode_number": 12,
+      "title": "Карты нет, все еще на связи!",
+      "release_date": "2026-07-28",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:291496:season:1:episode:12",
+      "content_id": "tmdb:291496",
+      "season_number": 1,
+      "episode_number": 12,
+      "title": "12 эпизод",
+      "release_date": "2026-08-07",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:320315:season:1:episode:77",
+      "content_id": "tmdb:320315",
+      "season_number": 1,
+      "episode_number": 77,
+      "title": "Эпизод 77",
+      "release_date": "2026-09-02",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:125988:season:3:episode:10",
+      "content_id": "tmdb:125988",
+      "season_number": 3,
+      "episode_number": 10,
+      "title": "Трой",
+      "release_date": "2026-09-03",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:30984:season:2:episode:48",
+      "content_id": "tmdb:30984",
+      "season_number": 2,
+      "episode_number": 48,
+      "title": "Эпизод 48",
+      "release_date": "2026-09-12",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:1433:season:22:episode:13",
+      "content_id": "tmdb:1433",
+      "season_number": 22,
+      "episode_number": 13,
+      "title": "Эпизод 13",
+      "release_date": "2026-09-13",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:108978:season:4:episode:8",
+      "content_id": "tmdb:108978",
+      "season_number": 4,
+      "episode_number": 8,
+      "title": "Порез",
+      "release_date": "2026-09-16",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:223564:season:1:episode:36",
+      "content_id": "tmdb:223564",
+      "season_number": 1,
+      "episode_number": 36,
+      "title": "Эпизод 36",
+      "release_date": "2026-09-20",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:113962:season:3:episode:8",
+      "content_id": "tmdb:113962",
+      "season_number": 3,
+      "episode_number": 8,
+      "title": "Развязка",
+      "release_date": "2026-09-20",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:65942:season:1:episode:84",
+      "content_id": "tmdb:65942",
+      "season_number": 1,
+      "episode_number": 84,
+      "title": "Эпизод 84",
+      "release_date": "2026-09-23",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:95480:season:6:episode:2",
+      "content_id": "tmdb:95480",
+      "season_number": 6,
+      "episode_number": 2,
+      "title": "Проблемы с отцом",
+      "release_date": "2026-09-23",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:1413:season:13:episode:3",
+      "content_id": "tmdb:1413",
+      "season_number": 13,
+      "episode_number": 3,
+      "title": "Эпизод 3",
+      "release_date": "2026-09-24",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:247718:season:2:episode:2",
+      "content_id": "tmdb:247718",
+      "season_number": 2,
+      "episode_number": 2,
+      "title": "Песня 2",
+      "release_date": "2026-09-25",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:45790:season:6:episode:2",
+      "content_id": "tmdb:45790",
+      "season_number": 6,
+      "episode_number": 2,
+      "title": "Эпизод 2",
+      "release_date": "2026-09-25",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:82684:season:4:episode:24",
+      "content_id": "tmdb:82684",
+      "season_number": 4,
+      "episode_number": 24,
+      "title": "Эпизод 24",
+      "release_date": "2026-09-25",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:312949:season:1:episode:12",
+      "content_id": "tmdb:312949",
+      "season_number": 1,
+      "episode_number": 12,
+      "title": "Я буду курить даже в последней серии, ня",
+      "release_date": "2026-09-25",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:1220:season:34:episode:1",
+      "content_id": "tmdb:1220",
+      "season_number": 34,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-09-25",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:91768:season:2:episode:23",
+      "content_id": "tmdb:91768",
+      "season_number": 2,
+      "episode_number": 23,
+      "title": "Эпизод 23",
+      "release_date": "2026-09-26",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:91801:season:4:episode:24",
+      "content_id": "tmdb:91801",
+      "season_number": 4,
+      "episode_number": 24,
+      "title": "Эпизод 24",
+      "release_date": "2026-09-26",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:256695:season:1:episode:12",
+      "content_id": "tmdb:256695",
+      "season_number": 1,
+      "episode_number": 12,
+      "title": "Эпизод 12",
+      "release_date": "2026-09-26",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:1667:season:52:episode:1",
+      "content_id": "tmdb:1667",
+      "season_number": 52,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-09-26",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:65334:season:6:episode:24",
+      "content_id": "tmdb:65334",
+      "season_number": 6,
+      "episode_number": 24,
+      "title": "Эпизод 24",
+      "release_date": "2026-09-27",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:456:season:38:episode:1",
+      "content_id": "tmdb:456",
+      "season_number": 38,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-09-27",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:278043:season:1:episode:24",
+      "content_id": "tmdb:278043",
+      "season_number": 1,
+      "episode_number": 24,
+      "title": "Стартовая линия",
+      "release_date": "2026-09-27",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:95350:season:1:episode:7",
+      "content_id": "tmdb:95350",
+      "season_number": 1,
+      "episode_number": 7,
+      "title": "Наследие Джорданов",
+      "release_date": "2026-09-27",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:4656:season:34:episode:39",
+      "content_id": "tmdb:4656",
+      "season_number": 34,
+      "episode_number": 39,
+      "title": "Эпизод 39",
+      "release_date": "2026-09-28",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:94664:season:3:episode:14",
+      "content_id": "tmdb:94664",
+      "season_number": 3,
+      "episode_number": 14,
+      "title": "Эпизод 14",
+      "release_date": "2026-09-28",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:1489:season:25:episode:12",
+      "content_id": "tmdb:1489",
+      "season_number": 25,
+      "episode_number": 12,
+      "title": "Эпизод 12",
+      "release_date": "2026-09-29",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:59941:season:14:episode:7",
+      "content_id": "tmdb:59941",
+      "season_number": 14,
+      "episode_number": 7,
+      "title": "Эпизод 7",
+      "release_date": "2026-09-29",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:2912:season:43:episode:12",
+      "content_id": "tmdb:2912",
+      "season_number": 43,
+      "episode_number": 12,
+      "title": "Эпизод 12",
+      "release_date": "2026-09-29",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:97546:season:4:episode:9",
+      "content_id": "tmdb:97546",
+      "season_number": 4,
+      "episode_number": 9,
+      "title": "Мэй едет на автобусе",
+      "release_date": "2026-09-29",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:65942:season:1:episode:85",
+      "content_id": "tmdb:65942",
+      "season_number": 1,
+      "episode_number": 85,
+      "title": "Эпизод 85",
+      "release_date": "2026-09-30",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:1489:season:25:episode:13",
+      "content_id": "tmdb:1489",
+      "season_number": 25,
+      "episode_number": 13,
+      "title": "Эпизод 13",
+      "release_date": "2026-09-30",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:95480:season:6:episode:3",
+      "content_id": "tmdb:95480",
+      "season_number": 6,
+      "episode_number": 3,
+      "title": "Воскрешение",
+      "release_date": "2026-09-30",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:59941:season:14:episode:8",
+      "content_id": "tmdb:59941",
+      "season_number": 14,
+      "episode_number": 8,
+      "title": "Эпизод 8",
+      "release_date": "2026-09-30",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:2912:season:43:episode:13",
+      "content_id": "tmdb:2912",
+      "season_number": 43,
+      "episode_number": 13,
+      "title": "Эпизод 13",
+      "release_date": "2026-09-30",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:335591:season:1:episode:1",
+      "content_id": "tmdb:335591",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-01",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:298505:season:1:episode:1",
+      "content_id": "tmdb:298505",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-01",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:1413:season:13:episode:4",
+      "content_id": "tmdb:1413",
+      "season_number": 13,
+      "episode_number": 4,
+      "title": "Эпизод 4",
+      "release_date": "2026-10-01",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:298852:season:1:episode:1",
+      "content_id": "tmdb:298852",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-01",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:258165:season:1:episode:1",
+      "content_id": "tmdb:258165",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-01",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:324502:season:1:episode:1",
+      "content_id": "tmdb:324502",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-02",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:247718:season:2:episode:3",
+      "content_id": "tmdb:247718",
+      "season_number": 2,
+      "episode_number": 3,
+      "title": "Эпизод 3",
+      "release_date": "2026-10-02",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:45790:season:6:episode:3",
+      "content_id": "tmdb:45790",
+      "season_number": 6,
+      "episode_number": 3,
+      "title": "Эпизод 3",
+      "release_date": "2026-10-02",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:284558:season:1:episode:1",
+      "content_id": "tmdb:284558",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-02",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:1220:season:34:episode:2",
+      "content_id": "tmdb:1220",
+      "season_number": 34,
+      "episode_number": 2,
+      "title": "Эпизод 2",
+      "release_date": "2026-10-02",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:301139:season:1:episode:1",
+      "content_id": "tmdb:301139",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-03",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:91768:season:2:episode:24",
+      "content_id": "tmdb:91768",
+      "season_number": 2,
+      "episode_number": 24,
+      "title": "Эпизод 24",
+      "release_date": "2026-10-03",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:256695:season:1:episode:13",
+      "content_id": "tmdb:256695",
+      "season_number": 1,
+      "episode_number": 13,
+      "title": "Эпизод 13",
+      "release_date": "2026-10-03",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:1667:season:52:episode:2",
+      "content_id": "tmdb:1667",
+      "season_number": 52,
+      "episode_number": 2,
+      "title": "Эпизод 2",
+      "release_date": "2026-10-03",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:65334:season:6:episode:25",
+      "content_id": "tmdb:65334",
+      "season_number": 6,
+      "episode_number": 25,
+      "title": "Эпизод 25",
+      "release_date": "2026-10-04",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:456:season:38:episode:2",
+      "content_id": "tmdb:456",
+      "season_number": 38,
+      "episode_number": 2,
+      "title": "Эпизод 2",
+      "release_date": "2026-10-04",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:278043:season:1:episode:25",
+      "content_id": "tmdb:278043",
+      "season_number": 1,
+      "episode_number": 25,
+      "title": "Эпизод 25",
+      "release_date": "2026-10-04",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:95350:season:1:episode:8",
+      "content_id": "tmdb:95350",
+      "season_number": 1,
+      "episode_number": 8,
+      "title": "Эпизод 8",
+      "release_date": "2026-10-04",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:336153:season:1:episode:1",
+      "content_id": "tmdb:336153",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-04",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:4656:season:34:episode:40",
+      "content_id": "tmdb:4656",
+      "season_number": 34,
+      "episode_number": 40,
+      "title": "Эпизод 40",
+      "release_date": "2026-10-05",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:80748:season:9:episode:1",
+      "content_id": "tmdb:80748",
+      "season_number": 9,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-05",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:307106:season:1:episode:1",
+      "content_id": "tmdb:307106",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-05",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:4614:season:24:episode:1",
+      "content_id": "tmdb:4614",
+      "season_number": 24,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-06",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:97546:season:4:episode:10",
+      "content_id": "tmdb:97546",
+      "season_number": 4,
+      "episode_number": 10,
+      "title": "Прощание с девушкой",
+      "release_date": "2026-10-06",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:288673:season:1:episode:1",
+      "content_id": "tmdb:288673",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-07",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:58841:season:14:episode:1",
+      "content_id": "tmdb:58841",
+      "season_number": 14,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-07",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:44006:season:15:episode:1",
+      "content_id": "tmdb:44006",
+      "season_number": 15,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-07",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:305551:season:1:episode:1",
+      "content_id": "tmdb:305551",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-07",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:303630:season:1:episode:1",
+      "content_id": "tmdb:303630",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-08",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:285322:season:1:episode:1",
+      "content_id": "tmdb:285322",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-08",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:549:season:26:episode:1",
+      "content_id": "tmdb:549",
+      "season_number": 26,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-08",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:2734:season:28:episode:1",
+      "content_id": "tmdb:2734",
+      "season_number": 28,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-08",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:317326:season:1:episode:1",
+      "content_id": "tmdb:317326",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-08",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:288458:season:1:episode:1",
+      "content_id": "tmdb:288458",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-09",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:287556:season:1:episode:1",
+      "content_id": "tmdb:287556",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-09",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:284833:season:1:episode:1",
+      "content_id": "tmdb:284833",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-09",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:289423:season:1:episode:1",
+      "content_id": "tmdb:289423",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-09",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:293610:season:1:episode:1",
+      "content_id": "tmdb:293610",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-09",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:293607:season:1:episode:1",
+      "content_id": "tmdb:293607",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-10",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:333101:season:1:episode:1",
+      "content_id": "tmdb:333101",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-11",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:331693:season:1:episode:1",
+      "content_id": "tmdb:331693",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-12",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:283371:season:1:episode:1",
+      "content_id": "tmdb:283371",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-13",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:213375:season:1:episode:1",
+      "content_id": "tmdb:213375",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-14",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:1416:season:23:episode:1",
+      "content_id": "tmdb:1416",
+      "season_number": 23,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-15",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:213562:season:1:episode:1",
+      "content_id": "tmdb:213562",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-15",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:204084:season:1:episode:1",
+      "content_id": "tmdb:204084",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-17",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:303745:season:1:episode:1",
+      "content_id": "tmdb:303745",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-19",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:30984:season:2:episode:49",
+      "content_id": "tmdb:30984",
+      "season_number": 2,
+      "episode_number": 49,
+      "title": "Эпизод 49",
+      "release_date": "2026-10-20",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:326788:season:1:episode:1",
+      "content_id": "tmdb:326788",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-20",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:314360:season:1:episode:1",
+      "content_id": "tmdb:314360",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-23",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:313699:season:1:episode:1",
+      "content_id": "tmdb:313699",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-29",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:292741:season:1:episode:1",
+      "content_id": "tmdb:292741",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-10-29",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:279246:season:1:episode:1",
+      "content_id": "tmdb:279246",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-11-04",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:171802:season:1:episode:1",
+      "content_id": "tmdb:171802",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-11-25",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:326247:season:1:episode:1",
+      "content_id": "tmdb:326247",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-11-26",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:288672:season:1:episode:1",
+      "content_id": "tmdb:288672",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-12-03",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:270596:season:1:episode:1",
+      "content_id": "tmdb:270596",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-12-10",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:283220:season:1:episode:1",
+      "content_id": "tmdb:283220",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-12-17",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:224377:season:1:episode:1",
+      "content_id": "tmdb:224377",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2026-12-25",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:79744:season:9:episode:1",
+      "content_id": "tmdb:79744",
+      "season_number": 9,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2027-01-01",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:215528:season:1:episode:1",
+      "content_id": "tmdb:215528",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2027-01-21",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:296264:season:1:episode:1",
+      "content_id": "tmdb:296264",
+      "season_number": 1,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2027-02-19",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    },
+    {
+      "id": "tmdb:125988:season:4:episode:1",
+      "content_id": "tmdb:125988",
+      "season_number": 4,
+      "episode_number": 1,
+      "title": "Эпизод 1",
+      "release_date": "2027-07-08",
+      "source_id": "tmdb",
+      "verification_status": "aggregator_confirmed"
+    }
+  ]
 }

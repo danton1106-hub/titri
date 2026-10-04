@@ -19,6 +19,7 @@
       "title": "Tagesschau",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -39,6 +40,7 @@
       "title": "Улица Сезам",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -59,6 +61,7 @@
       "title": "Субботним вечером в прямом эфире",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -79,6 +82,7 @@
       "title": "Риск!",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -99,6 +103,7 @@
       "title": "Симпсоны",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -119,6 +124,7 @@
       "title": "Закон и порядок",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -139,6 +145,7 @@
       "title": "WWE RAW",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -159,6 +166,7 @@
       "title": "Детектив Конан",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -179,6 +187,7 @@
       "title": "Дневное шоу с Тревором Ноем",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -199,6 +208,7 @@
       "title": "Гриффины",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -219,6 +229,7 @@
       "title": "Закон и порядок. Специальный корпус",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -239,6 +250,7 @@
       "title": "Ван-Пис",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -259,6 +271,7 @@
       "title": "Джимми Киммел в прямом эфире",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -279,6 +292,7 @@
       "title": "Морская полиция: Спецотдел",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -299,6 +313,7 @@
       "title": "Блич",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -319,6 +334,7 @@
       "title": "Американский папаша!",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -339,6 +355,7 @@
       "title": "Анатомия страсти",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -359,6 +376,7 @@
       "title": "Дораэмон",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -379,6 +397,7 @@
       "title": "Мыслить как преступник",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -399,6 +418,7 @@
       "title": "Шоу Грэма Нортона",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -419,6 +439,7 @@
       "title": "Королевские гонки РуПола",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -439,6 +460,7 @@
       "title": "Бегущий человек",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -459,6 +481,7 @@
       "title": "Американская история ужасов",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -479,6 +502,7 @@
       "title": "Невероятные приключения ДжоДжо",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -499,6 +523,7 @@
       "title": "Чикаго в огне",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -519,6 +544,7 @@
       "title": "Рик и Морти",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -539,6 +565,7 @@
       "title": "Полиция Чикаго",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -559,6 +586,7 @@
       "title": "Ночное шоу с Джимми Фэллоном",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -579,6 +607,7 @@
       "title": "Вечернее шоу со Стивеном Колбертом",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -599,6 +628,7 @@
       "title": "Леди Баг и Супер-кот",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -619,6 +649,7 @@
       "title": "Re:ZERO – Жизнь с нуля в альтернативном мире",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -639,6 +670,7 @@
       "title": "Добро пожаловать в класс превосходства",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -659,6 +691,7 @@
       "title": "ФБР",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -679,6 +712,7 @@
       "title": "О моём перерождении в слизь",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -699,6 +733,7 @@
       "title": "Новичок",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -719,6 +754,7 @@
       "title": "Власть книжного червя",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -739,6 +775,7 @@
       "title": "Добро пожаловать в ад, Ирума!",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -759,6 +796,7 @@
       "title": "Девушка на час",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -779,6 +817,7 @@
       "title": "Путешествие к бессмертию",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -799,6 +838,7 @@
       "title": "Тед Лассо",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -819,6 +859,7 @@
       "title": "МАГИЧЕСКАЯ БИТВА",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -839,6 +880,7 @@
       "title": "Реинкарнация безработного: История о приключениях в другом мире",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -859,6 +901,7 @@
       "title": "Для тебя, Бессмертный",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -879,6 +922,7 @@
       "title": "Ричер",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -899,6 +943,7 @@
       "title": "Медленные лошади",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -919,6 +964,7 @@
       "title": "Ангел по соседству",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -939,6 +985,7 @@
       "title": "Адский рай",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -959,6 +1006,7 @@
       "title": "Покемон: Отправление Лико и Роя",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -979,6 +1027,7 @@
       "title": "Укрытие",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -999,6 +1048,7 @@
       "title": "Спецназ: Львица",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1019,6 +1069,7 @@
       "title": "Фрирен, провожающая в последний путь",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1039,6 +1090,7 @@
       "title": "100 девушек, которые очень-очень-очень-очень-очень сильно тебя любят",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1059,6 +1111,7 @@
       "title": "Раб спецотряда демонического города",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1079,6 +1132,7 @@
       "title": "Гангстерленд",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1099,6 +1153,7 @@
       "title": "Ты и я — полные противоположности",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1119,6 +1174,7 @@
       "title": "Убежище",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1139,6 +1195,7 @@
       "title": "Goat: Мечтай по-крупному",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1159,6 +1216,7 @@
       "title": "Будешь моей девушкой?",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1179,6 +1237,7 @@
       "title": "Клинки хранителей",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1199,6 +1258,7 @@
       "title": "Мститель",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1219,6 +1279,7 @@
       "title": "Путь Баки: непобедимый самурай",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1239,6 +1300,7 @@
       "title": "Tagesschau",
       "season_number": 75,
       "episode_number": 57,
+      "source_episode_number": 57,
       "episode_name": "Эпизод 57"
     },
     {
@@ -1259,6 +1321,7 @@
       "title": "Прыгуны",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1279,6 +1342,7 @@
       "title": "Напоминание о нём",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1299,6 +1363,7 @@
       "title": "Socias por accidente",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1319,6 +1384,7 @@
       "title": "La oficina",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1339,6 +1405,7 @@
       "title": "La oficina",
       "season_number": 1,
       "episode_number": 8,
+      "source_episode_number": 8,
       "episode_name": "Эпизод 8"
     },
     {
@@ -1359,6 +1426,7 @@
       "title": "Проект «Конец света»",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1379,6 +1447,7 @@
       "title": "Я иду искать 2",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1396,9 +1465,10 @@
       "source_id": "tmdb",
       "source_url": null,
       "verification_status": "aggregator_confirmed",
-      "title": "BTS : ARIRANG",
+      "title": "BTS 컴백 라이브: ARIRANG",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1419,6 +1489,7 @@
       "title": "Раб спецотряда демонического города",
       "season_number": 2,
       "episode_number": 12,
+      "source_episode_number": 12,
       "episode_name": "Совет богов"
     },
     {
@@ -1439,6 +1510,7 @@
       "title": "МАГИЧЕСКАЯ БИТВА",
       "season_number": 1,
       "episode_number": 59,
+      "source_episode_number": 59,
       "episode_name": "Сэндайский барьер"
     },
     {
@@ -1459,6 +1531,7 @@
       "title": "Фрирен, провожающая в последний путь",
       "season_number": 1,
       "episode_number": 38,
+      "source_episode_number": 38,
       "episode_name": "Прекрасный пейзаж"
     },
     {
@@ -1479,6 +1552,7 @@
       "title": "Для тебя, Бессмертный",
       "season_number": 3,
       "episode_number": 22,
+      "source_episode_number": 22,
       "episode_name": "Фуси"
     },
     {
@@ -1499,6 +1573,7 @@
       "title": "Адский рай",
       "season_number": 1,
       "episode_number": 25,
+      "source_episode_number": 25,
       "episode_name": "Конец и начало"
     },
     {
@@ -1519,6 +1594,28 @@
       "title": "Супер Марио: Галактическое кино",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
+      "episode_name": null
+    },
+    {
+      "id": "tmdb:274622:series_premiere:2026-04-02:::global",
+      "content_id": "tmdb:274622",
+      "season_id": null,
+      "episode_id": null,
+      "event_type": "series_premiere",
+      "release_date": "2026-04-02",
+      "release_at": null,
+      "release_timezone": null,
+      "region": "GLOBAL",
+      "country": null,
+      "platform_id": null,
+      "source_id": "tmdb",
+      "source_url": null,
+      "verification_status": "aggregator_confirmed",
+      "title": "ガンバレ！中村くん！！",
+      "season_number": null,
+      "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1539,6 +1636,7 @@
       "title": "Бой со зверем",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1559,6 +1657,7 @@
       "title": "Жена принца XXI века",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1579,6 +1678,7 @@
       "title": "Мумия",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1599,6 +1699,7 @@
       "title": "Королевские гонки РуПола",
       "season_number": 18,
       "episode_number": 16,
+      "source_episode_number": 16,
       "episode_name": "Эпизод 16"
     },
     {
@@ -1619,6 +1720,7 @@
       "title": "Майкл",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1639,6 +1741,7 @@
       "title": "Следствие ведут овечки",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1659,6 +1762,7 @@
       "title": "В чужой шкуре",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1679,6 +1783,7 @@
       "title": "Новичок",
       "season_number": 8,
       "episode_number": 18,
+      "source_episode_number": 18,
       "episode_name": "Бандит"
     },
     {
@@ -1699,6 +1804,7 @@
       "title": "Мортал Комбат 2",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1719,6 +1825,7 @@
       "title": "Моя любимая убийца",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1739,6 +1846,7 @@
       "title": "Анатомия страсти",
       "season_number": 22,
       "episode_number": 18,
+      "source_episode_number": 18,
       "episode_name": "Эпизод 18"
     },
     {
@@ -1759,6 +1867,7 @@
       "title": "Необычайно умные создания",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1779,6 +1888,7 @@
       "title": "Дивный новый мир",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1799,6 +1909,7 @@
       "title": "Обычный мультик: Утерянные плёнки",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1819,6 +1930,7 @@
       "title": "Каратель: Последнее убийство",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1839,6 +1951,7 @@
       "title": "Морская полиция: Спецотдел",
       "season_number": 23,
       "episode_number": 20,
+      "source_episode_number": 20,
       "episode_name": "Эпизод 20"
     },
     {
@@ -1859,6 +1972,7 @@
       "title": "Вне кампуса",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1879,6 +1993,7 @@
       "title": "Вне кампуса",
       "season_number": 1,
       "episode_number": 8,
+      "source_episode_number": 8,
       "episode_name": "Эпизод 8"
     },
     {
@@ -1899,6 +2014,7 @@
       "title": "Грязные деньги",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1919,6 +2035,7 @@
       "title": "Обсессия",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -1939,6 +2056,7 @@
       "title": "Полиция Чикаго",
       "season_number": 13,
       "episode_number": 21,
+      "source_episode_number": 21,
       "episode_name": "Эпизод 21"
     },
     {
@@ -1959,6 +2077,7 @@
       "title": "Чикаго в огне",
       "season_number": 14,
       "episode_number": 21,
+      "source_episode_number": 21,
       "episode_name": "Эпизод 21"
     },
     {
@@ -1979,6 +2098,7 @@
       "title": "Закон и порядок",
       "season_number": 25,
       "episode_number": 21,
+      "source_episode_number": 21,
       "episode_name": "Эпизод 21"
     },
     {
@@ -1999,6 +2119,7 @@
       "title": "Закон и порядок. Специальный корпус",
       "season_number": 27,
       "episode_number": 21,
+      "source_episode_number": 21,
       "episode_name": "Эпизод 21"
     },
     {
@@ -2019,6 +2140,7 @@
       "title": "Ранчо Даттонов",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -2039,6 +2161,7 @@
       "title": "Суперчудаки",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -2059,6 +2182,7 @@
       "title": "Суперчудаки",
       "season_number": 1,
       "episode_number": 8,
+      "source_episode_number": 8,
       "episode_name": "Хранители Хэсона. Часть 2"
     },
     {
@@ -2079,6 +2203,7 @@
       "title": "Жена принца XXI века",
       "season_number": 1,
       "episode_number": 12,
+      "source_episode_number": 12,
       "episode_name": "Эпизод 12"
     },
     {
@@ -2099,6 +2224,7 @@
       "title": "Гриффины",
       "season_number": 24,
       "episode_number": 15,
+      "source_episode_number": 15,
       "episode_name": "Эпизод 15"
     },
     {
@@ -2119,6 +2245,7 @@
       "title": "ФБР",
       "season_number": 8,
       "episode_number": 22,
+      "source_episode_number": 22,
       "episode_name": "Перебежчик"
     },
     {
@@ -2139,6 +2266,7 @@
       "title": "Хранитель моей жизни",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -2159,6 +2287,7 @@
       "title": "Мандалорец и Грогу",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -2178,7 +2307,8 @@
       "verification_status": "aggregator_confirmed",
       "title": "Вечернее шоу со Стивеном Колбертом",
       "season_number": 11,
-      "episode_number": 118,
+      "episode_number": null,
+      "source_episode_number": 118,
       "episode_name": "Эпизод 118"
     },
     {
@@ -2199,6 +2329,7 @@
       "title": "Колония",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -2219,6 +2350,7 @@
       "title": "Настройщик",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -2239,6 +2371,7 @@
       "title": "Закулисье реальности",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -2259,6 +2392,7 @@
       "title": "Давление",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -2279,6 +2413,7 @@
       "title": "Де Голль. Часть 1. Сопротивление",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -2299,6 +2434,7 @@
       "title": "Истинное образование",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -2319,6 +2455,7 @@
       "title": "Истинное образование",
       "season_number": 1,
       "episode_number": 10,
+      "source_episode_number": 10,
       "episode_name": "Эпизод 10"
     },
     {
@@ -2339,6 +2476,7 @@
       "title": "Среди нас",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -2359,6 +2497,7 @@
       "title": "Среди нас",
       "season_number": 1,
       "episode_number": 10,
+      "source_episode_number": 10,
       "episode_name": "Все всё ещё живы. Никто не умер"
     },
     {
@@ -2379,6 +2518,7 @@
       "title": "Улица Сезам",
       "season_number": 56,
       "episode_number": 13,
+      "source_episode_number": 13,
       "episode_name": "Эпизод 13"
     },
     {
@@ -2399,6 +2539,7 @@
       "title": "День разоблачения",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -2419,6 +2560,7 @@
       "title": "Живая ярость",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -2439,6 +2581,7 @@
       "title": "Многоженец",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -2459,6 +2602,7 @@
       "title": "Многоженец",
       "season_number": 1,
       "episode_number": 22,
+      "source_episode_number": 22,
       "episode_name": "Эпизод 22"
     },
     {
@@ -2479,6 +2623,7 @@
       "title": "История игрушек 5",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -2499,6 +2644,7 @@
       "title": "Путь Баки: непобедимый самурай",
       "season_number": 1,
       "episode_number": 25,
+      "source_episode_number": 25,
       "episode_name": "Путь Меча"
     },
     {
@@ -2519,6 +2665,7 @@
       "title": "Смерть Робин Гуда",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -2539,6 +2686,7 @@
       "title": "Ангел по соседству",
       "season_number": 2,
       "episode_number": 12,
+      "source_episode_number": 12,
       "episode_name": "Вот и пришёл важный для ангела день"
     },
     {
@@ -2559,6 +2707,7 @@
       "title": "Дивный новый мир",
       "season_number": 1,
       "episode_number": 14,
+      "source_episode_number": 14,
       "episode_name": "Эпизод 14"
     },
     {
@@ -2579,6 +2728,7 @@
       "title": "Сообщения для Изабель",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -2599,6 +2749,7 @@
       "title": "Завтра снова на работу!",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -2619,6 +2770,7 @@
       "title": "Бэтмен: Падение рыцаря. Часть первая",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -2639,6 +2791,7 @@
       "title": "Добро пожаловать в класс превосходства",
       "season_number": 4,
       "episode_number": 16,
+      "source_episode_number": 16,
       "episode_name": "Эпизод 16"
     },
     {
@@ -2659,6 +2812,7 @@
       "title": "Миньоны и монстры",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -2679,7 +2833,29 @@
       "title": "Супергёрл",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
+    },
+    {
+      "id": "tmdb:274622:episode:2026-06-25:1:13:global",
+      "content_id": "tmdb:274622",
+      "season_id": null,
+      "episode_id": null,
+      "event_type": "episode",
+      "release_date": "2026-06-25",
+      "release_at": null,
+      "release_timezone": null,
+      "region": "GLOBAL",
+      "country": null,
+      "platform_id": null,
+      "source_id": "tmdb",
+      "source_url": null,
+      "verification_status": "aggregator_confirmed",
+      "title": "ガンバレ！中村くん！！",
+      "season_number": 1,
+      "episode_number": 13,
+      "source_episode_number": 13,
+      "episode_name": "Эпизод 13"
     },
     {
       "id": "tmdb:1165369:movie_digital:2026-06-26:::global",
@@ -2699,6 +2875,7 @@
       "title": "Де Голль. Часть 2. Свобода",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -2719,6 +2896,7 @@
       "title": "Девушка на час",
       "season_number": 1,
       "episode_number": 60,
+      "source_episode_number": 60,
       "episode_name": "Эпизод 60"
     },
     {
@@ -2739,6 +2917,7 @@
       "title": "Ранчо Даттонов",
       "season_number": 1,
       "episode_number": 9,
+      "source_episode_number": 9,
       "episode_name": "Эпизод 9"
     },
     {
@@ -2759,6 +2938,7 @@
       "title": "Табакошка",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -2779,6 +2959,7 @@
       "title": "Зловещие мертвецы: Пекло",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -2799,6 +2980,7 @@
       "title": "Моана",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -2819,6 +3001,7 @@
       "title": "Одиссея",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -2839,6 +3022,7 @@
       "title": "Коллектор",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -2859,6 +3043,7 @@
       "title": "Elize: Sombras de uma Mulher",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -2879,6 +3064,7 @@
       "title": "Мыслить как преступник",
       "season_number": 19,
       "episode_number": 10,
+      "source_episode_number": 10,
       "episode_name": "Эпизод 10"
     },
     {
@@ -2899,6 +3085,7 @@
       "title": "Щенячий патруль: Динофильм",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -2919,6 +3106,7 @@
       "title": "Легенда об Аанге: Последний маг воздуха",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -2939,6 +3127,7 @@
       "title": "Рик и Морти",
       "season_number": 9,
       "episode_number": 10,
+      "source_episode_number": 10,
       "episode_name": "Поле его мечты"
     },
     {
@@ -2959,6 +3148,7 @@
       "title": "Завтра снова на работу!",
       "season_number": 1,
       "episode_number": 12,
+      "source_episode_number": 12,
       "episode_name": "Карты нет, все еще на связи!"
     },
     {
@@ -2979,6 +3169,7 @@
       "title": "Человек-паук: Новый день",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -2999,6 +3190,7 @@
       "title": "Катастрофа. Удар из космоса",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -3019,6 +3211,7 @@
       "title": "Подростковый секс и смерть в лагере «Миазма»",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -3039,6 +3232,7 @@
       "title": "Липкая любовь",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -3059,6 +3253,7 @@
       "title": "Липкая любовь",
       "season_number": 1,
       "episode_number": 12,
+      "source_episode_number": 12,
       "episode_name": "12 эпизод"
     },
     {
@@ -3079,6 +3274,7 @@
       "title": "На краю Оук-стрит",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -3099,6 +3295,7 @@
       "title": "Фонари",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -3119,6 +3316,7 @@
       "title": "Хитрый Койот",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -3139,6 +3337,7 @@
       "title": "Мятеж",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -3159,6 +3358,7 @@
       "title": "Поймать Эль Чапо",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -3179,6 +3379,7 @@
       "title": "Последний рассвет",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -3199,6 +3400,7 @@
       "title": "Хранитель моей жизни",
       "season_number": 1,
       "episode_number": 77,
+      "source_episode_number": 77,
       "episode_name": "Эпизод 77"
     },
     {
@@ -3219,6 +3421,7 @@
       "title": "Бегущая",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -3239,6 +3442,7 @@
       "title": "Мэйдэй",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -3259,6 +3463,7 @@
       "title": "Укрытие",
       "season_number": 3,
       "episode_number": 10,
+      "source_episode_number": 10,
       "episode_name": "Трой"
     },
     {
@@ -3279,6 +3484,7 @@
       "title": "Курьер",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -3299,6 +3505,7 @@
       "title": "Блич",
       "season_number": 2,
       "episode_number": 48,
+      "source_episode_number": 48,
       "episode_name": "Эпизод 48"
     },
     {
@@ -3319,6 +3526,7 @@
       "title": "Американский папаша!",
       "season_number": 22,
       "episode_number": 13,
+      "source_episode_number": 13,
       "episode_name": "Эпизод 13"
     },
     {
@@ -3338,7 +3546,8 @@
       "verification_status": "aggregator_confirmed",
       "title": "Бегущий человек",
       "season_number": 1,
-      "episode_number": 820,
+      "episode_number": null,
+      "source_episode_number": 820,
       "episode_name": "Эпизод 820"
     },
     {
@@ -3359,6 +3568,7 @@
       "title": "Обитель зла",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -3379,6 +3589,7 @@
       "title": "Ричер",
       "season_number": 4,
       "episode_number": 8,
+      "source_episode_number": 8,
       "episode_name": "Порез"
     },
     {
@@ -3399,6 +3610,7 @@
       "title": "Сердце зверя",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -3419,6 +3631,7 @@
       "title": "100 девушек, которые очень-очень-очень-очень-очень сильно тебя любят",
       "season_number": 1,
       "episode_number": 36,
+      "source_episode_number": 36,
       "episode_name": "Эпизод 36"
     },
     {
@@ -3439,6 +3652,7 @@
       "title": "Спецназ: Львица",
       "season_number": 3,
       "episode_number": 8,
+      "source_episode_number": 8,
       "episode_name": "Развязка"
     },
     {
@@ -3459,6 +3673,7 @@
       "title": "Re:ZERO – Жизнь с нуля в альтернативном мире",
       "season_number": 1,
       "episode_number": 84,
+      "source_episode_number": 84,
       "episode_name": "Эпизод 84"
     },
     {
@@ -3479,6 +3694,7 @@
       "title": "Гипотеза любви",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -3499,6 +3715,7 @@
       "title": "Медленные лошади",
       "season_number": 6,
       "episode_number": 2,
+      "source_episode_number": 2,
       "episode_name": "Проблемы с отцом"
     },
     {
@@ -3519,6 +3736,7 @@
       "title": "Американская история ужасов",
       "season_number": 13,
       "episode_number": 3,
+      "source_episode_number": 3,
       "episode_name": "Эпизод 3"
     },
     {
@@ -3539,6 +3757,7 @@
       "title": "Гангстерленд",
       "season_number": 2,
       "episode_number": 2,
+      "source_episode_number": 2,
       "episode_name": "Песня 2"
     },
     {
@@ -3559,6 +3778,7 @@
       "title": "Невероятные приключения ДжоДжо",
       "season_number": 6,
       "episode_number": 2,
+      "source_episode_number": 2,
       "episode_name": "Эпизод 2"
     },
     {
@@ -3579,6 +3799,7 @@
       "title": "О моём перерождении в слизь",
       "season_number": 4,
       "episode_number": 24,
+      "source_episode_number": 24,
       "episode_name": "Эпизод 24"
     },
     {
@@ -3598,7 +3819,8 @@
       "verification_status": "aggregator_confirmed",
       "title": "Покемон: Отправление Лико и Роя",
       "season_number": 1,
-      "episode_number": 151,
+      "episode_number": null,
+      "source_episode_number": 151,
       "episode_name": "Эпизод 151"
     },
     {
@@ -3619,6 +3841,7 @@
       "title": "Табакошка",
       "season_number": 1,
       "episode_number": 12,
+      "source_episode_number": 12,
       "episode_name": "Я буду курить даже в последней серии, ня"
     },
     {
@@ -3639,6 +3862,7 @@
       "title": "Унабомбер",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -3659,6 +3883,7 @@
       "title": "Шоу Грэма Нортона",
       "season_number": 34,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -3679,6 +3904,7 @@
       "title": "Власть книжного червя",
       "season_number": 2,
       "episode_number": 23,
+      "source_episode_number": 23,
       "episode_name": "Эпизод 23"
     },
     {
@@ -3698,7 +3924,8 @@
       "verification_status": "aggregator_confirmed",
       "title": "Детектив Конан",
       "season_number": 1,
-      "episode_number": 1214,
+      "episode_number": null,
+      "source_episode_number": 1214,
       "episode_name": "Эпизод 1214"
     },
     {
@@ -3719,6 +3946,7 @@
       "title": "Добро пожаловать в ад, Ирума!",
       "season_number": 4,
       "episode_number": 24,
+      "source_episode_number": 24,
       "episode_name": "Эпизод 24"
     },
     {
@@ -3738,7 +3966,8 @@
       "verification_status": "aggregator_confirmed",
       "title": "Дораэмон",
       "season_number": 1,
-      "episode_number": 935,
+      "episode_number": null,
+      "source_episode_number": 935,
       "episode_name": "Эпизод 935"
     },
     {
@@ -3759,6 +3988,7 @@
       "title": "Обычный мультик: Утерянные плёнки",
       "season_number": 1,
       "episode_number": 12,
+      "source_episode_number": 12,
       "episode_name": "Эпизод 12"
     },
     {
@@ -3778,7 +4008,8 @@
       "verification_status": "aggregator_confirmed",
       "title": "Путешествие к бессмертию",
       "season_number": 1,
-      "episode_number": 193,
+      "episode_number": null,
+      "source_episode_number": 193,
       "episode_name": "Эпизод 193"
     },
     {
@@ -3799,6 +4030,7 @@
       "title": "Субботним вечером в прямом эфире",
       "season_number": 52,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -3818,7 +4050,8 @@
       "verification_status": "aggregator_confirmed",
       "title": "Ван-Пис",
       "season_number": 23,
-      "episode_number": 1180,
+      "episode_number": null,
+      "source_episode_number": 1180,
       "episode_name": "Эпизод 1180"
     },
     {
@@ -3839,6 +4072,7 @@
       "title": "Леди Баг и Супер-кот",
       "season_number": 6,
       "episode_number": 24,
+      "source_episode_number": 24,
       "episode_name": "Эпизод 24"
     },
     {
@@ -3859,6 +4093,7 @@
       "title": "Симпсоны",
       "season_number": 38,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -3879,6 +4114,7 @@
       "title": "Ты и я — полные противоположности",
       "season_number": 1,
       "episode_number": 24,
+      "source_episode_number": 24,
       "episode_name": "Стартовая линия"
     },
     {
@@ -3899,6 +4135,7 @@
       "title": "Фонари",
       "season_number": 1,
       "episode_number": 7,
+      "source_episode_number": 7,
       "episode_name": "Наследие Джорданов"
     },
     {
@@ -3919,6 +4156,7 @@
       "title": "WWE RAW",
       "season_number": 34,
       "episode_number": 39,
+      "source_episode_number": 39,
       "episode_name": "Эпизод 39"
     },
     {
@@ -3939,6 +4177,7 @@
       "title": "Реинкарнация безработного: История о приключениях в другом мире",
       "season_number": 3,
       "episode_number": 14,
+      "source_episode_number": 14,
       "episode_name": "Эпизод 14"
     },
     {
@@ -3959,6 +4198,7 @@
       "title": "Джимми Киммел в прямом эфире",
       "season_number": 25,
       "episode_number": 12,
+      "source_episode_number": 12,
       "episode_name": "Эпизод 12"
     },
     {
@@ -3978,7 +4218,8 @@
       "verification_status": "aggregator_confirmed",
       "title": "Дневное шоу с Тревором Ноем",
       "season_number": 31,
-      "episode_number": 108,
+      "episode_number": null,
+      "source_episode_number": 108,
       "episode_name": "Эпизод 108"
     },
     {
@@ -3999,6 +4240,7 @@
       "title": "Ночное шоу с Джимми Фэллоном",
       "season_number": 14,
       "episode_number": 7,
+      "source_episode_number": 7,
       "episode_name": "Эпизод 7"
     },
     {
@@ -4019,6 +4261,7 @@
       "title": "Риск!",
       "season_number": 43,
       "episode_number": 12,
+      "source_episode_number": 12,
       "episode_name": "Эпизод 12"
     },
     {
@@ -4039,6 +4282,7 @@
       "title": "Тед Лассо",
       "season_number": 4,
       "episode_number": 9,
+      "source_episode_number": 9,
       "episode_name": "Мэй едет на автобусе"
     },
     {
@@ -4059,6 +4303,7 @@
       "title": "Re:ZERO – Жизнь с нуля в альтернативном мире",
       "season_number": 1,
       "episode_number": 85,
+      "source_episode_number": 85,
       "episode_name": "Эпизод 85"
     },
     {
@@ -4079,6 +4324,7 @@
       "title": "Джимми Киммел в прямом эфире",
       "season_number": 25,
       "episode_number": 13,
+      "source_episode_number": 13,
       "episode_name": "Эпизод 13"
     },
     {
@@ -4098,7 +4344,8 @@
       "verification_status": "aggregator_confirmed",
       "title": "Дневное шоу с Тревором Ноем",
       "season_number": 31,
-      "episode_number": 109,
+      "episode_number": null,
+      "source_episode_number": 109,
       "episode_name": "Эпизод 109"
     },
     {
@@ -4119,6 +4366,7 @@
       "title": "Медленные лошади",
       "season_number": 6,
       "episode_number": 3,
+      "source_episode_number": 3,
       "episode_name": "Воскрешение"
     },
     {
@@ -4139,6 +4387,7 @@
       "title": "Ночное шоу с Джимми Фэллоном",
       "season_number": 14,
       "episode_number": 8,
+      "source_episode_number": 8,
       "episode_name": "Эпизод 8"
     },
     {
@@ -4159,6 +4408,7 @@
       "title": "Риск!",
       "season_number": 43,
       "episode_number": 13,
+      "source_episode_number": 13,
       "episode_name": "Эпизод 13"
     },
     {
@@ -4179,6 +4429,7 @@
       "title": "Beware Boiúna",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -4199,6 +4450,7 @@
       "title": "Break Clause",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -4219,6 +4471,7 @@
       "title": "Break Clause",
       "season_number": 1,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -4239,6 +4492,7 @@
       "title": "Академия ведьм",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -4259,6 +4513,7 @@
       "title": "Академия ведьм",
       "season_number": 1,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -4279,6 +4534,7 @@
       "title": "Американская история ужасов",
       "season_number": 13,
       "episode_number": 4,
+      "source_episode_number": 4,
       "episode_name": "Эпизод 4"
     },
     {
@@ -4299,6 +4555,7 @@
       "title": "Война",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -4319,6 +4576,7 @@
       "title": "Война",
       "season_number": 1,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -4339,6 +4597,7 @@
       "title": "К востоку от рая",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -4359,7 +4618,29 @@
       "title": "К востоку от рая",
       "season_number": 1,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
+    },
+    {
+      "id": "tmdb:1599191:movie_digital:2026-10-01:::global",
+      "content_id": "tmdb:1599191",
+      "season_id": null,
+      "episode_id": null,
+      "event_type": "movie_digital",
+      "release_date": "2026-10-01",
+      "release_at": null,
+      "release_timezone": null,
+      "region": "GLOBAL",
+      "country": null,
+      "platform_id": null,
+      "source_id": "tmdb",
+      "source_url": null,
+      "verification_status": "aggregator_confirmed",
+      "title": "仙逆剧场版：弑仙之战",
+      "season_number": null,
+      "episode_number": null,
+      "source_episode_number": null,
+      "episode_name": null
     },
     {
       "id": "tmdb:324502:series_premiere:2026-10-02:::global",
@@ -4379,6 +4660,7 @@
       "title": "Во всеоружии: Сила артефактов",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -4399,6 +4681,7 @@
       "title": "Во всеоружии: Сила артефактов",
       "season_number": 1,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -4419,6 +4702,7 @@
       "title": "Гангстерленд",
       "season_number": 2,
       "episode_number": 3,
+      "source_episode_number": 3,
       "episode_name": "Эпизод 3"
     },
     {
@@ -4439,6 +4723,7 @@
       "title": "Невероятные приключения ДжоДжо",
       "season_number": 6,
       "episode_number": 3,
+      "source_episode_number": 3,
       "episode_name": "Эпизод 3"
     },
     {
@@ -4459,6 +4744,7 @@
       "title": "Роллинг Лауд. Дикое веселье",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -4479,6 +4765,7 @@
       "title": "Убить Джеки",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -4499,6 +4786,7 @@
       "title": "Убить Джеки",
       "season_number": 1,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -4519,7 +4807,50 @@
       "title": "Шоу Грэма Нортона",
       "season_number": 34,
       "episode_number": 2,
+      "source_episode_number": 2,
       "episode_name": "Эпизод 2"
+    },
+    {
+      "id": "tmdb:1269325:movie_digital:2026-10-02:::global",
+      "content_id": "tmdb:1269325",
+      "season_id": null,
+      "episode_id": null,
+      "event_type": "movie_digital",
+      "release_date": "2026-10-02",
+      "release_at": null,
+      "release_timezone": null,
+      "region": "GLOBAL",
+      "country": null,
+      "platform_id": null,
+      "source_id": "tmdb",
+      "source_url": null,
+      "verification_status": "aggregator_confirmed",
+      "title": "दृश्यम्: द कन्क्लूजन",
+      "season_number": null,
+      "episode_number": null,
+      "source_episode_number": null,
+      "episode_name": null
+    },
+    {
+      "id": "tmdb:1777750:series_premiere:2026-10-02:::global",
+      "content_id": "tmdb:1777750",
+      "season_id": null,
+      "episode_id": null,
+      "event_type": "series_premiere",
+      "release_date": "2026-10-02",
+      "release_at": null,
+      "release_timezone": null,
+      "region": "GLOBAL",
+      "country": null,
+      "platform_id": null,
+      "source_id": "tmdb",
+      "source_url": null,
+      "verification_status": "aggregator_confirmed",
+      "title": "名探偵コナン 30号殺人事件",
+      "season_number": null,
+      "episode_number": null,
+      "source_episode_number": null,
+      "episode_name": null
     },
     {
       "id": "tmdb:301139:series_premiere:2026-10-03:::global",
@@ -4539,6 +4870,7 @@
       "title": "В поисках зомби",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -4559,6 +4891,7 @@
       "title": "В поисках зомби",
       "season_number": 1,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -4579,6 +4912,7 @@
       "title": "Власть книжного червя",
       "season_number": 2,
       "episode_number": 24,
+      "source_episode_number": 24,
       "episode_name": "Эпизод 24"
     },
     {
@@ -4598,7 +4932,8 @@
       "verification_status": "aggregator_confirmed",
       "title": "Детектив Конан",
       "season_number": 1,
-      "episode_number": 1215,
+      "episode_number": null,
+      "source_episode_number": 1215,
       "episode_name": "Эпизод 1215"
     },
     {
@@ -4618,7 +4953,8 @@
       "verification_status": "aggregator_confirmed",
       "title": "Дораэмон",
       "season_number": 1,
-      "episode_number": 936,
+      "episode_number": null,
+      "source_episode_number": 936,
       "episode_name": "Эпизод 936"
     },
     {
@@ -4639,6 +4975,7 @@
       "title": "Обычный мультик: Утерянные плёнки",
       "season_number": 1,
       "episode_number": 13,
+      "source_episode_number": 13,
       "episode_name": "Эпизод 13"
     },
     {
@@ -4658,7 +4995,8 @@
       "verification_status": "aggregator_confirmed",
       "title": "Путешествие к бессмертию",
       "season_number": 1,
-      "episode_number": 194,
+      "episode_number": null,
+      "source_episode_number": 194,
       "episode_name": "Эпизод 194"
     },
     {
@@ -4679,6 +5017,7 @@
       "title": "Субботним вечером в прямом эфире",
       "season_number": 52,
       "episode_number": 2,
+      "source_episode_number": 2,
       "episode_name": "Эпизод 2"
     },
     {
@@ -4698,7 +5037,8 @@
       "verification_status": "aggregator_confirmed",
       "title": "Бегущий человек",
       "season_number": 1,
-      "episode_number": 821,
+      "episode_number": null,
+      "source_episode_number": 821,
       "episode_name": "Эпизод 821"
     },
     {
@@ -4719,6 +5059,7 @@
       "title": "Леди Баг и Супер-кот",
       "season_number": 6,
       "episode_number": 25,
+      "source_episode_number": 25,
       "episode_name": "Эпизод 25"
     },
     {
@@ -4739,6 +5080,7 @@
       "title": "Симпсоны",
       "season_number": 38,
       "episode_number": 2,
+      "source_episode_number": 2,
       "episode_name": "Эпизод 2"
     },
     {
@@ -4759,6 +5101,7 @@
       "title": "Ты и я — полные противоположности",
       "season_number": 1,
       "episode_number": 25,
+      "source_episode_number": 25,
       "episode_name": "Эпизод 25"
     },
     {
@@ -4779,7 +5122,50 @@
       "title": "Фонари",
       "season_number": 1,
       "episode_number": 8,
+      "source_episode_number": 8,
       "episode_name": "Эпизод 8"
+    },
+    {
+      "id": "tmdb:336153:series_premiere:2026-10-04:::global",
+      "content_id": "tmdb:336153",
+      "season_id": null,
+      "episode_id": null,
+      "event_type": "series_premiere",
+      "release_date": "2026-10-04",
+      "release_at": null,
+      "release_timezone": null,
+      "region": "GLOBAL",
+      "country": null,
+      "platform_id": null,
+      "source_id": "tmdb",
+      "source_url": null,
+      "verification_status": "aggregator_confirmed",
+      "title": "أحلى نصيب",
+      "season_number": null,
+      "episode_number": null,
+      "source_episode_number": null,
+      "episode_name": null
+    },
+    {
+      "id": "tmdb:336153:episode:2026-10-04:1:1:global",
+      "content_id": "tmdb:336153",
+      "season_id": null,
+      "episode_id": null,
+      "event_type": "episode",
+      "release_date": "2026-10-04",
+      "release_at": null,
+      "release_timezone": null,
+      "region": "GLOBAL",
+      "country": null,
+      "platform_id": null,
+      "source_id": "tmdb",
+      "source_url": null,
+      "verification_status": "aggregator_confirmed",
+      "title": "أحلى نصيب",
+      "season_number": 1,
+      "episode_number": 1,
+      "source_episode_number": 1,
+      "episode_name": "Эпизод 1"
     },
     {
       "id": "tmdb:4656:episode:2026-10-05:34:40:global",
@@ -4799,6 +5185,7 @@
       "title": "WWE RAW",
       "season_number": 34,
       "episode_number": 40,
+      "source_episode_number": 40,
       "episode_name": "Эпизод 40"
     },
     {
@@ -4819,6 +5206,49 @@
       "title": "ФБР",
       "season_number": 9,
       "episode_number": 1,
+      "source_episode_number": 1,
+      "episode_name": "Эпизод 1"
+    },
+    {
+      "id": "tmdb:307106:series_premiere:2026-10-05:::global",
+      "content_id": "tmdb:307106",
+      "season_id": null,
+      "episode_id": null,
+      "event_type": "series_premiere",
+      "release_date": "2026-10-05",
+      "release_at": null,
+      "release_timezone": null,
+      "region": "GLOBAL",
+      "country": null,
+      "platform_id": null,
+      "source_id": "tmdb",
+      "source_url": null,
+      "verification_status": "aggregator_confirmed",
+      "title": "연애박사",
+      "season_number": null,
+      "episode_number": null,
+      "source_episode_number": null,
+      "episode_name": null
+    },
+    {
+      "id": "tmdb:307106:episode:2026-10-05:1:1:global",
+      "content_id": "tmdb:307106",
+      "season_id": null,
+      "episode_id": null,
+      "event_type": "episode",
+      "release_date": "2026-10-05",
+      "release_at": null,
+      "release_timezone": null,
+      "region": "GLOBAL",
+      "country": null,
+      "platform_id": null,
+      "source_id": "tmdb",
+      "source_url": null,
+      "verification_status": "aggregator_confirmed",
+      "title": "연애박사",
+      "season_number": 1,
+      "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -4839,6 +5269,7 @@
       "title": "Морская полиция: Спецотдел",
       "season_number": 24,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -4859,6 +5290,7 @@
       "title": "Тед Лассо",
       "season_number": 4,
       "episode_number": 10,
+      "source_episode_number": 10,
       "episode_name": "Прощание с девушкой"
     },
     {
@@ -4879,6 +5311,7 @@
       "title": "Vampire Carnival",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -4899,6 +5332,7 @@
       "title": "Кэрри",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -4919,6 +5353,7 @@
       "title": "Кэрри",
       "season_number": 1,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -4939,6 +5374,7 @@
       "title": "Полиция Чикаго",
       "season_number": 14,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -4959,6 +5395,7 @@
       "title": "Социальная расплата",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -4979,6 +5416,7 @@
       "title": "Чикаго в огне",
       "season_number": 15,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -4999,7 +5437,50 @@
       "title": "Чужая мама",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
+    },
+    {
+      "id": "tmdb:305551:series_premiere:2026-10-07:::global",
+      "content_id": "tmdb:305551",
+      "season_id": null,
+      "episode_id": null,
+      "event_type": "series_premiere",
+      "release_date": "2026-10-07",
+      "release_at": null,
+      "release_timezone": null,
+      "region": "GLOBAL",
+      "country": null,
+      "platform_id": null,
+      "source_id": "tmdb",
+      "source_url": null,
+      "verification_status": "aggregator_confirmed",
+      "title": "メリーベリーラブ",
+      "season_number": null,
+      "episode_number": null,
+      "source_episode_number": null,
+      "episode_name": null
+    },
+    {
+      "id": "tmdb:305551:episode:2026-10-07:1:1:global",
+      "content_id": "tmdb:305551",
+      "season_id": null,
+      "episode_id": null,
+      "event_type": "episode",
+      "release_date": "2026-10-07",
+      "release_at": null,
+      "release_timezone": null,
+      "region": "GLOBAL",
+      "country": null,
+      "platform_id": null,
+      "source_id": "tmdb",
+      "source_url": null,
+      "verification_status": "aggregator_confirmed",
+      "title": "メリーベリーラブ",
+      "season_number": 1,
+      "episode_number": 1,
+      "source_episode_number": 1,
+      "episode_name": "Эпизод 1"
     },
     {
       "id": "tmdb:303630:series_premiere:2026-10-08:::global",
@@ -5019,6 +5500,7 @@
       "title": "Cupertino",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -5039,6 +5521,7 @@
       "title": "Cupertino",
       "season_number": 1,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -5059,6 +5542,7 @@
       "title": "Matchbox: фильм",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -5079,6 +5563,7 @@
       "title": "The Sandbox",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -5099,6 +5584,7 @@
       "title": "Вглубь",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -5119,6 +5605,7 @@
       "title": "Вглубь",
       "season_number": 1,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -5139,6 +5626,7 @@
       "title": "Закон и порядок",
       "season_number": 26,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -5159,6 +5647,49 @@
       "title": "Закон и порядок. Специальный корпус",
       "season_number": 28,
       "episode_number": 1,
+      "source_episode_number": 1,
+      "episode_name": "Эпизод 1"
+    },
+    {
+      "id": "tmdb:317326:series_premiere:2026-10-08:::global",
+      "content_id": "tmdb:317326",
+      "season_id": null,
+      "episode_id": null,
+      "event_type": "series_premiere",
+      "release_date": "2026-10-08",
+      "release_at": null,
+      "release_timezone": null,
+      "region": "GLOBAL",
+      "country": null,
+      "platform_id": null,
+      "source_id": "tmdb",
+      "source_url": null,
+      "verification_status": "aggregator_confirmed",
+      "title": "คนโง่รักเข(ล)า",
+      "season_number": null,
+      "episode_number": null,
+      "source_episode_number": null,
+      "episode_name": null
+    },
+    {
+      "id": "tmdb:317326:episode:2026-10-08:1:1:global",
+      "content_id": "tmdb:317326",
+      "season_id": null,
+      "episode_id": null,
+      "event_type": "episode",
+      "release_date": "2026-10-08",
+      "release_at": null,
+      "release_timezone": null,
+      "region": "GLOBAL",
+      "country": null,
+      "platform_id": null,
+      "source_id": "tmdb",
+      "source_url": null,
+      "verification_status": "aggregator_confirmed",
+      "title": "คนโง่รักเข(ล)า",
+      "season_number": 1,
+      "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -5179,6 +5710,7 @@
       "title": "Ben-Hur: A Série",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -5199,6 +5731,7 @@
       "title": "Ben-Hur: A Série",
       "season_number": 1,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -5219,6 +5752,7 @@
       "title": "Mírame así, el camino de Noa",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -5239,46 +5773,7 @@
       "title": "Mírame así, el camino de Noa",
       "season_number": 1,
       "episode_number": 1,
-      "episode_name": "Эпизод 1"
-    },
-    {
-      "id": "tmdb:293610:series_premiere:2026-10-09:::global",
-      "content_id": "tmdb:293610",
-      "season_id": null,
-      "episode_id": null,
-      "event_type": "series_premiere",
-      "release_date": "2026-10-09",
-      "release_at": null,
-      "release_timezone": null,
-      "region": "GLOBAL",
-      "country": null,
-      "platform_id": null,
-      "source_id": "tmdb",
-      "source_url": null,
-      "verification_status": "aggregator_confirmed",
-      "title": "X",
-      "season_number": null,
-      "episode_number": null,
-      "episode_name": null
-    },
-    {
-      "id": "tmdb:293610:episode:2026-10-09:1:1:global",
-      "content_id": "tmdb:293610",
-      "season_id": null,
-      "episode_id": null,
-      "event_type": "episode",
-      "release_date": "2026-10-09",
-      "release_at": null,
-      "release_timezone": null,
-      "region": "GLOBAL",
-      "country": null,
-      "platform_id": null,
-      "source_id": "tmdb",
-      "source_url": null,
-      "verification_status": "aggregator_confirmed",
-      "title": "X",
-      "season_number": 1,
-      "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -5299,6 +5794,7 @@
       "title": "Аватар: Семь убежищ",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -5319,6 +5815,7 @@
       "title": "Аватар: Семь убежищ",
       "season_number": 1,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -5338,8 +5835,156 @@
       "verification_status": "aggregator_confirmed",
       "title": "Покемон: Отправление Лико и Роя",
       "season_number": 1,
-      "episode_number": 152,
+      "episode_number": null,
+      "source_episode_number": 152,
       "episode_name": "Эпизод 152"
+    },
+    {
+      "id": "tmdb:1375156:movie_digital:2026-10-09:::global",
+      "content_id": "tmdb:1375156",
+      "season_id": null,
+      "episode_id": null,
+      "event_type": "movie_digital",
+      "release_date": "2026-10-09",
+      "release_at": null,
+      "release_timezone": null,
+      "region": "GLOBAL",
+      "country": null,
+      "platform_id": null,
+      "source_id": "tmdb",
+      "source_url": null,
+      "verification_status": "aggregator_confirmed",
+      "title": "उड़ता तीर",
+      "season_number": null,
+      "episode_number": null,
+      "source_episode_number": null,
+      "episode_name": null
+    },
+    {
+      "id": "tmdb:289423:series_premiere:2026-10-09:::global",
+      "content_id": "tmdb:289423",
+      "season_id": null,
+      "episode_id": null,
+      "event_type": "series_premiere",
+      "release_date": "2026-10-09",
+      "release_at": null,
+      "release_timezone": null,
+      "region": "GLOBAL",
+      "country": null,
+      "platform_id": null,
+      "source_id": "tmdb",
+      "source_url": null,
+      "verification_status": "aggregator_confirmed",
+      "title": "나를 충전해줘",
+      "season_number": null,
+      "episode_number": null,
+      "source_episode_number": null,
+      "episode_name": null
+    },
+    {
+      "id": "tmdb:289423:episode:2026-10-09:1:1:global",
+      "content_id": "tmdb:289423",
+      "season_id": null,
+      "episode_id": null,
+      "event_type": "episode",
+      "release_date": "2026-10-09",
+      "release_at": null,
+      "release_timezone": null,
+      "region": "GLOBAL",
+      "country": null,
+      "platform_id": null,
+      "source_id": "tmdb",
+      "source_url": null,
+      "verification_status": "aggregator_confirmed",
+      "title": "나를 충전해줘",
+      "season_number": 1,
+      "episode_number": 1,
+      "source_episode_number": 1,
+      "episode_name": "Эпизод 1"
+    },
+    {
+      "id": "tmdb:293610:series_premiere:2026-10-09:::global",
+      "content_id": "tmdb:293610",
+      "season_id": null,
+      "episode_id": null,
+      "event_type": "series_premiere",
+      "release_date": "2026-10-09",
+      "release_at": null,
+      "release_timezone": null,
+      "region": "GLOBAL",
+      "country": null,
+      "platform_id": null,
+      "source_id": "tmdb",
+      "source_url": null,
+      "verification_status": "aggregator_confirmed",
+      "title": "닥터X: 하얀 마피아의 시대",
+      "season_number": null,
+      "episode_number": null,
+      "source_episode_number": null,
+      "episode_name": null
+    },
+    {
+      "id": "tmdb:293610:episode:2026-10-09:1:1:global",
+      "content_id": "tmdb:293610",
+      "season_id": null,
+      "episode_id": null,
+      "event_type": "episode",
+      "release_date": "2026-10-09",
+      "release_at": null,
+      "release_timezone": null,
+      "region": "GLOBAL",
+      "country": null,
+      "platform_id": null,
+      "source_id": "tmdb",
+      "source_url": null,
+      "verification_status": "aggregator_confirmed",
+      "title": "닥터X: 하얀 마피아의 시대",
+      "season_number": 1,
+      "episode_number": 1,
+      "source_episode_number": 1,
+      "episode_name": "Эпизод 1"
+    },
+    {
+      "id": "tmdb:293607:series_premiere:2026-10-10:::global",
+      "content_id": "tmdb:293607",
+      "season_id": null,
+      "episode_id": null,
+      "event_type": "series_premiere",
+      "release_date": "2026-10-10",
+      "release_at": null,
+      "release_timezone": null,
+      "region": "GLOBAL",
+      "country": null,
+      "platform_id": null,
+      "source_id": "tmdb",
+      "source_url": null,
+      "verification_status": "aggregator_confirmed",
+      "title": "100일의 거짓말",
+      "season_number": null,
+      "episode_number": null,
+      "source_episode_number": null,
+      "episode_name": null
+    },
+    {
+      "id": "tmdb:293607:episode:2026-10-10:1:1:global",
+      "content_id": "tmdb:293607",
+      "season_id": null,
+      "episode_id": null,
+      "event_type": "episode",
+      "release_date": "2026-10-10",
+      "release_at": null,
+      "release_timezone": null,
+      "region": "GLOBAL",
+      "country": null,
+      "platform_id": null,
+      "source_id": "tmdb",
+      "source_url": null,
+      "verification_status": "aggregator_confirmed",
+      "title": "100일의 거짓말",
+      "season_number": 1,
+      "episode_number": 1,
+      "source_episode_number": 1,
+      "episode_name": "Эпизод 1"
     },
     {
       "id": "tmdb:1773109:movie_digital:2026-10-10:::global",
@@ -5359,6 +6004,7 @@
       "title": "Termination Point",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -5379,6 +6025,7 @@
       "title": "Остров сокровищ",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -5399,6 +6046,7 @@
       "title": "Остров сокровищ",
       "season_number": 1,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -5419,6 +6067,7 @@
       "title": "Моя любовь - Черное море",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -5439,6 +6088,7 @@
       "title": "Моя любовь - Черное море",
       "season_number": 1,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -5459,6 +6109,7 @@
       "title": "Die Falle",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -5479,6 +6130,7 @@
       "title": "Die Falle",
       "season_number": 1,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -5499,6 +6151,7 @@
       "title": "Уличный боец",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -5519,6 +6172,7 @@
       "title": "Квест Вижна",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -5539,6 +6193,7 @@
       "title": "Квест Вижна",
       "season_number": 1,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -5559,6 +6214,7 @@
       "title": "Кит: Во тьме глубин",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -5579,6 +6235,7 @@
       "title": "Минотавр",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -5599,6 +6256,7 @@
       "title": "Анатомия страсти",
       "season_number": 23,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -5619,6 +6277,7 @@
       "title": "Хрустальное озеро",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -5639,7 +6298,29 @@
       "title": "Хрустальное озеро",
       "season_number": 1,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
+    },
+    {
+      "id": "tmdb:1234139:movie_digital:2026-10-15:::global",
+      "content_id": "tmdb:1234139",
+      "season_id": null,
+      "episode_id": null,
+      "event_type": "movie_digital",
+      "release_date": "2026-10-15",
+      "release_at": null,
+      "release_timezone": null,
+      "region": "GLOBAL",
+      "country": null,
+      "platform_id": null,
+      "source_id": "tmdb",
+      "source_url": null,
+      "verification_status": "aggregator_confirmed",
+      "title": "ஜெயிலர் 2",
+      "season_number": null,
+      "episode_number": null,
+      "source_episode_number": null,
+      "episode_name": null
     },
     {
       "id": "tmdb:1765072:movie_digital:2026-10-16:::global",
@@ -5659,6 +6340,7 @@
       "title": "You Can See Everything",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -5679,6 +6361,7 @@
       "title": "Dreamland",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -5699,6 +6382,49 @@
       "title": "Dreamland",
       "season_number": 1,
       "episode_number": 1,
+      "source_episode_number": 1,
+      "episode_name": "Эпизод 1"
+    },
+    {
+      "id": "tmdb:303745:series_premiere:2026-10-19:::global",
+      "content_id": "tmdb:303745",
+      "season_id": null,
+      "episode_id": null,
+      "event_type": "series_premiere",
+      "release_date": "2026-10-19",
+      "release_at": null,
+      "release_timezone": null,
+      "region": "GLOBAL",
+      "country": null,
+      "platform_id": null,
+      "source_id": "tmdb",
+      "source_url": null,
+      "verification_status": "aggregator_confirmed",
+      "title": "나의 유죄인간",
+      "season_number": null,
+      "episode_number": null,
+      "source_episode_number": null,
+      "episode_name": null
+    },
+    {
+      "id": "tmdb:303745:episode:2026-10-19:1:1:global",
+      "content_id": "tmdb:303745",
+      "season_id": null,
+      "episode_id": null,
+      "event_type": "episode",
+      "release_date": "2026-10-19",
+      "release_at": null,
+      "release_timezone": null,
+      "region": "GLOBAL",
+      "country": null,
+      "platform_id": null,
+      "source_id": "tmdb",
+      "source_url": null,
+      "verification_status": "aggregator_confirmed",
+      "title": "나의 유죄인간",
+      "season_number": 1,
+      "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -5719,6 +6445,7 @@
       "title": "Блич",
       "season_number": 2,
       "episode_number": 49,
+      "source_episode_number": 49,
       "episode_name": "Эпизод 49"
     },
     {
@@ -5739,6 +6466,7 @@
       "title": "Киберпанк: Бегущие по краю 2",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -5759,6 +6487,7 @@
       "title": "Киберпанк: Бегущие по краю 2",
       "season_number": 1,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -5779,6 +6508,7 @@
       "title": "Ведьмин лес",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -5799,6 +6529,7 @@
       "title": "Клара и Солнце",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -5819,6 +6550,7 @@
       "title": "Клэйфейс",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -5839,6 +6571,7 @@
       "title": "Плетёный муж",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -5859,6 +6592,7 @@
       "title": "Яга",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -5879,6 +6613,7 @@
       "title": "Яга",
       "season_number": 1,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -5899,6 +6634,7 @@
       "title": "Balaraw",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -5919,6 +6655,7 @@
       "title": "Balaraw",
       "season_number": 1,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -5939,6 +6676,7 @@
       "title": "Мангуст",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -5959,6 +6697,7 @@
       "title": "Ноктюрн",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -5979,6 +6718,7 @@
       "title": "Ноктюрн",
       "season_number": 1,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -5999,6 +6739,7 @@
       "title": "Дикая лошадь",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -6019,6 +6760,7 @@
       "title": "Годзилла: Минус ноль",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -6039,6 +6781,7 @@
       "title": "Ghost Soldier",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -6059,6 +6802,7 @@
       "title": "Кот в шляпе",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -6079,7 +6823,50 @@
       "title": "Тусовщик",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
+    },
+    {
+      "id": "tmdb:279246:series_premiere:2026-11-04:::global",
+      "content_id": "tmdb:279246",
+      "season_id": null,
+      "episode_id": null,
+      "event_type": "series_premiere",
+      "release_date": "2026-11-04",
+      "release_at": null,
+      "release_timezone": null,
+      "region": "GLOBAL",
+      "country": null,
+      "platform_id": null,
+      "source_id": "tmdb",
+      "source_url": null,
+      "verification_status": "aggregator_confirmed",
+      "title": "재혼 황후",
+      "season_number": null,
+      "episode_number": null,
+      "source_episode_number": null,
+      "episode_name": null
+    },
+    {
+      "id": "tmdb:279246:episode:2026-11-04:1:1:global",
+      "content_id": "tmdb:279246",
+      "season_id": null,
+      "episode_id": null,
+      "event_type": "episode",
+      "release_date": "2026-11-04",
+      "release_at": null,
+      "release_timezone": null,
+      "region": "GLOBAL",
+      "country": null,
+      "platform_id": null,
+      "source_id": "tmdb",
+      "source_url": null,
+      "verification_status": "aggregator_confirmed",
+      "title": "재혼 황후",
+      "season_number": 1,
+      "episode_number": 1,
+      "source_episode_number": 1,
+      "episode_name": "Эпизод 1"
     },
     {
       "id": "tmdb:1771231:movie_digital:2026-11-05:::global",
@@ -6099,6 +6886,28 @@
       "title": "Maintaining Normalcy",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
+      "episode_name": null
+    },
+    {
+      "id": "tmdb:656908:movie_digital:2026-11-05:::global",
+      "content_id": "tmdb:656908",
+      "season_id": null,
+      "episode_id": null,
+      "event_type": "movie_digital",
+      "release_date": "2026-11-05",
+      "release_at": null,
+      "release_timezone": null,
+      "region": "GLOBAL",
+      "country": null,
+      "platform_id": null,
+      "source_id": "tmdb",
+      "source_url": null,
+      "verification_status": "aggregator_confirmed",
+      "title": "रामायण",
+      "season_number": null,
+      "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -6119,6 +6928,7 @@
       "title": "Как ограбить банк",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -6139,6 +6949,7 @@
       "title": "Мэдден",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -6159,6 +6970,7 @@
       "title": "Психопатка",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -6179,6 +6991,7 @@
       "title": "Скрудж",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -6199,6 +7012,7 @@
       "title": "Бумажный тигр",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -6219,6 +7033,7 @@
       "title": "Голодные игры: Рассвет жатвы",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -6239,6 +7054,7 @@
       "title": "Elsinore",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -6259,6 +7075,7 @@
       "title": "Сводные сестры",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -6279,6 +7096,7 @@
       "title": "Бегущий по лезвию 2099",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -6299,6 +7117,7 @@
       "title": "Бегущий по лезвию 2099",
       "season_number": 1,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -6319,6 +7138,7 @@
       "title": "Билли и мир магии",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -6339,6 +7159,7 @@
       "title": "Знакомство с Факерами: Новая глава",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -6359,6 +7180,7 @@
       "title": "Приключения Клиффа Бута",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -6379,6 +7201,7 @@
       "title": "Ночь дурака",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -6399,7 +7222,29 @@
       "title": "Ночь дурака",
       "season_number": 1,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
+    },
+    {
+      "id": "tmdb:1599189:movie_digital:2026-12-01:::global",
+      "content_id": "tmdb:1599189",
+      "season_id": null,
+      "episode_id": null,
+      "event_type": "movie_digital",
+      "release_date": "2026-12-01",
+      "release_at": null,
+      "release_timezone": null,
+      "region": "GLOBAL",
+      "country": null,
+      "platform_id": null,
+      "source_id": "tmdb",
+      "source_url": null,
+      "verification_status": "aggregator_confirmed",
+      "title": "剑来院线剧场版 十三之争",
+      "season_number": null,
+      "episode_number": null,
+      "source_episode_number": null,
+      "episode_name": null
     },
     {
       "id": "tmdb:1084728:movie_digital:2026-12-02:::global",
@@ -6419,6 +7264,7 @@
       "title": "Астерикс и эликсир молодости",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -6439,6 +7285,7 @@
       "title": "Рэй Ганн",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -6459,6 +7306,7 @@
       "title": "Pride and Prejudice",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -6479,6 +7327,7 @@
       "title": "Pride and Prejudice",
       "season_number": 1,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -6499,6 +7348,7 @@
       "title": "Sri Sri",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -6519,6 +7369,7 @@
       "title": "Batman: Knightfall Part 2: Knightquest",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -6539,6 +7390,7 @@
       "title": "The Murder of JonBenét Ramsey",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -6559,6 +7411,7 @@
       "title": "The Murder of JonBenét Ramsey",
       "season_number": 1,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -6579,6 +7432,7 @@
       "title": "Дебют",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -6599,6 +7453,7 @@
       "title": "Дюна: Часть третья",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -6619,7 +7474,50 @@
       "title": "Мстители: Доктор Дум",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
+    },
+    {
+      "id": "tmdb:283220:series_premiere:2026-12-17:::global",
+      "content_id": "tmdb:283220",
+      "season_id": null,
+      "episode_id": null,
+      "event_type": "series_premiere",
+      "release_date": "2026-12-17",
+      "release_at": null,
+      "release_timezone": null,
+      "region": "GLOBAL",
+      "country": null,
+      "platform_id": null,
+      "source_id": "tmdb",
+      "source_url": null,
+      "verification_status": "aggregator_confirmed",
+      "title": "国民クイズ",
+      "season_number": null,
+      "episode_number": null,
+      "source_episode_number": null,
+      "episode_name": null
+    },
+    {
+      "id": "tmdb:283220:episode:2026-12-17:1:1:global",
+      "content_id": "tmdb:283220",
+      "season_id": null,
+      "episode_id": null,
+      "event_type": "episode",
+      "release_date": "2026-12-17",
+      "release_at": null,
+      "release_timezone": null,
+      "region": "GLOBAL",
+      "country": null,
+      "platform_id": null,
+      "source_id": "tmdb",
+      "source_url": null,
+      "verification_status": "aggregator_confirmed",
+      "title": "国民クイズ",
+      "season_number": 1,
+      "episode_number": 1,
+      "source_episode_number": 1,
+      "episode_name": "Эпизод 1"
     },
     {
       "id": "tmdb:224377:series_premiere:2026-12-25:::global",
@@ -6639,6 +7537,7 @@
       "title": "Гарри Поттер",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -6659,6 +7558,7 @@
       "title": "Гарри Поттер",
       "season_number": 1,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -6679,6 +7579,7 @@
       "title": "Новичок",
       "season_number": 9,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -6699,6 +7600,7 @@
       "title": "Нейромант",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -6719,6 +7621,7 @@
       "title": "Нейромант",
       "season_number": 1,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -6739,6 +7642,7 @@
       "title": "BeLIEf",
       "season_number": null,
       "episode_number": null,
+      "source_episode_number": null,
       "episode_name": null
     },
     {
@@ -6759,6 +7663,7 @@
       "title": "BeLIEf",
       "season_number": 1,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     },
     {
@@ -6779,6 +7684,7 @@
       "title": "Укрытие",
       "season_number": 4,
       "episode_number": 1,
+      "source_episode_number": 1,
       "episode_name": "Эпизод 1"
     }
   ]

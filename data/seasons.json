@@ -1,4 +1,1022 @@
 {
   "schema_version": 1,
-  "items": []
+  "items": [
+    {
+      "id": "tmdb:276161:season:1",
+      "content_id": "tmdb:276161",
+      "season_number": 1,
+      "aired_count": 1,
+      "total_episodes": 10,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:299167:season:1",
+      "content_id": "tmdb:299167",
+      "season_number": 1,
+      "aired_count": 1,
+      "total_episodes": 9,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:273240:season:1",
+      "content_id": "tmdb:273240",
+      "season_number": 1,
+      "aired_count": 1,
+      "total_episodes": 8,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:209867:season:1",
+      "content_id": "tmdb:209867",
+      "season_number": 1,
+      "aired_count": 1,
+      "total_episodes": 38,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:37854:season:23",
+      "content_id": "tmdb:37854",
+      "season_number": 23,
+      "aired_count": 0,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:60625:season:9",
+      "content_id": "tmdb:60625",
+      "season_number": 9,
+      "aired_count": 1,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:95479:season:1",
+      "content_id": "tmdb:95479",
+      "season_number": 1,
+      "aired_count": 1,
+      "total_episodes": 59,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:45790:season:6",
+      "content_id": "tmdb:45790",
+      "season_number": 6,
+      "aired_count": 2,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:79744:season:9",
+      "content_id": "tmdb:79744",
+      "season_number": 9,
+      "aired_count": 0,
+      "total_episodes": null,
+      "next_episode_number": 1,
+      "next_release_date": "2027-01-01"
+    },
+    {
+      "id": "tmdb:247718:season:2",
+      "content_id": "tmdb:247718",
+      "season_number": 2,
+      "aired_count": 2,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:82684:season:4",
+      "content_id": "tmdb:82684",
+      "season_number": 4,
+      "aired_count": 1,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:72517:season:4",
+      "content_id": "tmdb:72517",
+      "season_number": 4,
+      "aired_count": 1,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:44006:season:15",
+      "content_id": "tmdb:44006",
+      "season_number": 15,
+      "aired_count": 0,
+      "total_episodes": null,
+      "next_episode_number": 1,
+      "next_release_date": "2026-10-07"
+    },
+    {
+      "id": "tmdb:58841:season:14",
+      "content_id": "tmdb:58841",
+      "season_number": 14,
+      "aired_count": 0,
+      "total_episodes": null,
+      "next_episode_number": 1,
+      "next_release_date": "2026-10-07"
+    },
+    {
+      "id": "tmdb:30984:season:2",
+      "content_id": "tmdb:30984",
+      "season_number": 2,
+      "aired_count": 1,
+      "total_episodes": null,
+      "next_episode_number": 49,
+      "next_release_date": "2026-10-20"
+    },
+    {
+      "id": "tmdb:97546:season:4",
+      "content_id": "tmdb:97546",
+      "season_number": 4,
+      "aired_count": 1,
+      "total_episodes": null,
+      "next_episode_number": 10,
+      "next_release_date": "2026-10-06"
+    },
+    {
+      "id": "tmdb:94664:season:3",
+      "content_id": "tmdb:94664",
+      "season_number": 3,
+      "aired_count": 1,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:95350:season:1",
+      "content_id": "tmdb:95350",
+      "season_number": 1,
+      "aired_count": 2,
+      "total_episodes": 8,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:259837:season:1",
+      "content_id": "tmdb:259837",
+      "season_number": 1,
+      "aired_count": 1,
+      "total_episodes": 8,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:4057:season:19",
+      "content_id": "tmdb:4057",
+      "season_number": 19,
+      "aired_count": 1,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:113962:season:3",
+      "content_id": "tmdb:113962",
+      "season_number": 3,
+      "aired_count": 1,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:96316:season:1",
+      "content_id": "tmdb:96316",
+      "season_number": 1,
+      "aired_count": 1,
+      "total_episodes": 60,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:91801:season:4",
+      "content_id": "tmdb:91801",
+      "season_number": 4,
+      "aired_count": 1,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:97525:season:3",
+      "content_id": "tmdb:97525",
+      "season_number": 3,
+      "aired_count": 1,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:117465:season:1",
+      "content_id": "tmdb:117465",
+      "season_number": 1,
+      "aired_count": 1,
+      "total_episodes": 25,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:1416:season:23",
+      "content_id": "tmdb:1416",
+      "season_number": 23,
+      "aired_count": 0,
+      "total_episodes": null,
+      "next_episode_number": 1,
+      "next_release_date": "2026-10-15"
+    },
+    {
+      "id": "tmdb:125988:season:4",
+      "content_id": "tmdb:125988",
+      "season_number": 4,
+      "aired_count": 0,
+      "total_episodes": null,
+      "next_episode_number": 1,
+      "next_release_date": "2027-07-08"
+    },
+    {
+      "id": "tmdb:65334:season:6",
+      "content_id": "tmdb:65334",
+      "season_number": 6,
+      "aired_count": 2,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:65942:season:1",
+      "content_id": "tmdb:65942",
+      "season_number": 1,
+      "aired_count": 2,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:1413:season:13",
+      "content_id": "tmdb:1413",
+      "season_number": 13,
+      "aired_count": 2,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:108978:season:4",
+      "content_id": "tmdb:108978",
+      "season_number": 4,
+      "aired_count": 1,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:30983:season:1",
+      "content_id": "tmdb:30983",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:95480:season:6",
+      "content_id": "tmdb:95480",
+      "season_number": 6,
+      "aired_count": 2,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:2734:season:28",
+      "content_id": "tmdb:2734",
+      "season_number": 28,
+      "aired_count": 0,
+      "total_episodes": null,
+      "next_episode_number": 1,
+      "next_release_date": "2026-10-08"
+    },
+    {
+      "id": "tmdb:456:season:38",
+      "content_id": "tmdb:456",
+      "season_number": 38,
+      "aired_count": 2,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:80748:season:9",
+      "content_id": "tmdb:80748",
+      "season_number": 9,
+      "aired_count": 0,
+      "total_episodes": null,
+      "next_episode_number": 1,
+      "next_release_date": "2026-10-05"
+    },
+    {
+      "id": "tmdb:278573:season:1",
+      "content_id": "tmdb:278573",
+      "season_number": 1,
+      "aired_count": 1,
+      "total_episodes": 12,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:4614:season:24",
+      "content_id": "tmdb:4614",
+      "season_number": 24,
+      "aired_count": 0,
+      "total_episodes": null,
+      "next_episode_number": 1,
+      "next_release_date": "2026-10-06"
+    },
+    {
+      "id": "tmdb:322430:season:1",
+      "content_id": "tmdb:322430",
+      "season_number": 1,
+      "aired_count": 1,
+      "total_episodes": 22,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:8514:season:18",
+      "content_id": "tmdb:8514",
+      "season_number": 18,
+      "aired_count": 1,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:1434:season:24",
+      "content_id": "tmdb:1434",
+      "season_number": 24,
+      "aired_count": 1,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:65733:season:1",
+      "content_id": "tmdb:65733",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:549:season:26",
+      "content_id": "tmdb:549",
+      "season_number": 26,
+      "aired_count": 0,
+      "total_episodes": null,
+      "next_episode_number": 1,
+      "next_release_date": "2026-10-08"
+    },
+    {
+      "id": "tmdb:229544:season:1",
+      "content_id": "tmdb:229544",
+      "season_number": 1,
+      "aired_count": 1,
+      "total_episodes": 10,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:223564:season:1",
+      "content_id": "tmdb:223564",
+      "season_number": 1,
+      "aired_count": 1,
+      "total_episodes": 36,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:1220:season:34",
+      "content_id": "tmdb:1220",
+      "season_number": 34,
+      "aired_count": 2,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:502:season:56",
+      "content_id": "tmdb:502",
+      "season_number": 56,
+      "aired_count": 1,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:33238:season:1",
+      "content_id": "tmdb:33238",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:1433:season:22",
+      "content_id": "tmdb:1433",
+      "season_number": 22,
+      "aired_count": 1,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:1667:season:52",
+      "content_id": "tmdb:1667",
+      "season_number": 52,
+      "aired_count": 2,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:4656:season:34",
+      "content_id": "tmdb:4656",
+      "season_number": 34,
+      "aired_count": 1,
+      "total_episodes": null,
+      "next_episode_number": 40,
+      "next_release_date": "2026-10-05"
+    },
+    {
+      "id": "tmdb:320315:season:1",
+      "content_id": "tmdb:320315",
+      "season_number": 1,
+      "aired_count": 1,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:2224:season:31",
+      "content_id": "tmdb:2224",
+      "season_number": 31,
+      "aired_count": 0,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:94722:season:75",
+      "content_id": "tmdb:94722",
+      "season_number": 75,
+      "aired_count": 1,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:63770:season:11",
+      "content_id": "tmdb:63770",
+      "season_number": 11,
+      "aired_count": 0,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:256695:season:1",
+      "content_id": "tmdb:256695",
+      "season_number": 1,
+      "aired_count": 2,
+      "total_episodes": 23,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:59941:season:14",
+      "content_id": "tmdb:59941",
+      "season_number": 14,
+      "aired_count": 2,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:91768:season:2",
+      "content_id": "tmdb:91768",
+      "season_number": 2,
+      "aired_count": 2,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:300054:season:1",
+      "content_id": "tmdb:300054",
+      "season_number": 1,
+      "aired_count": 1,
+      "total_episodes": 25,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:291496:season:1",
+      "content_id": "tmdb:291496",
+      "season_number": 1,
+      "aired_count": 1,
+      "total_episodes": 12,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:220150:season:1",
+      "content_id": "tmdb:220150",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": "2026-10-09"
+    },
+    {
+      "id": "tmdb:303143:season:1",
+      "content_id": "tmdb:303143",
+      "season_number": 1,
+      "aired_count": 1,
+      "total_episodes": 14,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:2912:season:43",
+      "content_id": "tmdb:2912",
+      "season_number": 43,
+      "aired_count": 2,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:139060:season:2",
+      "content_id": "tmdb:139060",
+      "season_number": 2,
+      "aired_count": 1,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:274622:season:1",
+      "content_id": "tmdb:274622",
+      "season_number": 1,
+      "aired_count": 1,
+      "total_episodes": 13,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:154743:season:2",
+      "content_id": "tmdb:154743",
+      "season_number": 2,
+      "aired_count": 1,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:278043:season:1",
+      "content_id": "tmdb:278043",
+      "season_number": 1,
+      "aired_count": 2,
+      "total_episodes": 25,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:275202:season:1",
+      "content_id": "tmdb:275202",
+      "season_number": 1,
+      "aired_count": 1,
+      "total_episodes": 8,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:289763:season:1",
+      "content_id": "tmdb:289763",
+      "season_number": 1,
+      "aired_count": 1,
+      "total_episodes": 12,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:106449:season:1",
+      "content_id": "tmdb:106449",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:1489:season:25",
+      "content_id": "tmdb:1489",
+      "season_number": 25,
+      "aired_count": 2,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:312949:season:1",
+      "content_id": "tmdb:312949",
+      "season_number": 1,
+      "aired_count": 1,
+      "total_episodes": 12,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:298505:season:1",
+      "content_id": "tmdb:298505",
+      "season_number": 1,
+      "aired_count": 1,
+      "total_episodes": 10,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:258165:season:1",
+      "content_id": "tmdb:258165",
+      "season_number": 1,
+      "aired_count": 1,
+      "total_episodes": 7,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:298852:season:1",
+      "content_id": "tmdb:298852",
+      "season_number": 1,
+      "aired_count": 1,
+      "total_episodes": 8,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:335591:season:1",
+      "content_id": "tmdb:335591",
+      "season_number": 1,
+      "aired_count": 1,
+      "total_episodes": 6,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:324502:season:1",
+      "content_id": "tmdb:324502",
+      "season_number": 1,
+      "aired_count": 1,
+      "total_episodes": 12,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:284558:season:1",
+      "content_id": "tmdb:284558",
+      "season_number": 1,
+      "aired_count": 1,
+      "total_episodes": 8,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:1777750:season:1",
+      "content_id": "tmdb:1777750",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:301139:season:1",
+      "content_id": "tmdb:301139",
+      "season_number": 1,
+      "aired_count": 1,
+      "total_episodes": 1,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:336153:season:1",
+      "content_id": "tmdb:336153",
+      "season_number": 1,
+      "aired_count": 1,
+      "total_episodes": null,
+      "next_episode_number": null,
+      "next_release_date": null
+    },
+    {
+      "id": "tmdb:307106:season:1",
+      "content_id": "tmdb:307106",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": 12,
+      "next_episode_number": null,
+      "next_release_date": "2026-10-05"
+    },
+    {
+      "id": "tmdb:288673:season:1",
+      "content_id": "tmdb:288673",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": 8,
+      "next_episode_number": null,
+      "next_release_date": "2026-10-07"
+    },
+    {
+      "id": "tmdb:305551:season:1",
+      "content_id": "tmdb:305551",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": 10,
+      "next_episode_number": null,
+      "next_release_date": "2026-10-07"
+    },
+    {
+      "id": "tmdb:285322:season:1",
+      "content_id": "tmdb:285322",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": 6,
+      "next_episode_number": null,
+      "next_release_date": "2026-10-08"
+    },
+    {
+      "id": "tmdb:303630:season:1",
+      "content_id": "tmdb:303630",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": 3,
+      "next_episode_number": null,
+      "next_release_date": "2026-10-08"
+    },
+    {
+      "id": "tmdb:317326:season:1",
+      "content_id": "tmdb:317326",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": 1,
+      "next_episode_number": null,
+      "next_release_date": "2026-10-08"
+    },
+    {
+      "id": "tmdb:289423:season:1",
+      "content_id": "tmdb:289423",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": 12,
+      "next_episode_number": null,
+      "next_release_date": "2026-10-09"
+    },
+    {
+      "id": "tmdb:293610:season:1",
+      "content_id": "tmdb:293610",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": 12,
+      "next_episode_number": null,
+      "next_release_date": "2026-10-09"
+    },
+    {
+      "id": "tmdb:288458:season:1",
+      "content_id": "tmdb:288458",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": 1,
+      "next_episode_number": null,
+      "next_release_date": "2026-10-09"
+    },
+    {
+      "id": "tmdb:284833:season:1",
+      "content_id": "tmdb:284833",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": 13,
+      "next_episode_number": null,
+      "next_release_date": "2026-10-09"
+    },
+    {
+      "id": "tmdb:287556:season:1",
+      "content_id": "tmdb:287556",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": 25,
+      "next_episode_number": null,
+      "next_release_date": "2026-10-09"
+    },
+    {
+      "id": "tmdb:293607:season:1",
+      "content_id": "tmdb:293607",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": 16,
+      "next_episode_number": null,
+      "next_release_date": "2026-10-10"
+    },
+    {
+      "id": "tmdb:333101:season:1",
+      "content_id": "tmdb:333101",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": 6,
+      "next_episode_number": null,
+      "next_release_date": "2026-10-11"
+    },
+    {
+      "id": "tmdb:331693:season:1",
+      "content_id": "tmdb:331693",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": 3,
+      "next_episode_number": null,
+      "next_release_date": "2026-10-12"
+    },
+    {
+      "id": "tmdb:283371:season:1",
+      "content_id": "tmdb:283371",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": 6,
+      "next_episode_number": null,
+      "next_release_date": "2026-10-13"
+    },
+    {
+      "id": "tmdb:213375:season:1",
+      "content_id": "tmdb:213375",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": 8,
+      "next_episode_number": null,
+      "next_release_date": "2026-10-14"
+    },
+    {
+      "id": "tmdb:213562:season:1",
+      "content_id": "tmdb:213562",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": 8,
+      "next_episode_number": null,
+      "next_release_date": "2026-10-15"
+    },
+    {
+      "id": "tmdb:204084:season:1",
+      "content_id": "tmdb:204084",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": 10,
+      "next_episode_number": null,
+      "next_release_date": "2026-10-17"
+    },
+    {
+      "id": "tmdb:303745:season:1",
+      "content_id": "tmdb:303745",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": 12,
+      "next_episode_number": null,
+      "next_release_date": "2026-10-19"
+    },
+    {
+      "id": "tmdb:326788:season:1",
+      "content_id": "tmdb:326788",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": 10,
+      "next_episode_number": null,
+      "next_release_date": "2026-10-20"
+    },
+    {
+      "id": "tmdb:314360:season:1",
+      "content_id": "tmdb:314360",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": 8,
+      "next_episode_number": null,
+      "next_release_date": "2026-10-23"
+    },
+    {
+      "id": "tmdb:292741:season:1",
+      "content_id": "tmdb:292741",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": 10,
+      "next_episode_number": null,
+      "next_release_date": "2026-10-29"
+    },
+    {
+      "id": "tmdb:313699:season:1",
+      "content_id": "tmdb:313699",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": 8,
+      "next_episode_number": null,
+      "next_release_date": "2026-10-29"
+    },
+    {
+      "id": "tmdb:279246:season:1",
+      "content_id": "tmdb:279246",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": 10,
+      "next_episode_number": null,
+      "next_release_date": "2026-11-04"
+    },
+    {
+      "id": "tmdb:171802:season:1",
+      "content_id": "tmdb:171802",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": 8,
+      "next_episode_number": null,
+      "next_release_date": "2026-11-25"
+    },
+    {
+      "id": "tmdb:326247:season:1",
+      "content_id": "tmdb:326247",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": 1,
+      "next_episode_number": null,
+      "next_release_date": "2026-11-26"
+    },
+    {
+      "id": "tmdb:288672:season:1",
+      "content_id": "tmdb:288672",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": 6,
+      "next_episode_number": null,
+      "next_release_date": "2026-12-03"
+    },
+    {
+      "id": "tmdb:270596:season:1",
+      "content_id": "tmdb:270596",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": 8,
+      "next_episode_number": null,
+      "next_release_date": "2026-12-10"
+    },
+    {
+      "id": "tmdb:283220:season:1",
+      "content_id": "tmdb:283220",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": 6,
+      "next_episode_number": null,
+      "next_release_date": "2026-12-17"
+    },
+    {
+      "id": "tmdb:224377:season:1",
+      "content_id": "tmdb:224377",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": 1,
+      "next_episode_number": null,
+      "next_release_date": "2026-12-25"
+    },
+    {
+      "id": "tmdb:215528:season:1",
+      "content_id": "tmdb:215528",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": 10,
+      "next_episode_number": null,
+      "next_release_date": "2027-01-21"
+    },
+    {
+      "id": "tmdb:296264:season:1",
+      "content_id": "tmdb:296264",
+      "season_number": 1,
+      "aired_count": 0,
+      "total_episodes": 1,
+      "next_episode_number": null,
+      "next_release_date": "2027-02-19"
+    }
+  ]
 }

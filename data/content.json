@@ -39,6 +39,8 @@
         "name": "Эпизод 10"
       },
       "network": "Netflix",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://www.netflix.com/title/81947300",
       "external_ids": {
         "tmdb": 276161
@@ -79,6 +81,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Warner Bros. Animation",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1560520
@@ -120,6 +124,8 @@
         "name": "Эпизод 9"
       },
       "network": "Paramount Network",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://www.paramountplus.com/shows/dutton-ranch",
       "external_ids": {
         "tmdb": 299167
@@ -160,6 +166,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Nickelodeon Movies",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 980431
@@ -199,6 +207,8 @@
         "name": "Эпизод 8"
       },
       "network": "Prime Video",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://www.amazon.com/dp/B0GN8NL4Q1",
       "external_ids": {
         "tmdb": 273240
@@ -239,6 +249,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Skydance Animation",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "https://www.netflix.com/ru/title/81749852",
       "external_ids": {
         "tmdb": 1007757
@@ -284,6 +296,8 @@
         "name": "Прекрасный пейзаж"
       },
       "network": "Nippon TV",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://frieren-anime.jp/",
       "external_ids": {
         "tmdb": 209867
@@ -327,6 +341,8 @@
         "name": "Эпизод 1180"
       },
       "network": "Fuji TV",
+      "n_seasons": 23,
+      "seasons_total": 23,
       "homepage": "http://www.toei-anim.co.jp/tv/onep",
       "external_ids": {
         "tmdb": 37854
@@ -365,6 +381,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Draco Films",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1621552
@@ -401,6 +419,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Videocine",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1632181
@@ -446,6 +466,8 @@
         "name": "Поле его мечты"
       },
       "network": "Adult Swim",
+      "n_seasons": 10,
+      "seasons_total": 10,
       "homepage": "http://www.adultswim.com/videos/rick-and-morty",
       "external_ids": {
         "tmdb": 60625
@@ -489,6 +511,8 @@
         "name": "Сэндайский барьер"
       },
       "network": "MBS",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://jujutsukaisen.jp",
       "external_ids": {
         "tmdb": 95479
@@ -527,6 +551,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Sunwrite Moonact",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1630423
@@ -563,6 +589,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Lionsgate",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 936075
@@ -599,6 +627,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Lord Miller",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 687163
@@ -642,6 +672,8 @@
         "name": "Эпизод 2"
       },
       "network": "Netflix",
+      "n_seasons": 6,
+      "seasons_total": 6,
       "homepage": "https://jojo-portal.com/anime/",
       "external_ids": {
         "tmdb": 45790
@@ -690,6 +722,8 @@
         "name": "Бандит"
       },
       "network": "ABC",
+      "n_seasons": 9,
+      "seasons_total": 9,
       "homepage": "https://abc.com/show/ada4e644-ce0b-4590-9dac-b04ce0a446e8",
       "external_ids": {
         "tmdb": 79744
@@ -731,6 +765,8 @@
         "name": "Песня 2"
       },
       "network": "Paramount+",
+      "n_seasons": 2,
+      "seasons_total": 2,
       "homepage": "https://www.paramountplus.com/shows/mobland",
       "external_ids": {
         "tmdb": 247718
@@ -776,6 +812,8 @@
         "name": "Эпизод 24"
       },
       "network": "Nippon TV",
+      "n_seasons": 4,
+      "seasons_total": 4,
       "homepage": "https://www.ten-sura.com/anime/tensura",
       "external_ids": {
         "tmdb": 82684
@@ -819,6 +857,8 @@
         "name": "Эпизод 16"
       },
       "network": "AT-X",
+      "n_seasons": 5,
+      "seasons_total": 5,
       "homepage": "http://you-zitsu.com",
       "external_ids": {
         "tmdb": 72517
@@ -863,6 +903,8 @@
         "name": "Эпизод 21"
       },
       "network": "NBC",
+      "n_seasons": 15,
+      "seasons_total": 15,
       "homepage": "http://www.nbc.com/chicago-fire",
       "external_ids": {
         "tmdb": 44006
@@ -909,6 +951,8 @@
         "name": "Эпизод 21"
       },
       "network": "NBC",
+      "n_seasons": 14,
+      "seasons_total": 14,
       "homepage": "http://www.nbc.com/chicago-pd",
       "external_ids": {
         "tmdb": 58841
@@ -957,6 +1001,8 @@
         "name": "Эпизод 48"
       },
       "network": "TV Tokyo",
+      "n_seasons": 2,
+      "seasons_total": 2,
       "homepage": "https://bleach-anime.com",
       "external_ids": {
         "tmdb": 30984
@@ -1003,6 +1049,8 @@
         "name": "Мэй едет на автобусе"
       },
       "network": "Apple TV",
+      "n_seasons": 4,
+      "seasons_total": 4,
       "homepage": "https://tv.apple.com/show/umc.cmc.vtoh0mn0xn7t3c643xqonfzy",
       "external_ids": {
         "tmdb": 97546
@@ -1046,6 +1094,8 @@
         "name": "Эпизод 14"
       },
       "network": "Tokyo MX",
+      "n_seasons": 3,
+      "seasons_total": 3,
       "homepage": "https://mushokutensei.jp",
       "external_ids": {
         "tmdb": 94664
@@ -1089,6 +1139,8 @@
         "name": "Наследие Джорданов"
       },
       "network": "HBO",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://www.hbo.com/content/lanterns",
       "external_ids": {
         "tmdb": 95350
@@ -1125,6 +1177,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Aanaxion Studio",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1383731
@@ -1161,6 +1215,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Anonymous Content",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "https://www.netflix.com/ru/title/81911351",
       "external_ids": {
         "tmdb": 1330021
@@ -1206,6 +1262,8 @@
         "name": "Хранители Хэсона. Часть 2"
       },
       "network": "Netflix",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://www.netflix.com/title/81948067",
       "external_ids": {
         "tmdb": 259837
@@ -1249,6 +1307,8 @@
         "name": "Эпизод 10"
       },
       "network": "CBS",
+      "n_seasons": 19,
+      "seasons_total": 19,
       "homepage": "https://www.paramountplus.com/shows/criminal_minds",
       "external_ids": {
         "tmdb": 4057
@@ -1290,6 +1350,8 @@
         "name": "Развязка"
       },
       "network": "Paramount+",
+      "n_seasons": 3,
+      "seasons_total": 3,
       "homepage": "https://www.paramountplus.com/shows/lioness",
       "external_ids": {
         "tmdb": 113962
@@ -1331,6 +1393,8 @@
         "name": "Эпизод 60"
       },
       "network": "MBS",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://kanokari-official.com",
       "external_ids": {
         "tmdb": 96316
@@ -1374,6 +1438,8 @@
         "name": "Эпизод 24"
       },
       "network": "NHK Educational TV",
+      "n_seasons": 4,
+      "seasons_total": 4,
       "homepage": "https://www.nhk-character.com/chara/iruma/",
       "external_ids": {
         "tmdb": 91801
@@ -1412,6 +1478,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Marvel Studios",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1439930
@@ -1452,6 +1520,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Pixar",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1084244
@@ -1490,6 +1560,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Escape Artists",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "https://www.netflix.com/ru/title/81716219",
       "external_ids": {
         "tmdb": 614945
@@ -1533,6 +1605,8 @@
         "name": "Фуси"
       },
       "network": "NHK G",
+      "n_seasons": 3,
+      "seasons_total": 3,
       "homepage": "https://anime-fumetsunoanatae.com",
       "external_ids": {
         "tmdb": 97525
@@ -1576,6 +1650,8 @@
         "name": "Конец и начало"
       },
       "network": "TV Tokyo",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://www.jigokuraku.com",
       "external_ids": {
         "tmdb": 117465
@@ -1620,6 +1696,8 @@
         "name": "Эпизод 18"
       },
       "network": "ABC",
+      "n_seasons": 23,
+      "seasons_total": 23,
       "homepage": "https://abc.com/show/b7d90f97-dbb2-4ab5-b141-f9cbeae53581",
       "external_ids": {
         "tmdb": 1416
@@ -1666,6 +1744,8 @@
         "name": "Трой"
       },
       "network": "Apple TV",
+      "n_seasons": 4,
+      "seasons_total": 4,
       "homepage": "https://tv.apple.com/show/umc.cmc.3yksgc857px0k0rqe5zd4jice",
       "external_ids": {
         "tmdb": 125988
@@ -1702,6 +1782,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Tea Shop Productions",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1339713
@@ -1740,6 +1822,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Edko Films",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1280738
@@ -1782,6 +1866,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Illumination",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1226863
@@ -1825,6 +1911,8 @@
         "name": "Эпизод 24"
       },
       "network": "TF1",
+      "n_seasons": 6,
+      "seasons_total": 6,
       "homepage": "https://www.miraculousladybug.com",
       "external_ids": {
         "tmdb": 65334
@@ -1870,6 +1958,8 @@
         "name": "Эпизод 84"
       },
       "network": "TV Tokyo",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "http://re-zero-anime.jp/",
       "external_ids": {
         "tmdb": 65942
@@ -1913,6 +2003,8 @@
         "name": "Эпизод 3"
       },
       "network": "FX",
+      "n_seasons": 13,
+      "seasons_total": 13,
       "homepage": "https://www.fxnetworks.com/shows/american-horror-story",
       "external_ids": {
         "tmdb": 1413
@@ -1954,6 +2046,8 @@
         "name": "Порез"
       },
       "network": "Prime Video",
+      "n_seasons": 4,
+      "seasons_total": 4,
       "homepage": "https://www.amazon.com/dp/B09ML1ZF3D",
       "external_ids": {
         "tmdb": 108978
@@ -1992,6 +2086,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Wow Point",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1375646
@@ -2028,6 +2124,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "MRC",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1032863
@@ -2070,6 +2168,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Pixar",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1327819
@@ -2105,7 +2205,7 @@
       "popularity": 182.5,
       "release_date": "1996-01-08",
       "total_episodes": 1216,
-      "aired_count": 1215,
+      "aired_count": 1214,
       "aired_season": 1,
       "next_episode": null,
       "last_episode": {
@@ -2115,6 +2215,8 @@
         "name": "Эпизод 1214"
       },
       "network": "YTV",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "http://www.ytv.co.jp/conan",
       "external_ids": {
         "tmdb": 30983
@@ -2158,6 +2260,8 @@
         "name": "Проблемы с отцом"
       },
       "network": "Apple TV",
+      "n_seasons": 6,
+      "seasons_total": 6,
       "homepage": "https://tv.apple.com/show/umc.cmc.2szz3fdt71tl1ulnbp8utgq5o",
       "external_ids": {
         "tmdb": 95480
@@ -2206,6 +2310,8 @@
         "name": "Эпизод 21"
       },
       "network": "NBC",
+      "n_seasons": 28,
+      "seasons_total": 28,
       "homepage": "http://www.nbc.com/law-and-order-special-victims-unit",
       "external_ids": {
         "tmdb": 2734
@@ -2247,6 +2353,8 @@
         "name": "Эпизод 1"
       },
       "network": "FOX",
+      "n_seasons": 38,
+      "seasons_total": 38,
       "homepage": "https://www.fox.com/detail/series/SER000852IRHK/the-simpsons",
       "external_ids": {
         "tmdb": 456
@@ -2283,6 +2391,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Skydance Media",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "https://tv.apple.com/ua/movie/umc.cmc.shin43vzfoz3h4ggx41z8rf?l=ru",
       "external_ids": {
         "tmdb": 1137844
@@ -2321,6 +2431,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Universal Pictures",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1368337
@@ -2359,6 +2471,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Sony Pictures Animation",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1297842
@@ -2407,6 +2521,8 @@
         "name": "Перебежчик"
       },
       "network": "CBS",
+      "n_seasons": 9,
+      "seasons_total": 9,
       "homepage": "https://www.cbs.com/shows/fbi/",
       "external_ids": {
         "tmdb": 80748
@@ -2445,6 +2561,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Working Title",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1301421
@@ -2483,6 +2601,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Marvel Studios",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 969681
@@ -2521,6 +2641,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Black Bear Pictures",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1290821
@@ -2559,6 +2681,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "New Line Cinema",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 931285
@@ -2595,6 +2719,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Universal Pictures",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1367642
@@ -2631,6 +2757,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Atomic Monster",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1304313
@@ -2665,6 +2793,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "New Line Cinema",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1212763
@@ -2703,6 +2833,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Working Title",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1318413
@@ -2744,6 +2876,8 @@
         "name": "Эпизод 12"
       },
       "network": "MBC",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://program.imbc.com/perfectcrown",
       "external_ids": {
         "tmdb": 278573
@@ -2792,6 +2926,8 @@
         "name": "Эпизод 20"
       },
       "network": "CBS",
+      "n_seasons": 24,
+      "seasons_total": 24,
       "homepage": "http://www.cbs.com/shows/ncis/",
       "external_ids": {
         "tmdb": 4614
@@ -2830,6 +2966,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Troll Court Entertainment",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1204680
@@ -2866,6 +3004,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "C2 Motion Picture Group",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1122573
@@ -2908,6 +3048,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Universal Pictures",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1315772
@@ -2946,6 +3088,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Black Bear Pictures",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1340206
@@ -2984,6 +3128,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Lucasfilm Ltd.",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1228710
@@ -3020,6 +3166,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Universal Pictures",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1275779
@@ -3056,6 +3204,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Searchlight Pictures",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1266127
@@ -3097,6 +3247,8 @@
         "name": "Эпизод 22"
       },
       "network": "Netflix",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://www.netflix.com/title/81687036",
       "external_ids": {
         "tmdb": 322430
@@ -3136,6 +3288,8 @@
         "name": "Эпизод 16"
       },
       "network": "MTV",
+      "n_seasons": 18,
+      "seasons_total": 18,
       "homepage": "https://www.mtv.com/shows/rupauls-drag-race",
       "external_ids": {
         "tmdb": 8514
@@ -3177,6 +3331,8 @@
         "name": "Эпизод 15"
       },
       "network": "FOX",
+      "n_seasons": 24,
+      "seasons_total": 24,
       "homepage": "https://www.fox.com/detail/series/SER000854XOPZ/family-guy",
       "external_ids": {
         "tmdb": 1434
@@ -3217,6 +3373,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Walt Disney Pictures",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1108427
@@ -3256,7 +3414,7 @@
       "popularity": 369.2,
       "release_date": "2005-04-22",
       "total_episodes": 1464,
-      "aired_count": 936,
+      "aired_count": 935,
       "aired_season": 1,
       "next_episode": null,
       "last_episode": {
@@ -3266,6 +3424,8 @@
         "name": "Эпизод 935"
       },
       "network": "tv asahi",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "",
       "external_ids": {
         "tmdb": 65733
@@ -3302,6 +3462,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Alibaba Pictures Group",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1305781
@@ -3348,6 +3510,8 @@
         "name": "Эпизод 21"
       },
       "network": "NBC",
+      "n_seasons": 26,
+      "seasons_total": 26,
       "homepage": "http://www.nbc.com/law-order",
       "external_ids": {
         "tmdb": 549
@@ -3384,6 +3548,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Punch Palace Productions",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1288445
@@ -3422,6 +3588,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Constantin Film",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1423191
@@ -3467,6 +3635,8 @@
         "name": "Все всё ещё живы. Никто не умер"
       },
       "network": "Paramount+",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://www.paramountplus.com/shows/among-us",
       "external_ids": {
         "tmdb": 229544
@@ -3508,6 +3678,8 @@
         "name": "Эпизод 36"
       },
       "network": "Tokyo MX",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://hyakkano.com",
       "external_ids": {
         "tmdb": 223564
@@ -3546,6 +3718,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Warner Bros. Pictures",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1101383
@@ -3587,6 +3761,8 @@
         "name": "Эпизод 1"
       },
       "network": "BBC One",
+      "n_seasons": 34,
+      "seasons_total": 34,
       "homepage": "http://www.bbc.co.uk/programmes/b006xnzc",
       "external_ids": {
         "tmdb": 1220
@@ -3623,6 +3799,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Videocine",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1601797
@@ -3664,6 +3842,8 @@
         "name": "Эпизод 13"
       },
       "network": "PBS",
+      "n_seasons": 56,
+      "seasons_total": 56,
       "homepage": "http://www.sesamestreet.org",
       "external_ids": {
         "tmdb": 502
@@ -3695,7 +3875,7 @@
       "popularity": 526.6,
       "release_date": "2010-07-11",
       "total_episodes": 824,
-      "aired_count": 821,
+      "aired_count": 820,
       "aired_season": 1,
       "next_episode": null,
       "last_episode": {
@@ -3705,6 +3885,8 @@
         "name": "Эпизод 820"
       },
       "network": "SBS",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://programs.sbs.co.kr/enter/runningman/main",
       "external_ids": {
         "tmdb": 33238
@@ -3746,6 +3928,8 @@
         "name": "Эпизод 13"
       },
       "network": "FOX",
+      "n_seasons": 22,
+      "seasons_total": 22,
       "homepage": "https://www.fox.com/detail/series/SER001101XODY/american-dad",
       "external_ids": {
         "tmdb": 1433
@@ -3784,6 +3968,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Atomic Monster",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1083381
@@ -3825,6 +4011,8 @@
         "name": "Эпизод 1"
       },
       "network": "NBC",
+      "n_seasons": 52,
+      "seasons_total": 52,
       "homepage": "http://www.nbc.com/Saturday_Night_Live/",
       "external_ids": {
         "tmdb": 1667
@@ -3869,6 +4057,8 @@
         "name": "Эпизод 39"
       },
       "network": "USA Network",
+      "n_seasons": 34,
+      "seasons_total": 34,
       "homepage": "https://www.netflix.com/title/81788927",
       "external_ids": {
         "tmdb": 4656
@@ -3905,6 +4095,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Amazon MGM Studios",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1386315
@@ -3943,6 +4135,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "DC Studios",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1081003
@@ -3981,6 +4175,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Lyrical Media",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1284465
@@ -4022,6 +4218,8 @@
         "name": "Эпизод 77"
       },
       "network": "Univision",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://www.univision.com/shows/guardian-de-mi-vida",
       "external_ids": {
         "tmdb": 320315
@@ -4053,7 +4251,7 @@
       "popularity": 418.4,
       "release_date": "1996-07-22",
       "total_episodes": 4280,
-      "aired_count": 109,
+      "aired_count": 108,
       "aired_season": 31,
       "next_episode": null,
       "last_episode": {
@@ -4063,6 +4261,8 @@
         "name": "Эпизод 108"
       },
       "network": "Comedy Central",
+      "n_seasons": 31,
+      "seasons_total": 31,
       "homepage": "https://www.cc.com/shows/the-daily-show",
       "external_ids": {
         "tmdb": 2224
@@ -4099,6 +4299,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Pathé",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1165366
@@ -4137,6 +4339,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Boutique Filmes",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1487861
@@ -4176,6 +4380,8 @@
         "name": "Эпизод 57"
       },
       "network": "Das Erste",
+      "n_seasons": 75,
+      "seasons_total": 75,
       "homepage": "https://www.tagesschau.de/",
       "external_ids": {
         "tmdb": 94722
@@ -4212,6 +4418,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Broken Road Productions",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1377237
@@ -4248,6 +4456,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Pathé",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1165369
@@ -4289,6 +4499,8 @@
         "name": "Эпизод 118"
       },
       "network": "CBS",
+      "n_seasons": 11,
+      "seasons_total": 11,
       "homepage": "https://www.cbs.com/shows/the-late-show-with-stephen-colbert",
       "external_ids": {
         "tmdb": 63770
@@ -4325,6 +4537,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Broken Open Pictures",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1292415
@@ -4370,6 +4584,8 @@
         "name": "Эпизод 12"
       },
       "network": "Cartoon Network",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "",
       "external_ids": {
         "tmdb": 256695
@@ -4411,6 +4627,8 @@
         "name": "Эпизод 7"
       },
       "network": "NBC",
+      "n_seasons": 14,
+      "seasons_total": 14,
       "homepage": "http://www.nbc.com/the-tonight-show",
       "external_ids": {
         "tmdb": 59941
@@ -4453,6 +4671,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Spin Master",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1185806
@@ -4489,6 +4709,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Amazon MGM Studios",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1516698
@@ -4527,6 +4749,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "MRC",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "https://www.netflix.com/ru/title/82010386",
       "external_ids": {
         "tmdb": 1492640
@@ -4565,6 +4789,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Lukra Films",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1323244
@@ -4608,6 +4834,8 @@
         "name": "Эпизод 23"
       },
       "network": "Nippon TV",
+      "n_seasons": 2,
+      "seasons_total": 2,
       "homepage": "http://booklove-anime.jp",
       "external_ids": {
         "tmdb": 91768
@@ -4646,6 +4874,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Jungka Bangkok",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1630409
@@ -4687,6 +4917,8 @@
         "name": "Путь Меча"
       },
       "network": "Netflix",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://baki-anime.jp",
       "external_ids": {
         "tmdb": 300054
@@ -4696,7 +4928,7 @@
       "id": "tmdb:1628123",
       "slug": "bts-컴백-라이브-arirang",
       "content_type": "movie",
-      "title": "BTS : ARIRANG",
+      "title": "BTS 컴백 라이브: ARIRANG",
       "original_title": "BTS 컴백 라이브: ARIRANG",
       "overview": "",
       "country": "GB",
@@ -4721,6 +4953,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Done+Dusted",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1628123
@@ -4757,6 +4991,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Paramount Pictures",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1263337
@@ -4798,6 +5034,8 @@
         "name": "12 эпизод"
       },
       "network": "Netflix",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://www.netflix.com/title/82048302",
       "external_ids": {
         "tmdb": 291496
@@ -4836,7 +5074,7 @@
       "aired_count": 151,
       "aired_season": 1,
       "next_episode": {
-        "ep": 152,
+        "ep": null,
         "season": 1,
         "date": "2026-10-09",
         "name": "Эпизод 152"
@@ -4848,6 +5086,8 @@
         "name": "Эпизод 151"
       },
       "network": "TV Tokyo",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://www.tv-tokyo.co.jp/anime/pocketmonster2023/",
       "external_ids": {
         "tmdb": 220150
@@ -4886,6 +5126,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "MUBI",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1240889
@@ -4929,6 +5171,8 @@
         "name": "Эпизод 14"
       },
       "network": "SBS",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://programs.sbs.co.kr/drama/wickedworld/",
       "external_ids": {
         "tmdb": 303143
@@ -4970,6 +5214,8 @@
         "name": "Эпизод 12"
       },
       "network": "Syndication",
+      "n_seasons": 43,
+      "seasons_total": 43,
       "homepage": "http://www.jeopardy.com/",
       "external_ids": {
         "tmdb": 2912
@@ -5013,9 +5259,54 @@
         "name": "Совет богов"
       },
       "network": "AT-X",
+      "n_seasons": 2,
+      "seasons_total": 2,
       "homepage": "https://mabotai.jp",
       "external_ids": {
         "tmdb": 139060
+      }
+    },
+    {
+      "id": "tmdb:274622",
+      "slug": "ガンバレ中村くん",
+      "content_type": "anime",
+      "title": "ガンバレ！中村くん！！",
+      "original_title": "ガンバレ！中村くん！！",
+      "overview": "",
+      "country": "JP",
+      "original_language": "ja",
+      "year_start": "2026",
+      "status": "Ended",
+      "poster": "https://image.tmdb.org/t/p/w342/rCI8bgsqoq2ho04ZE0gUr36l8Pg.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w780/wpsLsjCcIf3QexYO6pCaLm9PI0Z.jpg",
+      "genres": [
+        "мультфильм",
+        "комедия"
+      ],
+      "genre_ids": [
+        16,
+        35
+      ],
+      "vote": 9.3,
+      "vote_count": 89,
+      "popularity": 11.0,
+      "release_date": "2026-04-02",
+      "total_episodes": 13,
+      "aired_count": 13,
+      "aired_season": 1,
+      "next_episode": null,
+      "last_episode": {
+        "ep": 13,
+        "season": 1,
+        "date": "2026-06-25",
+        "name": "Эпизод 13"
+      },
+      "network": "Gunma TV",
+      "n_seasons": 1,
+      "seasons_total": 1,
+      "homepage": "https://nakamura-kun.love",
+      "external_ids": {
+        "tmdb": 274622
       }
     },
     {
@@ -5054,6 +5345,8 @@
         "name": "Вот и пришёл важный для ангела день"
       },
       "network": "Tokyo MX",
+      "n_seasons": 2,
+      "seasons_total": 2,
       "homepage": "https://otonarino-tenshisama.jp",
       "external_ids": {
         "tmdb": 154743
@@ -5095,6 +5388,8 @@
         "name": "Стартовая линия"
       },
       "network": "MBS",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://sh-anime.shochiku.co.jp/seihantai_anime",
       "external_ids": {
         "tmdb": 278043
@@ -5134,6 +5429,8 @@
         "name": "Эпизод 8"
       },
       "network": "Prime Video",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://www.primevideo.com/detail/0GMF1T0JWKB2URJTI69NSOMA1N",
       "external_ids": {
         "tmdb": 275202
@@ -5175,6 +5472,8 @@
         "name": "Карты нет, все еще на связи!"
       },
       "network": "tvN",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://tvn.cjenm.com/ko/SEE-YOU-AT-WORK-TOMORROW",
       "external_ids": {
         "tmdb": 289763
@@ -5208,7 +5507,7 @@
       "popularity": 173.7,
       "release_date": "2020-07-25",
       "total_episodes": 206,
-      "aired_count": 194,
+      "aired_count": 193,
       "aired_season": 1,
       "next_episode": null,
       "last_episode": {
@@ -5218,6 +5517,8 @@
         "name": "Эпизод 193"
       },
       "network": "bilibili",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://www.bilibili.com/bangumi/media/md28223043",
       "external_ids": {
         "tmdb": 106449
@@ -5259,6 +5560,8 @@
         "name": "Эпизод 12"
       },
       "network": "ABC",
+      "n_seasons": 25,
+      "seasons_total": 25,
       "homepage": "https://abc.com/shows/jimmy-kimmel-live",
       "external_ids": {
         "tmdb": 1489
@@ -5302,6 +5605,8 @@
         "name": "Я буду курить даже в последней серии, ня"
       },
       "network": "Tokyo MX",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://yanineko-anime.com",
       "external_ids": {
         "tmdb": 312949
@@ -5342,6 +5647,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Freeform",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "",
       "external_ids": {
         "tmdb": 298505
@@ -5376,6 +5683,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Netflix",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://www.netflix.com/title/81611854",
       "external_ids": {
         "tmdb": 258165
@@ -5410,6 +5719,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "HBO",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://www.hbo.com/content/war",
       "external_ids": {
         "tmdb": 298852
@@ -5446,9 +5757,53 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Channel 4",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://www.channel4.com/programmes/break-clause",
       "external_ids": {
         "tmdb": 335591
+      }
+    },
+    {
+      "id": "tmdb:1599191",
+      "slug": "仙逆剧场版弑仙之战",
+      "content_type": "movie",
+      "title": "仙逆剧场版：弑仙之战",
+      "original_title": "仙逆剧场版：弑仙之战",
+      "overview": "",
+      "country": "CN",
+      "original_language": "zh",
+      "year_start": "2026",
+      "status": "Released",
+      "poster": "https://image.tmdb.org/t/p/w342/cpgLuRAT8SW7YiZaBYUGZ43GiLL.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w780/rJT7ARv4G2sr1uTZnBEUSigg1hf.jpg",
+      "genres": [
+        "мультфильм",
+        "боевик",
+        "приключения",
+        "фэнтези"
+      ],
+      "genre_ids": [
+        16,
+        28,
+        12,
+        14
+      ],
+      "vote": 0,
+      "vote_count": 0,
+      "popularity": 23.9,
+      "release_date": "2026-10-01",
+      "total_episodes": null,
+      "aired_count": null,
+      "aired_season": null,
+      "next_episode": null,
+      "last_episode": null,
+      "network": "Tencent Video",
+      "n_seasons": 0,
+      "seasons_total": 0,
+      "homepage": "",
+      "external_ids": {
+        "tmdb": 1599191
       }
     },
     {
@@ -5482,6 +5837,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Constantin Film",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1244523
@@ -5520,6 +5877,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Tokyo MX",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://tempal-anime.net",
       "external_ids": {
         "tmdb": 324502
@@ -5556,6 +5915,8 @@
       "next_episode": null,
       "last_episode": null,
       "network": "Prime Video",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "",
       "external_ids": {
         "tmdb": 284558
@@ -5592,9 +5953,95 @@
       "next_episode": null,
       "last_episode": null,
       "network": "American High",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1336166
+      }
+    },
+    {
+      "id": "tmdb:1269325",
+      "slug": "दशयम-द-कनकलजन",
+      "content_type": "movie",
+      "title": "दृश्यम्: द कन्क्लूजन",
+      "original_title": "दृश्यम्: द कन्क्लूजन",
+      "overview": "",
+      "country": "IN",
+      "original_language": "hi",
+      "year_start": "2026",
+      "status": "Released",
+      "poster": "https://image.tmdb.org/t/p/w342/67FsF2kpgEZ1T5Qos4adgqm9dLf.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w780/nq73eRdEooripf3k0XHLtX14zyC.jpg",
+      "genres": [
+        "триллер",
+        "драма",
+        "детектив",
+        "криминал"
+      ],
+      "genre_ids": [
+        53,
+        18,
+        9648,
+        80
+      ],
+      "vote": 0,
+      "vote_count": 0,
+      "popularity": 7.6,
+      "release_date": "2026-10-02",
+      "total_episodes": null,
+      "aired_count": null,
+      "aired_season": null,
+      "next_episode": null,
+      "last_episode": null,
+      "network": "Viacom18 Studios",
+      "n_seasons": 0,
+      "seasons_total": 0,
+      "homepage": "",
+      "external_ids": {
+        "tmdb": 1269325
+      }
+    },
+    {
+      "id": "tmdb:1777750",
+      "slug": "名探偵コナン-30号殺人事件",
+      "content_type": "anime",
+      "title": "名探偵コナン 30号殺人事件",
+      "original_title": "名探偵コナン 30号殺人事件",
+      "overview": "",
+      "country": "JP",
+      "original_language": "ja",
+      "year_start": "2026",
+      "status": "Released",
+      "poster": "https://image.tmdb.org/t/p/w342/pT9RIHf4K9OyOB3eqYj97E5h0YA.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w780/v0T74v8LPZBSL247oGeTOp06tnm.jpg",
+      "genres": [
+        "мультфильм",
+        "боевик",
+        "детектив",
+        "криминал"
+      ],
+      "genre_ids": [
+        16,
+        28,
+        9648,
+        80
+      ],
+      "vote": 6.6,
+      "vote_count": 5,
+      "popularity": 5.5,
+      "release_date": "2026-10-02",
+      "total_episodes": null,
+      "aired_count": null,
+      "aired_season": null,
+      "next_episode": null,
+      "last_episode": null,
+      "network": "TMS Entertainment",
+      "n_seasons": 0,
+      "seasons_total": 0,
+      "homepage": "",
+      "external_ids": {
+        "tmdb": 1777750
       }
     },
     {
@@ -5630,9 +6077,90 @@
       "next_episode": null,
       "last_episode": null,
       "network": "tv asahi",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://zommasu.com",
       "external_ids": {
         "tmdb": 301139
+      }
+    },
+    {
+      "id": "tmdb:336153",
+      "slug": "أحلى-نصيب",
+      "content_type": "series",
+      "title": "أحلى نصيب",
+      "original_title": "أحلى نصيب",
+      "overview": "",
+      "country": "SA",
+      "original_language": "ar",
+      "year_start": "2026",
+      "status": "Returning Series",
+      "poster": "https://image.tmdb.org/t/p/w342/l4TshB7iUEsed4sKH6gSsKqpPqO.jpg",
+      "backdrop": null,
+      "genres": [
+        "комедия",
+        "драма"
+      ],
+      "genre_ids": [
+        35,
+        18
+      ],
+      "vote": 0,
+      "vote_count": 0,
+      "popularity": 6.6,
+      "release_date": "2026-10-04",
+      "total_episodes": 90,
+      "aired_count": 1,
+      "aired_season": 1,
+      "next_episode": null,
+      "last_episode": null,
+      "network": "",
+      "n_seasons": 1,
+      "seasons_total": 1,
+      "homepage": "",
+      "external_ids": {
+        "tmdb": 336153
+      }
+    },
+    {
+      "id": "tmdb:307106",
+      "slug": "연애박사",
+      "content_type": "series",
+      "title": "연애박사",
+      "original_title": "연애박사",
+      "overview": "",
+      "country": "KR",
+      "original_language": "ko",
+      "year_start": "2026",
+      "status": "Returning Series",
+      "poster": "https://image.tmdb.org/t/p/w342/vyrpZOFIZJkQG8ZWTezmlNGav8R.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w780/mA4ClzkBvBCiTHQ8zHFsuWRaLW2.jpg",
+      "genres": [
+        "драма"
+      ],
+      "genre_ids": [
+        18
+      ],
+      "vote": 0,
+      "vote_count": 0,
+      "popularity": 11.1,
+      "release_date": "2026-10-05",
+      "total_episodes": 12,
+      "aired_count": null,
+      "aired_season": null,
+      "next_episode": {
+        "ep": 1,
+        "season": 1,
+        "date": "2026-10-05",
+        "name": "Эпизод 1"
+      },
+      "last_episode": null,
+      "network": "ENA",
+      "n_seasons": 1,
+      "seasons_total": 1,
+      "homepage": "https://ktena.co.kr/bbs/board.php?bo_table=drama&wr_id=51",
+      "external_ids": {
+        "tmdb": 307106
       }
     },
     {
@@ -5671,9 +6199,54 @@
       },
       "last_episode": null,
       "network": "Prime Video",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://www.amazon.com/dp/B0H8R9DQHS",
       "external_ids": {
         "tmdb": 288673
+      }
+    },
+    {
+      "id": "tmdb:305551",
+      "slug": "メリーベリーラブ",
+      "content_type": "series",
+      "title": "メリーベリーラブ",
+      "original_title": "メリーベリーラブ",
+      "overview": "",
+      "country": "JP",
+      "original_language": "ja",
+      "year_start": "2026",
+      "status": "Returning Series",
+      "poster": "https://image.tmdb.org/t/p/w342/qzH80C1YNzucLsVJfW23RxvX9vS.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w780/vPDVee1j6w0hJ2xMJ2bU5HVBA0Z.jpg",
+      "genres": [
+        "комедия",
+        "драма"
+      ],
+      "genre_ids": [
+        35,
+        18
+      ],
+      "vote": 0,
+      "vote_count": 0,
+      "popularity": 10.7,
+      "release_date": "2026-10-07",
+      "total_episodes": 10,
+      "aired_count": null,
+      "aired_season": null,
+      "next_episode": {
+        "ep": 1,
+        "season": 1,
+        "date": "2026-10-07",
+        "name": "Эпизод 1"
+      },
+      "last_episode": null,
+      "network": "Nippon TV",
+      "n_seasons": 1,
+      "seasons_total": 1,
+      "homepage": "https://www.ntv.co.jp/merryberrylove",
+      "external_ids": {
+        "tmdb": 305551
       }
     },
     {
@@ -5710,6 +6283,8 @@
       },
       "last_episode": null,
       "network": "Blumhouse Productions",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1400837
@@ -5751,6 +6326,8 @@
       },
       "last_episode": null,
       "network": "Columbia Pictures",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "https://thesocialreckoning.movie",
       "external_ids": {
         "tmdb": 1281331
@@ -5792,6 +6369,8 @@
       },
       "last_episode": null,
       "network": "Capstone Studios",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1634905
@@ -5831,6 +6410,8 @@
       },
       "last_episode": null,
       "network": "Netflix",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://www.netflix.com/title/81652677",
       "external_ids": {
         "tmdb": 285322
@@ -5870,9 +6451,52 @@
       },
       "last_episode": null,
       "network": "CBS",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://www.cbs.com/shows/cupertino",
       "external_ids": {
         "tmdb": 303630
+      }
+    },
+    {
+      "id": "tmdb:317326",
+      "slug": "คนโงรกเข-ล-า",
+      "content_type": "series",
+      "title": "คนโง่รักเข(ล)า",
+      "original_title": "คนโง่รักเข(ล)า",
+      "overview": "",
+      "country": "TH",
+      "original_language": "th",
+      "year_start": "2026",
+      "status": "In Production",
+      "poster": "https://image.tmdb.org/t/p/w342/qQgFY9HNKC1nuBLQB7frqb7jjx7.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w780/jxsiHQXIab1fh3zdNPF6kPwemIg.jpg",
+      "genres": [
+        "драма"
+      ],
+      "genre_ids": [
+        18
+      ],
+      "vote": 0,
+      "vote_count": 0,
+      "popularity": 5.8,
+      "release_date": "2026-10-08",
+      "total_episodes": 1,
+      "aired_count": null,
+      "aired_season": null,
+      "next_episode": {
+        "ep": 1,
+        "season": 1,
+        "date": "2026-10-08",
+        "name": "Эпизод 1"
+      },
+      "last_episode": null,
+      "network": "iQIYI International",
+      "n_seasons": 1,
+      "seasons_total": 1,
+      "homepage": "https://www.iq.com/album/%E4%BD%A0%E5%8D%B4%E7%88%B1%E7%9D%80%E4%B8%80%E4%B8%AA%E4%BB%96-2026-1vby5hezxel",
+      "external_ids": {
+        "tmdb": 317326
       }
     },
     {
@@ -5913,6 +6537,8 @@
       },
       "last_episode": null,
       "network": "Mattel Studios",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "https://tv.apple.com/ua/movie/umc.cmc.31qa8j1tn2cnpyk3fx43w928d?l=ru",
       "external_ids": {
         "tmdb": 1148365
@@ -5956,16 +6582,61 @@
       },
       "last_episode": null,
       "network": "Mocha Chai Laboratories",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1559680
       }
     },
     {
+      "id": "tmdb:289423",
+      "slug": "나를-충전해줘",
+      "content_type": "series",
+      "title": "나를 충전해줘",
+      "original_title": "나를 충전해줘",
+      "overview": "",
+      "country": "KR",
+      "original_language": "ko",
+      "year_start": "2026",
+      "status": "Returning Series",
+      "poster": "https://image.tmdb.org/t/p/w342/p5UJ0xS2NVmqtUfy9i0DMIJ1Lf3.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w780/cHO75BxLM6sz7NsiVyaBmkKnmgg.jpg",
+      "genres": [
+        "НФ и Фэнтези",
+        "комедия"
+      ],
+      "genre_ids": [
+        10765,
+        35
+      ],
+      "vote": 0,
+      "vote_count": 0,
+      "popularity": 11.9,
+      "release_date": "2026-10-09",
+      "total_episodes": 12,
+      "aired_count": null,
+      "aired_season": null,
+      "next_episode": {
+        "ep": 1,
+        "season": 1,
+        "date": "2026-10-09",
+        "name": "Эпизод 1"
+      },
+      "last_episode": null,
+      "network": "Netflix",
+      "n_seasons": 1,
+      "seasons_total": 1,
+      "homepage": "https://www.netflix.com/title/82016402",
+      "external_ids": {
+        "tmdb": 289423
+      }
+    },
+    {
       "id": "tmdb:293610",
       "slug": "닥터x-하얀-마피아의-시대",
       "content_type": "series",
-      "title": "X",
+      "title": "닥터X: 하얀 마피아의 시대",
       "original_title": "닥터X: 하얀 마피아의 시대",
       "overview": "",
       "country": "KR",
@@ -5999,6 +6670,8 @@
       },
       "last_episode": null,
       "network": "SBS",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://programs.sbs.co.kr/drama/doctorx",
       "external_ids": {
         "tmdb": 293610
@@ -6040,6 +6713,8 @@
       },
       "last_episode": null,
       "network": "Record",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://www.seriella.com/index.php?i=es",
       "external_ids": {
         "tmdb": 288458
@@ -6085,6 +6760,8 @@
       },
       "last_episode": null,
       "network": "Paramount+",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://www.paramountplus.com/shows/avatar-seven-havens",
       "external_ids": {
         "tmdb": 284833
@@ -6126,9 +6803,93 @@
       },
       "last_episode": null,
       "network": "Prime Video",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "",
       "external_ids": {
         "tmdb": 287556
+      }
+    },
+    {
+      "id": "tmdb:1375156",
+      "slug": "उडत-तर",
+      "content_type": "movie",
+      "title": "उड़ता तीर",
+      "original_title": "उड़ता तीर",
+      "overview": "",
+      "country": "IN",
+      "original_language": "hi",
+      "year_start": "2026",
+      "status": "Post Production",
+      "poster": "https://image.tmdb.org/t/p/w342/tvICKypVlW7Iio4KVs7NousbSKi.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w780/ncVecUcDZe1EOWtHaU2f8BFvbx4.jpg",
+      "genres": [
+        "комедия"
+      ],
+      "genre_ids": [
+        35
+      ],
+      "vote": 0,
+      "vote_count": 0,
+      "popularity": 12.7,
+      "release_date": "2026-10-09",
+      "total_episodes": null,
+      "aired_count": null,
+      "aired_season": null,
+      "next_episode": {
+        "ep": null,
+        "season": null,
+        "date": "2026-10-09",
+        "name": null
+      },
+      "last_episode": null,
+      "network": "Dharma Productions",
+      "n_seasons": 0,
+      "seasons_total": 0,
+      "homepage": "",
+      "external_ids": {
+        "tmdb": 1375156
+      }
+    },
+    {
+      "id": "tmdb:293607",
+      "slug": "100일의-거짓말",
+      "content_type": "series",
+      "title": "100일의 거짓말",
+      "original_title": "100일의 거짓말",
+      "overview": "",
+      "country": "KR",
+      "original_language": "ko",
+      "year_start": "2026",
+      "status": "Returning Series",
+      "poster": "https://image.tmdb.org/t/p/w342/7QBDoXKSyRCLU5UAOHQNOdn0vfZ.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w780/3SvKCITqMtjgPIhFBjRc4yTAc4H.jpg",
+      "genres": [
+        "Боевик и Приключения"
+      ],
+      "genre_ids": [
+        10759
+      ],
+      "vote": 0,
+      "vote_count": 0,
+      "popularity": 10.0,
+      "release_date": "2026-10-10",
+      "total_episodes": 16,
+      "aired_count": null,
+      "aired_season": null,
+      "next_episode": {
+        "ep": 1,
+        "season": 1,
+        "date": "2026-10-10",
+        "name": "Эпизод 1"
+      },
+      "last_episode": null,
+      "network": "tvN",
+      "n_seasons": 1,
+      "seasons_total": 1,
+      "homepage": "https://tvn.cjenm.com/ko/100-Days-of-Deception",
+      "external_ids": {
+        "tmdb": 293607
       }
     },
     {
@@ -6169,6 +6930,8 @@
       },
       "last_episode": null,
       "network": "",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1773109
@@ -6210,6 +6973,8 @@
       },
       "last_episode": null,
       "network": "MGM+",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "",
       "external_ids": {
         "tmdb": 333101
@@ -6249,6 +7014,8 @@
       },
       "last_episode": null,
       "network": "NOW",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://www.nowtv.com.tr/Sevdam-Karadeniz/izle",
       "external_ids": {
         "tmdb": 331693
@@ -6290,6 +7057,8 @@
       },
       "last_episode": null,
       "network": "Netflix",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://www.netflix.com/title/81720671",
       "external_ids": {
         "tmdb": 283371
@@ -6331,6 +7100,8 @@
       },
       "last_episode": null,
       "network": "Capcom",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1153576
@@ -6370,6 +7141,8 @@
       },
       "last_episode": null,
       "network": "Disney+",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://www.disneyplus.com/browse/entity-8744ec55-8d14-4631-99b4-c889a2d6013f",
       "external_ids": {
         "tmdb": 213375
@@ -6409,6 +7182,8 @@
       },
       "last_episode": null,
       "network": "Imagine Entertainment",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1255833
@@ -6452,6 +7227,8 @@
       },
       "last_episode": null,
       "network": "MK Productions",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 848700
@@ -6493,9 +7270,54 @@
       },
       "last_episode": null,
       "network": "Peacock",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "",
       "external_ids": {
         "tmdb": 213562
+      }
+    },
+    {
+      "id": "tmdb:1234139",
+      "slug": "ஜயலர-2",
+      "content_type": "movie",
+      "title": "ஜெயிலர் 2",
+      "original_title": "ஜெயிலர் 2",
+      "overview": "",
+      "country": "IN",
+      "original_language": "ta",
+      "year_start": "2026",
+      "status": "Post Production",
+      "poster": "https://image.tmdb.org/t/p/w342/lXOMsqKXVhEmPwthnx0F34DgoUt.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w780/m0ks2o59mOAz6WdCybJ5FAUNTOU.jpg",
+      "genres": [
+        "боевик",
+        "комедия"
+      ],
+      "genre_ids": [
+        28,
+        35
+      ],
+      "vote": 0,
+      "vote_count": 0,
+      "popularity": 7.6,
+      "release_date": "2026-10-15",
+      "total_episodes": null,
+      "aired_count": null,
+      "aired_season": null,
+      "next_episode": {
+        "ep": null,
+        "season": null,
+        "date": "2026-10-15",
+        "name": null
+      },
+      "last_episode": null,
+      "network": "Sun Pictures",
+      "n_seasons": 0,
+      "seasons_total": 0,
+      "homepage": "",
+      "external_ids": {
+        "tmdb": 1234139
       }
     },
     {
@@ -6532,6 +7354,8 @@
       },
       "last_episode": null,
       "network": "Blow Out Productions",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1765072
@@ -6577,9 +7401,54 @@
       },
       "last_episode": null,
       "network": "Crunchyroll",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://www.ellipseanimation.com/fr/production/dreamland/",
       "external_ids": {
         "tmdb": 204084
+      }
+    },
+    {
+      "id": "tmdb:303745",
+      "slug": "나의-유죄인간",
+      "content_type": "series",
+      "title": "나의 유죄인간",
+      "original_title": "나의 유죄인간",
+      "overview": "",
+      "country": "KR",
+      "original_language": "ko",
+      "year_start": "2026",
+      "status": "Returning Series",
+      "poster": "https://image.tmdb.org/t/p/w342/psv95lgfw9poTHzI04AIsoThHA7.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w780/32g5MD6eHPAZ5NAgkNAURb4eupm.jpg",
+      "genres": [
+        "комедия",
+        "драма"
+      ],
+      "genre_ids": [
+        35,
+        18
+      ],
+      "vote": 0,
+      "vote_count": 0,
+      "popularity": 13.3,
+      "release_date": "2026-10-19",
+      "total_episodes": 12,
+      "aired_count": null,
+      "aired_season": null,
+      "next_episode": {
+        "ep": 1,
+        "season": 1,
+        "date": "2026-10-19",
+        "name": "Эпизод 1"
+      },
+      "last_episode": null,
+      "network": "tvN",
+      "n_seasons": 1,
+      "seasons_total": 1,
+      "homepage": "https://tvn.cjenm.com/ko/Love-in-Disguise",
+      "external_ids": {
+        "tmdb": 303745
       }
     },
     {
@@ -6622,6 +7491,8 @@
       },
       "last_episode": null,
       "network": "Netflix",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://www.cyberpunk.net/en/edgerunners2",
       "external_ids": {
         "tmdb": 326788
@@ -6665,6 +7536,8 @@
       },
       "last_episode": null,
       "network": "DC Studios",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1400940
@@ -6708,6 +7581,8 @@
       },
       "last_episode": null,
       "network": "LAIKA",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 791523
@@ -6751,6 +7626,8 @@
       },
       "last_episode": null,
       "network": "3000 Pictures",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 858035
@@ -6794,6 +7671,8 @@
       },
       "last_episode": null,
       "network": "Topic Studios",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1195803
@@ -6835,6 +7714,8 @@
       },
       "last_episode": null,
       "network": "Crave",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "",
       "external_ids": {
         "tmdb": 314360
@@ -6876,6 +7757,8 @@
       },
       "last_episode": null,
       "network": "Apple TV",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://tv.apple.com/show/umc.cmc.4cfsq1juke72zutv5xp0pw3rj",
       "external_ids": {
         "tmdb": 292741
@@ -6917,6 +7800,8 @@
       },
       "last_episode": null,
       "network": "Netflix",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://www.netflix.com/title/81704898",
       "external_ids": {
         "tmdb": 313699
@@ -6958,6 +7843,8 @@
       },
       "last_episode": null,
       "network": "Code Entertainment",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1294189
@@ -7001,6 +7888,8 @@
       },
       "last_episode": null,
       "network": "Searchlight Pictures",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 891621
@@ -7044,9 +7933,54 @@
       },
       "last_episode": null,
       "network": "TOHO",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1381071
+      }
+    },
+    {
+      "id": "tmdb:279246",
+      "slug": "재혼-황후",
+      "content_type": "series",
+      "title": "재혼 황후",
+      "original_title": "재혼 황후",
+      "overview": "",
+      "country": "KR",
+      "original_language": "ko",
+      "year_start": "2026",
+      "status": "Returning Series",
+      "poster": "https://image.tmdb.org/t/p/w342/9mVhSAIZERTDw7dWbbGuJegCDjl.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w780/i6TwJ9uOynLnSWpKWnzqkV37iJ1.jpg",
+      "genres": [
+        "драма",
+        "НФ и Фэнтези"
+      ],
+      "genre_ids": [
+        18,
+        10765
+      ],
+      "vote": 0,
+      "vote_count": 0,
+      "popularity": 11.2,
+      "release_date": "2026-11-04",
+      "total_episodes": 10,
+      "aired_count": null,
+      "aired_season": null,
+      "next_episode": {
+        "ep": 1,
+        "season": 1,
+        "date": "2026-11-04",
+        "name": "Эпизод 1"
+      },
+      "last_episode": null,
+      "network": "Disney+",
+      "n_seasons": 1,
+      "seasons_total": 1,
+      "homepage": "",
+      "external_ids": {
+        "tmdb": 279246
       }
     },
     {
@@ -7085,6 +8019,8 @@
       },
       "last_episode": null,
       "network": "Columbia Pictures",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1562642
@@ -7132,6 +8068,8 @@
       },
       "last_episode": null,
       "network": "DNEG",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1117898
@@ -7173,9 +8111,56 @@
       },
       "last_episode": null,
       "network": "Topic Studios",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1585239
+      }
+    },
+    {
+      "id": "tmdb:656908",
+      "slug": "रमयण",
+      "content_type": "movie",
+      "title": "रामायण",
+      "original_title": "रामायण",
+      "overview": "",
+      "country": "IN",
+      "original_language": "hi",
+      "year_start": "2026",
+      "status": "Post Production",
+      "poster": "https://image.tmdb.org/t/p/w342/gOWnXaBxqT6k2y40hKfYU6c0Ym.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w780/svGHaToRKhlxwTBslsOxuntz0D7.jpg",
+      "genres": [
+        "фэнтези",
+        "драма",
+        "боевик"
+      ],
+      "genre_ids": [
+        14,
+        18,
+        28
+      ],
+      "vote": 0,
+      "vote_count": 0,
+      "popularity": 10.7,
+      "release_date": "2026-11-05",
+      "total_episodes": null,
+      "aired_count": null,
+      "aired_season": null,
+      "next_episode": {
+        "ep": null,
+        "season": null,
+        "date": "2026-11-05",
+        "name": null
+      },
+      "last_episode": null,
+      "network": "Monster Mind Creations",
+      "n_seasons": 0,
+      "seasons_total": 0,
+      "homepage": "",
+      "external_ids": {
+        "tmdb": 656908
       }
     },
     {
@@ -7212,6 +8197,8 @@
       },
       "last_episode": null,
       "network": "BlackRabbit Productions",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1771231
@@ -7253,6 +8240,8 @@
       },
       "last_episode": null,
       "network": "Anton",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1379486
@@ -7294,6 +8283,8 @@
       },
       "last_episode": null,
       "network": "Paramount Pictures",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1567605
@@ -7335,6 +8326,8 @@
       },
       "last_episode": null,
       "network": "Escape Artists",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1131943
@@ -7376,6 +8369,8 @@
       },
       "last_episode": null,
       "network": "87North Productions",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1437511
@@ -7419,6 +8414,8 @@
       },
       "last_episode": null,
       "network": "RT Features",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1381273
@@ -7462,6 +8459,8 @@
       },
       "last_episode": null,
       "network": "Lionsgate",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1300968
@@ -7501,6 +8500,8 @@
       },
       "last_episode": null,
       "network": "Lucky Red",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1599230
@@ -7546,6 +8547,8 @@
       },
       "last_episode": null,
       "network": "Netflix Animation Studios",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1595124
@@ -7585,6 +8588,8 @@
       },
       "last_episode": null,
       "network": "Prime Video",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://www.amazon.com/gp/video/detail/B0H8MGR6PV",
       "external_ids": {
         "tmdb": 171802
@@ -7630,6 +8635,8 @@
       },
       "last_episode": null,
       "network": "Walt Disney Animation Studios",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1538497
@@ -7673,6 +8680,8 @@
       },
       "last_episode": null,
       "network": "Heyday Films",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "https://www.netflix.com/title/82054606?preventIntent=true",
       "external_ids": {
         "tmdb": 1457866
@@ -7714,6 +8723,8 @@
       },
       "last_episode": null,
       "network": "Universal Pictures",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1400336
@@ -7759,9 +8770,56 @@
       },
       "last_episode": null,
       "network": "Netflix",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://www.foolnight.com",
       "external_ids": {
         "tmdb": 326247
+      }
+    },
+    {
+      "id": "tmdb:1599189",
+      "slug": "剑来院线剧场版-十三之争",
+      "content_type": "movie",
+      "title": "剑来院线剧场版 十三之争",
+      "original_title": "剑来院线剧场版 十三之争",
+      "overview": "",
+      "country": "",
+      "original_language": "zh",
+      "year_start": "2026",
+      "status": "Planned",
+      "poster": "https://image.tmdb.org/t/p/w342/95OnjUQ1mlu7JHvIMcjYL6ah9Ah.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w780/lsFLh0tcvafTom7lADYg4EGtDlY.jpg",
+      "genres": [
+        "мультфильм",
+        "боевик",
+        "приключения"
+      ],
+      "genre_ids": [
+        16,
+        28,
+        12
+      ],
+      "vote": 0,
+      "vote_count": 0,
+      "popularity": 5.7,
+      "release_date": "2026-12-01",
+      "total_episodes": null,
+      "aired_count": null,
+      "aired_season": null,
+      "next_episode": {
+        "ep": null,
+        "season": null,
+        "date": "2026-12-01",
+        "name": null
+      },
+      "last_episode": null,
+      "network": "",
+      "n_seasons": 0,
+      "seasons_total": 0,
+      "homepage": "",
+      "external_ids": {
+        "tmdb": 1599189
       }
     },
     {
@@ -7804,6 +8862,8 @@
       },
       "last_episode": null,
       "network": "Skydance Animation",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 940009
@@ -7851,6 +8911,8 @@
       },
       "last_episode": null,
       "network": "SND",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1084728
@@ -7890,6 +8952,8 @@
       },
       "last_episode": null,
       "network": "Netflix",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://www.netflix.com/title/81737965",
       "external_ids": {
         "tmdb": 288672
@@ -7931,6 +8995,8 @@
       },
       "last_episode": null,
       "network": "Sri Lakshmi Venkateswara Cinemas",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1516102
@@ -7974,6 +9040,8 @@
       },
       "last_episode": null,
       "network": "Warner Bros. Animation",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1389765
@@ -8015,6 +9083,8 @@
       },
       "last_episode": null,
       "network": "Netflix",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://www.netflix.com/title/82925778",
       "external_ids": {
         "tmdb": 270596
@@ -8058,6 +9128,8 @@
       },
       "last_episode": null,
       "network": "Topic Studios",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1391239
@@ -8101,6 +9173,8 @@
       },
       "last_episode": null,
       "network": "Marvel Studios",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1003596
@@ -8142,9 +9216,56 @@
       },
       "last_episode": null,
       "network": "Legendary Pictures",
+      "n_seasons": 0,
+      "seasons_total": 0,
       "homepage": "",
       "external_ids": {
         "tmdb": 1170608
+      }
+    },
+    {
+      "id": "tmdb:283220",
+      "slug": "国民クイズ",
+      "content_type": "series",
+      "title": "国民クイズ",
+      "original_title": "国民クイズ",
+      "overview": "",
+      "country": "JP",
+      "original_language": "ja",
+      "year_start": "2026",
+      "status": "In Production",
+      "poster": "https://image.tmdb.org/t/p/w342/yvkEL51xnhAuKpaycMU1dOnozwN.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w780/lHJnbocsJXA0nwxdpnLpPrNePFJ.jpg",
+      "genres": [
+        "НФ и Фэнтези",
+        "Боевик и Приключения",
+        "драма"
+      ],
+      "genre_ids": [
+        10765,
+        10759,
+        18
+      ],
+      "vote": 0,
+      "vote_count": 0,
+      "popularity": 6.8,
+      "release_date": "2026-12-17",
+      "total_episodes": 6,
+      "aired_count": null,
+      "aired_season": null,
+      "next_episode": {
+        "ep": 1,
+        "season": 1,
+        "date": "2026-12-17",
+        "name": "Эпизод 1"
+      },
+      "last_episode": null,
+      "network": "Netflix",
+      "n_seasons": 1,
+      "seasons_total": 1,
+      "homepage": "https://www.netflix.com/title/81679525",
+      "external_ids": {
+        "tmdb": 283220
       }
     },
     {
@@ -8185,6 +9306,8 @@
       },
       "last_episode": null,
       "network": "HBO",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://www.harrypotter.com/series",
       "external_ids": {
         "tmdb": 224377
@@ -8226,6 +9349,8 @@
       },
       "last_episode": null,
       "network": "Apple TV",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://tv.apple.com/show/umc.cmc.ym2z4w07kwsi1wywwxtyckr",
       "external_ids": {
         "tmdb": 215528
@@ -8269,6 +9394,8 @@
       },
       "last_episode": null,
       "network": "",
+      "n_seasons": 1,
+      "seasons_total": 1,
       "homepage": "https://rashproductions.co.uk/belief",
       "external_ids": {
         "tmdb": 296264

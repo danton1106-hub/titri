@@ -1,3 +1,4 @@
+import json
 import re
 import sys
 import unittest
@@ -32,6 +33,37 @@ class ContentModelTests(unittest.TestCase):
         item = {"content_type": "series", "total_episodes": 13, "aired_count": 3, "next_episode": {"ep": 4}}
         self.assertIn("3", progress(item))
         self.assertNotIn("4 из 13", progress(item))
+
+
+class SeasonModelTests(unittest.TestCase):
+    """Сезонный progress не смешивает текущий сезон со всем сериалом."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.root = Path(__file__).resolve().parents[1]
+
+    def test_season_and_episode_models_are_written(self):
+        seasons = json.loads((self.root / "data" / "seasons.json").read_text(encoding="utf-8"))["items"]
+        episodes = json.loads((self.root / "data" / "episodes.json").read_text(encoding="utf-8"))["items"]
+        self.assertGreater(len(seasons), 0)
+        self.assertGreater(len(episodes), 0)
+        for season in seasons:
+            self.assertTrue(season["id"].startswith(season["content_id"] + ":season:"))
+            total, aired = season.get("total_episodes"), season.get("aired_count")
+            if total is not None and aired is not None:
+                self.assertLessEqual(aired, total)
+
+    def test_global_episode_numbers_do_not_become_season_records(self):
+        episodes = json.loads((self.root / "data" / "episodes.json").read_text(encoding="utf-8"))["items"]
+        self.assertFalse(any(item["episode_number"] > 100 for item in episodes))
+
+    def test_month_heading_uses_nominative_case(self):
+        home = self.root / "docs" / "index.html"
+        if not home.exists():
+            self.skipTest("docs/index.html отсутствует")
+        text = home.read_text(encoding="utf-8")
+        self.assertNotIn("Октября 2026", text)
+        self.assertIn("Октябрь 2026", text)
 
 
 class SmokeHtml(unittest.TestCase):
