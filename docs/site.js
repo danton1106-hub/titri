@@ -307,20 +307,6 @@ content_id всегда стабильный внешний идентифика
     });
   }
 
-  /* Поиск на первом экране ведёт в каталог и передаёт запрос в поле каталога. */
-
-  function heroSearch() {
-    var form = document.querySelector(".hero-search");
-    if (!form) return;
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-      var field = form.querySelector("input[name=q]");
-      var query = field ? field.value.trim() : "";
-      form.action = (location.pathname.indexOf("/catalog/") !== -1 ? location.pathname : "/catalog/");
-      location.href = (form.action.charAt(0) === "/" ? form.action.replace(/\/+$/, "") : form.action) + "/" + (query ? "?q=" + encodeURIComponent(query) : "");
-    });
-  }
-
   /* ---------- дата и мобильное меню ---------- */
 
   function refreshDate() {
@@ -383,7 +369,6 @@ content_id всегда стабильный внешний идентифика
     watchPanel();
     banner();
     homeCalendar();
-    heroSearch();
     /* Любое изменение списка обновляет счётчик, панель и страницу списка. */
     subscribe(render);
   });

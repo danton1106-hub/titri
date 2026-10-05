@@ -12,14 +12,14 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 def build():
     html = open(os.path.join(ROOT, "preview", "home.html"), encoding="utf-8").read()
     css = open(os.path.join(ROOT, "preview", "titry.css"), encoding="utf-8").read()
-    ttf = open(os.path.join(ROOT, "fonts", "Onest-Variable.ttf"), "rb").read()
+    ttf = open(os.path.join(ROOT, "assets", "fonts", "Onest-Variable.ttf"), "rb").read()
 
     b64 = base64.b64encode(ttf).decode()
 
     # Onest внутрь CSS как data-URI: OFL разрешает встраивание,
     # так шрифт работает без папки fonts и без сети.
     css_in = css.replace(
-        "src: url('../fonts/Onest-Variable.ttf') format('truetype-variations');",
+        "src: url('fonts/Onest-Variable.ttf') format('truetype-variations');",
         f"src: url(data:font/ttf;base64,{b64}) format('truetype-variations');"
     )
     if "base64" not in css_in:

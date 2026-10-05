@@ -2506,14 +2506,9 @@
       "popularity": 175.5,
       "release_date": "2018-09-25",
       "total_episodes": 159,
-      "aired_count": 22,
-      "aired_season": 8,
-      "next_episode": {
-        "ep": 1,
-        "season": 9,
-        "date": "2026-10-05",
-        "name": "Эпизод 1"
-      },
+      "aired_count": 1,
+      "aired_season": 9,
+      "next_episode": null,
       "last_episode": {
         "ep": 22,
         "season": 8,
@@ -4042,14 +4037,9 @@
       "popularity": 313.3,
       "release_date": "1993-01-11",
       "total_episodes": 1747,
-      "aired_count": 39,
+      "aired_count": 40,
       "aired_season": 34,
-      "next_episode": {
-        "ep": 40,
-        "season": 34,
-        "date": "2026-10-05",
-        "name": "Эпизод 40"
-      },
+      "next_episode": null,
       "last_episode": {
         "ep": 39,
         "season": 34,
@@ -6146,14 +6136,9 @@
       "popularity": 11.1,
       "release_date": "2026-10-05",
       "total_episodes": 12,
-      "aired_count": null,
-      "aired_season": null,
-      "next_episode": {
-        "ep": 1,
-        "season": 1,
-        "date": "2026-10-05",
-        "name": "Эпизод 1"
-      },
+      "aired_count": 1,
+      "aired_season": 1,
+      "next_episode": null,
       "last_episode": null,
       "network": "ENA",
       "n_seasons": 1,

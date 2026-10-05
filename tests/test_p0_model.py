@@ -2,12 +2,12 @@ import json
 import re
 import sys
 import unittest
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from build import EPISODE_WORD, CONTENT_TYPES, progress
-from time_service import parse_local_date, relative_day
+from build import EPISODE_WORD, CONTENT_TYPES, MONTHS, MONTHS_GEN, progress
+from time_service import parse_local_date, relative_day, today_moscow
 
 
 class TimeServiceTests(unittest.TestCase):
@@ -71,9 +71,13 @@ class SeasonModelTests(unittest.TestCase):
         self.assertEqual(order, sorted(order), "блоки главной идут не в порядке прототипа")
         self.assertIn("Сегодня вышло", text)
         self.assertIn("Следующая серия", text)
-        self.assertIn("28 сентября — 4 октября", text)
-        self.assertIn("Весь октябрь", text)
         self.assertIn("Что смотрим сегодня?", text)
+        # Неделя считается от московской даты сборки, поэтому проверяем её тем же
+        # способом, а не зашитой строкой: иначе тест ломается на следующий день.
+        today = today_moscow()
+        start = today - timedelta(days=today.weekday())
+        self.assertIn(f"{start.day} {MONTHS[start.month - 1]}", text)
+        self.assertIn(f"Весь {MONTHS_GEN[today.month - 1]}", text)
 
 
 class SmokeHtml(unittest.TestCase):
@@ -98,6 +102,17 @@ class SmokeHtml(unittest.TestCase):
         self.assertEqual(len(re.findall(r"<h1\b", text)), 1, "на главной должен быть ровно один H1")
         for block in re.findall(r'<div class="section-head">.*?</div></div>', text, re.S):
             self.assertLessEqual(len(re.findall(r"<h2\b", block)), 1, "в заголовке раздела два H2")
+
+    def test_font_and_icon_ship_with_the_build(self):
+        """Onest и favicon должны лежать в docs/, иначе сайт молча теряет шрифт."""
+        font = self.docs / "fonts" / "Onest-Variable.ttf"
+        icon = self.docs / "favicon.svg"
+        if not self.home.exists():
+            self.skipTest("docs/index.html отсутствует")
+        self.assertTrue(font.exists(), "шрифт Onest не скопирован в docs/fonts")
+        self.assertTrue(icon.exists(), "favicon не скопирован в docs/")
+        text = self.home.read_text(encoding="utf-8")
+        self.assertIn('rel="icon"', text)
 
     def test_internal_nav_has_no_dead_links(self):
         if not self.home.exists():

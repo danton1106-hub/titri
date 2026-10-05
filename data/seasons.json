@@ -320,10 +320,10 @@
       "id": "tmdb:80748:season:9",
       "content_id": "tmdb:80748",
       "season_number": 9,
-      "aired_count": 0,
+      "aired_count": 1,
       "total_episodes": null,
-      "next_episode_number": 1,
-      "next_release_date": "2026-10-05"
+      "next_episode_number": null,
+      "next_release_date": null
     },
     {
       "id": "tmdb:278573:season:1",
@@ -455,10 +455,10 @@
       "id": "tmdb:4656:season:34",
       "content_id": "tmdb:4656",
       "season_number": 34,
-      "aired_count": 1,
+      "aired_count": 2,
       "total_episodes": null,
-      "next_episode_number": 40,
-      "next_release_date": "2026-10-05"
+      "next_episode_number": null,
+      "next_release_date": null
     },
     {
       "id": "tmdb:320315:season:1",
@@ -734,10 +734,10 @@
       "id": "tmdb:307106:season:1",
       "content_id": "tmdb:307106",
       "season_number": 1,
-      "aired_count": 0,
+      "aired_count": 1,
       "total_episodes": 12,
       "next_episode_number": null,
-      "next_release_date": "2026-10-05"
+      "next_release_date": null
     },
     {
       "id": "tmdb:288673:season:1",

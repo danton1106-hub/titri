@@ -477,7 +477,7 @@ def page(title, body, current=Path(""), description="", extra_script="", canonic
     script = f"<script defer>{extra_script}</script>" if extra_script else ""
     canonical_url = canonical if canonical is not None else f"{SITE_URL}/{('/'.join(current.parts) + '/') if current.parts else ''}"
     canonical_tag = f'<link rel="canonical" href="{esc(canonical_url)}">' if canonical_url else ""
-    return f'''<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)} - титры</title>{canonical_tag}<meta name="description" content="{esc(description)}"><link rel="stylesheet" href="{prefix}titry.css"><script defer src="{prefix}site.js"></script>{script}</head><body>{nav(current)}<main>{body}</main>{footer(current)}</body></html>'''
+    return f'''<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)} - титры</title>{canonical_tag}<meta name="description" content="{esc(description)}"><link rel="icon" href="{prefix}favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="{prefix}titry.css"><script defer src="{prefix}site.js"></script>{script}</head><body>{nav(current)}<main>{body}</main>{footer(current)}</body></html>'''
 
 
 def section_of(item):
@@ -1746,6 +1746,15 @@ def main():
         encoding="utf-8",
     )
     (DOCS / "site.js").write_text(read_asset("site.js"), encoding="utf-8")
+    # Шрифты: файлы, а не подключение с CDN. Без этого копирования @font-face в
+    # собранном docs/ ссылается на несуществующий путь, и сайт теряет Onest.
+    fonts_src = ROOT / "assets" / "fonts"
+    if fonts_src.exists():
+        shutil.copytree(fonts_src, DOCS / "fonts")
+    # favicon: SVG, чтобы не тащить бинарник и не ловить 404 в консоли.
+    favicon = ROOT / "assets" / "favicon.svg"
+    if favicon.exists():
+        shutil.copy2(favicon, DOCS / "favicon.svg")
     home_today = today_moscow()
     home_months = {(home_today.year, home_today.month)}
     write(Path(""), home_page(contents, events, ratings, home_today.year, home_today.month, home_months, season_model))

@@ -23,6 +23,9 @@ def resolve(page: Path, href: str) -> Path:
     return path
 
 
+ASSET = re.compile(r"url\(['\"]?([^)'\"]+)['\"]?\)", re.I)
+
+
 def main():
     errors = []
     pages = sorted(DOCS.rglob("*.html"))
@@ -32,6 +35,13 @@ def main():
                 continue
             if not resolve(page, href).exists():
                 errors.append(f"{page.relative_to(DOCS)} -> {href}")
+    # Локальные ассеты из CSS: пропавший шрифт ломает вёрстку молча, поэтому ловим его здесь.
+    for sheet in sorted(DOCS.rglob("*.css")):
+        for asset in ASSET.findall(sheet.read_text(encoding="utf-8")):
+            if asset.startswith(("data:", "http:", "https:", "//")):
+                continue
+            if not resolve(sheet, asset).exists():
+                errors.append(f"{sheet.relative_to(DOCS)} -> {asset}")
     if errors:
         print("Broken internal links:")
         print("\n".join(errors[:100]))
